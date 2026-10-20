@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carvalho Impressão 3D | Peças personalizadas e criações em 3D</title>
+<meta name="description" content="Carvalho Impressão 3D: ideias incríveis, formas reais. Peças personalizadas, produtos impressos em 3D e encomendas sob medida. Peça seu orçamento pelo WhatsApp.">
+<meta property="og:title" content="Carvalho Impressão 3D">
+<meta property="og:description" content="Ideias incríveis. Formas reais. Peças personalizadas e encomendas em impressão 3D.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--roxo:#7C3AED;--ciano:#00D9FF;--laranja:#FF6B35;--rosa:#FF3CAC;--fundo:#10101C;--claro:#F7F7FF;--fundo2:#191930;--topo:env(safe-area-inset-top,0px);--base:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px;overflow-x:hidden}
+body{background:var(--fundo);color:var(--claro);font:400 1.05rem/1.6 Inter,system-ui,sans-serif;overflow-x:hidden;padding-top:var(--topo)}
+h1,h2,h3{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.05;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ciano);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,92%);margin-inline:auto}
+section{padding:96px 0;position:relative}
+h2{font-size:clamp(2rem,5vw,3.6rem);max-width:16ch}
+.lead{max-width:56ch;color:#c9c9e6;margin-top:16px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:12px 26px;border-radius:14px;font:700 1rem "Space Grotesk",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn.main{background:var(--laranja);color:#10101C;box-shadow:0 6px 0 #b84317,0 12px 30px #ff6b3555}
+.btn.main:hover{transform:translateY(-3px);box-shadow:0 9px 0 #b84317,0 16px 34px #ff6b3577}
+.btn.main:active{transform:translateY(3px);box-shadow:0 2px 0 #b84317}
+.btn.ghost{border-color:var(--ciano);color:var(--ciano);background:#00d9ff12}
+.btn.ghost:hover{background:#00d9ff30;transform:translateY(-3px)}
+.tag{font:600 .78rem Inter;letter-spacing:.12em;color:var(--ciano)}
+/* nav */
+header{position:fixed;inset:0 0 auto;z-index:50;padding-top:var(--topo);transition:background .3s}
+header.sc{background:#10101Cdd;backdrop-filter:blur(14px)}
+nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 1.2rem "Space Grotesk";text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo i{width:26px;height:26px;border-radius:7px;background:linear-gradient(135deg,var(--roxo),var(--ciano) 60%,var(--rosa));display:grid;place-items:center;font:700 .8rem Inter;font-style:normal;transform:rotate(-8deg)}
+.links{display:flex;gap:26px;align-items:center}
+.links a{text-decoration:none;font-weight:500;color:#dcdcf5}.links a:hover{color:var(--ciano)}
+.burger{display:none;background:none;border:2px solid #fff3;color:#fff;border-radius:10px;width:48px;height:48px;font-size:1.3rem;cursor:pointer}
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;overflow:hidden;
+background:radial-gradient(60% 60% at 80% 30%,#7C3AED55,transparent 70%),radial-gradient(40% 40% at 10% 90%,#FF3CAC33,transparent 70%),var(--fundo);background-size:140% 140%;animation:bg 18s ease-in-out infinite alternate}
+@keyframes bg{to{background-position:100% 100%}}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0d 1px,transparent 1px),linear-gradient(90deg,#ffffff0d 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(70% 70% at 70% 50%,#000,transparent)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:30px;align-items:center;position:relative}
+h1{font-size:clamp(2.8rem,7.4vw,6rem);margin:18px 0 20px;background:linear-gradient(100deg,#fff 30%,var(--ciano) 65%,var(--rosa));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{font-size:1.15rem}.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.stage{position:relative;height:min(560px,70vw);perspective:900px}
+.obj{position:absolute;transition:transform .2s ease-out;animation:fl 7s ease-in-out infinite}
+@keyframes fl{50%{translate:0 -12px}}
+.cube{left:30%;top:22%;width:170px;height:170px;border-radius:26px;background:linear-gradient(135deg,var(--roxo),var(--rosa));box-shadow:0 30px 60px #7c3aed77,inset 0 0 0 3px #ffffff33;transform:rotate(14deg)}
+.cube::after{content:"";position:absolute;inset:0;border-radius:26px;background:repeating-linear-gradient(0deg,#0000 0 9px,#00000026 9px 11px)}
+.ring{left:2%;top:54%;width:190px;height:190px;border-radius:50%;border:34px solid var(--ciano);box-shadow:0 20px 50px #00d9ff55,inset 0 0 25px #0006;animation-delay:-2s}
+.stack{right:2%;top:6%;width:150px;animation-delay:-4s}
+.stack b{display:block;height:20px;margin-top:-6px;border-radius:50%/60%;box-shadow:0 8px 14px #0005}
+.stack b:nth-child(1){background:var(--laranja);width:60%;margin-left:20%}.stack b:nth-child(2){background:var(--rosa);width:80%;margin-left:10%}.stack b:nth-child(3){background:var(--roxo)}.stack b:nth-child(4){background:var(--ciano);width:80%;margin-left:10%}.stack b:nth-child(5){background:var(--laranja);width:60%;margin-left:20%}
+.pyr{right:12%;bottom:6%;width:0;height:0;border-inline:70px solid transparent;border-bottom:130px solid var(--laranja);filter:drop-shadow(0 25px 25px #ff6b3566);animation-delay:-1s}
+.chip{position:absolute;padding:8px 14px;border-radius:99px;background:#ffffff14;border:1px solid #ffffff40;backdrop-filter:blur(8px);font:600 .72rem Inter;letter-spacing:.08em}
+.c1{left:0;top:10%}.c2{right:0;top:52%}.c3{left:26%;bottom:2%}
+/* marquee */
+.band{background:linear-gradient(90deg,var(--roxo),var(--rosa));padding:18px 0;overflow:hidden;transform:rotate(-1.2deg);margin:-20px -2% 0;position:relative;z-index:2}
+.band div{display:flex;width:max-content;animation:mq 28s linear infinite;font:700 1.5rem "Space Grotesk";white-space:nowrap;gap:0}
+.band span{padding-right:32px}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* vitrine */
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:30px 0}
+.filters button{min-height:44px;padding:8px 18px;border-radius:99px;border:2px solid #ffffff30;background:none;color:var(--claro);font:600 .95rem Inter;cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--claro);color:var(--fundo);border-color:var(--claro)}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:16px}
+.item{position:relative;border:0;border-radius:22px;overflow:hidden;cursor:pointer;text-align:left;color:#fff;padding:20px;display:flex;flex-direction:column;justify-content:flex-end;grid-column:span 2;grid-row:span 2;transition:transform .3s}
+.item:nth-child(1){grid-column:span 4}.item:nth-child(4){grid-row:span 3;grid-column:span 2}.item:nth-child(5){grid-column:span 3}.item:nth-child(6){grid-column:span 3}
+.item:hover{transform:scale(1.02)}
+.item .art{position:absolute;inset:0;transition:transform .5s}.item:hover .art{transform:scale(1.1)}
+.item h3,.item small{position:relative;text-shadow:0 2px 12px #0008}.item h3{font-size:1.4rem}
+.item[hidden]{display:none}
+.a1{background:radial-gradient(circle at 75% 30%,#ff3cac,transparent 40%),linear-gradient(135deg,#4c1d95,#7C3AED)}
+.a2{background:repeating-linear-gradient(0deg,#0000 0 12px,#ffffff1f 12px 14px),linear-gradient(160deg,#0e7490,#00D9FF)}
+.a3{background:conic-gradient(from 200deg at 70% 40%,#FF6B35,#FF3CAC,#7C3AED,#FF6B35)}
+.a4{background:radial-gradient(circle at 30% 70%,#00d9ff88,transparent 45%),linear-gradient(200deg,#1e1b4b,#312e81)}
+.a5{background:linear-gradient(120deg,#ff6b35,#ff3cac)}.a6{background:linear-gradient(120deg,#2a2a4a,#7C3AED)}
+.note{margin-top:18px;font-size:.9rem;color:#a9a9cc}
+/* processo */
+.proc{background:var(--fundo2)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:40px}
+.steps li{list-style:none;border-left:4px solid var(--rosa);padding-left:18px}
+.steps h3{font-size:1.4rem;margin-bottom:6px}.steps p{color:#c9c9e6}
+.cmp{position:relative;margin-top:46px;height:min(380px,60vw);border-radius:26px;overflow:hidden;background:#10101C;border:1px solid #ffffff22;user-select:none}
+.cmp .lay{position:absolute;inset:0;display:grid;place-items:center}
+.final{background:radial-gradient(circle at 50% 50%,#7c3aed66,transparent 60%),#10101C}
+.wire{background:#10101C;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0);background-image:linear-gradient(#00d9ff30 1px,transparent 1px),linear-gradient(90deg,#00d9ff30 1px,transparent 1px);background-size:28px 28px}
+.shape{width:min(200px,40vw);aspect-ratio:1;border-radius:30px;transform:rotate(14deg)}
+.final .shape{background:linear-gradient(135deg,var(--roxo),var(--rosa));box-shadow:0 30px 60px #7c3aed88,inset 0 0 0 3px #fff3;background-image:repeating-linear-gradient(0deg,#0000 0 9px,#00000026 9px 11px),linear-gradient(135deg,var(--roxo),var(--rosa))}
+.wire .shape{border:2px dashed var(--ciano);box-shadow:0 0 24px #00d9ff55}
+.cmp label{position:absolute;bottom:14px;font:600 .75rem Inter;letter-spacing:.1em;padding:6px 12px;background:#000a;border-radius:99px}
+.cmp input{position:absolute;inset:auto 5% 14px 5%;width:90%;bottom:auto;top:14px;accent-color:var(--ciano);z-index:3}
+/* form */
+.pers .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:50px;align-items:start}
+form{background:linear-gradient(160deg,#ffffff14,#ffffff06);border:1px solid #ffffff2a;border-radius:26px;padding:28px;display:grid;gap:16px;grid-template-columns:1fr 1fr}
+.f{display:grid;gap:6px}.f.full{grid-column:1/-1}
+label.t{font-weight:600;font-size:.92rem}
+input,select,textarea{width:100%;min-height:48px;padding:12px 14px;border-radius:12px;border:2px solid #ffffff2e;background:#0b0b16;color:var(--claro);font:inherit}
+textarea{min-height:110px;resize:vertical}
+.err{color:#ff9bb9;font-size:.85rem;min-height:1em}
+input[aria-invalid=true],select[aria-invalid=true],textarea[aria-invalid=true]{border-color:#ff5c8a}
+/* diferenciais */
+.dif{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:46px;border-top:1px solid #ffffff24}
+.dif div{padding:30px 26px 30px 0;border-bottom:1px solid #ffffff24;display:flex;gap:20px}
+.dif div:nth-child(odd){border-right:1px solid #ffffff24}.dif div:nth-child(even){padding-left:26px}
+.dif i{flex:none;width:54px;height:54px;transition:transform .5s}.dif div:hover i{transform:rotate(90deg)}
+.dif h3{font-size:1.35rem;margin-bottom:6px}.dif p{color:#c9c9e6}
+/* sobre / insta / final */
+.sobre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.layers{height:320px;border-radius:26px;background:repeating-linear-gradient(180deg,var(--roxo) 0 14px,#5b21b6 14px 18px,var(--rosa) 18px 32px,#be1e82 32px 36px,var(--ciano) 36px 50px,#0891b2 50px 54px);mask-image:linear-gradient(#000 60%,transparent);box-shadow:0 30px 70px #7c3aed55}
+.final-cta{text-align:left;background:linear-gradient(120deg,var(--roxo),#3b82f6 55%,var(--rosa));overflow:hidden}
+.final-cta::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,#ffffff14 0 2px,#0000 2px 26px)}
+.final-cta .wrap{position:relative}.final-cta h2{max-width:14ch;color:#fff}.final-cta p{max-width:52ch;margin-top:14px}
+footer{padding:50px 0 calc(30px + var(--base));background:#0b0b16;font-size:.95rem;color:#b9b9d8}
+footer .wrap{display:flex;gap:30px;justify-content:space-between;flex-wrap:wrap}
+footer nav{height:auto;gap:18px;flex-wrap:wrap}
+.wpp{position:fixed;right:18px;bottom:calc(18px + var(--base));z-index:40;width:60px;height:60px;border-radius:50%;background:#25D366;color:#073;display:grid;place-items:center;font:700 .85rem Inter;text-decoration:none;box-shadow:0 10px 26px #25d36666}
+/* modal */
+dialog{border:0;border-radius:26px;background:var(--fundo2);color:var(--claro);width:min(560px,92vw);padding:0;overflow:hidden}
+dialog::backdrop{background:#000b;backdrop-filter:blur(4px)}
+dialog .art{height:240px}.dc{padding:26px}.dc h3{font-size:1.8rem;margin-bottom:8px}.dc .cta{margin-top:20px}
+.x{position:absolute;top:12px;right:12px;width:48px;height:48px;border-radius:50%;border:0;background:#000a;color:#fff;font-size:1.2rem;cursor:pointer;z-index:2}
+.rv{opacity:0;transform:translateY(24px);transition:.7s}.rv.on{opacity:1;transform:none}
+@media(max-width:860px){
+section{padding:70px 0}
+.links{position:fixed;inset:68px 0 auto;background:#10101Cf5;flex-direction:column;padding:24px;display:none;gap:20px}.links.open{display:flex}.burger{display:block}
+.hero .wrap,.pers .wrap,.sobre .wrap{grid-template-columns:1fr}.stage{height:360px}.cube{width:120px;height:120px}.ring{width:120px;height:120px;border-width:22px}.stack{width:110px}
+.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:130px}.item,.item:nth-child(n){grid-column:span 1;grid-row:span 2}.item:nth-child(1){grid-column:span 2}
+.steps,.dif{grid-template-columns:1fr}.dif div:nth-child(n){border-right:0;padding-left:0}
+form{grid-template-columns:1fr;padding:20px}.band div{animation-duration:20s;font-size:1.1rem}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<header id="top"><div class="wrap"><nav aria-label="Principal">
+<a class="logo" href="#inicio"><i>3D</i>Carvalho Impressão 3D</a>
+<button class="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+<div class="links" id="menu"><a href="#criacoes">Criações</a><a href="#processo">Como funciona</a><a href="#diferenciais">Diferenciais</a><a href="#sobre">Sobre</a><a class="btn main" data-wa href="#">Pedir orçamento</a></div>
+</nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<div><p class="tag">CARVALHO IMPRESSÃO 3D · CRIATIVIDADE EM CAMADAS</p>
+<h1>Ideias incríveis. Formas reais.</h1>
+<p class="lead">Da imaginação para o mundo físico. Descubra as possibilidades da impressão 3D com criações cheias de personalidade, detalhes e criatividade.</p>
+<div class="cta"><a class="btn main" href="#personalizar">Quero criar minha peça</a><a class="btn ghost" href="#criacoes">Explorar criações</a></div></div>
+<div class="stage" aria-hidden="true" id="stage">
+<div class="obj cube" data-d="30"></div><div class="obj ring" data-d="-20"></div>
+<div class="obj stack" data-d="45"><b></b><b></b><b></b><b></b><b></b></div><div class="obj pyr" data-d="-35"></div>
+<span class="chip c1">CRIATIVIDADE SEM LIMITES</span><span class="chip c2">PEÇAS PERSONALIZADAS</span><span class="chip c3">FEITO EM 3D</span></div>
+</div></section>
+
+<div class="band" aria-hidden="true"><div><span>IMPRESSÃO 3D ✳ DESIGN CRIATIVO ✳ PERSONALIZAÇÃO ✳ IDEIAS QUE GANHAM FORMA ✳</span><span>IMPRESSÃO 3D ✳ DESIGN CRIATIVO ✳ PERSONALIZAÇÃO ✳ IDEIAS QUE GANHAM FORMA ✳</span></div></div>
+
+<section id="criacoes"><div class="wrap rv">
+<h2>Pequenas peças. Grandes ideias.</h2>
+<p class="lead">Explore criações que unem funcionalidade, design e a liberdade de transformar ideias em objetos reais.</p>
+<div class="filters" role="group" aria-label="Filtrar categorias"></div>
+<div class="grid" id="grid"></div>
+<p class="note">Os blocos acima são categorias ilustrativas, sem fotos nem preços. Cada categoria será trocada pelas peças e fotografias reais da Carvalho Impressão 3D.</p>
+</div></section>
+
+<section class="proc" id="processo"><div class="wrap rv">
+<h2>Do primeiro traço à última camada.</h2>
+<ol class="steps">
+<li><h3>Etapa 1: a ideia</h3><p>Você imagina, desenha ou encontra uma referência. O primeiro passo é descobrir o que podemos criar.</p></li>
+<li><h3>Etapa 2: a construção</h3><p>O modelo ganha volume e cada camada ajuda a transformar o projeto em uma peça física.</p></li>
+<li><h3>Etapa 3: o resultado</h3><p>A ideia sai da tela e ganha forma, pronta para cumprir seu propósito ou surpreender alguém.</p></li></ol>
+<div class="cmp" id="cmp" style="--p:50%"><div class="lay final"><div class="shape"></div></div><div class="lay wire"><div class="shape"></div></div>
+<input type="range" min="0" max="100" value="50" aria-label="Alternar entre modelo wireframe e peça final">
+<label style="left:14px">MODELO DIGITAL</label><label style="right:14px">PEÇA FINAL</label></div>
+</div></section>
+
+<section class="pers" id="personalizar"><div class="wrap">
+<div class="rv"><h2>Você imagina. A gente explora as possibilidades.</h2>
+<p class="lead">Tem uma ideia diferente, precisa de uma peça específica ou quer criar algo com a sua identidade? Entre em contato com a Carvalho Impressão 3D e apresente seu projeto.</p>
+<p class="lead">Fotos, desenhos e arquivos? Envie direto pelo WhatsApp depois de abrir a conversa.</p></div>
+<form id="f" novalidate>
+<div class="f"><label class="t" for="n">Nome</label><input id="n" required autocomplete="name"><span class="err"></span></div>
+<div class="f"><label class="t" for="w">WhatsApp para retorno</label><input id="w" type="tel" inputmode="tel" required autocomplete="tel" placeholder="(00) 00000-0000"><span class="err"></span></div>
+<div class="f full"><label class="t" for="tp">Tipo de projeto</label><select id="tp" required><option value="">Escolha uma opção</option><option>Quero um produto do catálogo</option><option>Quero personalizar uma peça</option><option>Preciso de uma peça específica</option><option>Quero desenvolver um projeto</option><option>Ainda estou explorando possibilidades</option></select><span class="err"></span></div>
+<div class="f full"><label class="t" for="d">Descrição da ideia</label><textarea id="d" required></textarea><span class="err"></span></div>
+<div class="f"><label class="t" for="c">Cor desejada (opcional)</label><input id="c"></div>
+<div class="f"><label class="t" for="s">Tamanho aproximado (opcional)</label><input id="s" placeholder="ex.: 10 cm de altura"></div>
+<div class="f"><label class="t" for="q">Quantidade de peças</label><input id="q" type="number" min="1" value="1"><span class="err"></span></div>
+<div class="f"><label class="t" for="l">Link de referência (opcional)</label><input id="l" type="url" placeholder="https://"><span class="err"></span></div>
+<div class="f full"><button class="btn main" type="submit">Solicitar orçamento</button><span class="err" id="fs" role="status"></span></div>
+</form></div></section>
+
+<section id="diferenciais"><div class="wrap rv">
+<h2>Mais liberdade para criar.</h2>
+<div class="dif">
+<div><i><svg viewBox="0 0 54 54"><circle cx="18" cy="18" r="14" fill="#FF3CAC"/><circle cx="34" cy="20" r="14" fill="#00D9FF" opacity=".85"/><circle cx="27" cy="36" r="14" fill="#7C3AED" opacity=".9"/></svg></i><span><h3>Personalização</h3><p>Possibilidade de explorar cores, dimensões e detalhes de acordo com cada projeto, conforme a viabilidade de produção.</p></span></div>
+<div><i><svg viewBox="0 0 54 54"><polygon points="27,4 50,46 4,46" fill="none" stroke="#FF6B35" stroke-width="5" stroke-linejoin="round"/><circle cx="27" cy="33" r="6" fill="#FF3CAC"/></svg></i><span><h3>Criatividade</h3><p>Soluções que permitem explorar formatos e ideias além dos objetos convencionais.</p></span></div>
+<div><i><svg viewBox="0 0 54 54"><rect x="6" y="6" width="42" height="42" rx="8" fill="none" stroke="#00D9FF" stroke-width="5"/><path d="M6 27h42M27 6v42" stroke="#7C3AED" stroke-width="5"/></svg></i><span><h3>Funcionalidade</h3><p>Peças que podem atender a necessidades práticas, organizar espaços ou complementar projetos.</p></span></div>
+<div><i><svg viewBox="0 0 54 54"><path d="M8 40l19-30 19 30z" fill="#7C3AED"/><path d="M8 46h38" stroke="#FF3CAC" stroke-width="5"/><path d="M14 34h26" stroke="#00D9FF" stroke-width="4"/></svg></i><span><h3>Desenvolvimento sob demanda</h3><p>Possibilidade de avaliar solicitações específicas e verificar como transformar uma referência em um produto físico.</p></span></div>
+</div></div></section>
+
+<section class="sobre" id="sobre" style="background:var(--fundo2)"><div class="wrap">
+<div class="rv"><h2>Tecnologia para tirar ideias do papel.</h2>
+<p class="lead">A Carvalho Impressão 3D explora as possibilidades da fabricação digital para transformar ideias em peças físicas. Cada projeto começa com uma necessidade, uma referência ou uma ideia que merece ser explorada.</p></div>
+<div class="layers rv" aria-hidden="true"></div></div></section>
+
+<section><div class="wrap rv"><h2>Mais criações, mais possibilidades.</h2>
+<p class="lead">Acompanhe os projetos, descubra novas ideias e veja as possibilidades da impressão 3D.</p>
+<div class="cta"><a class="btn main" href="https://www.instagram.com/carvalho_impressao_3d/" target="_blank" rel="noopener noreferrer">Ver o Instagram oficial</a></div></div></section>
+
+<section class="final-cta"><div class="wrap"><h2>Sua próxima ideia começa aqui.</h2>
+<p>Conte o que você quer criar. Vamos conversar sobre as possibilidades de transformar sua ideia em uma peça de verdade.</p>
+<div class="cta"><a class="btn main" data-wa href="#">Quero tirar minha ideia do papel</a><a class="btn ghost" style="color:#fff;border-color:#fff" href="https://www.instagram.com/carvalho_impressao_3d/" target="_blank" rel="noopener noreferrer">Conhecer o Instagram</a></div></div></section>
+</main>
+<footer><div class="wrap"><div><strong style="color:#fff;font:700 1.2rem 'Space Grotesk'">Carvalho Impressão 3D</strong><p style="max-width:36ch">Ideias incríveis, formas reais. Peças personalizadas e criações em impressão 3D.</p><p style="margin-top:10px">© <span id="yr"></span> Carvalho Impressão 3D</p></div>
+<nav aria-label="Rodapé"><a href="#criacoes">Criações</a><a href="#processo">Como funciona</a><a href="#personalizar">Orçamento</a><a href="https://www.instagram.com/carvalho_impressao_3d/" target="_blank" rel="noopener noreferrer">Instagram</a><a data-wa href="#">WhatsApp</a></nav></div></footer>
+<a class="wpp" data-wa href="#" aria-label="Falar no WhatsApp">WhatsApp</a>
+<dialog id="dlg" aria-labelledby="dt"><button class="x" aria-label="Fechar">✕</button><div class="art" id="da"></div><div class="dc"><h3 id="dt"></h3><p id="dp"></p><div class="cta"><a class="btn main" id="dw" href="#" target="_blank" rel="noopener noreferrer">Consultar esta categoria</a></div></div></dialog>
+<script>
+/* Defina aqui o número comercial com DDI e DDD, só dígitos. Ex.: "5547999999999". Vazio = o WhatsApp abre e o visitante escolhe o contato. */
+const WA_NUMBER="";
+const wa=t=>"https://wa.me/"+WA_NUMBER+"?text="+encodeURIComponent(t);
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+$$("[data-wa]").forEach(a=>{a.href=wa("Olá! Vim pelo site da Carvalho Impressão 3D e quero conversar sobre uma peça.");a.target="_blank";a.rel="noopener noreferrer"});
+$("#yr").textContent=new Date().getFullYear();
+addEventListener("scroll",()=>$("header").classList.toggle("sc",scrollY>20),{passive:true});
+const b=$(".burger"),m=$("#menu");
+b.onclick=()=>{const o=m.classList.toggle("open");b.setAttribute("aria-expanded",o)};
+m.onclick=e=>{if(e.target.tagName==="A"){m.classList.remove("open");b.setAttribute("aria-expanded",false)}};
+const P=[
+["Decoração e design","Decoração","a1","Objetos decorativos com formas e cores exploradas em camadas."],
+["Miniaturas e colecionáveis","Miniaturas","a2","Miniaturas criativas e itens de coleção."],
+["Chaveiros e acessórios","Acessórios","a3","Acessórios para o dia a dia."],
+["Organização e utilidades","Utilidades","a4","Suportes e peças pensadas para organizar espaços."],
+["Presentes criativos","Presentes","a5","Ideias de presente com personalidade."],
+["Projetos sob encomenda","Sob encomenda","a6","Peças específicas, avaliadas caso a caso."]];
+const cats=["Todos",...new Set(P.map(p=>p[1]))];
+$(".filters").innerHTML=cats.map((c,i)=>`<button type="button" aria-pressed="${!i}">${c}</button>`).join("");
+$("#grid").innerHTML=P.map((p,i)=>`<button class="item" data-i="${i}" data-c="${p[1]}"><span class="art ${p[2]}"></span><small>${p[1]}</small><h3>${p[0]}</h3></button>`).join("");
+$(".filters").onclick=e=>{if(e.target.tagName!=="BUTTON")return;$$(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===e.target));const c=e.target.textContent;$$(".item").forEach(i=>i.hidden=c!=="Todos"&&i.dataset.c!==c)};
+const dlg=$("#dlg");
+$("#grid").onclick=e=>{const it=e.target.closest(".item");if(!it)return;const p=P[it.dataset.i];$("#da").className="art "+p[2];$("#dt").textContent=p[0];$("#dp").textContent=p[3]+" Fale com a gente para ver opções reais, cores e tamanhos disponíveis.";$("#dw").href=wa("Olá! Tenho interesse em: "+p[0]+".");dlg.showModal()};
+dlg.onclick=e=>{if(e.target===dlg||e.target.closest(".x"))dlg.close()};
+const cmp=$("#cmp");cmp.querySelector("input").oninput=e=>cmp.style.setProperty("--p",e.target.value+"%");
+if(!matchMedia("(prefers-reduced-motion:reduce)").matches&&matchMedia("(hover:hover)").matches){
+$(".hero").addEventListener("mousemove",e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;$$(".obj").forEach(o=>o.style.transform=`translate(${x*o.dataset.d}px,${y*o.dataset.d}px)`)})}
+const io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&(x.target.classList.add("on"),io.unobserve(x.target))),{threshold:.12});
+$$(".rv").forEach(r=>io.observe(r));
+const F=$("#f"),rules={n:v=>v.trim().length>1||"Informe seu nome.",w:v=>v.replace(/\D/g,"").length>=10||"Informe um WhatsApp com DDD.",tp:v=>!!v||"Escolha o tipo de projeto.",d:v=>v.trim().length>=10||"Descreva sua ideia em pelo menos 10 caracteres.",q:v=>+v>=1||"Use uma quantidade de 1 ou mais.",l:v=>!v||/^https?:\/\/\S+\.\S+/.test(v)||"Use um link começando com http:// ou https://."};
+F.onsubmit=e=>{e.preventDefault();let ok=true,first;
+for(const k in rules){const el=$("#"+k),r=rules[k](el.value),err=el.parentNode.querySelector(".err");el.setAttribute("aria-invalid",r!==true);err.textContent=r===true?"":r;if(r!==true){ok=false;first=first||el}}
+if(!ok){first.focus();return}
+const v=k=>$("#"+k).value.trim()||"não informado";
+const msg=`Olá! Vim pelo site da Carvalho Impressão 3D e quero um orçamento.\n\nNome: ${v("n")}\nWhatsApp: ${v("w")}\nTipo de projeto: ${v("tp")}\nIdeia: ${v("d")}\nCor: ${v("c")}\nTamanho: ${v("s")}\nQuantidade: ${v("q")}\nReferência: ${v("l")}`;
+const w=open(wa(msg),"_blank","noopener");$("#fs").textContent=w?"WhatsApp aberto com sua mensagem. É só enviar.":"Seu navegador bloqueou a abertura. Permita pop-ups e clique em Solicitar orçamento de novo."};
+</script>
+</body>
+</html>

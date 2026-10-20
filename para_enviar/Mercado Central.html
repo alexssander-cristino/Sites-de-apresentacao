@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mercado Central — Ofertas, setores e novidades</title>
+<meta name="description" content="Conheça as ofertas, os setores e as novidades do Mercado Central.">
+<meta property="og:title" content="Mercado Central">
+<meta property="og:description" content="Ofertas, setores e novidades do Mercado Central.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f1e7;--surface:#fffdf8;--ink:#14231a;--muted:#5a6a5f;--brand:#0f4d33;--brand-ink:#f6f1e7;--accent:#e8512b;--line:#d9d1bf;--hd:"Archivo Black","Arial Black",Impact,sans-serif;--bd:"Archivo",system-ui,Arial,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1a13;--surface:#16271d;--ink:#f1ece0;--muted:#a3b3a8;--brand:#1f7a50;--brand-ink:#fff;--accent:#ff7a52;--line:#2b4034}}
+:root[data-theme="dark"]{--bg:#0e1a13;--surface:#16271d;--ink:#f1ece0;--muted:#a3b3a8;--brand:#1f7a50;--brand-ink:#fff;--accent:#ff7a52;--line:#2b4034}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.55 var(--bd)}
+a{color:inherit}
+h1,h2,h3{font-family:var(--hd);font-weight:400;line-height:1.02;margin:0;letter-spacing:-.01em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border:2px solid var(--ink);background:var(--ink);color:var(--bg);font:700 .95rem var(--bd);text-decoration:none;cursor:pointer;border-radius:2px;transition:transform .2s,background .2s,color .2s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:3px 3px 0 var(--accent)}
+.btn.alt{background:transparent;color:inherit}
+.btn.acc{background:var(--accent);border-color:var(--accent);color:#fff}
+/* header */
+header{position:fixed;left:0;right:0;top:0;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .3s,color .3s;color:var(--brand-ink)}
+header.solid{background:var(--brand);box-shadow:0 1px 0 rgba(0,0,0,.2)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--hd);font-size:1.25rem;text-decoration:none;display:flex;gap:8px;align-items:center}
+.logo i{width:14px;height:14px;background:var(--accent);display:inline-block;transform:rotate(45deg)}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:6px}
+nav .btn{min-height:40px;padding:0 16px;background:var(--accent);border-color:var(--accent);color:#fff}
+.burger{display:none;background:none;border:2px solid currentColor;color:inherit;min-width:48px;min-height:44px;font:700 .85rem var(--bd);cursor:pointer}
+@media(max-width:820px){.burger{display:block}nav{position:absolute;top:100%;left:0;right:0;background:var(--brand);display:none;padding:8px 20px 20px}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch;gap:0}nav li a{display:flex;min-height:52px;align-items:center;border-bottom:1px solid rgba(255,255,255,.15)}nav .btn{margin-top:14px;justify-content:center}}
+/* hero */
+.hero{position:relative;min-height:100svh;background:var(--brand);color:var(--brand-ink);display:flex;align-items:flex-end;overflow:hidden}
+.hero .photo{position:absolute;inset:0;background:radial-gradient(circle at 78% 30%,rgba(232,81,43,.55) 0 18%,transparent 18.2%),radial-gradient(circle at 92% 70%,rgba(246,241,231,.12) 0 22%,transparent 22.2%),repeating-linear-gradient(115deg,transparent 0 46px,rgba(255,255,255,.04) 46px 48px)}
+.hero .photo img{width:100%;height:100%;object-fit:cover;opacity:.55}
+.hero-in{position:relative;padding:130px 0 64px;max-width:760px}
+.kicker{display:inline-block;background:var(--accent);color:#fff;font:700 .78rem var(--bd);letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;transform:rotate(-2deg);margin-bottom:20px}
+.hero h1{font-size:clamp(2.6rem,9vw,6rem)}
+.hero p{font-size:1.15rem;max-width:520px;margin:20px 0 28px;opacity:.92}
+.hero .btn{border-color:var(--brand-ink);background:var(--brand-ink);color:var(--brand)}
+.hero .btn.alt{background:transparent;color:var(--brand-ink)}
+.tag{position:absolute;right:max(20px,6vw);top:24%;width:150px;height:150px;border-radius:50%;background:var(--surface);color:var(--ink);display:grid;place-items:center;text-align:center;font:700 .8rem/1.2 var(--bd);transform:rotate(8deg);border:3px dashed var(--accent);padding:14px}
+.tag b{font:400 1.5rem/1 var(--hd);display:block;color:var(--accent)}
+@media(max-width:700px){.tag{width:104px;height:104px;top:14%;font-size:.65rem}.tag b{font-size:1.05rem}}
+section{padding:84px 0}
+.sec-h{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.sec-h h2{font-size:clamp(2rem,5vw,3.4rem)}
+.sec-h p{max-width:420px;color:var(--muted);margin:0}
+.demo{background:#ffe27a;color:#3a2f00;font:700 .72rem var(--bd);padding:4px 10px;display:inline-block;margin-bottom:14px}
+/* offers */
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.tools input{flex:1 1 220px;min-height:48px;padding:0 14px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);font:inherit;border-radius:2px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+.chip{flex:none;min-height:44px;padding:0 16px;border:2px solid var(--line);background:transparent;color:var(--ink);font:600 .9rem var(--bd);cursor:pointer;border-radius:999px;transition:all .2s}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+.card{background:var(--surface);border:2px solid var(--ink);display:flex;flex-direction:column;animation:pop .35s both}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}}
+.ph{aspect-ratio:4/3;background:var(--line);display:grid;place-items:center;font:400 3.2rem var(--hd);color:var(--muted);position:relative;overflow:hidden}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.05)}
+.badge{position:absolute;left:0;top:12px;background:var(--accent);color:#fff;font:700 .72rem var(--bd);padding:4px 10px;letter-spacing:.06em;text-transform:uppercase}
+.cb{padding:14px 16px 18px;display:flex;flex-direction:column;gap:2px;flex:1}
+.cb small{color:var(--muted)}
+.cb h3{font:700 1.05rem/1.25 var(--bd)}
+.price{margin-top:auto;padding-top:12px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price b{font:400 2.1rem/1 var(--hd);color:var(--brand)}
+.price b sup{font-size:.9rem;vertical-align:top;margin-right:2px}
+.price s{color:var(--muted);font-size:.9rem}
+.empty{padding:40px;text-align:center;color:var(--muted);border:2px dashed var(--line)}
+/* campaigns */
+.camps{background:var(--ink);color:var(--bg)}
+.camps .sec-h p{color:inherit;opacity:.7}
+.cg{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.camp{padding:32px;min-height:280px;display:flex;flex-direction:column;justify-content:flex-end;gap:12px;grid-column:span 6;position:relative;overflow:hidden}
+.camp:nth-child(1){grid-column:span 7;background:var(--accent);color:#fff}
+.camp:nth-child(2){grid-column:span 5;background:var(--brand);color:var(--brand-ink)}
+.camp:nth-child(3){grid-column:span 12;background:var(--bg);color:var(--ink);min-height:200px}
+.camp h3{font-size:clamp(1.6rem,3.6vw,2.6rem)}
+.camp p{margin:0;max-width:440px}
+.camp a{font-weight:700;text-underline-offset:5px;min-height:44px;display:inline-flex;align-items:center}
+@media(max-width:760px){.camp,.camp:nth-child(n){grid-column:span 12}}
+/* sectors */
+.sg{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.sec{grid-column:span 2;min-height:240px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;text-decoration:none;border:2px solid var(--ink);background:var(--surface);position:relative;overflow:hidden;transition:background .25s,color .25s}
+.sec:nth-child(1),.sec:nth-child(4){grid-column:span 3}
+.sec:hover{background:var(--brand);color:var(--brand-ink)}
+.sec h3{font-size:1.7rem;margin-bottom:6px}
+.sec p{margin:0;font-size:.95rem;opacity:.85}
+.sec span{position:absolute;top:14px;right:16px;font:400 3rem var(--hd);opacity:.12}
+@media(max-width:760px){.sg{grid-template-columns:1fr}.sec,.sec:nth-child(n){grid-column:auto;min-height:150px}}
+/* about, insta */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media(max-width:760px){.two{grid-template-columns:1fr;gap:28px}}
+.about .block{aspect-ratio:1;background:var(--brand);color:var(--brand-ink);display:grid;place-items:center;font:400 clamp(2rem,7vw,3.5rem)/1 var(--hd);text-align:center;padding:24px;position:relative}
+.about .block::after{content:"";position:absolute;inset:14px;border:2px dashed var(--accent)}
+.vals{display:grid;gap:10px;margin:20px 0 0;padding:0;list-style:none}
+.vals li{padding-left:22px;position:relative}
+.vals li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;background:var(--accent);transform:rotate(45deg)}
+.ig{background:var(--surface);border-block:2px solid var(--ink)}
+.igg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0}
+.igg div{aspect-ratio:1;background:var(--line);display:grid;place-items:center;color:var(--muted);font-size:.8rem;text-align:center;padding:8px;overflow:hidden}
+.igg img{width:100%;height:100%;object-fit:cover}
+@media(max-width:600px){.igg{grid-template-columns:repeat(2,1fr)}}
+/* contact */
+.cl{display:grid;gap:14px;margin:20px 0 28px}
+.cl dt{font:700 .75rem var(--bd);letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cl dd{margin:0;font-size:1.1rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+form{display:grid;gap:14px;background:var(--surface);border:2px solid var(--ink);padding:24px}
+label{display:grid;gap:6px;font-weight:600;font-size:.9rem}
+input,textarea{font:inherit;padding:12px;border:2px solid var(--line);background:var(--bg);color:var(--ink);border-radius:2px;min-height:48px}
+.err{color:var(--accent);font-size:.82rem;min-height:1em;font-weight:400}
+footer{background:var(--brand);color:var(--brand-ink);padding:36px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;transition:none}.card{animation:none}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header id="hd"><div class="wrap bar">
+ <a class="logo" href="#inicio" aria-label="Mercado Central — início"><i></i>MERCADO CENTRAL</a>
+ <button class="burger" id="bg" aria-expanded="false" aria-controls="nv">Menu</button>
+ <nav id="nv" aria-label="Principal"><ul>
+  <li><a href="#inicio">Início</a></li><li><a href="#ofertas">Ofertas</a></li><li><a href="#setores">Nossos setores</a></li><li><a href="#sobre">Sobre o mercado</a></li><li><a href="#contato">Contato</a></li>
+  <li><a class="btn" href="#ofertas">Ver ofertas</a></li></ul></nav>
+</div></header>
+
+<main>
+<div class="hero" id="inicio">
+ <div class="photo" id="heroPhoto" aria-hidden="true"></div>
+ <div class="tag" aria-hidden="true"><div>ofertas<b>sempre<br>em dia</b>confira</div></div>
+ <div class="wrap"><div class="hero-in">
+  <span class="kicker">Mercado Central</span>
+  <h1>Sua rotina mais completa começa aqui.</h1>
+  <p>Qualidade, variedade e ofertas para acompanhar você em todos os momentos.</p>
+  <div class="cta"><a class="btn" href="#ofertas">Confira as ofertas</a><a class="btn alt" href="#sobre">Conheça o Mercado</a></div>
+ </div></div>
+</div>
+
+<section id="ofertas"><div class="wrap">
+ <div class="sec-h rv"><div><span class="demo" id="demoFlag">CONTEÚDO DE EXEMPLO — substituir por dados reais</span><h2>Central de ofertas</h2></div><p>Filtre por setor ou busque pelo nome do produto.</p></div>
+ <div class="tools rv"><input id="q" type="search" placeholder="Buscar produto…" aria-label="Buscar produto"><div class="chips" id="chips" role="group" aria-label="Categorias"></div></div>
+ <p id="count" class="sr" aria-live="polite" style="color:var(--muted);margin:0 0 14px"></p>
+ <div class="grid" id="grid"></div>
+</div></section>
+
+<section class="camps" id="campanhas"><div class="wrap">
+ <div class="sec-h rv"><h2>Campanhas e destaques</h2><p>Ative apenas as campanhas confirmadas pelo mercado (arquivo de configuração abaixo).</p></div>
+ <div class="cg rv" id="camps"></div>
+</div></section>
+
+<section id="setores"><div class="wrap">
+ <div class="sec-h rv"><div><span class="demo">SETORES A CONFIRMAR COM O MERCADO</span><h2>Conheça nossos setores</h2></div><p>Toque em um setor para ver as ofertas dele.</p></div>
+ <div class="sg rv" id="sectors"></div>
+</div></section>
+
+<section class="about" id="sobre"><div class="wrap two">
+ <div class="rv"><h2 style="font-size:clamp(2rem,5vw,3.2rem)">A marca por trás do mercado</h2>
+  <p style="margin-top:18px" id="aboutTxt"></p>
+  <ul class="vals"><li>Relacionamento próximo com os clientes</li><li>Compromisso com a qualidade</li><li>Variedade para o dia a dia</li></ul></div>
+ <div class="block rv" id="aboutImg" role="img" aria-label="Espaço reservado para foto da loja">Foto real da loja aqui</div>
+</div></section>
+
+<section class="ig" id="instagram"><div class="wrap">
+ <div class="sec-h rv" style="margin:0"><h2>Acompanhe o Mercado Central</h2><p>Novidades e ofertas em primeira mão no perfil oficial.</p></div>
+ <div class="igg rv" id="igg"></div>
+ <a class="btn acc" id="igLink" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/mercado_central_oficial/">Seguir no Instagram</a>
+</div></section>
+
+<section id="contato"><div class="wrap two" style="align-items:start">
+ <div class="rv"><h2 style="font-size:clamp(2rem,5vw,3.2rem)">Visite o Mercado</h2>
+  <dl class="cl" id="info"></dl><div class="cta" id="ctaBtns"></div></div>
+ <form id="form" class="rv" novalidate>
+  <h3 style="font-size:1.4rem">Fale com o mercado</h3>
+  <label>Nome<input name="n" required autocomplete="name"><span class="err" data-for="n"></span></label>
+  <label>E-mail<input name="e" type="email" required autocomplete="email"><span class="err" data-for="e"></span></label>
+  <label>Mensagem<textarea name="m" rows="4" required></textarea><span class="err" data-for="m"></span></label>
+  <button class="btn" type="submit">Enviar mensagem</button>
+  <p id="fmsg" role="status" style="margin:0;font-size:.9rem"></p>
+ </form>
+</div></section>
+</main>
+<footer><div class="wrap"><span>© <span id="yr"></span> Mercado Central</span><span>Site em desenvolvimento — conteúdo de exemplo sinalizado.</span></div></footer>
+
+<script>
+/* ===== CONFIGURAÇÃO — a equipe edita apenas este bloco =====
+   Deixe vazio o que não foi confirmado: o site oculta o botão/campo correspondente.
+   Preços/produtos abaixo são EXEMPLOS (demo:true). Ao inserir dados reais, use demo:false. */
+const CONFIG = {
+  demo: true,
+  heroImage: "",            // data URI ou caminho de foto real
+  instagram: "https://www.instagram.com/mercado_central_oficial/",
+  about: "Texto institucional real do Mercado Central (história, valores, comunidade) — a ser fornecido pela empresa.",
+  contact: { endereco:"", telefone:"", whatsapp:"" /* só dígitos com DDI, ex: 5547999999999 */, horario:"", mapsUrl:"" },
+  gallery: [],              // lista de { img:"data:...", alt:"" } fornecida pela empresa
+  campaigns: [
+    { ativa:true, titulo:"Ofertas da semana", texto:"Os preços em destaque desta semana, reunidos em um só lugar.", link:"#ofertas", cta:"Ver ofertas" },
+    { ativa:true, titulo:"Especial de hortifrúti", texto:"Frescor e variedade para a mesa.", link:"#ofertas", cat:"Hortifrúti", cta:"Ver hortifrúti" },
+    { ativa:false, titulo:"Seleção para o churrasco", texto:"Ative quando houver campanha confirmada.", link:"#ofertas", cat:"Carnes", cta:"Ver carnes" }
+  ],
+  sectors: [
+    { nome:"Hortifrúti", desc:"Mais cor, frescor e variedade para a sua mesa." },
+    { nome:"Padaria", desc:"Sabores que fazem parte dos melhores momentos do dia." },
+    { nome:"Carnes", desc:"Opções para diferentes receitas e ocasiões." },
+    { nome:"Mercearia", desc:"Tudo para abastecer a despensa." },
+    { nome:"Bebidas", desc:"Para o dia a dia e para as ocasiões especiais." },
+    { nome:"Limpeza", desc:"Praticidade para cuidar da casa." }
+  ],
+  /* preco em número; de = preço anterior (só se promoção real); validade opcional; img opcional */
+  offers: [
+    { nome:"Produto exemplo 1", marca:"Marca", un:"kg", preco:0.00, de:null, cat:"Hortifrúti", validade:"", img:"" },
+    { nome:"Produto exemplo 2", marca:"Marca", un:"unidade", preco:0.00, de:null, cat:"Padaria", validade:"", img:"" },
+    { nome:"Produto exemplo 3", marca:"Marca", un:"kg", preco:0.00, de:null, cat:"Carnes", validade:"", img:"" },
+    { nome:"Produto exemplo 4", marca:"Marca", un:"pacote", preco:0.00, de:null, cat:"Mercearia", validade:"", img:"" },
+    { nome:"Produto exemplo 5", marca:"Marca", un:"litro", preco:0.00, de:null, cat:"Bebidas", validade:"", img:"" },
+    { nome:"Produto exemplo 6", marca:"Marca", un:"unidade", preco:0.00, de:null, cat:"Limpeza", validade:"", img:"" }
+  ]
+};
+
+const $=s=>document.querySelector(s), esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const brl=n=>{const [i,d]=Number(n).toFixed(2).split(".");return `<sup>R$</sup>${i},${d}`};
+$("#yr").textContent=new Date().getFullYear();
+if(!CONFIG.demo)$("#demoFlag").hidden=true;
+$("#aboutTxt").textContent=CONFIG.about;
+$("#igLink").href=CONFIG.instagram;
+if(CONFIG.heroImage)$("#heroPhoto").innerHTML=`<img src="${esc(CONFIG.heroImage)}" alt="">`;
+
+/* header */
+const hd=$("#hd"),nv=$("#nv"),bg=$("#bg");
+const onS=()=>hd.classList.toggle("solid",scrollY>40||nv.classList.contains("open"));
+addEventListener("scroll",onS,{passive:true});onS();
+bg.onclick=()=>{const o=nv.classList.toggle("open");bg.setAttribute("aria-expanded",o);onS()};
+nv.addEventListener("click",e=>{if(e.target.closest("a")){nv.classList.remove("open");bg.setAttribute("aria-expanded","false");onS()}});
+
+/* offers */
+let cat="Todas";
+const cats=["Todas",...new Set(CONFIG.offers.map(o=>o.cat))];
+$("#chips").innerHTML=cats.map(c=>`<button class="chip" aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join("");
+function render(){
+  const q=$("#q").value.trim().toLowerCase();
+  const list=CONFIG.offers.filter(o=>(cat==="Todas"||o.cat===cat)&&(o.nome+" "+(o.marca||"")).toLowerCase().includes(q));
+  document.querySelectorAll(".chip").forEach(b=>b.setAttribute("aria-pressed",b.dataset.c===cat));
+  $("#count").textContent=list.length+(list.length===1?" oferta encontrada":" ofertas encontradas");
+  $("#grid").innerHTML=list.length?list.map(o=>`<article class="card"><div class="ph">${o.img?`<img src="${esc(o.img)}" alt="${esc(o.nome)}" loading="lazy">`:esc(o.nome.charAt(0))}${o.de?'<span class="badge">Oferta</span>':""}</div><div class="cb"><small>${esc(o.cat)}${o.marca?" · "+esc(o.marca):""}</small><h3>${esc(o.nome)}</h3><div class="price"><b>${brl(o.preco)}</b><small>/ ${esc(o.un)}</small>${o.de?`<s>R$ ${Number(o.de).toFixed(2).replace(".",",")}</s>`:""}</div>${o.validade?`<small>Válido: ${esc(o.validade)}</small>`:""}</div></article>`).join(""):`<div class="empty" style="grid-column:1/-1">Nenhuma oferta encontrada. Tente outro termo ou categoria.</div>`;
+}
+$("#chips").onclick=e=>{const b=e.target.closest(".chip");if(b){cat=b.dataset.c;render()}};
+$("#q").oninput=render;render();
+const goCat=c=>{cat=cats.includes(c)?c:"Todas";render()};
+
+/* campaigns */
+$("#camps").innerHTML=CONFIG.campaigns.filter(c=>c.ativa).map(c=>`<div class="camp"><h3>${esc(c.titulo)}</h3><p>${esc(c.texto)}</p><a href="${esc(c.link)}" data-cat="${esc(c.cat||"")}">${esc(c.cta)} →</a></div>`).join("");
+$("#camps").onclick=e=>{const a=e.target.closest("a");if(a&&a.dataset.cat)goCat(a.dataset.cat)};
+
+/* sectors */
+$("#sectors").innerHTML=CONFIG.sectors.map((s,i)=>`<a class="sec" href="#ofertas" data-cat="${esc(s.nome)}"><span>0${i+1}</span><h3>${esc(s.nome)}</h3><p>${esc(s.desc)}</p></a>`).join("");
+$("#sectors").onclick=e=>{const a=e.target.closest("a");if(a)goCat(a.dataset.cat)};
+
+/* gallery */
+$("#igg").innerHTML=CONFIG.gallery.length?CONFIG.gallery.map(g=>`<div><img src="${esc(g.img)}" alt="${esc(g.alt||"")}" loading="lazy"></div>`).join(""):Array(4).fill('<div>Foto fornecida pela empresa</div>').join("");
+
+/* contact (só mostra o que existe) */
+const c=CONFIG.contact,rows=[["Endereço",c.endereco],["Telefone",c.telefone],["Horário",c.horario]].filter(r=>r[1]);
+$("#info").innerHTML=rows.length?rows.map(r=>`<div><dt>${r[0]}</dt><dd>${esc(r[1])}</dd></div>`).join(""):`<div><dt>Informações</dt><dd>Endereço, telefone e horário serão exibidos aqui após confirmação.</dd></div>`;
+let btns="";
+if(c.whatsapp)btns+=`<a class="btn acc" target="_blank" rel="noopener noreferrer" href="https://wa.me/${esc(c.whatsapp)}">Falar no WhatsApp</a>`;
+if(c.mapsUrl)btns+=`<a class="btn" target="_blank" rel="noopener noreferrer" href="${esc(c.mapsUrl)}">Como chegar</a>`;
+btns+=`<a class="btn alt" target="_blank" rel="noopener noreferrer" href="${esc(CONFIG.instagram)}">Instagram</a>`;
+$("#ctaBtns").innerHTML=btns;
+if(c.whatsapp){const f=document.createElement("a");f.href="https://wa.me/"+c.whatsapp;f.target="_blank";f.rel="noopener noreferrer";f.className="btn acc";f.textContent="WhatsApp";f.style.cssText="position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:15";document.body.append(f)}
+
+/* form: validação; sem backend, não finge envio */
+$("#form").addEventListener("submit",e=>{
+  e.preventDefault();const f=e.target;let ok=true;
+  [["n","Informe seu nome."],["e","Informe um e-mail válido."],["m","Escreva sua mensagem."]].forEach(([k,msg])=>{
+    const el=f.elements[k],bad=!el.value.trim()||(k==="e"&&!el.validity.valid&&!/^\S+@\S+\.\S+$/.test(el.value));
+    f.querySelector(`[data-for=${k}]`).textContent=bad?msg:"";if(bad)ok=false});
+  $("#fmsg").textContent=ok?(c.whatsapp?"Para falar agora, use o botão de WhatsApp. O envio por formulário ainda depende de um serviço de e-mail ser configurado.":"Formulário validado. O envio ainda depende de um serviço de e-mail ser configurado."):"";
+});
+
+/* reveal */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
