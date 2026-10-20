@@ -1,0 +1,3331 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f3">
+
+  <title>Vem Que Tem Preço Barato | Moda em Pouso Redondo SC</title>
+  <meta name="description" content="Descubra novidades e achadinhos na Vem Que Tem Preço Barato, em Pouso Redondo, Santa Catarina. Confira nossa loja virtual e acompanhe o Instagram.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vem Que Tem Preço Barato">
+  <meta property="og:description" content="Moda bonita, novidades e achadinhos para você.">
+  <meta property="og:url" content="https://vemqtem22.lojavirtualnuvem.com.br/">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<style>
+    
+/* ==========================================================
+   VEM QUE TEM PREÇO BARATO
+   Identidade visual: Rosa-choque / Pink premium
+   Arquivo: styles.css
+   ========================================================== */
+
+/* =========================
+   1. VARIÁVEIS E RESET
+   ========================= */
+
+:root {
+  --pink: #ff008c;
+  --pink-bright: #ff1493;
+  --pink-dark: #d90070;
+  --pink-deep: #a90058;
+  --pink-light: #ff5bb6;
+  --pink-pale: #fff0f8;
+  --pink-soft: #ffe0ef;
+  --pink-border: #ffd0e7;
+
+  --white: #ffffff;
+  --cream: #fffafd;
+  --background: #fff8fc;
+
+  --ink: #281321;
+  --ink-soft: #513044;
+  --muted: #826b7a;
+
+  --yellow: #ffe66d;
+  --green: #24a879;
+
+  --font-body: "DM Sans", sans-serif;
+  --font-heading: "Manrope", sans-serif;
+
+  --container: 1220px;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 30px;
+  --radius-xl: 42px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 6px 20px rgba(169, 0, 88, 0.06);
+  --shadow-md: 0 15px 40px rgba(169, 0, 88, 0.10);
+  --shadow-lg: 0 25px 65px rgba(169, 0, 88, 0.16);
+  --shadow-pink: 0 12px 28px rgba(255, 0, 140, 0.25);
+
+  --transition: 0.28s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-body);
+}
+
+button,
+input,
+textarea,
+select {
+  font-size: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--pink-light);
+  outline-offset: 4px;
+}
+
+::selection {
+  background: var(--pink);
+  color: var(--white);
+}
+
+.container {
+  width: min(var(--container), calc(100% - 56px));
+  margin-inline: auto;
+}
+
+section {
+  position: relative;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 9999;
+  top: 12px;
+  left: 12px;
+  padding: 12px 18px;
+  transform: translateY(-150%);
+  border-radius: 10px;
+  background: var(--pink-dark);
+  color: var(--white);
+  font-weight: 700;
+  transition: transform var(--transition);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* =========================
+   2. TIPOGRAFIA
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+h1 {
+  font-size: clamp(3.1rem, 6.4vw, 6.1rem);
+}
+
+h2 {
+  font-size: clamp(2.25rem, 4.6vw, 4.2rem);
+}
+
+h3 {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+}
+
+p {
+  color: var(--muted);
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+h1 span,
+h2 span {
+  color: var(--pink);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  color: var(--pink-dark);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.eyebrow .dot {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--pink);
+  box-shadow: 0 0 0 5px rgba(255, 0, 140, 0.12);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--pink-dark);
+  font-size: 0.9rem;
+  font-weight: 800;
+  transition: color var(--transition), gap var(--transition);
+}
+
+.text-link:hover {
+  gap: 13px;
+  color: var(--pink);
+}
+
+/* =========================
+   3. BOTÕES
+   ========================= */
+
+.button {
+  position: relative;
+  display: inline-flex;
+  min-height: 56px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 15px 27px;
+  overflow: hidden;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: 0.92rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition);
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button span {
+  font-size: 1.2rem;
+  transition: transform var(--transition);
+}
+
+.button:hover span {
+  transform: translateX(4px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--pink-bright), var(--pink-dark));
+  color: var(--white);
+  box-shadow: var(--shadow-pink);
+}
+
+.button-primary:hover {
+  background: linear-gradient(135deg, var(--pink-dark), var(--pink-deep));
+  color: var(--white);
+  box-shadow: 0 17px 36px rgba(217, 0, 112, 0.30);
+}
+
+.button-outline {
+  border-color: var(--pink-border);
+  background: var(--white);
+  color: var(--pink-dark);
+}
+
+.button-outline:hover {
+  border-color: var(--pink);
+  background: var(--pink-pale);
+  color: var(--pink-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.button-dark {
+  background: var(--ink);
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(40, 19, 33, 0.13);
+}
+
+.button-dark:hover {
+  background: var(--pink-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-pink);
+}
+
+.button-light {
+  background: var(--white);
+  color: var(--pink-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.button-light:hover {
+  background: var(--yellow);
+  color: var(--ink);
+}
+
+.button-outline-light {
+  border-color: rgba(255, 255, 255, 0.65);
+  background: transparent;
+  color: var(--white);
+}
+
+.button-outline-light:hover {
+  border-color: var(--white);
+  background: var(--white);
+  color: var(--pink-dark);
+}
+
+.button-small {
+  min-height: 44px;
+  padding: 12px 19px;
+  font-size: 0.82rem;
+}
+
+/* =========================
+   4. FAIXA SUPERIOR
+   ========================= */
+
+.announcement {
+  position: relative;
+  z-index: 1002;
+  display: flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 20px;
+  background: var(--pink);
+  color: var(--white);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.announcement span {
+  color: var(--white);
+}
+
+.announcement a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--white);
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+  text-underline-offset: 3px;
+  transition: opacity var(--transition);
+}
+
+.announcement a:hover {
+  opacity: 0.78;
+}
+
+/* =========================
+   5. CABEÇALHO E NAVEGAÇÃO
+   ========================= */
+
+.header {
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  border-bottom: 1px solid rgba(255, 208, 231, 0.8);
+  background: rgba(255, 250, 253, 0.93);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.header-inner {
+  display: flex;
+  min-height: 86px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 49px;
+  height: 49px;
+  flex-shrink: 0;
+  place-items: center;
+  transform: rotate(-5deg);
+  border-radius: 16px;
+  background: linear-gradient(145deg, var(--pink-bright), var(--pink-dark));
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+  box-shadow: 0 8px 20px rgba(255, 0, 140, 0.24);
+  transition: transform var(--transition);
+}
+
+.brand:hover .brand-mark {
+  transform: rotate(5deg) scale(1.05);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name strong {
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 1.17rem;
+  font-weight: 900;
+  letter-spacing: -0.065em;
+}
+
+.brand-name small {
+  margin-top: 6px;
+  color: var(--pink-dark);
+  font-size: 0.64rem;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  position: relative;
+  padding: 10px 0;
+  color: var(--ink-soft);
+  font-size: 0.86rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: var(--radius-pill);
+  background: var(--pink);
+  content: "";
+  transition: transform var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--pink-dark);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.instagram-icon {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid var(--pink-border);
+  border-radius: 50%;
+  background: var(--pink-pale);
+  color: var(--pink-dark);
+  font-size: 1.65rem;
+  line-height: 1;
+  transition:
+    transform var(--transition),
+    color var(--transition),
+    background var(--transition);
+}
+
+.instagram-icon:hover {
+  transform: translateY(-3px) rotate(-7deg);
+  background: var(--pink);
+  color: var(--white);
+}
+
+.menu-toggle {
+  display: none;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid var(--pink-border);
+  border-radius: 50%;
+  background: var(--white);
+}
+
+.menu-toggle span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: var(--radius-pill);
+  background: var(--pink-dark);
+  transition:
+    transform var(--transition),
+    opacity var(--transition);
+}
+
+.menu-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================
+   6. HERO
+   ========================= */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding: 83px 0 30px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(255, 91, 182, 0.16), transparent 33%),
+    radial-gradient(ellipse at 5% 75%, rgba(255, 0, 140, 0.07), transparent 30%),
+    linear-gradient(135deg, #fffafd 0%, #fff3f9 100%);
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  top: -155px;
+  right: -100px;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255, 0, 140, 0.11);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero::after {
+  position: absolute;
+  z-index: -1;
+  right: 4%;
+  bottom: -230px;
+  width: 450px;
+  height: 450px;
+  border: 1px solid rgba(255, 0, 140, 0.09);
+  border-radius: 50%;
+  content: "";
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.94fr;
+  align-items: center;
+  gap: clamp(40px, 6vw, 90px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 35px;
+}
+
+.hero-content h1 {
+  margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+  display: inline-block;
+  position: relative;
+  color: var(--pink);
+}
+
+.hero-content h1 span::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  left: 0;
+  height: 8px;
+  transform: rotate(-1.5deg);
+  border-radius: 50%;
+  background: rgba(255, 0, 140, 0.17);
+  content: "";
+}
+
+.hero-content > p {
+  max-width: 500px;
+  margin-bottom: 31px;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.hero-note {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 31px;
+}
+
+.note-icon {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--pink-soft);
+  color: var(--pink-dark);
+  font-size: 1.35rem;
+}
+
+.hero-note > span:last-child {
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.55;
+}
+
+.hero-note strong {
+  color: var(--ink);
+  font-size: 0.92rem;
+}
+
+.hero-visual {
+  position: relative;
+  min-width: 0;
+  padding: 0 0 25px 20px;
+}
+
+.hero-visual::before {
+  position: absolute;
+  z-index: -1;
+  top: 28px;
+  right: -16px;
+  bottom: 5px;
+  left: 45px;
+  transform: rotate(4deg);
+  border-radius: 35px;
+  background: var(--pink);
+  content: "";
+}
+
+.hero-visual > img {
+  width: 100%;
+  height: clamp(400px, 45vw, 600px);
+  border: 7px solid var(--white);
+  border-radius: 34px;
+  object-fit: cover;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-sticker {
+  position: absolute;
+  top: 34px;
+  left: -9px;
+  display: flex;
+  width: 132px;
+  height: 132px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotate(-9deg);
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  background: var(--yellow);
+  color: var(--ink);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-sticker small {
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+}
+
+.hero-sticker strong {
+  margin-top: 1px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 0.98;
+  text-align: center;
+  letter-spacing: -0.07em;
+}
+
+.hero-sticker > span {
+  position: absolute;
+  right: 12px;
+  bottom: 13px;
+  color: var(--pink-dark);
+  font-size: 1.2rem;
+}
+
+.hero-caption {
+  position: absolute;
+  right: -10px;
+  bottom: 2px;
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 18px;
+  border: 1px solid var(--pink-border);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: var(--shadow-md);
+}
+
+.hero-caption .dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 0 4px rgba(36, 168, 121, 0.12);
+}
+
+.caption-arrow {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--pink-pale);
+  color: var(--pink-dark);
+}
+
+.hero-footer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-top: 55px;
+  color: var(--pink-dark);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.17em;
+}
+
+.footer-line {
+  width: 65px;
+  height: 1px;
+  background: var(--pink-border);
+}
+
+/* =========================
+   7. BENEFÍCIOS
+   ========================= */
+
+.benefits {
+  position: relative;
+  z-index: 3;
+  padding: 27px 0;
+  border-top: 1px solid var(--pink-border);
+  border-bottom: 1px solid var(--pink-border);
+  background: var(--white);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 10px;
+}
+
+.benefit-icon {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 17px;
+  background: var(--pink-pale);
+  color: var(--pink-dark);
+  font-size: 1.35rem;
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    color var(--transition);
+}
+
+.benefit:hover .benefit-icon {
+  transform: rotate(-7deg) scale(1.06);
+  background: var(--pink);
+  color: var(--white);
+}
+
+.benefit strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.benefit small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+/* =========================
+   8. SEÇÕES E TÍTULOS
+   ========================= */
+
+.section {
+  padding: 105px 0;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  max-width: 760px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 17px;
+}
+
+.section-heading > p {
+  max-width: 450px;
+}
+
+.disclaimer {
+  margin-top: 23px;
+  color: #9b8492;
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   9. CARDS DE CATEGORIAS
+   ========================= */
+
+.category-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr 0.9fr;
+  gap: 22px;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  height: 435px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 5px solid var(--white);
+  border-radius: 27px;
+  background: var(--pink-soft);
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.category-card.category-large {
+  height: 475px;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.category-card > img {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.category-card:hover > img {
+  transform: scale(1.07);
+}
+
+.image-shade {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(38, 15, 30, 0.02) 15%,
+    rgba(38, 15, 30, 0.15) 42%,
+    rgba(38, 15, 30, 0.83) 100%
+  );
+  transition: background var(--transition);
+}
+
+.category-card:hover .image-shade {
+  background: linear-gradient(
+    180deg,
+    rgba(38, 15, 30, 0.04) 10%,
+    rgba(38, 15, 30, 0.22) 40%,
+    rgba(169, 0, 88, 0.88) 100%
+  );
+}
+
+.category-number {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--pink-dark);
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  backdrop-filter: blur(10px);
+}
+
+.category-label {
+  position: absolute;
+  right: 22px;
+  bottom: 23px;
+  left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--white);
+}
+
+.category-label strong {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 2.2vw, 2.15rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.category-label small {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+/* =========================
+   10. OFERTAS
+   ========================= */
+
+.offers-section {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 100% 0%, rgba(255, 0, 140, 0.12), transparent 35%),
+    linear-gradient(135deg, #fff0f8, #fffafd);
+}
+
+.offers-section::before {
+  position: absolute;
+  top: -100px;
+  left: -90px;
+  width: 270px;
+  height: 270px;
+  border: 1px solid rgba(255, 0, 140, 0.1);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.offers-heading {
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  align-items: end;
+  gap: 60px;
+  margin-bottom: 43px;
+}
+
+.offers-heading h2 {
+  font-size: clamp(2.7rem, 5vw, 4.6rem);
+}
+
+.offers-heading h2 span {
+  color: var(--pink);
+}
+
+.offers-heading > p {
+  max-width: 480px;
+  padding-bottom: 7px;
+  font-size: 0.98rem;
+  line-height: 1.9;
+}
+
+.catalog-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 36px;
+  overflow: hidden;
+  border: 1px solid var(--pink-border);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.catalog-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.catalog-card::after {
+  position: absolute;
+  top: -75px;
+  right: 160px;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(255, 0, 140, 0.1);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.catalog-symbol {
+  display: grid;
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 25px;
+  background: linear-gradient(145deg, var(--pink), var(--pink-dark));
+  color: var(--white);
+  font-size: 2.8rem;
+  box-shadow: var(--shadow-pink);
+}
+
+.catalog-content {
+  position: relative;
+  z-index: 1;
+}
+
+.catalog-content .eyebrow {
+  margin-bottom: 10px;
+  font-size: 0.68rem;
+}
+
+.catalog-content h3 {
+  margin-bottom: 10px;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+}
+
+.catalog-content p {
+  max-width: 570px;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   11. NOVIDADES
+   ========================= */
+
+.new-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: clamp(45px, 7vw, 95px);
+}
+
+.new-image {
+  position: relative;
+  min-width: 0;
+  padding: 0 18px 18px 0;
+}
+
+.new-image::before {
+  position: absolute;
+  z-index: -1;
+  top: 22px;
+  right: 0;
+  bottom: 0;
+  left: 23px;
+  border-radius: 30px;
+  background: var(--pink-soft);
+  content: "";
+}
+
+.new-image > img {
+  width: 100%;
+  height: 490px;
+  border: 7px solid var(--white);
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.image-tag {
+  position: absolute;
+  bottom: 40px;
+  left: 25px;
+  padding: 12px 17px;
+  border-radius: var(--radius-pill);
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  box-shadow: var(--shadow-sm);
+}
+
+.new-content h2 {
+  margin-bottom: 23px;
+}
+
+.new-content > p {
+  max-width: 490px;
+  margin-bottom: 28px;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.new-content .note {
+  display: block;
+  margin-top: 18px;
+  color: #9b8492;
+  font-size: 0.75rem;
+}
+
+/* =========================
+   12. MODA INFANTIL
+   ========================= */
+
+.kids-section {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 5% 90%, rgba(255, 0, 140, 0.11), transparent 34%),
+    var(--pink-pale);
+}
+
+.kids-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  align-items: center;
+  gap: clamp(45px, 7vw, 100px);
+}
+
+.kids-content h2 {
+  margin-bottom: 25px;
+}
+
+.kids-content h2 span {
+  color: var(--pink-dark);
+}
+
+.kids-content > p {
+  max-width: 490px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.kids-image {
+  position: relative;
+  padding: 15px 0 0 15px;
+}
+
+.kids-image::before {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: -13px;
+  bottom: 30px;
+  left: 42px;
+  transform: rotate(3deg);
+  border-radius: 32px;
+  background: var(--pink);
+  content: "";
+}
+
+.kids-image img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 470px;
+  border: 7px solid var(--white);
+  border-radius: 30px;
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+}
+
+.kids-tag {
+  position: absolute;
+  z-index: 2;
+  right: -5px;
+  bottom: 3px;
+  padding: 14px 20px;
+  border: 4px solid var(--white);
+  border-radius: var(--radius-pill);
+  background: var(--yellow);
+  color: var(--ink);
+  font-size: 0.74rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  box-shadow: var(--shadow-sm);
+}
+
+/* =========================
+   13. CHAMADA FINAL
+   ========================= */
+
+.cta-section {
+  position: relative;
+  isolation: isolate;
+  padding: 85px 0;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 10% 0%, rgba(255, 255, 255, 0.15), transparent 35%),
+    linear-gradient(125deg, #ff1493 0%, #e60073 50%, #a90058 100%);
+}
+
+.cta-section::before,
+.cta-section::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.cta-section::before {
+  top: -230px;
+  right: -100px;
+  width: 510px;
+  height: 510px;
+}
+
+.cta-section::after {
+  bottom: -280px;
+  left: -100px;
+  width: 530px;
+  height: 530px;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 38px;
+}
+
+.cta-logo {
+  display: grid;
+  width: 95px;
+  height: 95px;
+  place-items: center;
+  transform: rotate(-6deg);
+  border: 4px solid rgba(255, 255, 255, 0.75);
+  border-radius: 30px;
+  background: var(--yellow);
+  color: var(--pink-dark);
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 900;
+  letter-spacing: -0.1em;
+  box-shadow: 0 12px 30px rgba(80, 0, 40, 0.15);
+}
+
+.cta-content .eyebrow {
+  color: var(--white);
+}
+
+.cta-content .eyebrow::before {
+  background: var(--yellow);
+}
+
+.cta-content h2 {
+  color: var(--white);
+  font-size: clamp(2rem, 3.7vw, 3.5rem);
+}
+
+.cta-content p {
+  max-width: 570px;
+  margin-top: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.96rem;
+}
+
+.cta-actions {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* =========================
+   14. INSTAGRAM
+   ========================= */
+
+.instagram-section {
+  background: var(--white);
+}
+
+.instagram-heading {
+  align-items: center;
+}
+
+.instagram-heading h2 {
+  font-size: clamp(2.1rem, 4vw, 3.5rem);
+}
+
+.instagram-heading p {
+  margin-top: 13px;
+  font-size: 0.96rem;
+}
+
+.instagram-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+  min-height: 330px;
+  padding: 42px;
+  overflow: hidden;
+  border: 1px solid var(--pink-border);
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.15), transparent 35%),
+    linear-gradient(130deg, #ff1493 0%, #e60073 55%, #a90058 100%);
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.instagram-banner:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.instagram-banner::before {
+  position: absolute;
+  top: -140px;
+  right: -90px;
+  width: 350px;
+  height: 350px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.instagram-photos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 12px;
+}
+
+.instagram-photos img {
+  width: 100%;
+  height: 185px;
+  border: 4px solid rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 24px rgba(70, 0, 35, 0.16);
+  transition: transform var(--transition);
+}
+
+.instagram-photos img:nth-child(2) {
+  transform: translateY(-17px) rotate(3deg);
+}
+
+.instagram-photos img:nth-child(1) {
+  transform: rotate(-4deg);
+}
+
+.instagram-photos img:nth-child(3) {
+  transform: rotate(4deg);
+}
+
+.instagram-banner:hover .instagram-photos img:nth-child(1) {
+  transform: translateY(-5px) rotate(-6deg);
+}
+
+.instagram-banner:hover .instagram-photos img:nth-child(2) {
+  transform: translateY(-22px) rotate(5deg);
+}
+
+.instagram-banner:hover .instagram-photos img:nth-child(3) {
+  transform: translateY(-5px) rotate(6deg);
+}
+
+.instagram-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  color: var(--white);
+}
+
+.instagram-big-icon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.13);
+  color: var(--white);
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.instagram-content > strong {
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.65rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.055em;
+}
+
+.instagram-content > span:last-child {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.instagram-content b {
+  color: var(--yellow);
+  font-size: 1.1rem;
+}
+
+.instagram-section .disclaimer {
+  margin-top: 22px;
+}
+
+/* =========================
+   15. CONTATO
+   ========================= */
+
+.contact-section {
+  padding: 100px 0;
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(255, 0, 140, 0.08), transparent 36%),
+    var(--pink-pale);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  align-items: center;
+  gap: clamp(45px, 8vw, 110px);
+}
+
+.contact-intro h2 {
+  margin-bottom: 24px;
+  font-size: clamp(2.5rem, 4.5vw, 4.3rem);
+}
+
+.contact-intro > p {
+  max-width: 430px;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.contact-card {
+  padding: 34px;
+  border: 1px solid var(--pink-border);
+  border-radius: 30px;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.contact-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-symbol {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--pink);
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.contact-heading strong {
+  display: block;
+  font-size: 1rem;
+}
+
+.contact-heading small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.contact-divider {
+  height: 1px;
+  margin: 25px 0 12px;
+  background: var(--pink-border);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 0;
+  border-bottom: 1px solid #f8e5ef;
+  transition: padding var(--transition);
+}
+
+.contact-row:hover {
+  padding-right: 4px;
+  padding-left: 4px;
+}
+
+.contact-row-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 15px;
+  background: var(--pink-pale);
+  color: var(--pink-dark);
+  font-size: 1.35rem;
+}
+
+.contact-row-text {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-row-text small {
+  color: var(--pink-dark);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+}
+
+.contact-row-text strong {
+  overflow-wrap: anywhere;
+  font-size: 0.87rem;
+}
+
+.contact-arrow {
+  color: var(--pink-dark);
+  font-size: 1.15rem;
+  transition: transform var(--transition);
+}
+
+.contact-row:hover .contact-arrow {
+  transform: translate(3px, -3px);
+}
+
+.contact-note {
+  margin-top: 20px;
+  color: #9b8492;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   16. RODAPÉ
+   ========================= */
+
+.footer {
+  padding: 48px 0 20px;
+  background: #2a1020;
+  color: var(--white);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  align-items: center;
+  gap: 35px;
+  padding-bottom: 35px;
+}
+
+.footer .brand-mark {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+}
+
+.footer .brand-name strong {
+  color: var(--white);
+}
+
+.footer .brand-name small {
+  color: #ff78bf;
+}
+
+.footer-main > p {
+  max-width: 330px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.83rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: color var(--transition);
+}
+
+.footer-links a:hover {
+  color: #ff78bf;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  color: var(--white);
+  font-size: 0.8rem;
+  font-weight: 800;
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+}
+
+.footer-social:hover {
+  border-color: var(--pink);
+  background: var(--pink-dark);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.footer-bottom span,
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 0.75rem;
+}
+
+.footer-bottom a {
+  font-weight: 700;
+  transition: color var(--transition);
+}
+
+.footer-bottom a:hover {
+  color: #ff78bf;
+}
+
+/* =========================
+   17. ESTADOS GERAIS
+   ========================= */
+
+a img {
+  border: 0;
+}
+
+button:disabled,
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* =========================
+   18. TELAS MÉDIAS
+   ========================= */
+
+@media (max-width: 1100px) {
+  :root {
+    --container: 960px;
+  }
+
+  .header-inner {
+    gap: 18px;
+  }
+
+  .navigation {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .brand-name strong {
+    font-size: 1.05rem;
+  }
+
+  .hero-grid {
+    gap: 38px;
+  }
+
+  .hero-visual > img {
+    height: 475px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .category-card,
+  .category-card.category-large {
+    height: 390px;
+  }
+
+  .catalog-card {
+    gap: 20px;
+    padding: 28px;
+  }
+
+  .cta-grid {
+    grid-template-columns: auto 1fr;
+  }
+
+  .cta-actions {
+    grid-column: 2;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footer-main {
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .footer-links {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  .footer-social {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
+
+/* =========================
+   19. TABLETS E MENU MOBILE
+   ========================= */
+
+@media (max-width: 850px) {
+  html {
+    scroll-padding-top: 78px;
+  }
+
+  section[id] {
+    scroll-margin-top: 78px;
+  }
+
+  .container {
+    width: min(100% - 38px, var(--container));
+  }
+
+  .header-inner {
+    min-height: 74px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .navigation {
+    position: absolute;
+    top: calc(100% + 1px);
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 22px 22px;
+    transform: translateY(-8px);
+    border-bottom: 1px solid var(--pink-border);
+    background: var(--white);
+    box-shadow: 0 18px 35px rgba(100, 0, 50, 0.11);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity var(--transition),
+      transform var(--transition),
+      visibility var(--transition);
+  }
+
+  .navigation.is-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .navigation .nav-link {
+    padding: 15px 3px;
+    border-bottom: 1px solid #fae5f0;
+    font-size: 0.93rem;
+  }
+
+  .navigation .nav-link::after {
+    display: none;
+  }
+
+  .navigation .instagram-icon {
+    margin-top: 14px;
+    margin-bottom: 12px;
+  }
+
+  .navigation .button {
+    align-self: stretch;
+  }
+
+  .hero {
+    padding-top: 58px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .hero-content {
+    padding-bottom: 0;
+  }
+
+  .hero-content h1 {
+    max-width: 650px;
+    font-size: clamp(3.2rem, 9.5vw, 5.5rem);
+  }
+
+  .hero-content > p {
+    max-width: 590px;
+  }
+
+  .hero-visual {
+    width: min(100%, 620px);
+    margin-inline: auto;
+    padding-left: 15px;
+  }
+
+  .hero-visual > img {
+    height: 530px;
+  }
+
+  .hero-sticker {
+    left: -2px;
+  }
+
+  .hero-caption {
+    right: 0;
+  }
+
+  .hero-footer {
+    padding-top: 48px;
+  }
+
+  .benefits-grid {
+    gap: 10px;
+  }
+
+  .benefit {
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 7px 0;
+  }
+
+  .benefit-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+  }
+
+  .benefit strong {
+    font-size: 0.8rem;
+  }
+
+  .benefit small {
+    font-size: 0.7rem;
+  }
+
+  .section {
+    padding: 75px 0;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .category-card,
+  .category-card.category-large {
+    height: 390px;
+  }
+
+  .category-card.category-large {
+    grid-column: 1 / -1;
+    height: 440px;
+  }
+
+  .offers-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .offers-heading > p {
+    max-width: 620px;
+  }
+
+  .catalog-card {
+    grid-template-columns: auto 1fr;
+    gap: 22px;
+  }
+
+  .catalog-card > .button {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
+  .new-grid,
+  .kids-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .new-image {
+    width: min(100%, 650px);
+  }
+
+  .new-image > img {
+    height: 460px;
+  }
+
+  .new-content {
+    max-width: 650px;
+  }
+
+  .kids-content {
+    order: 1;
+  }
+
+  .kids-image {
+    width: min(100%, 650px);
+    order: 2;
+  }
+
+  .kids-image img {
+    height: 450px;
+  }
+
+  .cta-grid {
+    grid-template-columns: auto 1fr;
+    gap: 25px;
+  }
+
+  .cta-logo {
+    width: 75px;
+    height: 75px;
+    border-radius: 24px;
+    font-size: 1.8rem;
+  }
+
+  .cta-actions {
+    grid-column: 1 / -1;
+    padding-left: 0;
+  }
+
+  .instagram-banner {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 32px;
+  }
+
+  .instagram-photos {
+    max-width: 560px;
+  }
+
+  .instagram-photos img {
+    height: 200px;
+  }
+
+  .instagram-content {
+    align-items: flex-start;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-intro {
+    max-width: 650px;
+  }
+
+  .contact-card {
+    width: min(100%, 650px);
+  }
+}
+
+/* =========================
+   20. CELULARES
+   ========================= */
+
+@media (max-width: 580px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .announcement {
+    gap: 6px;
+    padding: 8px 12px;
+    font-size: 0.67rem;
+  }
+
+  .announcement a {
+    white-space: nowrap;
+  }
+
+  .header-inner {
+    min-height: 70px;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 43px;
+    height: 43px;
+    border-radius: 14px;
+    font-size: 0.98rem;
+  }
+
+  .brand-name strong {
+    font-size: 1rem;
+  }
+
+  .brand-name small {
+    margin-top: 5px;
+    font-size: 0.57rem;
+  }
+
+  .menu-toggle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .hero {
+    padding-top: 43px;
+  }
+
+  .hero-grid {
+    gap: 36px;
+  }
+
+  .hero-content .eyebrow {
+    gap: 8px;
+    margin-bottom: 19px;
+    font-size: 0.63rem;
+    letter-spacing: 0.11em;
+  }
+
+  .hero-content h1 {
+    margin-bottom: 20px;
+    font-size: clamp(2.85rem, 12vw, 4.3rem);
+    line-height: 1.05;
+  }
+
+  .hero-content h1 span::after {
+    bottom: -2px;
+    height: 5px;
+  }
+
+  .hero-content > p {
+    margin-bottom: 25px;
+    font-size: 0.96rem;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .button {
+    min-height: 52px;
+    padding: 14px 20px;
+    font-size: 0.86rem;
+  }
+
+  .hero-note {
+    margin-top: 23px;
+  }
+
+  .hero-visual {
+    width: calc(100% - 5px);
+    padding-left: 9px;
+  }
+
+  .hero-visual::before {
+    top: 19px;
+    right: -5px;
+    left: 23px;
+    border-radius: 25px;
+  }
+
+  .hero-visual > img {
+    height: 390px;
+    border-width: 5px;
+    border-radius: 25px;
+  }
+
+  .hero-sticker {
+    top: 22px;
+    left: -7px;
+    width: 100px;
+    height: 100px;
+    border-width: 4px;
+  }
+
+  .hero-sticker small {
+    font-size: 0.5rem;
+  }
+
+  .hero-sticker strong {
+    font-size: 1.15rem;
+  }
+
+  .hero-sticker > span {
+    right: 7px;
+    bottom: 8px;
+    font-size: 0.9rem;
+  }
+
+  .hero-caption {
+    right: -2px;
+    bottom: -2px;
+    min-height: 48px;
+    gap: 8px;
+    padding: 0 12px;
+    font-size: 0.7rem;
+  }
+
+  .caption-arrow {
+    width: 25px;
+    height: 25px;
+  }
+
+  .hero-footer {
+    gap: 10px;
+    padding-top: 40px;
+    font-size: 0.56rem;
+    letter-spacing: 0.09em;
+  }
+
+  .footer-line {
+    width: 28px;
+  }
+
+  .benefits {
+    padding: 17px 0;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 9px;
+  }
+
+  .benefit {
+    justify-content: flex-start;
+    gap: 13px;
+  }
+
+  .benefit-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .benefit strong {
+    font-size: 0.85rem;
+  }
+
+  .benefit small {
+    font-size: 0.74rem;
+  }
+
+  .section {
+    padding: 65px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 27px;
+  }
+
+  .section-heading .eyebrow,
+  .offers-heading .eyebrow,
+  .new-content .eyebrow,
+  .kids-content .eyebrow,
+  .contact-intro .eyebrow {
+    margin-bottom: 14px;
+    font-size: 0.65rem;
+  }
+
+  .section-heading h2,
+  .contact-intro h2 {
+    font-size: clamp(2.15rem, 9vw, 3.2rem);
+  }
+
+  .section-heading > p {
+    font-size: 0.9rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .category-card,
+  .category-card.category-large {
+    height: 370px;
+    grid-column: auto;
+    border-width: 4px;
+    border-radius: 23px;
+  }
+
+  .category-card.category-large {
+    height: 400px;
+  }
+
+  .category-label {
+    right: 19px;
+    bottom: 20px;
+    left: 19px;
+  }
+
+  .category-label strong {
+    font-size: 1.75rem;
+  }
+
+  .category-number {
+    top: 15px;
+    left: 15px;
+    font-size: 0.61rem;
+  }
+
+  .disclaimer {
+    font-size: 0.71rem;
+  }
+
+  .offers-heading {
+    margin-bottom: 28px;
+  }
+
+  .offers-heading h2 {
+    font-size: clamp(2.65rem, 10vw, 3.7rem);
+  }
+
+  .offers-heading > p {
+    font-size: 0.91rem;
+    line-height: 1.8;
+  }
+
+  .catalog-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 24px 21px;
+    border-radius: 23px;
+  }
+
+  .catalog-symbol {
+    width: 62px;
+    height: 62px;
+    border-radius: 20px;
+    font-size: 2.1rem;
+  }
+
+  .catalog-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .catalog-content p {
+    font-size: 0.85rem;
+  }
+
+  .catalog-card > .button {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .new-grid,
+  .kids-grid {
+    gap: 30px;
+  }
+
+  .new-image {
+    padding: 0 10px 12px 0;
+  }
+
+  .new-image::before {
+    top: 15px;
+    left: 15px;
+    border-radius: 23px;
+  }
+
+  .new-image > img {
+    height: 350px;
+    border-width: 5px;
+    border-radius: 23px;
+  }
+
+  .image-tag {
+    bottom: 25px;
+    left: 13px;
+    padding: 10px 12px;
+    font-size: 0.61rem;
+  }
+
+  .new-content h2,
+  .kids-content h2 {
+    margin-bottom: 19px;
+    font-size: clamp(2.35rem, 9vw, 3.2rem);
+  }
+
+  .new-content > p,
+  .kids-content > p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+
+  .new-content .button,
+  .kids-content .button {
+    width: 100%;
+  }
+
+  .kids-image {
+    padding: 9px 0 0 9px;
+  }
+
+  .kids-image::before {
+    right: -5px;
+    bottom: 23px;
+    left: 23px;
+    border-radius: 24px;
+  }
+
+  .kids-image img {
+    height: 350px;
+    border-width: 5px;
+    border-radius: 24px;
+  }
+
+  .kids-tag {
+    right: -2px;
+    bottom: -1px;
+    padding: 11px 14px;
+    border-width: 3px;
+    font-size: 0.63rem;
+  }
+
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .cta-logo {
+    width: 65px;
+    height: 65px;
+    border-width: 3px;
+    border-radius: 21px;
+    font-size: 1.55rem;
+  }
+
+  .cta-content .eyebrow {
+    margin-bottom: 13px;
+    font-size: 0.65rem;
+  }
+
+  .cta-content h2 {
+    font-size: clamp(2.05rem, 8.7vw, 3rem);
+  }
+
+  .cta-content p {
+    font-size: 0.91rem;
+    line-height: 1.8;
+  }
+
+  .cta-actions {
+    grid-column: auto;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .instagram-heading {
+    gap: 22px;
+  }
+
+  .instagram-heading h2 {
+    font-size: clamp(2.1rem, 8.7vw, 3rem);
+  }
+
+  .instagram-heading .button {
+    width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .instagram-banner {
+    gap: 29px;
+    padding: 22px 17px;
+    border-radius: 25px;
+  }
+
+  .instagram-photos {
+    gap: 7px;
+  }
+
+  .instagram-photos img {
+    height: 132px;
+    border-width: 3px;
+    border-radius: 13px;
+  }
+
+  .instagram-content {
+    padding: 0 3px 5px;
+  }
+
+  .instagram-big-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    font-size: 1.9rem;
+  }
+
+  .instagram-content > strong {
+    font-size: 2rem;
+  }
+
+  .instagram-content > span:last-child {
+    font-size: 0.81rem;
+  }
+
+  .contact-section {
+    padding: 65px 0;
+  }
+
+  .contact-grid {
+    gap: 28px;
+  }
+
+  .contact-intro > p {
+    font-size: 0.92rem;
+    line-height: 1.8;
+  }
+
+  .contact-card {
+    padding: 22px 18px;
+    border-radius: 24px;
+  }
+
+  .contact-heading {
+    gap: 11px;
+  }
+
+  .contact-symbol {
+    width: 46px;
+    height: 46px;
+    border-radius: 15px;
+  }
+
+  .contact-heading strong {
+    font-size: 0.87rem;
+  }
+
+  .contact-heading small {
+    font-size: 0.72rem;
+  }
+
+  .contact-row {
+    gap: 10px;
+  }
+
+  .contact-row-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    font-size: 1.15rem;
+  }
+
+  .contact-row-text small {
+    font-size: 0.58rem;
+  }
+
+  .contact-row-text strong {
+    font-size: 0.76rem;
+  }
+
+  .contact-arrow {
+    font-size: 0.95rem;
+  }
+
+  .contact-note {
+    font-size: 0.71rem;
+  }
+
+  .footer {
+    padding-top: 35px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    align-items: flex-start;
+    gap: 23px;
+    padding-bottom: 27px;
+  }
+
+  .footer-main > p {
+    max-width: 360px;
+    font-size: 0.82rem;
+  }
+
+  .footer-links {
+    grid-column: auto;
+    grid-row: auto;
+    gap: 12px 18px;
+  }
+
+  .footer-social {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: start;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* =========================
+   21. CELULARES PEQUENOS
+   ========================= */
+
+@media (max-width: 360px) {
+  .container {
+    width: calc(100% - 26px);
+  }
+
+  .brand-mark {
+    width: 39px;
+    height: 39px;
+    font-size: 0.9rem;
+  }
+
+  .brand-name strong {
+    font-size: 0.92rem;
+  }
+
+  .brand-name small {
+    font-size: 0.52rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.65rem;
+  }
+
+  .hero-visual > img {
+    height: 330px;
+  }
+
+  .hero-sticker {
+    width: 86px;
+    height: 86px;
+  }
+
+  .hero-sticker strong {
+    font-size: 1rem;
+  }
+
+  .hero-caption {
+    min-height: 43px;
+    gap: 6px;
+    padding: 0 9px;
+    font-size: 0.63rem;
+  }
+
+  .category-card,
+  .category-card.category-large {
+    height: 330px;
+  }
+
+  .category-card.category-large {
+    height: 360px;
+  }
+
+  .new-image > img,
+  .kids-image img {
+    height: 300px;
+  }
+
+  .instagram-photos img {
+    height: 108px;
+  }
+
+  .contact-card {
+    padding: 18px 14px;
+  }
+}
+
+/* =========================
+   22. ANIMAÇÕES SUAVES
+   ========================= */
+
+@keyframes pink-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes pink-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 5px rgba(255, 0, 140, 0.10);
+  }
+
+  50% {
+    box-shadow: 0 0 0 8px rgba(255, 0, 140, 0.04);
+  }
+}
+
+.hero-sticker {
+  animation: pink-float 4s ease-in-out infinite;
+}
+
+.hero-content .eyebrow .dot {
+  animation: pink-pulse 2.5s ease-in-out infinite;
+}
+
+/* =========================
+   23. ACESSIBILIDADE
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+</style>
+
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="announcement">
+    <span>Seu próximo achadinho pode estar aqui.</span>
+    <a href="https://vemqtem22.lojavirtualnuvem.com.br/" target="_blank" rel="noopener noreferrer">
+      Visite nossa loja ↗
+    </a>
+  </div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="Vem Que Tem - início">
+        <span class="brand-mark">VQ</span>
+        <span class="brand-name">
+          <strong>vem que tem</strong>
+          <small>PREÇO BARATO</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Abrir menu"
+        aria-expanded="false" aria-controls="navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="navigation" id="navigation" aria-label="Menu principal">
+        <a class="nav-link active" href="#inicio">Início</a>
+        <a class="nav-link" href="#categorias">Produtos</a>
+        <a class="nav-link" href="#ofertas">Ofertas</a>
+        <a class="nav-link" href="#infantil">Moda infantil</a>
+        <a class="nav-link" href="#contato">Contato</a>
+        <a class="instagram-icon" href="https://www.instagram.com/vemquetemprecobarato/"
+           target="_blank" rel="noopener noreferrer" aria-label="Instagram oficial">◎</a>
+        <a class="button button-dark button-small"
+           href="https://vemqtem22.lojavirtualnuvem.com.br/"
+           target="_blank" rel="noopener noreferrer">Ver loja ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow"><span class="dot"></span> BONS ACHADINHOS COMEÇAM AQUI</span>
+
+          <h1>Seu estilo.<br>Seu jeito.<br><span>Seu precinho.</span></h1>
+
+          <p>
+            Moda bonita, novidades e opções para encontrar aquele
+            achadinho que combina com você.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#categorias">
+              Explorar novidades <span>→</span>
+            </a>
+            <a class="button button-outline"
+               href="https://vemqtem22.lojavirtualnuvem.com.br/"
+               target="_blank" rel="noopener noreferrer">
+              Visitar loja ↗
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span class="note-icon">✳</span>
+            <span><strong>Vem que tem!</strong><br>Seu próximo favorito está te esperando.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1100&q=85"
+            alt="Fotografia ilustrativa de moda casual"
+            fetchpriority="high"
+          >
+          <div class="hero-sticker">
+            <small>MODA</small>
+            <strong>do seu<br>jeito!</strong>
+            <span>✳</span>
+          </div>
+          <div class="hero-caption">
+            <span class="dot"></span>
+            Novidades para descobrir
+            <span class="caption-arrow">↗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-footer">
+        <span>POUSO REDONDO · SANTA CATARINA</span>
+        <span class="footer-line"></span>
+        <span>VEM DESCOBRIR</span>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container benefits-grid">
+        <article class="benefit">
+          <span class="benefit-icon">✳</span>
+          <div>
+            <strong>Achadinhos especiais</strong>
+            <small>Descubra novas opções</small>
+          </div>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-icon">♡</span>
+          <div>
+            <strong>Moda para o dia a dia</strong>
+            <small>Estilo para diferentes momentos</small>
+          </div>
+        </article>
+
+        <article class="benefit">
+          <span class="benefit-icon">↗</span>
+          <div>
+            <strong>Compre online</strong>
+            <small>Acesse nossa loja virtual</small>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">UM MUNDO DE POSSIBILIDADES</span>
+            <h2>Encontre seu próximo <span>achadinho.</span></h2>
+          </div>
+
+          <a class="text-link"
+             href="https://vemqtem22.lojavirtualnuvem.com.br/"
+             target="_blank" rel="noopener noreferrer">
+            Ver catálogo completo ↗
+          </a>
+        </div>
+
+        <div class="category-grid">
+          <a class="category-card category-large"
+             href="https://vemqtem22.lojavirtualnuvem.com.br/"
+             target="_blank" rel="noopener noreferrer">
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1000&q=80"
+              alt="Inspiração de looks casuais" loading="lazy">
+            <span class="image-shade"></span>
+            <span class="category-number">01 / ESTILO</span>
+            <span class="category-label">
+              <strong>Looks para amar</strong>
+              <small>Encontre seu estilo ↗</small>
+            </span>
+          </a>
+
+          <a class="category-card" href="#infantil">
+            <img
+              src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80"
+              alt="Fotografia ilustrativa de moda infantil" loading="lazy">
+            <span class="image-shade"></span>
+            <span class="category-number">02 / INFANTIL</span>
+            <span class="category-label">
+              <strong>Pequenos estilos</strong>
+              <small>Moda infantil ↗</small>
+            </span>
+          </a>
+
+          <a class="category-card" href="#ofertas">
+            <img
+              src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80"
+              alt="Roupas em composição de moda" loading="lazy">
+            <span class="image-shade"></span>
+            <span class="category-number">03 / DESCOBERTAS</span>
+            <span class="category-label">
+              <strong>Garimpo fashion</strong>
+              <small>Confira as opções ↗</small>
+            </span>
+          </a>
+        </div>
+
+        <p class="disclaimer">
+          Imagens ilustrativas. Consulte o catálogo oficial para conferir os produtos disponíveis.
+        </p>
+      </div>
+    </section>
+
+    <section class="section offers-section" id="ofertas">
+      <div class="container">
+        <div class="offers-heading">
+          <div>
+            <span class="eyebrow">BONS ACHADOS COMEÇAM AQUI</span>
+            <h2>Precinhos que<br><span>você vai amar!</span></h2>
+          </div>
+
+          <p>
+            Explore o catálogo oficial e encontre as peças disponíveis.
+            Os preços, tamanhos e condições são consultados diretamente na loja.
+          </p>
+        </div>
+
+        <div class="catalog-card">
+          <div class="catalog-symbol">✳</div>
+          <div class="catalog-content">
+            <span class="eyebrow">CATÁLOGO OFICIAL</span>
+            <h3>Seu próximo favorito está na loja.</h3>
+            <p>
+              Confira os produtos e as informações atualizadas diretamente
+              na loja virtual da Vem Que Tem.
+            </p>
+          </div>
+          <a class="button button-dark"
+             href="https://vemqtem22.lojavirtualnuvem.com.br/"
+             target="_blank" rel="noopener noreferrer">
+            Conferir produtos ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container new-grid">
+        <div class="new-image">
+          <img
+            src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85"
+            alt="Araras de roupas em fotografia ilustrativa" loading="lazy">
+          <span class="image-tag">✳ SEU PRÓXIMO ACHADO</span>
+        </div>
+
+        <div class="new-content">
+          <span class="eyebrow">NOVIDADE É AQUI</span>
+          <h2>Chegaram<br><span>novidades!</span></h2>
+          <p>
+            Tem sempre algo novo para descobrir. Acompanhe nossos canais
+            oficiais e fique de olho nas peças e oportunidades da loja.
+          </p>
+          <a class="button button-primary"
+             href="https://www.instagram.com/vemquetemprecobarato/"
+             target="_blank" rel="noopener noreferrer">
+            Ver novidades no Instagram ↗
+          </a>
+          <small class="note">
+            A disponibilidade deve ser confirmada nos canais oficiais.
+          </small>
+        </div>
+      </div>
+    </section>
+
+    <section class="section kids-section" id="infantil">
+      <div class="container kids-grid">
+        <div class="kids-content">
+          <span class="eyebrow">ESTILO DESDE PEQUENO</span>
+          <h2>Pequenos looks.<br><span>Grandes fofuras.</span></h2>
+          <p>
+            Explore as opções de moda infantil disponíveis na loja.
+            Consulte os tamanhos de cada peça diretamente no catálogo.
+          </p>
+          <a class="button button-light"
+             href="https://vemqtem22.lojavirtualnuvem.com.br/"
+             target="_blank" rel="noopener noreferrer">
+            Explorar loja virtual ↗
+          </a>
+        </div>
+
+        <div class="kids-image">
+          <img
+            src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=1000&q=85"
+            alt="Fotografia ilustrativa de moda infantil" loading="lazy">
+          <span class="kids-tag">CONFORTO + ESTILO</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-grid">
+        <div class="cta-logo">VQ</div>
+
+        <div class="cta-content">
+          <span class="eyebrow">VEM COM A GENTE</span>
+          <h2>Seu próximo achadinho<br>está aqui!</h2>
+          <p>
+            Venha conhecer a Vem Que Tem e descubra opções para
+            renovar o guarda-roupa sem gastar muito.
+          </p>
+        </div>
+
+        <div class="cta-actions">
+          <a class="button button-primary"
+             href="https://vemqtem22.lojavirtualnuvem.com.br/"
+             target="_blank" rel="noopener noreferrer">
+            Conhecer a loja ↗
+          </a>
+          <a class="button button-outline button-outline-light"
+             href="https://www.instagram.com/vemquetemprecobarato/"
+             target="_blank" rel="noopener noreferrer">
+            Acessar Instagram ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section instagram-section">
+      <div class="container">
+        <div class="section-heading instagram-heading">
+          <div>
+            <span class="eyebrow">SIGA E ACOMPANHE</span>
+            <h2>Tem novidade no <span>Instagram.</span></h2>
+            <p>Inspire-se e acompanhe as novidades da loja.</p>
+          </div>
+
+          <a class="button button-outline"
+             href="https://www.instagram.com/vemquetemprecobarato/"
+             target="_blank" rel="noopener noreferrer">
+            @vemquetemprecobarato ↗
+          </a>
+        </div>
+
+        <a class="instagram-banner"
+           href="https://www.instagram.com/vemquetemprecobarato/"
+           target="_blank" rel="noopener noreferrer">
+          <div class="instagram-photos">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=75" alt="" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=75" alt="" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=400&q=75" alt="" loading="lazy">
+          </div>
+
+          <div class="instagram-content">
+            <span class="instagram-big-icon">◎</span>
+            <strong>Vem acompanhar<br>de pertinho.</strong>
+            <span>Confira o perfil oficial <b>↗</b></span>
+          </div>
+        </a>
+
+        <p class="disclaimer">
+          Fotografias ilustrativas. Esta galeria não é uma integração automática com o Instagram.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-intro">
+          <span class="eyebrow">VAMOS CONVERSAR?</span>
+          <h2>A gente te espera<br>por aqui.</h2>
+          <p>
+            Ficou com dúvida sobre algum produto? Entre em contato
+            pelos canais oficiais da loja.
+          </p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-heading">
+            <span class="contact-symbol">↗</span>
+            <div>
+              <strong>Vem Que Tem Preço Barato</strong>
+              <small>Pouso Redondo · Santa Catarina</small>
+            </div>
+          </div>
+
+          <div class="contact-divider"></div>
+
+          <a class="contact-row"
+             href="https://www.instagram.com/vemquetemprecobarato/"
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-row-icon">◎</span>
+            <span class="contact-row-text">
+              <small>INSTAGRAM OFICIAL</small>
+              <strong>@vemquetemprecobarato</strong>
+            </span>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <a class="contact-row"
+             href="https://vemqtem22.lojavirtualnuvem.com.br/"
+             target="_blank" rel="noopener noreferrer">
+            <span class="contact-row-icon">↗</span>
+            <span class="contact-row-text">
+              <small>LOJA VIRTUAL</small>
+              <strong>Produtos e disponibilidade</strong>
+            </span>
+            <span class="contact-arrow">↗</span>
+          </a>
+
+          <p class="contact-note">
+            Endereço completo, telefone e horário de funcionamento
+            precisam ser confirmados pela loja.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-main">
+      <a href="#inicio" class="brand">
+        <span class="brand-mark">VQ</span>
+        <span class="brand-name">
+          <strong>vem que tem</strong>
+          <small>PREÇO BARATO</small>
+        </span>
+      </a>
+
+      <p>Moda bonita, boas descobertas e aquele achadinho especial.</p>
+
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <a href="#inicio">Início</a>
+        <a href="#categorias">Produtos</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <a class="footer-social"
+         href="https://www.instagram.com/vemquetemprecobarato/"
+         target="_blank" rel="noopener noreferrer">
+        Instagram ↗
+      </a>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Vem Que Tem Preço Barato.</span>
+      <a href="#inicio">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+</body>
+
+<script>
+    
+"use strict";
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector(".menu-toggle");
+  const navigation = document.querySelector(".navigation");
+  const year = document.querySelector("#year");
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
+
+  function closeMenu() {
+    if (!menuButton || !navigation) return;
+
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Abrir menu");
+    navigation.classList.remove("is-open");
+  }
+
+  if (menuButton && navigation) {
+    menuButton.addEventListener("click", () => {
+      const isOpen =
+        menuButton.getAttribute("aria-expanded") === "true";
+
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      menuButton.setAttribute(
+        "aria-label",
+        isOpen ? "Abrir menu" : "Fechar menu"
+      );
+
+      navigation.classList.toggle("is-open", !isOpen);
+    });
+
+    navigation.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        const wasOpen =
+          menuButton.getAttribute("aria-expanded") === "true";
+
+        closeMenu();
+
+        if (wasOpen) menuButton.focus();
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (
+        !navigation.contains(event.target) &&
+        !menuButton.contains(event.target)
+      ) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 980) closeMenu();
+    });
+  }
+
+  // Marca a seção visível no menu.
+  if ("IntersectionObserver" in window) {
+    const sections = document.querySelectorAll("main section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          const currentId = `#${entry.target.id}`;
+
+          navLinks.forEach((link) => {
+            const active = link.getAttribute("href") === currentId;
+
+            link.classList.toggle("active", active);
+
+            if (active) {
+              link.setAttribute("aria-current", "location");
+            } else {
+              link.removeAttribute("aria-current");
+            }
+          });
+        });
+      },
+      {
+        rootMargin: "-25% 0px -65% 0px",
+        threshold: 0
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  }
+});
+
+</script>
+</html>

@@ -1,0 +1,2439 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111316">
+  <meta name="description" content="Conheça a experiência digital da MS Automóveis. Explore veículos, consulte informações e entre em contato para negociar seu próximo carro.">
+  <meta property="og:title" content="MS Automóveis | Seu próximo carro começa aqui">
+  <meta property="og:description" content="Explore veículos e encontre seu próximo carro com a MS Automóveis.">
+  <meta property="og:type" content="website">
+  <title>MS Automóveis — Seu próximo carro começa aqui</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #111316;
+      --bg-deep: #0b0c0e;
+      --surface: #191b20;
+      --surface-hover: #22252b;
+      --line: #30333a;
+      --red: #e53935;
+      --red-hover: #f04440;
+      --white: #f5f6f7;
+      --muted: #9ca3af;
+      --light-bg: #f3f4f6;
+      --light-text: #191b20;
+      --radius: 12px;
+      --max-width: 1240px;
+      --font: "DM Sans", sans-serif;
+      --heading: "Manrope", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--white);
+      font-family: var(--font);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body, button, input, select, textarea { font-family: var(--font); }
+
+    button, input, select, textarea { font-size: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+    button:focus-visible, a:focus-visible, input:focus-visible,
+    select:focus-visible, textarea:focus-visible {
+      outline: 2px solid var(--red);
+      outline-offset: 4px;
+    }
+
+    ::selection { background: var(--red); color: white; }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .section { padding: 100px 0; }
+    .section-light { background: var(--light-bg); color: var(--light-text); }
+    .section-dark { background: var(--bg-deep); }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      font-family: var(--heading);
+      letter-spacing: -1.3px;
+      line-height: 1.14;
+    }
+
+    h2 { font-size: clamp(30px, 4vw, 46px); }
+    p { color: var(--muted); }
+    .section-light p { color: #626875; }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 42px;
+    }
+
+    .section-heading h2 { margin-top: 14px; max-width: 620px; }
+    .section-heading p { max-width: 420px; margin: 0; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 21px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, border-color .2s, transform .2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--red); color: #fff; }
+    .btn-primary:hover { background: var(--red-hover); }
+    .btn-outline { border-color: #ffffff40; background: transparent; color: #fff; }
+    .btn-outline:hover { border-color: white; background: #ffffff0b; }
+    .btn-dark { background: #191b20; color: white; }
+    .btn-dark:hover { background: #2a2d33; }
+    .btn-light { background: white; color: #151619; }
+    .btn-light:hover { background: #e8e9eb; }
+    .btn-full { width: 100%; }
+    .text-link { color: var(--red); font-size: 13px; font-weight: 700; }
+    .text-link:hover { text-decoration: underline; }
+
+    /* Header */
+
+    .header {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid transparent;
+      transition: background .25s, border-color .25s;
+    }
+
+    .header.scrolled, .header.menu-open {
+      background: #111316f5;
+      border-color: #ffffff12;
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      border: 1px solid #ffffff2b;
+      border-radius: 5px;
+      background: linear-gradient(145deg, #272a30, #111316);
+      font-family: var(--heading);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .brand-mark span { color: var(--red); }
+
+    .brand-copy { display: grid; gap: 2px; }
+    .brand-name { font: 800 14px var(--heading); letter-spacing: 1.2px; }
+    .brand-sub { color: #9ca3af; font-size: 9px; letter-spacing: 2.1px; }
+
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a {
+      color: #c7c9ce;
+      font-size: 12px;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: white; }
+
+    .nav-actions { display: flex; align-items: center; gap: 12px; }
+    .nav-actions .btn { min-height: 43px; padding: 0 16px; }
+
+    .menu-toggle {
+      display: none;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      min-height: 730px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      isolation: isolate;
+      background: #15171b;
+    }
+
+    .hero::before {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      content: "";
+      background:
+        linear-gradient(90deg, #0b0c0ef5 0%, #0b0c0edb 32%, #0b0c0e58 70%, #0b0c0e6b 100%),
+        linear-gradient(0deg, #111316 0%, transparent 28%),
+        url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85")
+        center 57% / cover no-repeat;
+      animation: hero-enter 1.1s ease both;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      background: var(--red);
+      opacity: .8;
+    }
+
+    .hero-content {
+      padding-top: 105px;
+      padding-bottom: 65px;
+      max-width: 720px;
+      animation: rise-in .8s .1s both;
+    }
+
+    .hero .eyebrow { margin-bottom: 27px; }
+    .hero h1 {
+      font-size: clamp(42px, 6.3vw, 76px);
+      font-weight: 800;
+      letter-spacing: -3.8px;
+      line-height: 1.04;
+    }
+
+    .hero h1 span { color: var(--red); }
+    .hero-description {
+      max-width: 475px;
+      margin: 25px 0 31px;
+      color: #c3c5ca;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 52px;
+      padding-top: 24px;
+      border-top: 1px solid #ffffff23;
+    }
+
+    .hero-meta span { color: #d0d1d5; font-size: 11px; }
+    .hero-meta strong { color: white; }
+
+    .hero-scroll {
+      position: absolute;
+      right: max(24px, calc((100vw - var(--max-width)) / 2));
+      bottom: 60px;
+      color: #c1c3c8;
+      font-size: 10px;
+      letter-spacing: 2px;
+      writing-mode: vertical-rl;
+    }
+
+    /* Search */
+
+    .search-wrap { position: relative; z-index: 3; margin-top: -35px; }
+
+    .search-panel {
+      padding: 27px;
+      border: 1px solid #ffffff0e;
+      border-radius: 10px;
+      background: #1a1c21;
+      box-shadow: 0 22px 60px #00000027;
+    }
+
+    .search-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .search-title h2 { font-size: 17px; letter-spacing: -.4px; }
+    .search-title span { color: var(--muted); font-size: 11px; }
+
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .field { display: grid; gap: 8px; min-width: 0; }
+    .field label { color: #bfc2c9; font-size: 11px; font-weight: 600; }
+    .section-light .field label { color: #454b55; }
+
+    .field input, .field select, .field textarea {
+      width: 100%;
+      min-width: 0;
+      min-height: 46px;
+      padding: 11px 12px;
+      border: 1px solid #363941;
+      border-radius: 5px;
+      outline: none;
+      background: #111316;
+      color: #f5f6f7;
+      font-size: 12px;
+    }
+
+    .field input:focus, .field select:focus, .field textarea:focus {
+      border-color: var(--red);
+    }
+
+    .field select { cursor: pointer; }
+    .field select option { background: #191b20; }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .field input::placeholder, .field textarea::placeholder { color: #777e89; }
+
+    .search-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 17px;
+    }
+
+    .search-bottom p { margin: 0; font-size: 11px; }
+
+    /* Vehicles */
+
+    .inventory-section { padding-top: 100px; }
+
+    .vehicle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .vehicle-card {
+      overflow: hidden;
+      border: 1px solid #e4e6e9;
+      border-radius: 9px;
+      background: white;
+      color: #17191d;
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .vehicle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 35px #17191d12;
+    }
+
+    .vehicle-image {
+      position: relative;
+      height: 235px;
+      overflow: hidden;
+      background: #e4e6e9;
+    }
+
+    .vehicle-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .55s;
+    }
+
+    .vehicle-card:hover .vehicle-image img { transform: scale(1.045); }
+
+    .vehicle-image-fallback {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      height: 100%;
+      color: #737985;
+      background: linear-gradient(145deg, #e5e7eb, #d4d7dc);
+      font-size: 12px;
+    }
+
+    .vehicle-tag {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      padding: 7px 10px;
+      border-radius: 4px;
+      background: var(--red);
+      color: white;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+    }
+
+    .vehicle-tag.neutral { background: #191b20eF; }
+
+    .vehicle-body { padding: 21px; }
+
+    .vehicle-brand {
+      margin: 0 0 6px;
+      color: #737985;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .vehicle-name {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: -.6px;
+    }
+
+    .vehicle-version { margin: 5px 0 0; color: #777e89; font-size: 11px; }
+
+    .vehicle-specs {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 21px 0;
+      padding: 17px 0;
+      border-top: 1px solid #e9eaec;
+      border-bottom: 1px solid #e9eaec;
+    }
+
+    .vehicle-spec { display: grid; gap: 5px; min-width: 0; }
+    .vehicle-spec small { color: #858b95; font-size: 10px; }
+    .vehicle-spec strong { overflow: hidden; font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
+
+    .vehicle-price-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 17px;
+    }
+
+    .vehicle-price-label { display: block; color: #858b95; font-size: 10px; }
+    .vehicle-price { display: block; margin-top: 3px; font: 800 23px var(--heading); letter-spacing: -1px; }
+    .vehicle-status { color: #5e6975; font-size: 10px; text-align: right; }
+
+    .vehicle-actions { display: grid; grid-template-columns: 1fr auto; gap: 9px; }
+    .vehicle-actions .btn { min-height: 43px; padding: 0 12px; font-size: 11px; }
+    .vehicle-actions .btn-outline-dark { border-color: #d7d9de; background: white; color: #191b20; }
+
+    .demo-note {
+      margin: 0 0 20px;
+      padding: 12px 15px;
+      border: 1px solid #f2d5a0;
+      border-radius: 6px;
+      background: #fff9eb;
+      color: #7d5815;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .inventory-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .result-count { color: #626875; font-size: 12px; }
+    .sort-select {
+      min-height: 42px;
+      padding: 0 12px;
+      border: 1px solid #d8dbe0;
+      border-radius: 5px;
+      background: white;
+      color: #17191d;
+      font-size: 12px;
+    }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 65px 20px;
+      border: 1px dashed #cdd0d5;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .empty-state h3 { font-size: 23px; }
+    .empty-state p { max-width: 430px; margin: 12px auto 22px; }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 85px;
+    }
+
+    .about-visual {
+      position: relative;
+      min-height: 460px;
+      overflow: hidden;
+      border-radius: 8px;
+      background:
+        linear-gradient(0deg, #1011147a, transparent 55%),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1100&q=85")
+        center / cover no-repeat;
+    }
+
+    .about-visual::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 130px;
+      content: "";
+      background: var(--red);
+    }
+
+    .about-caption {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      left: 22px;
+      padding: 20px;
+      border: 1px solid #ffffff28;
+      border-radius: 5px;
+      background: #111316bd;
+      backdrop-filter: blur(12px);
+    }
+
+    .about-caption strong { display: block; font: 700 16px var(--heading); }
+    .about-caption span { color: #c4c7ce; font-size: 11px; }
+
+    .about-copy h2 { margin: 15px 0 22px; }
+    .about-copy > p { font-size: 14px; line-height: 1.9; }
+
+    .value-list { display: grid; gap: 19px; margin-top: 29px; }
+
+    .value-item { display: flex; gap: 15px; align-items: start; }
+    .value-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 39px;
+      height: 39px;
+      border-radius: 5px;
+      background: #e8e9ec;
+      color: var(--red);
+      font-size: 17px;
+    }
+
+    .value-item h3 { font-size: 14px; letter-spacing: -.2px; }
+    .value-item p { margin: 5px 0 0; font-size: 12px; line-height: 1.7; }
+
+    /* Process */
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 35px;
+      margin-top: 50px;
+    }
+
+    .step { position: relative; padding-top: 25px; border-top: 1px solid #393c42; }
+    .step-number { color: var(--red); font: 800 12px var(--heading); letter-spacing: 2px; }
+    .step h3 { margin-top: 23px; font-size: 20px; letter-spacing: -.5px; }
+    .step p { max-width: 320px; font-size: 13px; line-height: 1.9; }
+
+    /* CTA */
+
+    .cta-section { padding: 90px 0; }
+    .cta-panel {
+      position: relative;
+      overflow: hidden;
+      padding: 65px;
+      border: 1px solid #ffffff16;
+      border-radius: 9px;
+      background:
+        linear-gradient(100deg, #191b20 0%, #191b20ef 52%, #191b20a3 100%),
+        url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80")
+        center / cover;
+    }
+
+    .cta-panel h2 { max-width: 660px; margin: 17px 0; font-size: clamp(30px, 4vw, 47px); }
+    .cta-panel p { max-width: 500px; margin-bottom: 26px; font-size: 13px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 75px;
+    }
+
+    .contact-copy h2 { margin: 14px 0 19px; }
+    .contact-copy > p { font-size: 13px; line-height: 1.9; }
+    .contact-items { display: grid; gap: 21px; margin-top: 34px; }
+    .contact-item { display: flex; gap: 13px; align-items: start; }
+    .contact-item strong { display: block; font-size: 13px; }
+    .contact-item span { display: block; margin-top: 4px; color: #9ca3af; font-size: 12px; }
+
+    .contact-form {
+      padding: 30px;
+      border: 1px solid #30333a;
+      border-radius: 8px;
+      background: #191b20;
+    }
+
+    .contact-form h3 { margin-bottom: 6px; font-size: 22px; }
+    .contact-form > p { margin: 0 0 25px; font-size: 12px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .field-wide { grid-column: 1 / -1; }
+    .contact-form .field { margin-bottom: 0; }
+    .contact-form .field label { color: #c3c5ca; }
+    .consent {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      margin: 19px 0;
+      color: #a6abb5;
+      font-size: 11px;
+      line-height: 1.7;
+    }
+    .consent input { margin-top: 4px; accent-color: var(--red); }
+    .form-feedback { margin-top: 15px; font-size: 12px; line-height: 1.7; }
+    .form-feedback.error { color: #ff7772; }
+    .form-feedback.success { color: #91d5aa; }
+
+    /* Footer */
+
+    .footer { padding: 54px 0 25px; border-top: 1px solid #ffffff12; background: #0b0c0e; }
+    .footer-top { display: flex; justify-content: space-between; gap: 40px; padding-bottom: 42px; }
+    .footer-description { max-width: 320px; margin: 17px 0 0; font-size: 12px; line-height: 1.9; }
+    .footer-columns { display: flex; flex-wrap: wrap; gap: 65px; }
+    .footer-column h3 { margin-bottom: 17px; font-size: 12px; letter-spacing: 0; }
+    .footer-column a, .footer-column p {
+      display: block;
+      margin: 10px 0;
+      color: #9ca3af;
+      font-size: 11px;
+    }
+    .footer-column a:hover { color: white; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-top: 22px;
+      border-top: 1px solid #ffffff12;
+      color: #7e838c;
+      font-size: 10px;
+    }
+
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom a:hover { color: white; }
+
+    /* Vehicle details modal */
+
+    .modal {
+      position: fixed;
+      z-index: 100;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: #000b;
+      backdrop-filter: blur(6px);
+    }
+
+    .modal.open { display: flex; }
+    .modal-dialog {
+      position: relative;
+      width: min(920px, 100%);
+      max-height: min(88vh, 900px);
+      overflow: auto;
+      border: 1px solid #ffffff1a;
+      border-radius: 10px;
+      background: #191b20;
+      animation: rise-in .2s ease both;
+    }
+
+    .modal-close {
+      position: sticky;
+      z-index: 3;
+      top: 12px;
+      float: right;
+      width: 42px;
+      height: 42px;
+      margin: 12px 12px -54px 0;
+      border: 1px solid #ffffff25;
+      border-radius: 5px;
+      background: #111316eb;
+      cursor: pointer;
+      font-size: 23px;
+    }
+
+    .detail-gallery { background: #111316; }
+    .detail-main-image { position: relative; height: 390px; }
+    .detail-main-image img { width: 100%; height: 100%; object-fit: cover; }
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #ffffff50;
+      border-radius: 50%;
+      background: #111316a8;
+      cursor: pointer;
+      transform: translateY(-50%);
+    }
+    .gallery-arrow.prev { left: 15px; }
+    .gallery-arrow.next { right: 15px; }
+    .gallery-count {
+      position: absolute;
+      right: 15px;
+      bottom: 15px;
+      padding: 6px 10px;
+      border-radius: 4px;
+      background: #111316d9;
+      font-size: 11px;
+    }
+
+    .detail-thumbnails { display: flex; gap: 8px; padding: 12px 20px; overflow-x: auto; }
+    .detail-thumbnails button {
+      flex: 0 0 82px;
+      height: 54px;
+      overflow: hidden;
+      padding: 0;
+      border: 2px solid transparent;
+      border-radius: 4px;
+      background: #272a30;
+      cursor: pointer;
+    }
+    .detail-thumbnails button.selected { border-color: var(--red); }
+    .detail-thumbnails img { width: 100%; height: 100%; object-fit: cover; }
+
+    .detail-content { padding: 28px; }
+    .detail-content h2 { margin: 9px 0; font-size: 31px; }
+    .detail-description { font-size: 13px; line-height: 1.9; }
+    .detail-price { margin: 20px 0; font: 800 29px var(--heading); }
+    .detail-spec-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 25px 0;
+    }
+    .detail-spec {
+      padding: 15px;
+      border: 1px solid #30333a;
+      border-radius: 5px;
+    }
+    .detail-spec span { display: block; color: #9ca3af; font-size: 10px; }
+    .detail-spec strong { display: block; margin-top: 5px; font-size: 13px; }
+    .detail-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    /* Finance calculator */
+
+    .finance-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 35px;
+    }
+    .finance-form, .finance-result {
+      padding: 25px;
+      border: 1px solid #30333a;
+      border-radius: 8px;
+      background: #191b20;
+    }
+    .finance-form .field { margin-bottom: 18px; }
+    .finance-result { display: flex; flex-direction: column; justify-content: center; }
+    .finance-result-label { color: #a8adb7; font-size: 12px; }
+    .finance-installment { margin: 8px 0 20px; font: 800 clamp(27px, 4vw, 39px) var(--heading); }
+    .finance-line { display: flex; justify-content: space-between; gap: 15px; padding: 12px 0; border-top: 1px solid #30333a; font-size: 12px; }
+    .finance-line span { color: #a8adb7; }
+    .finance-note { font-size: 11px; line-height: 1.8; }
+
+    /* Privacy / terms */
+
+    .legal-content { max-width: 850px; margin: 0 auto; }
+    .legal-content h1 { margin: 15px 0 20px; font-size: clamp(32px, 5vw, 52px); }
+    .legal-content h2 { margin-top: 35px; font-size: 23px; letter-spacing: -.5px; }
+    .legal-content p, .legal-content li { color: #b5bac3; font-size: 14px; line-height: 1.9; }
+    .legal-content a { color: #ff7772; text-decoration: underline; }
+
+    .page-view { display: none; min-height: 70vh; padding-top: 125px; }
+    .page-view.active { display: block; }
+    .home-view.hidden { display: none; }
+
+    .breadcrumb { margin-bottom: 20px; color: #9ca3af; font-size: 11px; }
+    .breadcrumb a { color: #ff7772; }
+
+    .mobile-contact {
+      position: fixed;
+      z-index: 45;
+      right: 18px;
+      bottom: 18px;
+      display: grid;
+      place-items: center;
+      width: 54px;
+      height: 54px;
+      border: 1px solid #ffffff24;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 8px 24px #0004;
+      font-size: 23px;
+      transition: transform .2s;
+    }
+    .mobile-contact:hover { transform: translateY(-3px); }
+    .mobile-contact[hidden] { display: none; }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .65s, transform .65s; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @keyframes rise-in {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes hero-enter {
+      from { opacity: .5; transform: scale(1.025); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media (max-width: 1050px) {
+      .nav-links { gap: 17px; }
+      .nav-actions .btn { padding-inline: 12px; }
+      .about-grid { gap: 45px; }
+      .vehicle-image { height: 200px; }
+      .contact-grid { gap: 40px; }
+    }
+
+    @media (max-width: 820px) {
+      .container { width: min(var(--max-width), calc(100% - 36px)); }
+      .section { padding: 75px 0; }
+      .nav { min-height: 72px; }
+      .menu-toggle { display: block; }
+      .nav-actions .btn { display: none; }
+      .nav-links {
+        position: absolute;
+        top: 71px;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 18px 22px;
+        border-bottom: 1px solid #ffffff18;
+        background: #111316fc;
+      }
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links a { padding: 13px 5px; border-bottom: 1px solid #ffffff0c; }
+      .hero { min-height: 670px; }
+      .hero::before {
+        background:
+          linear-gradient(90deg, #0b0c0ef0, #0b0c0e9c 60%, #0b0c0e72),
+          linear-gradient(0deg, #111316, transparent 40%),
+          url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1400&q=80")
+          center / cover no-repeat;
+      }
+      .hero h1 { letter-spacing: -2.3px; }
+      .hero-scroll { display: none; }
+      .search-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .vehicle-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+      .vehicle-image { height: 200px; }
+      .about-grid { grid-template-columns: 1fr; gap: 38px; }
+      .about-visual { min-height: 380px; }
+      .steps-grid { gap: 22px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-columns { gap: 45px; }
+      .cta-panel { padding: 42px 30px; }
+    }
+
+    @media (max-width: 560px) {
+      .container { width: calc(100% - 30px); }
+      .section { padding: 63px 0; }
+      .section-heading { align-items: start; flex-direction: column; gap: 15px; margin-bottom: 28px; }
+      .section-heading h2 { font-size: 32px; }
+      .hero { min-height: 690px; }
+      .hero-content { padding-top: 105px; }
+      .hero h1 { font-size: clamp(39px, 11vw, 56px); }
+      .hero-description { font-size: 14px; }
+      .hero-meta { gap: 12px 22px; margin-top: 35px; }
+      .hero-meta span { font-size: 10px; }
+      .search-wrap { margin-top: -25px; }
+      .search-panel { padding: 19px 15px; }
+      .search-title { align-items: start; flex-direction: column; gap: 5px; }
+      .search-grid { gap: 12px 10px; }
+      .field input, .field select { min-height: 44px; padding: 9px; }
+      .search-bottom { align-items: stretch; flex-direction: column; }
+      .search-bottom .btn { width: 100%; }
+      .vehicle-grid { grid-template-columns: 1fr; }
+      .vehicle-image { height: 240px; }
+      .vehicle-body { padding: 19px; }
+      .vehicle-name { font-size: 21px; }
+      .steps-grid { grid-template-columns: 1fr; gap: 30px; }
+      .step { padding-top: 19px; }
+      .step h3 { margin-top: 14px; }
+      .cta-panel { padding: 34px 21px; }
+      .cta-panel h2 { font-size: 32px; }
+      .contact-form { padding: 20px 15px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .field-wide { grid-column: auto; }
+      .footer-columns { gap: 30px; }
+      .footer-bottom { flex-direction: column; }
+      .modal { padding: 8px; }
+      .modal-dialog { max-height: 94vh; }
+      .detail-main-image { height: 250px; }
+      .detail-content { padding: 20px 15px; }
+      .detail-content h2 { font-size: 25px; }
+      .detail-spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+      .detail-spec { padding: 12px; }
+      .detail-actions .btn { flex: 1 1 100%; }
+      .finance-panel { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="MS Automóveis - Início">
+        <span class="brand-mark">M<span>S</span></span>
+        <span class="brand-copy">
+          <span class="brand-name">MS AUTOMÓVEIS</span>
+          <span class="brand-sub">SEU PRÓXIMO CARRO</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#estoque">Estoque</a>
+        <a href="#comprar-vender">Comprar ou vender</a>
+        <a href="#sobre">Sobre a MS</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#estoque">Ver estoque <span>↗</span></a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span id="menuIcon">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="homeView" class="home-view">
+    <section class="hero" id="inicio">
+      <div class="container hero-content">
+        <span class="eyebrow">Uma nova experiência automotiva</span>
+        <h1>Seu próximo carro está mais perto do que <span>imagina.</span></h1>
+        <p class="hero-description">
+          Encontre seu próximo veículo com praticidade, informações claras
+          e atendimento personalizado.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#estoque">Explorar veículos <span>↗</span></a>
+          <a class="btn btn-outline" href="#contato">Falar com a equipe</a>
+        </div>
+        <div class="hero-meta">
+          <span><strong>01.</strong> Explore o estoque</span>
+          <span><strong>02.</strong> Compare suas opções</span>
+          <span><strong>03.</strong> Converse com a equipe</span>
+        </div>
+      </div>
+      <span class="hero-scroll">ROLE PARA EXPLORAR ↓</span>
+    </section>
+
+    <section class="container search-wrap" aria-label="Busca de veículos">
+      <div class="search-panel">
+        <div class="search-title">
+          <h2>Encontre o carro ideal</h2>
+          <span>Personalize sua busca e explore as opções.</span>
+        </div>
+
+        <form id="quickSearch">
+          <div class="search-grid">
+            <div class="field">
+              <label for="quickBrand">Marca</label>
+              <select id="quickBrand">
+                <option value="">Todas as marcas</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quickModel">Modelo</label>
+              <input id="quickModel" placeholder="Ex.: Civic, Polo...">
+            </div>
+            <div class="field">
+              <label for="quickYearMin">Ano inicial</label>
+              <select id="quickYearMin">
+                <option value="">Qualquer ano</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quickYearMax">Ano final</label>
+              <select id="quickYearMax">
+                <option value="">Qualquer ano</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quickPriceMin">Preço mínimo</label>
+              <select id="quickPriceMin">
+                <option value="">Sem mínimo</option>
+                <option value="20000">R$ 20 mil</option>
+                <option value="40000">R$ 40 mil</option>
+                <option value="60000">R$ 60 mil</option>
+                <option value="80000">R$ 80 mil</option>
+                <option value="100000">R$ 100 mil</option>
+                <option value="150000">R$ 150 mil</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quickPriceMax">Preço máximo</label>
+              <select id="quickPriceMax">
+                <option value="">Sem máximo</option>
+                <option value="40000">R$ 40 mil</option>
+                <option value="60000">R$ 60 mil</option>
+                <option value="80000">R$ 80 mil</option>
+                <option value="100000">R$ 100 mil</option>
+                <option value="150000">R$ 150 mil</option>
+                <option value="250000">R$ 250 mil</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quickFuel">Combustível</label>
+              <select id="quickFuel">
+                <option value="">Todos</option>
+                <option value="Flex">Flex</option>
+                <option value="Gasolina">Gasolina</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Híbrido">Híbrido</option>
+                <option value="Elétrico">Elétrico</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="quickTransmission">Câmbio</label>
+              <select id="quickTransmission">
+                <option value="">Todos</option>
+                <option value="Automático">Automático</option>
+                <option value="Manual">Manual</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-bottom">
+            <p>Os resultados dependem dos veículos cadastrados.</p>
+            <button class="btn btn-primary" type="submit">Encontrar meu carro <span>→</span></button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-light inventory-section" id="estoque">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Nosso catálogo</span>
+            <h2>Encontre seu próximo companheiro de estrada.</h2>
+          </div>
+          <p>Explore as opções, compare características e encontre o veículo que combina com você.</p>
+        </div>
+
+        <div class="demo-note" id="demoNotice">
+          <strong>Modo de demonstração:</strong> os veículos exibidos abaixo são exemplos fictícios
+          para testar o funcionamento do catálogo. Eles não representam o estoque real da MS Automóveis.
+          Substitua os registros pelos veículos confirmados antes de publicar.
+        </div>
+
+        <div class="inventory-controls">
+          <span class="result-count" id="resultCount" aria-live="polite">Carregando catálogo...</span>
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+            <label for="sortOrder" style="font-size:12px;color:#626875">Ordenar por</label>
+            <select class="sort-select" id="sortOrder">
+              <option value="featured">Destaques</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+              <option value="year-desc">Ano mais recente</option>
+              <option value="mileage-asc">Menor quilometragem</option>
+            </select>
+            <button class="btn btn-dark" type="button" id="clearFilters">Limpar filtros</button>
+          </div>
+        </div>
+
+        <div class="vehicle-grid" id="vehicleGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="sobre">
+      <div class="container about-grid">
+        <div class="about-visual reveal" role="img" aria-label="Fotografia ilustrativa de um automóvel"></div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">Sobre a MS Automóveis</span>
+          <h2>Mais do que encontrar um carro. Encontrar a escolha certa.</h2>
+          <p>
+            Comprar um veículo é uma decisão importante. Por isso, esta experiência foi
+            pensada para facilitar sua pesquisa, organizar informações e aproximar você
+            da equipe comercial.
+          </p>
+          <p>
+            Consulte os detalhes dos veículos, compare suas características e converse
+            com a equipe para esclarecer dúvidas sobre disponibilidade e condições.
+          </p>
+
+          <div class="value-list">
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">↗</div>
+              <div>
+                <h3>Informações organizadas</h3>
+                <p>Características e valores apresentados de forma clara, conforme os dados cadastrados.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">◎</div>
+              <div>
+                <h3>Atendimento próximo</h3>
+                <p>Um canal para tirar dúvidas e conversar sobre o veículo que chamou sua atenção.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon" aria-hidden="true">⌕</div>
+              <div>
+                <h3>Pesquisa prática</h3>
+                <p>Filtros para encontrar opções compatíveis com o que você procura.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Simples assim</span>
+            <h2>Seu próximo carro em três etapas.</h2>
+          </div>
+          <p>Uma jornada pensada para você pesquisar com calma e avançar quando estiver pronto.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step reveal">
+            <span class="step-number">01 / EXPLORE</span>
+            <h3>Descubra suas opções</h3>
+            <p>Utilize a pesquisa para encontrar marcas, modelos e características que fazem sentido para você.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">02 / ESCOLHA</span>
+            <h3>Compare os detalhes</h3>
+            <p>Confira os dados cadastrados de cada automóvel e identifique os modelos que mais combinam com você.</p>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">03 / CONVERSE</span>
+            <h3>Entre em contato</h3>
+            <p>Fale com a equipe para confirmar disponibilidade, condições comerciais e próximos passos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="financiamento">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Planeje sua compra</span>
+            <h2>Uma estimativa para colocar seus planos na estrada.</h2>
+          </div>
+          <p>Simule valores de parcelas sem compromisso. O resultado não representa uma proposta de crédito.</p>
+        </div>
+
+        <div class="finance-panel">
+          <form class="finance-form" id="financeForm">
+            <div class="field">
+              <label for="financePrice">Valor do veículo (R$)</label>
+              <input id="financePrice" type="number" min="1" max="100000000" step="0.01" value="80000" required>
+            </div>
+            <div class="field">
+              <label for="financeDown">Entrada (R$)</label>
+              <input id="financeDown" type="number" min="0" max="100000000" step="0.01" value="20000" required>
+            </div>
+            <div class="field">
+              <label for="financeMonths">Quantidade de parcelas</label>
+              <select id="financeMonths">
+                <option value="12">12 meses</option>
+                <option value="24">24 meses</option>
+                <option value="36">36 meses</option>
+                <option value="48" selected>48 meses</option>
+                <option value="60">60 meses</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="financeRate">Juros mensais estimados (%)</label>
+              <input id="financeRate" type="number" min="0" max="100" step="0.01" value="1.79" required>
+            </div>
+            <button class="btn btn-primary btn-full" type="submit">Calcular estimativa ↗</button>
+            <p class="finance-note">Você pode alterar os valores. A taxa é ilustrativa e não representa uma condição oferecida pela loja ou por uma instituição financeira.</p>
+          </form>
+
+          <div class="finance-result" id="financeResult" aria-live="polite">
+            <span class="finance-result-label">Parcela mensal estimada</span>
+            <div class="finance-installment" id="financeInstallment">R$ 0,00</div>
+            <div class="finance-line"><span>Valor financiado</span><strong id="financePrincipal">R$ 0,00</strong></div>
+            <div class="finance-line"><span>Total das parcelas</span><strong id="financeTotal">R$ 0,00</strong></div>
+            <div class="finance-line"><span>Total com entrada</span><strong id="financeGrandTotal">R$ 0,00</strong></div>
+            <p class="finance-note" id="financeDisclaimer">Estimativa matemática, sem tarifas, seguros ou outros custos. Não representa aprovação de crédito nem oferta de financiamento.</p>
+            <button class="btn btn-outline btn-full" type="button" id="financeContact" style="margin-top:12px">Consultar condições com a equipe</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="comprar-vender">
+      <div class="container cta-panel">
+        <span class="eyebrow">Seu próximo movimento</span>
+        <h2>Está pensando em trocar de carro? Vamos conversar.</h2>
+        <p>Conte um pouco sobre o veículo que você deseja negociar e veja como iniciar uma conversa com a equipe.</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary" type="button" id="openSellForm">Tenho um veículo para negociar ↗</button>
+          <a class="btn btn-outline" href="#contato">Entrar em contato</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="contato">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <span class="eyebrow">Fale com a equipe</span>
+          <h2>Vamos encontrar a melhor opção para você.</h2>
+          <p>
+            Tem interesse em um veículo ou quer saber mais sobre a empresa?
+            Envie sua mensagem e escolha como deseja continuar a conversa.
+          </p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="value-icon" aria-hidden="true">↗</div>
+              <div>
+                <strong>Atendimento comercial</strong>
+                <span>Configure o canal oficial para receber mensagens.</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="value-icon" aria-hidden="true">◎</div>
+              <div>
+                <strong>Instagram oficial</strong>
+                <span><a href="https://www.instagram.com/msautomoveisoficial/" target="_blank" rel="noopener noreferrer">Acompanhe a MS Automóveis ↗</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <h3>Como podemos ajudar?</h3>
+          <p>Preencha os dados para preparar sua solicitação.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="contactName">Nome *</label>
+              <input id="contactName" name="name" autocomplete="name" maxlength="100" required placeholder="Seu nome">
+            </div>
+            <div class="field">
+              <label for="contactPhone">Telefone *</label>
+              <input id="contactPhone" name="phone" type="tel" autocomplete="tel" maxlength="25" required placeholder="(00) 00000-0000">
+            </div>
+            <div class="field field-wide">
+              <label for="contactSubject">Assunto</label>
+              <select id="contactSubject" name="subject">
+                <option value="Interesse em veículo">Tenho interesse em um veículo</option>
+                <option value="Quero vender meu carro">Quero vender meu carro</option>
+                <option value="Dúvida comercial">Tenho uma dúvida</option>
+                <option value="Outros assuntos">Outro assunto</option>
+              </select>
+            </div>
+            <div class="field field-wide">
+              <label for="contactMessage">Mensagem *</label>
+              <textarea id="contactMessage" name="message" required maxlength="2000" placeholder="Conte como podemos ajudar..."></textarea>
+            </div>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="contactConsent" required>
+            <span>Autorizo o uso dos dados informados para tratar desta solicitação, conforme a <a href="#privacidade" style="color:#ff7772">política de privacidade</a>. *</span>
+          </label>
+          <button class="btn btn-primary btn-full" type="submit">Preparar minha mensagem ↗</button>
+          <p class="form-feedback" id="contactFeedback" aria-live="polite">
+            Este formulário ainda não envia dados para um servidor. Sem backend, sua solicitação não é armazenada.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Página de estoque com filtros completos -->
+  <section class="page-view section-light" id="stockPage">
+    <div class="container">
+      <div class="breadcrumb"><a href="#inicio">Início</a> / Estoque</div>
+      <div class="section-heading">
+        <div><span class="eyebrow">Catálogo completo</span><h2>Todos os veículos</h2></div>
+        <p>Use os filtros para refinar sua busca e comparar os resultados.</p>
+      </div>
+
+      <div class="demo-note">
+        <strong>Importante:</strong> os registros demonstrativos devem ser substituídos pelo estoque
+        confirmado antes da publicação comercial.
+      </div>
+
+      <form id="stockFilterForm" class="search-panel" style="margin-bottom:25px">
+        <div class="search-grid">
+          <div class="field">
+            <label for="stockSearch">Marca, modelo ou versão</label>
+            <input id="stockSearch" placeholder="Digite para pesquisar">
+          </div>
+          <div class="field">
+            <label for="stockBrand">Marca</label>
+            <select id="stockBrand"><option value="">Todas</option></select>
+          </div>
+          <div class="field">
+            <label for="stockYearMin">Ano mínimo</label>
+            <select id="stockYearMin"><option value="">Qualquer</option></select>
+          </div>
+          <div class="field">
+            <label for="stockYearMax">Ano máximo</label>
+            <select id="stockYearMax"><option value="">Qualquer</option></select>
+          </div>
+          <div class="field">
+            <label for="stockPriceMin">Preço mínimo (R$)</label>
+            <input id="stockPriceMin" type="number" min="0" placeholder="0">
+          </div>
+          <div class="field">
+            <label for="stockPriceMax">Preço máximo (R$)</label>
+            <input id="stockPriceMax" type="number" min="0" placeholder="Sem limite">
+          </div>
+          <div class="field">
+            <label for="stockMileageMax">Quilometragem máxima</label>
+            <input id="stockMileageMax" type="number" min="0" placeholder="Sem limite">
+          </div>
+          <div class="field">
+            <label for="stockFuel">Combustível</label>
+            <select id="stockFuel">
+              <option value="">Todos</option>
+              <option>Flex</option><option>Gasolina</option><option>Diesel</option>
+              <option>Híbrido</option><option>Elétrico</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stockTransmission">Câmbio</label>
+            <select id="stockTransmission">
+              <option value="">Todos</option><option>Automático</option><option>Manual</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stockBody">Categoria</label>
+            <select id="stockBody">
+              <option value="">Todas</option>
+              <option>Hatch</option><option>Sedan</option><option>SUV</option>
+              <option>Picape</option><option>Esportivo</option><option>Utilitário</option>
+            </select>
+          </div>
+        </div>
+        <div class="search-bottom">
+          <p>Os critérios são combinados para refinar os resultados.</p>
+          <button type="button" class="btn btn-dark" id="stockClear">Limpar filtros</button>
+        </div>
+      </form>
+
+      <div class="inventory-controls">
+        <span class="result-count" id="stockResultCount" aria-live="polite"></span>
+        <select class="sort-select" id="stockSort" aria-label="Ordenar estoque">
+          <option value="featured">Destaques</option>
+          <option value="price-asc">Menor preço</option>
+          <option value="price-desc">Maior preço</option>
+          <option value="year-desc">Ano mais recente</option>
+          <option value="mileage-asc">Menor quilometragem</option>
+        </select>
+      </div>
+      <div class="vehicle-grid" id="stockGrid"></div>
+    </div>
+  </section>
+
+  <!-- Página de compra e venda -->
+  <section class="page-view section-dark" id="sellPage">
+    <div class="container">
+      <div class="breadcrumb"><a href="#inicio">Início</a> / Comprar ou vender</div>
+      <div class="section-heading">
+        <div><span class="eyebrow">Negocie seu veículo</span><h2>Conte-nos sobre seu carro.</h2></div>
+        <p>Preencha os dados para preparar uma solicitação comercial. A avaliação do veículo depende de análise da equipe.</p>
+      </div>
+
+      <div class="contact-form" style="max-width:850px;margin:auto">
+        <form id="sellForm">
+          <div class="form-grid">
+            <div class="field"><label for="sellName">Nome *</label><input id="sellName" required maxlength="100" autocomplete="name"></div>
+            <div class="field"><label for="sellPhone">Telefone *</label><input id="sellPhone" required maxlength="25" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="sellBrand">Marca *</label><input id="sellBrand" required maxlength="60"></div>
+            <div class="field"><label for="sellModel">Modelo *</label><input id="sellModel" required maxlength="80"></div>
+            <div class="field"><label for="sellVersion">Versão</label><input id="sellVersion" maxlength="100"></div>
+            <div class="field"><label for="sellYear">Ano</label><input id="sellYear" type="number" min="1950" max="2100"></div>
+            <div class="field"><label for="sellMileage">Quilometragem</label><input id="sellMileage" type="number" min="0"></div>
+            <div class="field">
+              <label for="sellCondition">Estado geral</label>
+              <select id="sellCondition">
+                <option value="">Selecione</option><option>Excelente</option>
+                <option>Bom</option><option>Regular</option><option>Precisa de reparos</option>
+              </select>
+            </div>
+            <div class="field field-wide"><label for="sellNotes">Observações</label><textarea id="sellNotes" maxlength="2000" placeholder="Informações adicionais sobre o veículo"></textarea></div>
+          </div>
+          <label class="consent"><input type="checkbox" id="sellConsent" required><span>Autorizo o uso dos dados para tratar desta solicitação, conforme a política de privacidade. *</span></label>
+          <button class="btn btn-primary" type="submit">Preparar solicitação ↗</button>
+          <p class="form-feedback" id="sellFeedback" aria-live="polite">O envio e o armazenamento exigem integração com um backend ou canal comercial configurado.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section class="page-view section-light" id="aboutPage">
+    <div class="container legal-content">
+      <div class="breadcrumb"><a href="#inicio">Início</a> / Sobre a MS</div>
+      <span class="eyebrow">MS Automóveis</span>
+      <h1>Uma escolha que começa com informação.</h1>
+      <p>Esta página apresenta uma descrição inicial da proposta de atendimento e da experiência digital da MS Automóveis.</p>
+      <p>Para publicar uma apresentação institucional definitiva, acrescente a história real da empresa, sua localização confirmada, os serviços oferecidos e outras informações autorizadas pela equipe.</p>
+      <h2>Nosso compromisso com a informação</h2>
+      <p>Os dados dos veículos devem corresponder aos registros confirmados pela empresa. Disponibilidade, preço e condições comerciais precisam ser verificados com a equipe antes de qualquer negociação.</p>
+      <h2>Conheça nossas opções</h2>
+      <p><a href="#estoque">Explore o catálogo de veículos</a> ou <a href="#contato">entre em contato</a> para esclarecer suas dúvidas.</p>
+    </div>
+  </section>
+
+  <!-- Privacidade -->
+  <section class="page-view section-dark" id="privacidadePage">
+    <div class="container legal-content">
+      <div class="breadcrumb"><a href="#inicio">Início</a> / Privacidade</div>
+      <span class="eyebrow">Transparência</span>
+      <h1>Política de privacidade</h1>
+      <p><strong>Documento inicial para configuração.</strong> Este texto é um modelo de desenvolvimento, não uma política jurídica definitiva. Deve ser revisado e preenchido com as práticas reais da empresa antes da publicação.</p>
+      <h2>1. Dados informados</h2>
+      <p>Formulários de contato podem solicitar nome, telefone e informações necessárias para responder à solicitação. Formulários de negociação podem solicitar características do veículo oferecido.</p>
+      <h2>2. Finalidade</h2>
+      <p>Os dados devem ser utilizados somente para as finalidades informadas ao visitante e de acordo com a base legal aplicável. A empresa deve definir seus procedimentos de acesso, armazenamento, segurança e exclusão.</p>
+      <h2>3. Armazenamento e compartilhamento</h2>
+      <p>Esta versão estática não possui backend e não grava as solicitações em um banco de dados. Ao abrir um aplicativo externo, como o WhatsApp, os dados enviados passam a estar sujeitos às condições do serviço utilizado.</p>
+      <h2>4. Direitos dos titulares</h2>
+      <p>Os titulares podem exercer os direitos previstos na legislação aplicável por um canal de atendimento que deverá ser informado pela empresa. Adicione aqui o contato responsável e os procedimentos reais.</p>
+      <h2>5. Contato e atualização</h2>
+      <p>Informe o responsável pelo tratamento, a data de vigência, as finalidades específicas, os prazos de retenção e os canais de atendimento antes de publicar esta política.</p>
+    </div>
+  </section>
+
+  <!-- Termos -->
+  <section class="page-view section-dark" id="termosPage">
+    <div class="container legal-content">
+      <div class="breadcrumb"><a href="#inicio">Início</a> / Termos de uso</div>
+      <span class="eyebrow">Condições de utilização</span>
+      <h1>Termos de uso</h1>
+      <p><strong>Modelo inicial:</strong> revise este documento com base na operação real da empresa antes de disponibilizar o site ao público.</p>
+      <h2>1. Informações do catálogo</h2>
+      <p>As informações apresentadas devem ser conferidas com a empresa. Valores, disponibilidade, características e condições comerciais estão sujeitos à confirmação antes da negociação.</p>
+      <h2>2. Simulador</h2>
+      <p>O simulador fornece apenas uma estimativa matemática. Não representa uma oferta de crédito, aprovação de financiamento ou garantia de taxa, prazo ou valor de parcela.</p>
+      <h2>3. Contatos e solicitações</h2>
+      <p>O envio de uma mensagem não garante a contratação de um serviço nem a reserva de um veículo. A equipe deverá confirmar o recebimento e os próximos passos por um canal válido.</p>
+      <h2>4. Propriedade intelectual</h2>
+      <p>Marcas, fotografias e materiais de terceiros devem ser utilizados conforme as permissões aplicáveis. A identidade tipográfica temporária não representa necessariamente o logotipo oficial da empresa.</p>
+      <h2>5. Atualizações</h2>
+      <p>Inclua a identificação jurídica da empresa, a data de vigência e as condições definitivas de utilização após a revisão do documento.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="#inicio">
+            <span class="brand-mark">M<span>S</span></span>
+            <span class="brand-copy">
+              <span class="brand-name">MS AUTOMÓVEIS</span>
+              <span class="brand-sub">SEU PRÓXIMO CARRO</span>
+            </span>
+          </a>
+          <p class="footer-description">Uma experiência digital para explorar veículos, comparar informações e iniciar uma conversa comercial.</p>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-column">
+            <h3>Navegação</h3>
+            <a href="#inicio">Início</a>
+            <a href="#estoque">Estoque</a>
+            <a href="#comprar-vender">Comprar ou vender</a>
+            <a href="#sobre">Sobre a MS</a>
+          </div>
+          <div class="footer-column">
+            <h3>Atendimento</h3>
+            <a href="#contato">Fale conosco</a>
+            <a href="https://www.instagram.com/msautomoveisoficial/" target="_blank" rel="noopener noreferrer">Instagram oficial ↗</a>
+            <a href="#financiamento">Simular financiamento</a>
+          </div>
+          <div class="footer-column">
+            <h3>Informações</h3>
+            <a href="#privacidade">Privacidade</a>
+            <a href="#termos">Termos de uso</a>
+            <p>Contato e endereço: configurar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© <span id="currentYear"></span> MS Automóveis. Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#privacidade">Privacidade</a>
+          <a href="#termos">Termos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="mobile-contact" id="floatingContact" href="#contato" aria-label="Entrar em contato">↗</a>
+
+  <div class="modal" id="vehicleModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="closeModal" aria-label="Fechar detalhes">×</button>
+      <div id="vehicleDetail"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Visualização ampliada da fotografia">
+    <div class="modal-dialog" style="max-width:1100px;background:#0b0c0e">
+      <button class="modal-close" id="closeLightbox" aria-label="Fechar fotografia">×</button>
+      <div class="detail-main-image" style="height:min(72vh,720px)">
+        <img id="lightboxImage" src="" alt="" style="object-fit:contain">
+        <button class="gallery-arrow prev" id="lightboxPrev" aria-label="Fotografia anterior">‹</button>
+        <button class="gallery-arrow next" id="lightboxNext" aria-label="Próxima fotografia">›</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    "use strict";
+
+    /*
+      CONFIGURAÇÃO DA MS AUTOMÓVEIS
+      1. Cadastre o telefone oficial no formato internacional, apenas com dígitos.
+      2. Substitua os veículos de demonstração por registros confirmados.
+      3. Remova as imagens demonstrativas e use fotografias autorizadas da empresa.
+      4. Conecte os formulários a um backend antes de prometer armazenamento.
+    */
+
+    const CONFIG = {
+      // Exemplo de formato: 55 + DDD + número. Deixe vazio até confirmar.
+      whatsapp: "",
+      instagram: "https://www.instagram.com/msautomoveisoficial/",
+      demoMode: true,
+      pageSize: 9
+    };
+
+    // Registros fictícios para demonstração. Não representam o estoque real.
+    // Remova ou substitua antes da publicação comercial.
+    const DEMO_VEHICLES = [
+      {
+        id: "demo-001", brand: "Volkswagen", model: "Polo", version: "Highline TSI",
+        year: 2023, manufactureYear: 2022, price: 89900, mileage: 28000,
+        fuel: "Flex", transmission: "Automático", color: "Cinza",
+        doors: 4, body: "Hatch", status: "Disponível", featured: true,
+        demo: true, slug: "volkswagen-polo-highline-2023",
+        description: "Registro fictício de demonstração. Substitua as informações pelas características confirmadas do veículo antes de publicar.",
+        options: ["Ar-condicionado", "Direção elétrica", "Vidros elétricos"],
+        images: [
+          "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        id: "demo-002", brand: "Honda", model: "Civic", version: "Touring",
+        year: 2022, manufactureYear: 2022, price: 149900, mileage: 35000,
+        fuel: "Gasolina", transmission: "Automático", color: "Preto",
+        doors: 4, body: "Sedan", status: "Disponível", featured: true,
+        demo: true, slug: "honda-civic-touring-2022",
+        description: "Registro fictício de demonstração. Preço, quilometragem, versão e opcionais não correspondem a uma oferta real.",
+        options: ["Ar-condicionado", "Câmera de ré", "Central multimídia"],
+        images: [
+          "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        id: "demo-003", brand: "Toyota", model: "Corolla", version: "XEi",
+        year: 2021, manufactureYear: 2021, price: 119900, mileage: 44000,
+        fuel: "Flex", transmission: "Automático", color: "Prata",
+        doors: 4, body: "Sedan", status: "Disponível", featured: false,
+        demo: true, slug: "toyota-corolla-xei-2021",
+        description: "Registro fictício de demonstração. Consulte a equipe após o cadastro do veículo real.",
+        options: ["Direção elétrica", "Ar-condicionado", "Controle de estabilidade"],
+        images: [
+          "https://images.unsplash.com/photo-1617469767053-d3b523a0b982?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        id: "demo-004", brand: "Jeep", model: "Compass", version: "Longitude",
+        year: 2022, manufactureYear: 2021, price: 132900, mileage: 39000,
+        fuel: "Flex", transmission: "Automático", color: "Branco",
+        doors: 4, body: "SUV", status: "Disponível", featured: true,
+        demo: true, slug: "jeep-compass-longitude-2022",
+        description: "Registro fictício de demonstração. Nenhuma informação aqui representa uma oferta confirmada.",
+        options: ["Central multimídia", "Câmera de ré", "Ar-condicionado"],
+        images: [
+          "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        id: "demo-005", brand: "Chevrolet", model: "Onix", version: "Premier",
+        year: 2023, manufactureYear: 2022, price: 84900, mileage: 26000,
+        fuel: "Flex", transmission: "Automático", color: "Vermelho",
+        doors: 4, body: "Hatch", status: "Disponível", featured: false,
+        demo: true, slug: "chevrolet-onix-premier-2023",
+        description: "Registro fictício para demonstrar a pesquisa e os detalhes do catálogo.",
+        options: ["Central multimídia", "Ar-condicionado", "Direção elétrica"],
+        images: [
+          "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      {
+        id: "demo-006", brand: "BMW", model: "Série 3", version: "320i",
+        year: 2022, manufactureYear: 2021, price: 219900, mileage: 31000,
+        fuel: "Gasolina", transmission: "Automático", color: "Azul",
+        doors: 4, body: "Sedan", status: "Disponível", featured: false,
+        demo: true, slug: "bmw-serie-3-320i-2022",
+        description: "Registro fictício. Fotografia, versão, preço e especificações são exemplos para desenvolvimento.",
+        options: ["Ar-condicionado", "Direção elétrica", "Controle de estabilidade"],
+        images: [
+          "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=1200&q=80"
+        ]
+      }
+    ];
+
+    /*
+      Para começar com estoque vazio, use:
+      const vehicles = [];
+      Para testar o catálogo, mantenha os registros demonstrativos.
+    */
+    let vehicles = CONFIG.demoMode ? [...DEMO_VEHICLES] : [];
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+    const money = value => new Intl.NumberFormat("pt-BR", {
+      style: "currency", currency: "BRL", maximumFractionDigits: 2
+    }).format(value);
+
+    const integer = value => new Intl.NumberFormat("pt-BR").format(value);
+    const normalized = value => String(value ?? "").normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
+    const escapeHTML = value => String(value ?? "").replace(/[&<>"']/g, char => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[char]);
+
+    const isValidPhone = value => {
+      const digits = value.replace(/\D/g, "");
+      return digits.length >= 10 && digits.length <= 13;
+    };
+
+    function whatsappConfigured() {
+      return /^\d{12,13}$/.test(CONFIG.whatsapp);
+    }
+
+    function openWhatsApp(message) {
+      if (!whatsappConfigured()) {
+        showToast("O WhatsApp oficial ainda não foi configurado. Utilize o Instagram oficial ou configure o número da empresa.");
+        return false;
+      }
+
+      const url = "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(message);
+      window.open(url, "_blank", "noopener,noreferrer");
+      return true;
+    }
+
+    function showToast(message) {
+      let toast = $("#siteToast");
+
+      if (!toast) {
+        toast = document.createElement("div");
+        toast.id = "siteToast";
+        toast.setAttribute("role", "status");
+        Object.assign(toast.style, {
+          position: "fixed", zIndex: "200", bottom: "22px", left: "50%",
+          transform: "translateX(-50%)", width: "min(560px,calc(100% - 30px))",
+          padding: "15px 18px", border: "1px solid #454951", borderRadius: "7px",
+          background: "#191b20", color: "#f5f6f7", boxShadow: "0 12px 35px #0005",
+          fontSize: "12px", lineHeight: "1.7"
+        });
+        document.body.appendChild(toast);
+      }
+
+      toast.textContent = message;
+      toast.hidden = false;
+    }
+
+    function closeToast() {
+      const toast = $("#siteToast");
+      if (toast) toast.remove();
+    }
+
+    function vehicleURL(vehicle) {
+      return location.origin + location.pathname + "#veiculo=" + encodeURIComponent(vehicle.slug || vehicle.id);
+    }
+
+    function vehicleBySlug(slug) {
+      return vehicles.find(v => v.slug === slug || v.id === slug);
+    }
+
+    function vehicleImage(vehicle, index = 0) {
+      return vehicle.images?.[index] || "";
+    }
+
+    function cardHTML(vehicle) {
+      const image = vehicleImage(vehicle);
+      const title = `${vehicle.brand} ${vehicle.model}`;
+      const status = vehicle.status || "Disponível";
+
+      return `
+        <article class="vehicle-card">
+          <div class="vehicle-image">
+            ${image
+              ? `<img src="${escapeHTML(image)}" alt="${escapeHTML(title)} — fotografia ilustrativa do registro ${vehicle.demo ? "de demonstração" : "do veículo"}" loading="lazy" width="600" height="400" onerror="this.outerHTML='<div class=&quot;vehicle-image-fallback&quot;>Fotografia não disponível</div>'">`
+              : `<div class="vehicle-image-fallback">Fotografia não cadastrada</div>`}
+            <span class="vehicle-tag ${vehicle.featured ? "" : "neutral"}">${vehicle.demo ? "Demonstração" : escapeHTML(status)}</span>
+          </div>
+          <div class="vehicle-body">
+            <p class="vehicle-brand">${escapeHTML(vehicle.brand)}</p>
+            <h3 class="vehicle-name">${escapeHTML(vehicle.model)}</h3>
+            <p class="vehicle-version">${escapeHTML(vehicle.version || "Versão não informada")}</p>
+            <div class="vehicle-specs">
+              <div class="vehicle-spec"><small>Ano</small><strong>${escapeHTML(vehicle.year || "—")}</strong></div>
+              <div class="vehicle-spec"><small>Quilometragem</small><strong>${vehicle.mileage == null ? "—" : integer(vehicle.mileage) + " km"}</strong></div>
+              <div class="vehicle-spec"><small>Câmbio</small><strong>${escapeHTML(vehicle.transmission || "—")}</strong></div>
+            </div>
+            <div class="vehicle-price-row">
+              <div><span class="vehicle-price-label">Valor anunciado</span><strong class="vehicle-price">${money(vehicle.price)}</strong></div>
+              <span class="vehicle-status">${escapeHTML(status)}</span>
+            </div>
+            <div class="vehicle-actions">
+              <button class="btn btn-dark" type="button" data-details="${escapeHTML(vehicle.id)}">Ver detalhes ↗</button>
+              <button class="btn btn-outline-dark" type="button" data-contact="${escapeHTML(vehicle.id)}" aria-label="Consultar ${escapeHTML(title)}">↗</button>
+            </div>
+          </div>
+        </article>`;
+    }
+
+    function emptyHTML() {
+      return `
+        <div class="empty-state">
+          <h3>Nenhum veículo encontrado.</h3>
+          <p>Não encontramos veículos com os critérios selecionados. Tente remover alguns filtros ou consulte a equipe.</p>
+          <button class="btn btn-dark" type="button" data-action="clear-filters">Limpar filtros</button>
+        </div>`;
+    }
+
+    function populateSelect(select, values, firstLabel) {
+      if (!select) return;
+
+      const current = select.value;
+      select.replaceChildren(new Option(firstLabel, ""));
+
+      values.forEach(value => select.add(new Option(String(value), String(value))));
+      if (values.map(String).includes(current)) select.value = current;
+    }
+
+    function populateSearchOptions() {
+      const brands = [...new Set(vehicles.map(v => v.brand).filter(Boolean))].sort();
+      const years = [...new Set(vehicles.map(v => v.year).filter(Boolean))].sort((a, b) => b - a);
+
+      populateSelect($("#quickBrand"), brands, "Todas as marcas");
+      populateSelect($("#stockBrand"), brands, "Todas as marcas");
+
+      populateSelect($("#quickYearMin"), [...years].sort((a, b) => a - b), "Qualquer ano");
+      populateSelect($("#quickYearMax"), years, "Qualquer ano");
+
+      populateSelect($("#stockYearMin"), [...years].sort((a, b) => a - b), "Qualquer ano");
+      populateSelect($("#stockYearMax"), years, "Qualquer ano");
+    }
+
+    function applySort(list, sort) {
+      const result = [...list];
+
+      switch (sort) {
+        case "price-asc": return result.sort((a, b) => a.price - b.price);
+        case "price-desc": return result.sort((a, b) => b.price - a.price);
+        case "year-desc": return result.sort((a, b) => b.year - a.year);
+        case "mileage-asc": return result.sort((a, b) => a.mileage - b.mileage);
+        default: return result.sort((a, b) => Number(b.featured) - Number(a.featured));
+      }
+    }
+
+    function getStockFilters() {
+      return {
+        query: normalized($("#stockSearch").value),
+        brand: $("#stockBrand").value,
+        yearMin: Number($("#stockYearMin").value) || 0,
+        yearMax: Number($("#stockYearMax").value) || Infinity,
+        priceMin: $("#stockPriceMin").value === "" ? 0 : Number($("#stockPriceMin").value),
+        priceMax: $("#stockPriceMax").value === "" ? Infinity : Number($("#stockPriceMax").value),
+        mileageMax: $("#stockMileageMax").value === "" ? Infinity : Number($("#stockMileageMax").value),
+        fuel: $("#stockFuel").value,
+        transmission: $("#stockTransmission").value,
+        body: $("#stockBody").value
+      };
+    }
+
+    function filterVehicles(filters = {}) {
+      return vehicles.filter(v => {
+        const searchText = normalized([v.brand, v.model, v.version, v.body].join(" "));
+        if (filters.query && !searchText.includes(filters.query)) return false;
+        if (filters.brand && v.brand !== filters.brand) return false;
+        if (filters.yearMin && Number(v.year) < filters.yearMin) return false;
+        if (filters.yearMax !== undefined && Number(v.year) > filters.yearMax) return false;
+        if (filters.priceMin !== undefined && Number(v.price) < filters.priceMin) return false;
+        if (filters.priceMax !== undefined && Number(v.price) > filters.priceMax) return false;
+        if (filters.mileageMax !== undefined && Number(v.mileage) > filters.mileageMax) return false;
+        if (filters.fuel && v.fuel !== filters.fuel) return false;
+        if (filters.transmission && v.transmission !== filters.transmission) return false;
+        if (filters.body && v.body !== filters.body) return false;
+        return true;
+      });
+    }
+
+    function renderGrid(grid, count, list, sort) {
+      const sorted = applySort(list, sort);
+      count.textContent = `${sorted.length} ${sorted.length === 1 ? "veículo encontrado" : "veículos encontrados"}`;
+      grid.innerHTML = sorted.length ? sorted.map(cardHTML).join("") : emptyHTML();
+    }
+
+    function renderHomeInventory() {
+      const featured = vehicles.filter(v => v.featured && v.status !== "Vendido");
+      const selected = featured.length ? featured : vehicles.filter(v => v.status !== "Vendido");
+      renderGrid($("#vehicleGrid"), $("#resultCount"), selected.slice(0, 6), "featured");
+    }
+
+    function renderStock() {
+      const filters = getStockFilters();
+      const list = filterVehicles(filters);
+      renderGrid($("#stockGrid"), $("#stockResultCount"), list, $("#stockSort").value);
+    }
+
+    function renderAll() {
+      populateSearchOptions();
+      renderHomeInventory();
+      renderStock();
+
+      $("#demoNotice").hidden = !CONFIG.demoMode;
+    }
+
+    // Busca rápida: aplica os mesmos critérios à página de estoque.
+    $("#quickSearch").addEventListener("submit", event => {
+      event.preventDefault();
+
+      $("#stockBrand").value = $("#quickBrand").value;
+      $("#stockSearch").value = $("#quickModel").value;
+      $("#stockYearMin").value = $("#quickYearMin").value;
+      $("#stockYearMax").value = $("#quickYearMax").value;
+      $("#stockPriceMin").value = $("#quickPriceMin").value;
+      $("#stockPriceMax").value = $("#quickPriceMax").value;
+      $("#stockFuel").value = $("#quickFuel").value;
+      $("#stockTransmission").value = $("#quickTransmission").value;
+
+      const filters = getStockFilters();
+      const url = new URL(location.href);
+      url.hash = "estoque";
+      url.search = "";
+
+      Object.entries(filters).forEach(([key, value]) => {
+        if (value !== "" && value !== 0 && value !== Infinity) {
+          url.searchParams.set(key, String(value));
+        }
+      });
+
+      history.replaceState(null, "", url.pathname + url.search + url.hash);
+      renderStock();
+      showPage("stockPage");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Atualização dos filtros e ordenação.
+    $("#stockFilterForm").addEventListener("input", renderStock);
+    $("#stockFilterForm").addEventListener("change", renderStock);
+    $("#stockSort").addEventListener("change", renderStock);
+    $("#sortOrder").addEventListener("change", () => {
+      renderGrid($("#vehicleGrid"), $("#resultCount"),
+        filterVehicles(getStockFilters()), $("#sortOrder").value);
+    });
+
+    function clearStockFilters() {
+      $("#stockFilterForm").reset();
+      $("#quickSearch").reset();
+      $("#stockSort").value = "featured";
+      $("#sortOrder").value = "featured";
+      const url = new URL(location.href);
+      url.search = "";
+      history.replaceState(null, "", url.pathname + url.hash);
+      renderAll();
+    }
+
+    $("#stockClear").addEventListener("click", clearStockFilters);
+    $("#clearFilters").addEventListener("click", clearStockFilters);
+
+    document.addEventListener("click", event => {
+      const details = event.target.closest("[data-details]");
+      const contact = event.target.closest("[data-contact]");
+      const clear = event.target.closest('[data-action="clear-filters"]');
+
+      if (details) openVehicleDetails(details.dataset.details);
+      if (contact) contactVehicle(contact.dataset.contact);
+      if (clear) clearStockFilters();
+    });
+
+    // Detalhes e galeria.
+    let currentVehicle = null;
+    let currentImageIndex = 0;
+    let lastFocusedElement = null;
+
+    function openVehicleDetails(id) {
+      const vehicle = vehicles.find(v => v.id === id);
+      if (!vehicle) {
+        showToast("Não foi possível encontrar esse veículo.");
+        return;
+      }
+
+      currentVehicle = vehicle;
+      currentImageIndex = 0;
+      lastFocusedElement = document.activeElement;
+
+      renderVehicleDetails();
+      $("#vehicleModal").classList.add("open");
+      document.body.style.overflow = "hidden";
+      $("#closeModal").focus();
+    }
+
+    function renderVehicleDetails() {
+      const v = currentVehicle;
+      if (!v) return;
+
+      const images = v.images || [];
+      const image = images[currentImageIndex] || "";
+
+      $("#vehicleDetail").innerHTML = `
+        <div class="detail-gallery">
+          <div class="detail-main-image">
+            ${image
+              ? `<img id="detailMainImage" src="${escapeHTML(image)}" alt="${escapeHTML(v.brand + " " + v.model + " — fotografia " + (currentImageIndex + 1))}" onerror="this.style.display='none';this.parentElement.insertAdjacentHTML('afterbegin','<div class=&quot;vehicle-image-fallback&quot;>Fotografia não disponível</div>')">`
+              : `<div class="vehicle-image-fallback">Fotografia não cadastrada</div>`}
+            ${images.length > 1 ? `
+              <button class="gallery-arrow prev" type="button" data-gallery="prev" aria-label="Fotografia anterior">‹</button>
+              <button class="gallery-arrow next" type="button" data-gallery="next" aria-label="Próxima fotografia">›</button>
+              <span class="gallery-count">${currentImageIndex + 1} / ${images.length}</span>
+            ` : ""}
+          </div>
+          ${images.length > 1 ? `
+            <div class="detail-thumbnails">
+              ${images.map((src, index) => `
+                <button type="button" data-thumbnail="${index}" class="${index === currentImageIndex ? "selected" : ""}" aria-label="Ver fotografia ${index + 1}">
+                  <img src="${escapeHTML(src)}" alt="" loading="lazy">
+                </button>
+              `).join("")}
+            </div>
+          ` : ""}
+        </div>
+
+        <div class="detail-content">
+          <span class="eyebrow">${v.demo ? "Registro demonstrativo" : escapeHTML(v.status || "Veículo")}</span>
+          <h2 id="detailTitle">${escapeHTML(v.brand)} ${escapeHTML(v.model)}</h2>
+          <p style="margin:0;color:#a8adb7;font-size:12px">${escapeHTML(v.version || "Versão não informada")} · Ano-modelo ${escapeHTML(v.year || "—")}</p>
+          <div class="detail-price">${money(v.price)}</div>
+          ${v.demo ? '<div class="demo-note">Este é um registro fictício de demonstração, não uma oferta real da MS Automóveis.</div>' : ""}
+          <p class="detail-description">${escapeHTML(v.description || "Descrição não cadastrada.")}</p>
+
+          <div class="detail-spec-grid">
+            ${[
+              ["Ano fabricação", v.manufactureYear],
+              ["Ano-modelo", v.year],
+              ["Quilometragem", v.mileage == null ? null : integer(v.mileage) + " km"],
+              ["Combustível", v.fuel],
+              ["Câmbio", v.transmission],
+              ["Cor", v.color],
+              ["Categoria", v.body],
+              ["Portas", v.doors],
+              ["Disponibilidade", v.status]
+            ].filter(([label, value]) => value !== null && value !== undefined && value !== "")
+             .map(([label, value]) => `
+              <div class="detail-spec">
+                <span>${escapeHTML(label)}</span>
+                <strong>${escapeHTML(value)}</strong>
+              </div>`).join("")}
+          </div>
+
+          ${v.options?.length ? `
+            <h3 style="font-size:16px;letter-spacing:0;margin-bottom:12px">Equipamentos cadastrados</h3>
+            <p class="detail-description">${v.options.map(escapeHTML).join(" · ")}</p>
+          ` : ""}
+
+          <p style="font-size:11px;color:#a8adb7;line-height:1.8">Confirme disponibilidade, características, preço e condições comerciais com a equipe antes de realizar a negociação.</p>
+          <div class="detail-actions">
+            <button class="btn btn-primary" type="button" id="detailContact">Consultar este veículo ↗</button>
+            <button class="btn btn-outline" type="button" id="detailShare">Compartilhar anúncio</button>
+            <button class="btn btn-outline" type="button" id="detailCopy">Copiar link</button>
+          </div>
+        </div>`;
+
+      $("#detailContact").addEventListener("click", () => contactVehicle(v.id));
+      $("#detailShare").addEventListener("click", () => shareVehicle(v));
+      $("#detailCopy").addEventListener("click", () => copyVehicleLink(v));
+    }
+
+    $("#vehicleDetail").addEventListener("click", event => {
+      const arrow = event.target.closest("[data-gallery]");
+      const thumb = event.target.closest("[data-thumbnail]");
+
+      if (arrow) {
+        const images = currentVehicle?.images || [];
+        if (images.length) {
+          currentImageIndex = (currentImageIndex + (arrow.dataset.gallery === "next" ? 1 : -1) + images.length) % images.length;
+          renderVehicleDetails();
+        }
+      }
+
+      if (thumb) {
+        currentImageIndex = Number(thumb.dataset.thumbnail);
+        renderVehicleDetails();
+      }
+
+      const mainImage = event.target.closest("#detailMainImage");
+      if (mainImage) openLightbox();
+    });
+
+    function contactVehicle(id) {
+      const v = vehicles.find(item => item.id === id);
+      if (!v) return;
+
+      const message = `Olá! Tenho interesse no veículo ${v.brand} ${v.model} ${v.version || ""} (${v.year || "ano não informado"}). Gostaria de receber mais informações sobre disponibilidade e condições. ${vehicleURL(v)}`;
+      openWhatsApp(message);
+    }
+
+    async function shareVehicle(v) {
+      const url = vehicleURL(v);
+      const shareData = {
+        title: `${v.brand} ${v.model} | MS Automóveis`,
+        text: `Confira este veículo: ${v.brand} ${v.model}`,
+        url
+      };
+
+      try {
+        if (navigator.share) {
+          await navigator.share(shareData);
+        } else {
+          await navigator.clipboard.writeText(url);
+          showToast("Link copiado para compartilhar.");
+        }
+      } catch (error) {
+        if (error.name !== "AbortError") showToast("Não foi possível compartilhar. Copie o link do anúncio.");
+      }
+    }
+
+    async function copyVehicleLink(v) {
+      const url = vehicleURL(v);
+      try {
+        await navigator.clipboard.writeText(url);
+        showToast("Link do anúncio copiado.");
+      } catch {
+        showToast("Copie o link da barra de endereços do navegador.");
+      }
+    }
+
+    function closeVehicleModal() {
+      $("#vehicleModal").classList.remove("open");
+      document.body.style.overflow = "";
+      if (lastFocusedElement?.focus) lastFocusedElement.focus();
+    }
+
+    $("#closeModal").addEventListener("click", closeVehicleModal);
+    $("#vehicleModal").addEventListener("click", event => {
+      if (event.target === $("#vehicleModal")) closeVehicleModal();
+    });
+
+    // Lightbox com navegação, teclado e miniaturas.
+    function openLightbox() {
+      if (!currentVehicle?.images?.length) return;
+      $("#lightboxModal").classList.add("open");
+      updateLightbox();
+      $("#closeLightbox").focus();
+    }
+
+    function updateLightbox() {
+      const images = currentVehicle?.images || [];
+      if (!images.length) return;
+      $("#lightboxImage").src = images[currentImageIndex];
+      $("#lightboxImage").alt = `${currentVehicle.brand} ${currentVehicle.model}, fotografia ${currentImageIndex + 1}`;
+      $("#lightboxPrev").hidden = images.length < 2;
+      $("#lightboxNext").hidden = images.length < 2;
+    }
+
+    function moveLightbox(direction) {
+      const images = currentVehicle?.images || [];
+      if (!images.length) return;
+      currentImageIndex = (currentImageIndex + direction + images.length) % images.length;
+      updateLightbox();
+    }
+
+    $("#lightboxPrev").addEventListener("click", () => moveLightbox(-1));
+    $("#lightboxNext").addEventListener("click", () => moveLightbox(1));
+    $("#closeLightbox").addEventListener("click", () => $("#lightboxModal").classList.remove("open"));
+    $("#lightboxModal").addEventListener("click", event => {
+      if (event.target === $("#lightboxModal")) $("#lightboxModal").classList.remove("open");
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        if ($("#lightboxModal").classList.contains("open")) {
+          $("#lightboxModal").classList.remove("open");
+        } else if ($("#vehicleModal").classList.contains("open")) {
+          closeVehicleModal();
+        }
+      }
+
+      if ($("#lightboxModal").classList.contains("open")) {
+        if (event.key === "ArrowRight") moveLightbox(1);
+        if (event.key === "ArrowLeft") moveLightbox(-1);
+      }
+
+      if ($("#vehicleModal").classList.contains("open") &&
+          event.key === "Tab" && !$("#lightboxModal").classList.contains("open")) {
+        const dialog = $("#vehicleModal .modal-dialog");
+        const focusable = $$('button:not([disabled]),a[href],input:not([disabled])', dialog)
+          .filter(el => el.offsetParent !== null);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    // Simulador de financiamento: sistema Price.
+    function calculateFinance(event) {
+      event?.preventDefault();
+
+      const price = Number($("#financePrice").value);
+      const down = Number($("#financeDown").value);
+      const months = Number($("#financeMonths").value);
+      const ratePercent = Number($("#financeRate").value);
+
+      if (!Number.isFinite(price) || !Number.isFinite(down) ||
+          !Number.isFinite(ratePercent) || price <= 0 || down < 0 ||
+          down >= price || ratePercent < 0 || ratePercent > 100 ||
+          !Number.isInteger(months) || months < 1) {
+        showToast("Confira os valores: a entrada deve ser menor que o valor do veículo e os campos precisam ser válidos.");
+        return false;
+      }
+
+      const principal = price - down;
+      const rate = ratePercent / 100;
+      const installment = rate === 0
+        ? principal / months
+        : principal * rate / (1 - Math.pow(1 + rate, -months));
+
+      $("#financeInstallment").textContent = money(installment);
+      $("#financePrincipal").textContent = money(principal);
+      $("#financeTotal").textContent = money(installment * months);
+      $("#financeGrandTotal").textContent = money(down + installment * months);
+
+      $("#financeDisclaimer").textContent =
+        `Cálculo ilustrativo pela fórmula Price, com ${months} parcelas e juros nominais de ${ratePercent.toLocaleString("pt-BR")}% ao mês. Não inclui tarifas, seguros, impostos ou custos adicionais.`;
+
+      return true;
+    }
+
+    $("#financeForm").addEventListener("submit", calculateFinance);
+    calculateFinance();
+
+    $("#financeContact").addEventListener("click", () => {
+      const message =
+        `Olá! Gostaria de conversar sobre uma simulação de financiamento. ` +
+        `Valor do veículo: ${$("#financePrice").value}; entrada: ${$("#financeDown").value}; ` +
+        `prazo: ${$("#financeMonths").value} meses; taxa ilustrativa: ${$("#financeRate").value}% ao mês. ` +
+        `Se possível, gostaria de entender as condições comerciais disponíveis.`;
+
+      openWhatsApp(message);
+    });
+
+    // Formulários: nunca alegar que um registro foi salvo sem backend.
+    function setupContactForm(formId, feedbackId, buildMessage) {
+      $(formId).addEventListener("submit", event => {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const feedback = $(feedbackId);
+
+        if (!form.reportValidity()) return;
+
+        const phoneField = form.querySelector('input[type="tel"]');
+        if (phoneField && !isValidPhone(phoneField.value)) {
+          feedback.className = "form-feedback error";
+          feedback.textContent = "Informe um telefone válido com DDD.";
+          phoneField.focus();
+          return;
+        }
+
+        const message = buildMessage();
+
+        if (whatsappConfigured()) {
+          const confirmed = window.confirm(
+            "O site abrirá o WhatsApp oficial configurado para você enviar a mensagem. Deseja continuar?"
+          );
+
+          if (confirmed) {
+            const opened = openWhatsApp(message);
+            if (opened) {
+              feedback.className = "form-feedback success";
+              feedback.textContent = "O WhatsApp foi aberto. Revise a mensagem e envie-a para concluir o contato. O site não armazenou seus dados.";
+            }
+          }
+        } else {
+          feedback.className = "form-feedback error";
+          feedback.textContent =
+            "Não foi enviado nem armazenado nenhum dado. O WhatsApp oficial ainda não está configurado e este formulário não possui backend. Entre em contato pelo Instagram oficial.";
+        }
+      });
+    }
+
+    setupContactForm("#contactForm", "#contactFeedback", () => {
+      return `Olá! Meu nome é ${$("#contactName").value.trim()}. ` +
+        `Telefone: ${$("#contactPhone").value.trim()}. ` +
+        `Assunto: ${$("#contactSubject").value}. ` +
+        `Mensagem: ${$("#contactMessage").value.trim()}`;
+    });
+
+    setupContactForm("#sellForm", "#sellFeedback", () => {
+      return `Olá! Gostaria de conversar sobre a negociação de um veículo.\n` +
+        `Nome: ${$("#sellName").value.trim()}\n` +
+        `Telefone: ${$("#sellPhone").value.trim()}\n` +
+        `Veículo: ${$("#sellBrand").value.trim()} ${$("#sellModel").value.trim()}\n` +
+        `Versão: ${$("#sellVersion").value.trim() || "Não informada"}\n` +
+        `Ano: ${$("#sellYear").value || "Não informado"}\n` +
+        `Quilometragem: ${$("#sellMileage").value || "Não informada"}\n` +
+        `Estado geral: ${$("#sellCondition").value || "Não informado"}\n` +
+        `Observações: ${$("#sellNotes").value.trim() || "Nenhuma"}`;
+    });
+
+    $("#openSellForm").addEventListener("click", () => {
+      showPage("sellPage");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    // Navegação por hash: início, estoque, compra e venda, sobre, contato e páginas legais.
+    const pageRoutes = {
+      inicio: "homeView",
+      estoque: "stockPage",
+      "comprar-vender": "sellPage",
+      sobre: "aboutPage",
+      contato: "homeView",
+      privacidade: "privacidadePage",
+      termos: "termosPage",
+      financiamento: "homeView"
+    };
+
+    function showPage(pageId) {
+      const home = $("#homeView");
+      const pageSections = $$(".page-view");
+
+      home.classList.toggle("hidden", pageId !== "homeView");
+      pageSections.forEach(section => {
+        section.classList.toggle("active", section.id === pageId);
+      });
+
+      const menu = $("#navLinks");
+      menu.classList.remove("open");
+      $("#header").classList.remove("menu-open");
+      $("#menuToggle").setAttribute("aria-expanded", "false");
+      $("#menuIcon").textContent = "☰";
+
+      $("#floatingContact").hidden = pageId !== "homeView";
+
+      if (pageId === "stockPage") renderStock();
+    }
+
+    function routeFromHash() {
+      const hash = location.hash.slice(1);
+      const vehicleMatch = hash.match(/^veiculo=(.+)$/);
+
+      if (vehicleMatch) {
+        const slug = decodeURIComponent(vehicleMatch[1]);
+        const vehicle = vehicleBySlug(slug);
+        showPage("homeView");
+        if (vehicle) openVehicleDetails(vehicle.id);
+        else showToast("Este anúncio não está disponível neste catálogo.");
+        return;
+      }
+
+      const route = hash.split("?")[0] || "inicio";
+      const pageId = pageRoutes[route] || "homeView";
+
+      showPage(pageId);
+
+      if (route === "contato" || route === "financiamento") {
+        setTimeout(() => {
+          const target = $("#" + route);
+          target?.scrollIntoView({ behavior: "smooth" });
+        }, 30);
+      } else if (route === "estoque" && pageId === "homeView") {
+        setTimeout(() => $("#estoque").scrollIntoView({ behavior: "smooth" }), 30);
+      } else if (route === "comprar-vender" && pageId === "sellPage") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }
+
+    window.addEventListener("hashchange", routeFromHash);
+
+    $("#navLinks").addEventListener("click", event => {
+      const link = event.target.closest("a");
+      if (!link) return;
+
+      const route = link.getAttribute("href").slice(1);
+      if (route === "estoque") {
+        event.preventDefault();
+        location.hash = "estoque";
+        showPage("stockPage");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else if (route === "comprar-vender") {
+        event.preventDefault();
+        location.hash = "comprar-vender";
+        showPage("sellPage");
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+
+    $("#menuToggle").addEventListener("click", () => {
+      const menu = $("#navLinks");
+      const open = menu.classList.toggle("open");
+      $("#header").classList.toggle("menu-open", open);
+      $("#menuToggle").setAttribute("aria-expanded", String(open));
+      $("#menuIcon").textContent = open ? "×" : "☰";
+      $("#menuToggle").setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    });
+
+    // Cabeçalho e animações progressivas.
+    const header = $("#header");
+
+    function updateHeader() {
+      header.classList.toggle("scrolled", window.scrollY > 25);
+    }
+
+    window.addEventListener("scroll", updateHeader, { passive: true });
+    updateHeader();
+
+    if ("IntersectionObserver" in window &&
+        !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      $$(".reveal").forEach(element => observer.observe(element));
+    } else {
+      $$(".reveal").forEach(element => element.classList.add("visible"));
+    }
+
+    // Ano do rodapé e inicialização.
+    $("#currentYear").textContent = new Date().getFullYear();
+
+    renderAll();
+    routeFromHash();
+
+    /*
+      Integrações pendentes para produção:
+      - API/backend para persistir veículos e solicitações.
+      - Banco de dados e autenticação administrativa.
+      - Upload seguro de fotografias.
+      - Configuração do WhatsApp comercial.
+      - Sitemap, robots.txt e páginas de erro do servidor.
+      - Política de privacidade definitiva e consentimento aplicável.
+    */
+  </script>
+</body>
+</html>

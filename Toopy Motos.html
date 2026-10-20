@@ -1,0 +1,2243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b12">
+
+<title>Toopy Motos | Motocicletas em Pouso Redondo - SC</title>
+<meta name="description" content="Conheça a Toopy Motos em Pouso Redondo, Santa Catarina. Consulte as motocicletas disponíveis e fale diretamente com a equipe pelo WhatsApp.">
+<meta property="og:title" content="Toopy Motos | Sua próxima conquista começa aqui">
+<meta property="og:description" content="Conheça a Toopy Motos em Pouso Redondo, SC. Consulte as motocicletas disponíveis pelo WhatsApp.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #1677ff;
+  --blue-dark: #0a2a66;
+  --bg: #080b12;
+  --panel: #111722;
+  --panel2: #151b26;
+  --white: #ffffff;
+  --muted: #b8c1d1;
+  --line: rgba(184,193,209,.15);
+  --max: 1240px;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--white);
+  font-family: Manrope, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+body, button, input, select { font-family: Manrope, Arial, sans-serif; }
+
+body.menu-open { overflow: hidden; }
+
+a { color: inherit; text-decoration: none; }
+
+button, input, select { font-size: inherit; }
+
+button { cursor: pointer; }
+
+img { display: block; max-width: 100%; }
+
+.container {
+  width: min(var(--max), calc(100% - 44px));
+  margin: auto;
+}
+
+section { scroll-margin-top: 85px; }
+
+h1, h2, h3 {
+  margin-top: 0;
+  line-height: 1.05;
+}
+
+h1, h2, .display {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -.025em;
+}
+
+h1 {
+  font-size: clamp(3.8rem, 8vw, 7.5rem);
+  line-height: .94;
+  font-weight: 900;
+  margin: 22px 0;
+}
+
+h1 span { color: #69a7ff; }
+
+h2 {
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-weight: 800;
+  margin: 14px 0 20px;
+}
+
+h3 { font-size: 1.2rem; }
+
+p { margin-top: 0; }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #83b7ff;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  height: 2px;
+  width: 24px;
+  background: var(--blue);
+}
+
+.section { padding: 100px 0; }
+
+.section-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 35px;
+}
+
+.section-head p {
+  color: var(--muted);
+  max-width: 470px;
+  margin-bottom: 4px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 19px;
+  background: var(--blue);
+  color: white;
+  border: 1px solid var(--blue);
+  border-radius: 9px;
+  font-size: .85rem;
+  font-weight: 800;
+  text-align: center;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #3688ff;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background: #151b26;
+  border-color: #28589b;
+}
+
+.btn.secondary:hover { background: #1b2a41; }
+
+.btn.ghost {
+  background: transparent;
+  border-color: var(--line);
+}
+
+.btn.small {
+  min-height: 39px;
+  padding: 9px 12px;
+  font-size: .76rem;
+}
+
+button:focus-visible, a:focus-visible,
+input:focus-visible, select:focus-visible {
+  outline: 3px solid #83b7ff;
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
+}
+
+/* CABEÇALHO */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(8,11,18,.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.nav {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-size: 1.65rem;
+  font-weight: 900;
+  line-height: .9;
+  letter-spacing: .03em;
+  flex-shrink: 0;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-family: Manrope, sans-serif;
+  font-size: .55rem;
+  letter-spacing: .3em;
+  margin-top: 6px;
+}
+
+.brand-mark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(140deg, var(--blue), var(--blue-dark));
+}
+
+.brand-mark svg {
+  width: 26px;
+  fill: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  color: #d0d7e4;
+  font-size: .79rem;
+  font-weight: 700;
+}
+
+.nav-links a:hover { color: #82b7ff; }
+
+.nav-actions { display: flex; align-items: center; }
+
+.menu-toggle {
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--panel2);
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  min-height: min(780px, calc(100svh - 78px));
+  display: flex;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(90deg, #080b12 0%, rgba(8,11,18,.88) 34%, rgba(8,11,18,.2) 78%),
+    linear-gradient(0deg, #080b12 0%, transparent 35%),
+    url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=2000&q=85")
+    center / cover no-repeat;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: -8%;
+  top: 15%;
+  width: 45vw;
+  height: 45vw;
+  max-width: 620px;
+  max-height: 620px;
+  border: 1px solid rgba(22,119,255,.25);
+  border-radius: 50%;
+  box-shadow: 0 0 0 45px rgba(22,119,255,.035);
+  pointer-events: none;
+}
+
+.hero-content {
+  padding: 90px 0 110px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-copy {
+  max-width: 555px;
+  color: #d0d8e5;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 30px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-note {
+  margin-top: 42px;
+  color: var(--muted);
+  font-size: .75rem;
+  letter-spacing: .06em;
+}
+
+.hero-note span {
+  display: inline-block;
+  height: 2px;
+  width: 32px;
+  background: var(--blue);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* FAIXA INSTITUCIONAL */
+
+.ticker {
+  background: #0c111a;
+  border-block: 1px solid var(--line);
+}
+
+.ticker-inner {
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding-block: 16px;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: #c8d0de;
+}
+
+.ticker-item svg { color: #73adff; }
+
+/* CATÁLOGO */
+
+.catalog-section {
+  background: linear-gradient(180deg, #080b12, #0b1019);
+}
+
+.catalog-tools {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 12px;
+  padding: 17px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  margin-bottom: 22px;
+}
+
+.field label {
+  display: block;
+  color: #aab5c7;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.field input, .field select {
+  width: 100%;
+  min-height: 45px;
+  padding: 10px 12px;
+  color: white;
+  background: #0b1019;
+  border: 1px solid #303a4b;
+  border-radius: 8px;
+}
+
+.field input::placeholder { color: #77849a; }
+
+.field select { color-scheme: dark; }
+
+.search-wrap { position: relative; }
+
+.search-wrap svg {
+  position: absolute;
+  left: 12px;
+  top: 13px;
+  color: #8c9ab0;
+}
+
+.search-wrap input { padding-left: 40px; }
+
+.filter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.filter-row strong { color: white; }
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 20px;
+}
+
+.bike-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #171e2a, #10151e);
+  transition: transform .25s, border-color .25s;
+}
+
+.bike-card:hover {
+  transform: translateY(-4px);
+  border-color: #1677ff80;
+}
+
+.bike-image {
+  height: 225px;
+  position: relative;
+  overflow: hidden;
+  background: #10151e;
+}
+
+.bike-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.bike-card:hover .bike-image img { transform: scale(1.04); }
+
+.bike-badge {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  padding: 6px 9px;
+  background: rgba(8,11,18,.9);
+  border: 1px solid #ffffff24;
+  border-radius: 5px;
+  color: #9dc7ff;
+  font-size: .65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bike-card-body { padding: 18px; }
+
+.bike-meta {
+  color: #92a0b6;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.bike-card h3 { margin-bottom: 14px; }
+
+.bike-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 13px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: .74rem;
+}
+
+.bike-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.bike-price { font-weight: 800; }
+
+.bike-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.bike-actions .btn { flex: 1; }
+
+.empty-state {
+  grid-column: 1 / -1;
+  padding: 55px 22px;
+  text-align: center;
+  background: #10151e;
+  border: 1px dashed #344055;
+  border-radius: 15px;
+}
+
+.empty-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  color: #7eb4ff;
+  background: #1677ff18;
+}
+
+.empty-state h3 { font-size: 1.45rem; }
+
+.empty-state p {
+  max-width: 500px;
+  color: var(--muted);
+  margin: 0 auto 20px;
+}
+
+.catalog-footnote {
+  margin-top: 16px;
+  color: #8793a7;
+  font-size: .72rem;
+}
+
+/* DESTAQUES */
+
+.feature-section { background: #0c111a; }
+
+.feature-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.feature-image {
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 17px;
+  background: #111722;
+}
+
+.feature-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-image::after {
+  content: "";
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(0deg, #080b12bb, transparent);
+}
+
+.image-caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 24px;
+  left: 24px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.feature-copy > p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.feature-points {
+  display: grid;
+  gap: 19px;
+  margin: 28px 0;
+}
+
+.feature-point {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.point-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid #1677ff55;
+  border-radius: 10px;
+  background: #1677ff14;
+  color: #83b7ff;
+}
+
+.feature-point strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: .88rem;
+}
+
+.feature-point p {
+  color: var(--muted);
+  font-size: .8rem;
+  margin-bottom: 0;
+}
+
+/* CATEGORIAS */
+
+.categories-section { background: var(--bg); }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 14px;
+}
+
+.category-card {
+  min-height: 180px;
+  position: relative;
+  display: flex;
+  align-items: end;
+  padding: 18px;
+  overflow: hidden;
+  text-align: left;
+  color: white;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: #111722;
+  isolation: isolate;
+}
+
+.category-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: var(--cat-image) center / cover;
+  transition: transform .4s;
+}
+
+.category-card:hover::before { transform: scale(1.06); }
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: 25% 0 0;
+  z-index: -1;
+  background: linear-gradient(0deg, #080b12, transparent);
+}
+
+.category-card strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.65rem;
+  text-transform: uppercase;
+}
+
+.category-card span span {
+  display: block;
+  color: #c1cada;
+  font-size: .68rem;
+}
+
+.category-card .arrow {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #080b12c9;
+}
+
+.category-note {
+  color: #8995a8;
+  font-size: .72rem;
+  margin-top: 15px;
+}
+
+/* GALERIA */
+
+.gallery-section { background: #0c111a; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  grid-template-rows: 190px 190px;
+  gap: 13px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  border-radius: 12px;
+  background: #151b26;
+  color: white;
+  text-align: left;
+}
+
+.gallery-item:first-child { grid-row: span 2; }
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.gallery-item:hover img { transform: scale(1.05); }
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(0deg, #080b12cc, transparent);
+}
+
+.gallery-item span {
+  position: absolute;
+  z-index: 1;
+  bottom: 13px;
+  left: 15px;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+/* SOBRE */
+
+.about-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 19px;
+  background: linear-gradient(135deg, #151b26, #0c111a);
+}
+
+.about-visual {
+  min-height: 360px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a2a66, #080b12);
+}
+
+.about-visual::before, .about-visual::after {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 1px solid #ffffff20;
+  border-radius: 50%;
+}
+
+.about-visual::after {
+  width: 240px;
+  height: 240px;
+}
+
+.about-logo {
+  position: relative;
+  z-index: 1;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.4rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: .8;
+  text-align: center;
+}
+
+.about-logo span { color: #78b0ff; }
+
+.about-logo small {
+  display: block;
+  margin-top: 17px;
+  color: #c3d9ff;
+  font-family: Manrope, sans-serif;
+  font-size: .68rem;
+  letter-spacing: .3em;
+}
+
+.about-content {
+  padding: clamp(28px, 5vw, 55px);
+  align-self: center;
+}
+
+.about-content p {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+/* CONTATO */
+
+.location-section { background: #0c111a; }
+
+.location-grid {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 23px;
+}
+
+.contact-panel {
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--panel2);
+}
+
+.contact-list {
+  display: grid;
+  gap: 21px;
+  margin: 27px 0;
+}
+
+.contact-item {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+}
+
+.contact-item strong {
+  display: block;
+  font-size: .84rem;
+  margin-bottom: 4px;
+}
+
+.contact-item p, .contact-item a {
+  color: var(--muted);
+  font-size: .79rem;
+  overflow-wrap: anywhere;
+  margin-bottom: 0;
+}
+
+.contact-item a:hover { color: #83b7ff; }
+
+.contact-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.map-frame {
+  min-height: 440px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #111722;
+}
+
+.map-frame iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  border: 0;
+}
+
+/* CTA */
+
+.cta-band {
+  padding: 0 0 90px;
+  background: #0c111a;
+}
+
+.cta-inner {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(30px, 6vw, 65px);
+  border: 1px solid #3b7fe950;
+  border-radius: 19px;
+  background: linear-gradient(115deg, #0a2a66, #0b1630 62%, #111722);
+}
+
+.cta-inner h2 {
+  max-width: 700px;
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+}
+
+.cta-inner p {
+  max-width: 600px;
+  color: #cad8ef;
+}
+
+.cta-inner::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: -100px;
+  width: 320px;
+  height: 320px;
+  border: 1px solid #ffffff1c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 40px #ffffff08;
+  pointer-events: none;
+}
+
+.cta-inner .btn { position: relative; z-index: 1; }
+
+/* RODAPÉ */
+
+.site-footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  background: #07090e;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-copy {
+  color: #8490a3;
+  font-size: .72rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 17px;
+  flex-wrap: wrap;
+  color: #b4bece;
+  font-size: .75rem;
+}
+
+.footer-links a:hover { color: white; }
+
+/* WHATSAPP */
+
+.whatsapp-float {
+  position: fixed;
+  z-index: 45;
+  right: 20px;
+  bottom: 20px;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #ffffff44;
+  border-radius: 50%;
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 10px 30px #1677ff55;
+  transition: transform .2s;
+}
+
+.whatsapp-float:hover { transform: translateY(-4px); }
+
+.whatsapp-float svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* MODAL DE DETALHES */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(1,4,10,.84);
+  backdrop-filter: blur(8px);
+}
+
+.modal-backdrop.open { display: flex; }
+
+.modal {
+  width: min(900px, 100%);
+  max-height: 90svh;
+  overflow: auto;
+  position: relative;
+  background: #111722;
+  border: 1px solid #ffffff20;
+  border-radius: 17px;
+}
+
+.modal-close {
+  position: sticky;
+  float: right;
+  top: 10px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  margin: 10px 10px -50px 0;
+  border: 1px solid #ffffff35;
+  border-radius: 50%;
+  background: #080b12;
+  color: white;
+}
+
+.modal-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.modal-gallery {
+  min-height: 360px;
+  background: #080b12;
+}
+
+.modal-gallery img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+}
+
+.modal-info { padding: 32px 26px; }
+
+.modal-info h2 { font-size: 2.5rem; }
+
+.modal-info p {
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.8;
+}
+
+.modal-specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.modal-spec {
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0b1019;
+}
+
+.modal-spec small {
+  display: block;
+  color: #8997ac;
+  font-size: .62rem;
+  text-transform: uppercase;
+}
+
+.modal-spec strong {
+  display: block;
+  margin-top: 4px;
+  font-size: .83rem;
+}
+
+.modal-actions { display: grid; gap: 9px; }
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background: rgba(2,4,10,.96);
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: min(1100px, 100%);
+  max-height: 85svh;
+  object-fit: contain;
+}
+
+.lightbox button {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff40;
+  border-radius: 50%;
+  background: #151b26;
+  color: white;
+}
+
+.lightbox-close { right: 20px; top: 20px; }
+.lightbox-prev { left: 20px; top: 50%; }
+.lightbox-next { right: 20px; top: 50%; }
+
+@media (max-width: 1050px) {
+  .nav-links { gap: 14px; }
+  .nav-links a { font-size: .73rem; }
+  .catalog-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .category-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .feature-layout { gap: 28px; }
+  .feature-image { min-height: 430px; }
+}
+
+@media (max-width: 760px) {
+  .container { width: calc(100% - 32px); }
+
+  .section { padding: 75px 0; }
+
+  .nav { height: 68px; }
+
+  .brand { font-size: 1.45rem; }
+
+  .menu-toggle { display: grid; }
+
+  .nav-actions > .btn { display: none; }
+
+  .nav-links {
+    position: fixed;
+    inset: 68px 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 12px 20px 22px;
+    background: rgba(8,11,18,.99);
+    border-bottom: 1px solid var(--line);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-120%);
+    transition: .25s;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    padding: 14px 4px;
+    border-bottom: 1px solid #ffffff10;
+    font-size: .94rem;
+  }
+
+  .hero {
+    min-height: 690px;
+    min-height: calc(92svh - 68px);
+    align-items: end;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(90deg, rgba(8,11,18,.84), rgba(8,11,18,.35)),
+      linear-gradient(0deg, #080b12 0%, rgba(8,11,18,.1) 80%),
+      url("https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1100&q=85")
+      58% center / cover no-repeat;
+  }
+
+  .hero-content { padding: 100px 0 70px; }
+
+  .hero h1 { font-size: clamp(3.8rem, 15vw, 6rem); }
+
+  .hero-copy { font-size: .91rem; }
+
+  .hero-actions { align-items: stretch; }
+
+  .ticker-inner { justify-content: flex-start; gap: 17px; }
+
+  .ticker-item { font-size: .64rem; }
+
+  .section-head { display: block; }
+
+  .section-head p { margin-top: 15px; }
+
+  .catalog-tools { grid-template-columns: 1fr 1fr; padding: 12px; }
+
+  .catalog-tools .field:first-child { grid-column: 1 / -1; }
+
+  .catalog-grid { gap: 12px; }
+
+  .bike-image { height: 170px; }
+
+  .bike-card-body { padding: 13px; }
+
+  .bike-card h3 { font-size: 1.05rem; }
+
+  .bike-bottom { align-items: flex-start; flex-direction: column; }
+
+  .bike-actions { flex-direction: column; }
+
+  .bike-actions .btn { width: 100%; }
+
+  .feature-layout, .about-card, .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-image {
+    min-height: 330px;
+    order: 2;
+  }
+
+  .feature-copy { order: 1; }
+
+  .category-card { min-height: 145px; padding: 14px; }
+
+  .category-card strong { font-size: 1.4rem; }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 190px 140px 140px;
+  }
+
+  .gallery-item:first-child {
+    grid-row: auto;
+    grid-column: 1 / -1;
+  }
+
+  .about-visual { min-height: 260px; }
+
+  .about-content { padding: 28px; }
+
+  .map-frame, .map-frame iframe { min-height: 340px; }
+
+  .cta-band { padding-bottom: 65px; }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .modal-content { grid-template-columns: 1fr; }
+
+  .modal-gallery, .modal-gallery img {
+    min-height: 230px;
+    height: 250px;
+  }
+
+  .modal-info { padding: 25px 20px; }
+
+  .modal-info h2 { font-size: 2rem; }
+
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero-actions { display: grid; }
+  .hero-actions .btn { width: 100%; }
+
+  .catalog-grid { grid-template-columns: 1fr; }
+
+  .bike-image { height: 220px; }
+
+  .bike-bottom {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .bike-actions { flex-direction: row; }
+
+  .bike-actions .btn {
+    padding: 10px 8px;
+    font-size: .73rem;
+  }
+
+  .catalog-tools { grid-template-columns: 1fr; }
+
+  .catalog-tools .field:first-child { grid-column: auto; }
+
+  .filter-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .category-grid { gap: 9px; }
+
+  .category-card { min-height: 130px; }
+
+  .gallery-grid { grid-template-rows: 175px 125px 125px; }
+
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MotorcycleDealer",
+  "name": "Toopy Motos - Pouso Redondo",
+  "telephone": "+55 47 99194-5964",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "BR-470, KM 175, nº 9355, Arno Siewerdt",
+    "addressLocality": "Pouso Redondo",
+    "addressRegion": "SC",
+    "postalCode": "89172-000",
+    "addressCountry": "BR"
+  },
+  "sameAs": ["https://www.instagram.com/toopymotos/"]
+}
+</script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#inicio" aria-label="Toopy Motos - início">
+      <span class="brand-mark">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M4 25 13 6h7l-6 12h6l-3 7H4Zm16 0 8-19h-6l-8 19h6Z"/>
+        </svg>
+      </span>
+      <span>TOOPY<small>MOTOS</small></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+      <a href="#inicio">Início</a>
+      <a href="#estoque">Estoque de motos</a>
+      <a href="#destaques">Destaques</a>
+      <a href="#sobre">Sobre a loja</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a class="btn small" href="#estoque">Encontrar minha moto →</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu"
+        aria-expanded="false" aria-controls="navLinks">
+        <svg class="icon" viewBox="0 0 24 24">
+          <path d="M4 7h16M4 12h16M4 17h16"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <span class="eyebrow">Toopy Motos · Pouso Redondo, SC</span>
+    <h1>Sua próxima<br><span>conquista</span><br>começa aqui.</h1>
+
+    <p class="hero-copy">
+      Encontre a motocicleta ideal para acompanhar sua rotina,
+      seus planos e sua paixão por duas rodas. Sua próxima história
+      começa no próximo giro.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn" href="#estoque">Explorar motocicletas →</a>
+      <a class="btn secondary" href="https://wa.me/5547991945964?text=Ol%C3%A1%21%20Acessei%20o%20site%20da%20Toopy%20Motos%20e%20gostaria%20de%20conhecer%20as%20motocicletas%20dispon%C3%ADveis."
+         target="_blank" rel="noopener noreferrer">Falar com um consultor</a>
+    </div>
+
+    <div class="hero-note"><span></span> O próximo destino é seu.</div>
+  </div>
+</section>
+
+<div class="ticker">
+  <div class="container ticker-inner">
+    <div class="ticker-item">✦ Paixão por duas rodas</div>
+    <div class="ticker-item">◇ Atendimento direto</div>
+    <div class="ticker-item">⌖ Pouso Redondo · SC</div>
+    <div class="ticker-item">↗ Sua próxima conquista</div>
+  </div>
+</div>
+
+<section class="section catalog-section" id="estoque">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Catálogo</span>
+        <h2>Encontre sua<br>próxima moto.</h2>
+      </div>
+      <p>
+        Explore o catálogo e encontre uma moto que combine com seus planos.
+        Consulte a equipe para confirmar disponibilidade e detalhes.
+      </p>
+    </div>
+
+    <div class="catalog-tools">
+      <div class="field">
+        <label for="searchInput">Buscar moto</label>
+        <div class="search-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="searchInput" type="search" placeholder="Marca ou modelo..." autocomplete="off">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="brandFilter">Marca</label>
+        <select id="brandFilter"><option value="">Todas as marcas</option></select>
+      </div>
+
+      <div class="field">
+        <label for="categoryFilter">Categoria</label>
+        <select id="categoryFilter">
+          <option value="">Todas as categorias</option>
+          <option>Street</option><option>Esportiva</option><option>Trail</option>
+          <option>Naked</option><option>Scooter</option><option>Custom</option>
+          <option>Touring</option><option>Outra</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="conditionFilter">Condição</label>
+        <select id="conditionFilter">
+          <option value="">Todas</option><option value="Nova">Nova</option><option value="Usada">Usada</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="priceFilter">Faixa de preço</label>
+        <select id="priceFilter">
+          <option value="">Qualquer preço</option>
+          <option value="0-10000">Até R$ 10 mil</option>
+          <option value="10000-25000">R$ 10 mil – R$ 25 mil</option>
+          <option value="25000-50000">R$ 25 mil – R$ 50 mil</option>
+          <option value="50000-99999999">Acima de R$ 50 mil</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="yearFilter">Ano mínimo</label>
+        <select id="yearFilter"><option value="">Todos os anos</option></select>
+      </div>
+
+      <div class="field">
+        <label for="ccFilter">Cilindrada mínima</label>
+        <select id="ccFilter">
+          <option value="">Todas</option>
+          <option value="125">125 cc+</option><option value="150">150 cc+</option>
+          <option value="250">250 cc+</option><option value="400">400 cc+</option>
+          <option value="600">600 cc+</option><option value="1000">1000 cc+</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="sortFilter">Ordenar por</label>
+        <select id="sortFilter">
+          <option value="">Relevância</option>
+          <option value="price-asc">Menor preço</option>
+          <option value="price-desc">Maior preço</option>
+          <option value="year-desc">Ano mais recente</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <span id="resultCount" aria-live="polite">0 motocicletas encontradas</span>
+      <button class="btn ghost small" id="clearFilters" type="button">Limpar filtros</button>
+    </div>
+
+    <div class="catalog-grid" id="catalogGrid" aria-live="polite"></div>
+
+    <p class="catalog-footnote">
+      Fotografias de ambientação são ilustrativas e não representam veículos
+      disponíveis no estoque. Consulte a equipe para informações atualizadas.
+    </p>
+  </div>
+</section>
+
+<section class="section feature-section" id="destaques">
+  <div class="container feature-layout">
+    <div class="feature-image">
+      <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1100&q=85"
+           alt="Motocicleta em cenário escuro, fotografia ilustrativa" loading="lazy">
+      <div class="image-caption">Liberdade em duas rodas.</div>
+    </div>
+
+    <div class="feature-copy">
+      <span class="eyebrow">Destaques</span>
+      <h2>Motos que merecem<br>sua atenção.</h2>
+      <p>
+        Os destaques são definidos pelo cadastro do catálogo. Quando uma
+        motocicleta for marcada como destaque, ela poderá ser apresentada
+        nesta área sem inventar informações sobre o estoque.
+      </p>
+
+      <div class="feature-points">
+        <div class="feature-point">
+          <span class="point-icon">⌕</span>
+          <div><strong>Explore com calma</strong>
+            <p>Compare as informações disponíveis e encontre opções que façam sentido para você.</p>
+          </div>
+        </div>
+        <div class="feature-point">
+          <span class="point-icon">↗</span>
+          <div><strong>Tire suas dúvidas diretamente</strong>
+            <p>Converse com a equipe para confirmar preço, disponibilidade e características.</p>
+          </div>
+        </div>
+        <div class="feature-point">
+          <span class="point-icon">✓</span>
+          <div><strong>Informações transparentes</strong>
+            <p>O site mostra apenas os dados cadastrados. Informações não confirmadas ficam de fora.</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="btn" href="#estoque">Ver catálogo de motos →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section categories-section" id="categorias">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Encontre seu estilo</span>
+        <h2>Qual é a sua<br>próxima estrada?</h2>
+      </div>
+      <p>Escolha uma categoria para filtrar o catálogo. As categorias são tipos de motocicleta, não uma confirmação de estoque.</p>
+    </div>
+
+    <div class="category-grid">
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=75')" data-category="Street">
+        <span><strong>Street</strong><span>Versatilidade urbana</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=500&q=75')" data-category="Esportiva">
+        <span><strong>Esportivas</strong><span>Linhas e atitude</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=500&q=75')" data-category="Trail">
+        <span><strong>Trail</strong><span>Novos caminhos</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=75')" data-category="Naked">
+        <span><strong>Naked</strong><span>Essência exposta</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=500&q=75')" data-category="Scooter">
+        <span><strong>Scooter</strong><span>Praticidade diária</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=500&q=75')" data-category="Custom">
+        <span><strong>Custom</strong><span>Personalidade marcante</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=500&q=75')" data-category="Touring">
+        <span><strong>Touring</strong><span>Feita para ir além</span></span><span class="arrow">↗</span>
+      </button>
+      <button class="category-card" style="--cat-image:url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=500&q=75')" data-category="">
+        <span><strong>Todas as motos</strong><span>Ver catálogo completo</span></span><span class="arrow">↗</span>
+      </button>
+    </div>
+
+    <p class="category-note">Imagens ilustrativas. Consulte a loja para verificar as opções disponíveis.</p>
+  </div>
+</section>
+
+<section class="section gallery-section" id="galeria">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Universo sobre duas rodas</span>
+        <h2>Detalhes que<br>fazem a diferença.</h2>
+      </div>
+      <p>Uma seleção visual de referência para o universo motociclístico. As imagens não estão associadas a anúncios específicos.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <button class="gallery-item" data-lightbox="0" aria-label="Ampliar fotografia de motocicleta">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=1000&q=85" alt="Motocicleta em fotografia editorial ilustrativa" loading="lazy">
+        <span>Design & presença</span>
+      </button>
+      <button class="gallery-item" data-lightbox="1" aria-label="Ampliar fotografia de motocicleta">
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=700&q=80" alt="Motocicleta em ambiente externo, imagem ilustrativa" loading="lazy">
+        <span>Estilo em movimento</span>
+      </button>
+      <button class="gallery-item" data-lightbox="2" aria-label="Ampliar fotografia de motocicleta">
+        <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=700&q=80" alt="Detalhe de motocicleta, imagem ilustrativa" loading="lazy">
+        <span>Detalhes mecânicos</span>
+      </button>
+      <button class="gallery-item" data-lightbox="3" aria-label="Ampliar fotografia de motocicleta">
+        <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=700&q=80" alt="Motocicleta em fotografia ilustrativa" loading="lazy">
+        <span>Espírito de estrada</span>
+      </button>
+      <button class="gallery-item" data-lightbox="4" aria-label="Ampliar fotografia de motocicleta">
+        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=700&q=80" alt="Fotografia ilustrativa de motocicleta" loading="lazy">
+        <span>Paixão por motos</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="section about-section" id="sobre">
+  <div class="container">
+    <div class="about-card">
+      <div class="about-visual">
+        <div class="about-logo">TOOPY<br><span>MOTOS</span><small>POUSO REDONDO · SC</small></div>
+      </div>
+      <div class="about-content">
+        <span class="eyebrow">Sobre a loja</span>
+        <h2>Conheça a<br>Toopy Motos.</h2>
+        <p>
+          A Toopy Motos está localizada em Pouso Redondo, Santa Catarina.
+          Entre em contato para conhecer as motocicletas disponíveis,
+          tirar dúvidas e conversar com a equipe sobre a opção ideal para você.
+        </p>
+        <p>Estoque, valores e condições são confirmados diretamente com a loja.</p>
+        <a class="btn secondary" href="https://www.instagram.com/toopymotos/" target="_blank" rel="noopener noreferrer">Conhecer no Instagram ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section location-section" id="contato">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Visite ou fale com a equipe</span>
+        <h2>Sua próxima moto<br>está mais perto.</h2>
+      </div>
+      <p>Entre em contato para consultar as motocicletas disponíveis ou planejar sua visita à Toopy Motos.</p>
+    </div>
+
+    <div class="location-grid">
+      <div class="contact-panel">
+        <span class="eyebrow">Toopy Motos - Pouso Redondo</span>
+
+        <div class="contact-list">
+          <div class="contact-item">
+            <span class="point-icon">⌖</span>
+            <div>
+              <strong>Endereço</strong>
+              <p>BR-470, KM 175, nº 9355, Arno Siewerdt<br>Pouso Redondo - SC, CEP 89172-000</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="point-icon">☎</span>
+            <div>
+              <strong>Telefone e WhatsApp</strong>
+              <a href="https://wa.me/5547991945964" target="_blank" rel="noopener noreferrer">(47) 99194-5964</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <span class="point-icon">◎</span>
+            <div>
+              <strong>Instagram</strong>
+              <a href="https://www.instagram.com/toopymotos/" target="_blank" rel="noopener noreferrer">@toopymotos</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn" href="https://wa.me/5547991945964?text=Ol%C3%A1%21%20Acessei%20o%20site%20da%20Toopy%20Motos%20e%20gostaria%20de%20conhecer%20as%20motocicletas%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">Conversar pelo WhatsApp</a>
+          <a class="btn secondary" href="https://www.google.com/maps/place/Toopy+Motos+-+Pouso+Redondo/data=!4m2!3m1!1s0x0:0x2a9ed7d5db4d7ed9" target="_blank" rel="noopener noreferrer">Abrir no Google Maps</a>
+          <a class="btn ghost" href="https://www.instagram.com/toopymotos/" target="_blank" rel="noopener noreferrer">Seguir no Instagram</a>
+        </div>
+      </div>
+
+      <div class="map-frame">
+        <iframe
+          title="Mapa da Toopy Motos em Pouso Redondo"
+          src="https://maps.google.com/maps?q=BR-470%2C%20KM%20175%2C%209355%2C%20Pouso%20Redondo%20SC&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="eyebrow">Vamos conversar?</span>
+      <h2>A próxima história pode começar com uma mensagem.</h2>
+      <p>Fale com a Toopy Motos, tire suas dúvidas e consulte as opções disponíveis no momento.</p>
+      <a class="btn" href="https://wa.me/5547991945964?text=Ol%C3%A1%21%20Acessei%20o%20site%20da%20Toopy%20Motos%20e%20gostaria%20de%20conhecer%20as%20motocicletas%20dispon%C3%ADveis." target="_blank" rel="noopener noreferrer">Chamar no WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark">T</span>
+      <span>TOOPY<small>MOTOS</small></span>
+    </a>
+    <span class="footer-copy">© <span id="yearNow"></span> Toopy Motos · Pouso Redondo, SC</span>
+    <div class="footer-links">
+      <a href="#estoque">Catálogo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a href="https://www.instagram.com/toopymotos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" id="whatsappFloat"
+   href="https://wa.me/5547991945964?text=Ol%C3%A1%21%20Acessei%20o%20site%20da%20Toopy%20Motos%20e%20gostaria%20de%20conhecer%20as%20motocicletas%20dispon%C3%ADveis."
+   target="_blank" rel="noopener noreferrer" aria-label="Conversar com a Toopy Motos pelo WhatsApp">
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.9A8.5 8.5 0 1 1 21 11.5Z"/>
+    <path d="M8.5 8.5c.8 2.5 2.2 3.9 4.8 4.8"/>
+  </svg>
+</a>
+
+<div class="modal-backdrop" id="bikeModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="modal-close" id="modalClose" aria-label="Fechar detalhes">✕</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada da galeria">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Fechar imagem">✕</button>
+  <button class="lightbox-prev" id="lightboxPrev" aria-label="Imagem anterior">‹</button>
+  <img id="lightboxImage" src="" alt="">
+  <button class="lightbox-next" id="lightboxNext" aria-label="Próxima imagem">›</button>
+</div>
+
+<script>
+/*
+  CATÁLOGO DA TOOPY MOTOS
+
+  O catálogo começa vazio para não inventar estoque ou preços.
+  Cadastre somente motocicletas confirmadas pela loja.
+
+  EXEMPLO DE CADASTRO:
+  {
+    id: "moto-001",
+    brand: "Marca",
+    model: "Modelo",
+    year: 2024,
+    price: 25000,
+    mileage: 12000,
+    cc: 250,
+    category: "Street",
+    condition: "Usada",
+    description: "Descrição verificada pela loja.",
+    images: ["URL_DA_FOTO_AUTORIZADA"],
+    available: true,
+    featured: true
+  }
+*/
+
+const motorcycles = [];
+
+const WHATSAPP_NUMBER = "5547991945964";
+
+const placeholderImage =
+  "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=900&q=80";
+
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+const filters = {
+  search: "",
+  brand: "",
+  category: "",
+  condition: "",
+  price: "",
+  year: "",
+  cc: "",
+  sort: ""
+};
+
+const availableMotorcycles = motorcycles.filter(m => m.available !== false);
+
+const grid = $("#catalogGrid");
+
+let previousFocus = null;
+let lightboxIndex = 0;
+
+const galleryImages = $$(".gallery-item img").map(img => ({
+  src: img.src,
+  alt: img.alt
+}));
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[char]);
+}
+
+function formatBRL(value) {
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    maximumFractionDigits: 0
+  }).format(value);
+}
+
+function whatsappURL(message) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+}
+
+function setupFilterOptions() {
+  const brands = [...new Set(
+    availableMotorcycles.map(m => m.brand).filter(Boolean)
+  )].sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+  brands.forEach(brand => {
+    $("#brandFilter").add(new Option(brand, brand));
+  });
+
+  const years = [...new Set(
+    availableMotorcycles.map(m => Number(m.year)).filter(Number.isFinite)
+  )].sort((a, b) => b - a);
+
+  years.forEach(year => {
+    $("#yearFilter").add(new Option(year, year));
+  });
+}
+
+function filteredMotorcycles() {
+  let items = availableMotorcycles.filter(m => {
+    const query = filters.search.toLocaleLowerCase("pt-BR");
+    const name = `${m.brand || ""} ${m.model || ""}`.toLocaleLowerCase("pt-BR");
+
+    const range = filters.price
+      ? filters.price.split("-").map(Number)
+      : null;
+
+    const price = Number(m.price);
+
+    return (
+      (!query || name.includes(query)) &&
+      (!filters.brand || m.brand === filters.brand) &&
+      (!filters.category || m.category === filters.category) &&
+      (!filters.condition || m.condition === filters.condition) &&
+      (!range || (
+        Number.isFinite(price) &&
+        price >= range[0] &&
+        price <= range[1]
+      )) &&
+      (!filters.year || Number(m.year) >= Number(filters.year)) &&
+      (!filters.cc || Number(m.cc) >= Number(filters.cc))
+    );
+  });
+
+  if (filters.sort === "price-asc") {
+    items.sort((a, b) => (Number(a.price) || Infinity) - (Number(b.price) || Infinity));
+  }
+
+  if (filters.sort === "price-desc") {
+    items.sort((a, b) => (Number(b.price) || -Infinity) - (Number(a.price) || -Infinity));
+  }
+
+  if (filters.sort === "year-desc") {
+    items.sort((a, b) => (Number(b.year) || 0) - (Number(a.year) || 0));
+  }
+
+  return items;
+}
+
+function renderCatalog() {
+  const items = filteredMotorcycles();
+
+  $("#resultCount").innerHTML =
+    `<strong>${items.length}</strong> ${
+      items.length === 1
+        ? "motocicleta encontrada"
+        : "motocicletas encontradas"
+    }`;
+
+  if (!items.length) {
+    grid.innerHTML = `
+      <div class="empty-state">
+        <div class="empty-icon">⌕</div>
+        <h3>${availableMotorcycles.length
+          ? "Nenhuma moto encontrada com esses filtros."
+          : "Estamos preparando nosso catálogo."
+        }</h3>
+        <p>${availableMotorcycles.length
+          ? "Altere a pesquisa ou limpe os filtros para tentar novamente."
+          : "Entre em contato com a equipe da Toopy Motos para consultar as motocicletas disponíveis no momento."
+        }</p>
+        <a class="btn"
+           href="${whatsappURL("Olá! Acessei o site da Toopy Motos e gostaria de consultar as motocicletas disponíveis.")}"
+           target="_blank" rel="noopener noreferrer">
+           Consultar pelo WhatsApp
+        </a>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = items.map(m => {
+    const name = `${m.brand || ""} ${m.model || ""}`.trim();
+    const image = Array.isArray(m.images) && m.images[0]
+      ? m.images[0]
+      : placeholderImage;
+
+    const specs = [
+      m.year ? `Ano ${escapeHTML(m.year)}` : "",
+      m.cc ? `${escapeHTML(m.cc)} cc` : "",
+      m.mileage !== undefined && m.mileage !== null
+        ? `${Number(m.mileage).toLocaleString("pt-BR")} km`
+        : ""
+    ].filter(Boolean);
+
+    const message =
+      `Olá! Tenho interesse na ${name}${m.year ? ` (${m.year})` : ""}. Poderiam me passar mais informações?`;
+
+    return `
+      <article class="bike-card">
+        <div class="bike-image">
+          <img src="${escapeHTML(image)}"
+               alt="${escapeHTML(name)}"
+               loading="lazy"
+               onerror="this.onerror=null;this.src='${placeholderImage}'">
+          ${m.featured ? '<span class="bike-badge">Em destaque</span>' : ""}
+        </div>
+
+        <div class="bike-card-body">
+          <div class="bike-meta">
+            ${escapeHTML(m.brand || "Motocicleta")}
+            ${m.category ? ` · ${escapeHTML(m.category)}` : ""}
+          </div>
+
+          <h3>${escapeHTML(name)}</h3>
+
+          <div class="bike-specs">
+            ${specs.length
+              ? specs.map(s => `<span>${s}</span>`).join("")
+              : "<span>Consulte os detalhes</span>"
+            }
+          </div>
+
+          <div class="bike-bottom">
+            <div class="bike-price">
+              ${m.price ? formatBRL(m.price) : "Consulte o preço"}
+            </div>
+            ${m.condition
+              ? `<span class="bike-meta">${escapeHTML(m.condition)}</span>`
+              : ""
+            }
+          </div>
+
+          <div class="bike-actions">
+            <button class="btn secondary small" data-details="${escapeHTML(m.id)}">
+              Ver detalhes
+            </button>
+            <a class="btn small" href="${whatsappURL(message)}"
+               target="_blank" rel="noopener noreferrer">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </article>`;
+  }).join("");
+}
+
+function setFilter(selector, key) {
+  $(selector).addEventListener("change", event => {
+    filters[key] = event.target.value;
+    renderCatalog();
+  });
+}
+
+$("#searchInput").addEventListener("input", event => {
+  filters.search = event.target.value;
+  renderCatalog();
+});
+
+setFilter("#brandFilter", "brand");
+setFilter("#categoryFilter", "category");
+setFilter("#conditionFilter", "condition");
+setFilter("#priceFilter", "price");
+setFilter("#yearFilter", "year");
+setFilter("#ccFilter", "cc");
+setFilter("#sortFilter", "sort");
+
+$("#clearFilters").addEventListener("click", () => {
+  Object.keys(filters).forEach(key => filters[key] = "");
+
+  $("#searchInput").value = "";
+
+  [
+    "brandFilter",
+    "categoryFilter",
+    "conditionFilter",
+    "priceFilter",
+    "yearFilter",
+    "ccFilter",
+    "sortFilter"
+  ].forEach(id => $("#" + id).value = "");
+
+  renderCatalog();
+});
+
+$$(".category-card").forEach(card => {
+  card.addEventListener("click", () => {
+    filters.category = card.dataset.category || "";
+    $("#categoryFilter").value = filters.category;
+    renderCatalog();
+
+    $("#estoque").scrollIntoView({
+      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth"
+    });
+  });
+});
+
+function openDetails(id) {
+  const moto = availableMotorcycles.find(m => String(m.id) === String(id));
+  if (!moto) return;
+
+  previousFocus = document.activeElement;
+
+  const name = `${moto.brand || ""} ${moto.model || ""}`.trim();
+
+  const details = [
+    ["Ano", moto.year],
+    ["Quilometragem",
+      moto.mileage !== undefined && moto.mileage !== null
+        ? `${Number(moto.mileage).toLocaleString("pt-BR")} km`
+        : null
+    ],
+    ["Cilindrada", moto.cc ? `${moto.cc} cc` : null],
+    ["Categoria", moto.category],
+    ["Condição", moto.condition]
+  ].filter(([, value]) => value !== undefined && value !== null && value !== "");
+
+  const message =
+    `Olá! Tenho interesse na ${name}${moto.year ? ` (${moto.year})` : ""}. Poderiam me passar mais informações?`;
+
+  const images = Array.isArray(moto.images) && moto.images.length
+    ? moto.images
+    : [placeholderImage];
+
+  $("#modalContent").innerHTML = `
+    <div class="modal-content">
+      <div class="modal-gallery">
+        <img src="${escapeHTML(images[0])}"
+             alt="${escapeHTML(name)}"
+             onerror="this.onerror=null;this.src='${placeholderImage}'">
+      </div>
+
+      <div class="modal-info">
+        <span class="eyebrow">Detalhes da motocicleta</span>
+        <h2 id="modalTitle">${escapeHTML(name)}</h2>
+
+        <div class="bike-price">
+          ${moto.price ? formatBRL(moto.price) : "Consulte o preço"}
+        </div>
+
+        <div class="modal-specs">
+          ${details.map(([label, value]) => `
+            <div class="modal-spec">
+              <small>${escapeHTML(label)}</small>
+              <strong>${escapeHTML(value)}</strong>
+            </div>
+          `).join("")}
+        </div>
+
+        <p>${escapeHTML(
+          moto.description ||
+          "Entre em contato com a equipe para confirmar os detalhes e a disponibilidade desta motocicleta."
+        )}</p>
+
+        <div class="modal-actions">
+          <a class="btn" href="${whatsappURL(message)}"
+             target="_blank" rel="noopener noreferrer">
+            Consultar pelo WhatsApp
+          </a>
+          <button class="btn ghost" type="button" id="modalDismiss">
+            Fechar detalhes
+          </button>
+        </div>
+      </div>
+    </div>`;
+
+  $("#bikeModal").classList.add("open");
+  document.body.style.overflow = "hidden";
+  $("#modalClose").focus();
+
+  $("#modalDismiss").addEventListener("click", closeDetails);
+}
+
+function closeDetails() {
+  $("#bikeModal").classList.remove("open");
+  document.body.style.overflow = "";
+
+  if (previousFocus && previousFocus.focus) {
+    previousFocus.focus();
+  }
+}
+
+grid.addEventListener("click", event => {
+  const button = event.target.closest("[data-details]");
+  if (button) openDetails(button.dataset.details);
+});
+
+$("#modalClose").addEventListener("click", closeDetails);
+
+$("#bikeModal").addEventListener("click", event => {
+  if (event.target === $("#bikeModal")) closeDetails();
+});
+
+function closeMenu() {
+  $("#navLinks").classList.remove("open");
+  $("#menuToggle").setAttribute("aria-expanded", "false");
+  $("#menuToggle").setAttribute("aria-label", "Abrir menu");
+  document.body.classList.remove("menu-open");
+}
+
+$("#menuToggle").addEventListener("click", () => {
+  const open = $("#navLinks").classList.toggle("open");
+
+  $("#menuToggle").setAttribute("aria-expanded", String(open));
+  $("#menuToggle").setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  document.body.classList.toggle("menu-open", open);
+});
+
+$$("#navLinks a").forEach(link => {
+  link.addEventListener("click", closeMenu);
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 760) closeMenu();
+});
+
+function openLightbox(index) {
+  lightboxIndex = index;
+  updateLightbox();
+  $("#lightbox").classList.add("open");
+  document.body.style.overflow = "hidden";
+  $("#lightboxClose").focus();
+}
+
+function updateLightbox() {
+  const item = galleryImages[lightboxIndex];
+  if (!item) return;
+
+  $("#lightboxImage").src = item.src;
+  $("#lightboxImage").alt = item.alt;
+}
+
+function changeLightbox(step) {
+  lightboxIndex =
+    (lightboxIndex + step + galleryImages.length) % galleryImages.length;
+
+  updateLightbox();
+}
+
+function closeLightbox() {
+  $("#lightbox").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+$$("[data-lightbox]").forEach(button => {
+  button.addEventListener("click", () => {
+    openLightbox(Number(button.dataset.lightbox));
+  });
+});
+
+$("#lightboxClose").addEventListener("click", closeLightbox);
+$("#lightboxPrev").addEventListener("click", () => changeLightbox(-1));
+$("#lightboxNext").addEventListener("click", () => changeLightbox(1));
+
+$("#lightbox").addEventListener("click", event => {
+  if (event.target === $("#lightbox")) closeLightbox();
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeDetails();
+    closeLightbox();
+    closeMenu();
+  }
+
+  if ($("#lightbox").classList.contains("open")) {
+    if (event.key === "ArrowRight") changeLightbox(1);
+    if (event.key === "ArrowLeft") changeLightbox(-1);
+  }
+
+  if ($("#bikeModal").classList.contains("open") && event.key === "Tab") {
+    const focusable = $$("#bikeModal button, #bikeModal a[href]");
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+});
+
+$("#yearNow").textContent = new Date().getFullYear();
+
+setupFilterOptions();
+renderCatalog();
+</script>
+
+</body>
+</html>

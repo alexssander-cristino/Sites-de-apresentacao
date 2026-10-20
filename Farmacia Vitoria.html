@@ -1,0 +1,2548 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f1efe6">
+  <meta name="description" content="Farma Vitória — cuidado, saúde e bem-estar em um só lugar. Conheça a marca e entre em contato.">
+  <title>Farma Vitória — Seu cuidado, do seu jeito.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #f1efe6;
+      --paper-dark: #e5e2d6;
+      --ink: #173d35;
+      --ink-deep: #102e28;
+      --orange: #ff7048;
+      --yellow: #e6ed8c;
+      --white: #fffdf6;
+      --muted: #777c70;
+      --line: rgba(23, 61, 53, .19);
+      --font: "DM Sans", sans-serif;
+      --display: "Manrope", sans-serif;
+      --radius: 4px;
+      --max: 1320px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body, button, input, select, textarea { font-family: var(--font); }
+
+    a { color: inherit; text-decoration: none; }
+
+    button { color: inherit; }
+
+    button, a, input, select {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 3px solid var(--orange);
+      outline-offset: 4px;
+    }
+
+    ::selection { background: var(--yellow); color: var(--ink); }
+
+    .container {
+      width: min(var(--max), calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    .announcement {
+      min-height: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 8px 20px;
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .announcement span {
+      color: var(--yellow);
+    }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(241, 239, 230, .94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 83px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+    }
+
+    .brand-symbol {
+      width: 39px;
+      height: 39px;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      color: var(--ink);
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 27px;
+      line-height: 1;
+      transform: rotate(-4deg);
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .brand-name {
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -.07em;
+      line-height: 1;
+    }
+
+    .brand-caption {
+      margin-top: 4px;
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(18px, 3vw, 40px);
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 700;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .icon-button {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      background: transparent;
+      border: 1px solid var(--line);
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+
+    .icon-button:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .icon-button svg { width: 18px; height: 18px; }
+
+    .button {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      padding: 0 22px;
+      border: 1px solid var(--ink);
+      border-radius: 0;
+      background: var(--ink);
+      color: var(--white);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .2s, color .2s, transform .2s;
+    }
+
+    .button:hover {
+      background: var(--orange);
+      color: var(--ink);
+      border-color: var(--orange);
+      transform: translateY(-2px);
+    }
+
+    .button svg { width: 16px; height: 16px; }
+
+    .button-outline {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .button-light {
+      background: var(--paper);
+      color: var(--ink);
+      border-color: var(--paper);
+    }
+
+    .menu-toggle { display: none; }
+
+    /* HERO — editorial e assimétrico */
+
+    .hero {
+      padding: 42px 0 70px;
+      overflow: hidden;
+    }
+
+    .hero-topline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+      gap: 16px;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    .hero-edition {
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 38px;
+      align-items: center;
+      padding-top: 45px;
+    }
+
+    .hero-copy { position: relative; z-index: 2; }
+
+    .hero h1 {
+      max-width: 790px;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(58px, 8.2vw, 112px);
+      line-height: .91;
+      font-weight: 700;
+      letter-spacing: -.095em;
+    }
+
+    .hero h1 .line-accent {
+      display: block;
+      color: var(--orange);
+      font-weight: 800;
+      font-style: italic;
+      letter-spacing: -.105em;
+    }
+
+    .hero-bottom {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .hero-description {
+      max-width: 300px;
+      color: #59685c;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 25px;
+    }
+
+    .hero-art {
+      min-height: 480px;
+      position: relative;
+      overflow: hidden;
+      background: var(--ink);
+      isolation: isolate;
+    }
+
+    .hero-art::before {
+      content: "";
+      position: absolute;
+      width: 390px;
+      height: 390px;
+      right: -75px;
+      top: 45px;
+      border: 1px solid rgba(241, 239, 230, .3);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 30px rgba(241,239,230,.035),
+        0 0 0 65px rgba(241,239,230,.035),
+        0 0 0 100px rgba(241,239,230,.035);
+      z-index: -1;
+    }
+
+    .hero-art::after {
+      content: "+";
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      color: var(--yellow);
+      font-size: 70px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    .art-top-label {
+      position: absolute;
+      top: 28px;
+      left: 28px;
+      color: #d8dfce;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .art-center {
+      position: absolute;
+      inset: 70px 0 55px;
+      display: grid;
+      place-items: center;
+    }
+
+    .orbit {
+      width: min(72%, 320px);
+      aspect-ratio: 1;
+      position: relative;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(241,239,230,.4);
+      border-radius: 50%;
+      transform: rotate(-15deg);
+    }
+
+    .orbit::before {
+      content: "";
+      position: absolute;
+      width: 72%;
+      height: 72%;
+      border: 1px solid rgba(241,239,230,.32);
+      border-radius: 50%;
+    }
+
+    .orbit::after {
+      content: "";
+      position: absolute;
+      width: 48%;
+      height: 48%;
+      background: var(--yellow);
+      border-radius: 50%;
+      box-shadow: 0 0 80px rgba(230,237,140,.15);
+    }
+
+    .orbit-cross {
+      position: absolute;
+      z-index: 2;
+      font-family: var(--display);
+      font-size: clamp(80px, 12vw, 145px);
+      font-weight: 500;
+      line-height: 1;
+      color: var(--ink);
+      transform: rotate(15deg);
+    }
+
+    .orbit-dot {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 13%;
+      left: 22%;
+      z-index: 3;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    .art-bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 15px 25px;
+      border-top: 1px solid rgba(241,239,230,.24);
+      color: var(--paper);
+    }
+
+    .art-bottom strong {
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .art-bottom span {
+      font-size: 9px;
+      color: #b8c9b6;
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .hero-stamp {
+      position: absolute;
+      bottom: 70px;
+      left: 18px;
+      z-index: 3;
+      width: 100px;
+      height: 100px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--orange);
+      color: var(--ink);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-align: center;
+      text-transform: uppercase;
+      transform: rotate(-12deg);
+    }
+
+    /* FAIXA DE MARCA */
+
+    .ticker {
+      overflow: hidden;
+      background: var(--yellow);
+      color: var(--ink);
+      border-block: 1px solid var(--ink);
+    }
+
+    .ticker-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 25px;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+    }
+
+    .ticker-item span {
+      color: var(--orange);
+      font-size: 20px;
+    }
+
+    /* SEÇÕES */
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+      gap: 35px;
+      margin-bottom: 48px;
+    }
+
+    .section-index {
+      display: block;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .section h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(42px, 6vw, 74px);
+      font-weight: 700;
+      letter-spacing: -.085em;
+      line-height: .98;
+    }
+
+    .section-heading p {
+      max-width: 410px;
+      justify-self: end;
+      margin: 0;
+      color: #626c61;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* CATEGORIAS */
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .category-card {
+      min-height: 210px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 23px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      transition: background .25s, color .25s, transform .25s;
+    }
+
+    .category-card:hover {
+      background: var(--ink);
+      color: var(--paper);
+      transform: translateY(-4px);
+    }
+
+    .category-number {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      opacity: .6;
+    }
+
+    .category-icon {
+      position: absolute;
+      top: 22px;
+      right: 20px;
+      font-family: var(--display);
+      font-size: 39px;
+      font-weight: 400;
+      opacity: .8;
+    }
+
+    .category-card h3 {
+      max-width: 160px;
+      margin: 0 0 8px;
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -.06em;
+      line-height: 1.05;
+    }
+
+    .category-card p {
+      margin: 0;
+      font-size: 11px;
+      opacity: .7;
+    }
+
+    .category-card .category-arrow {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      font-size: 20px;
+      transition: transform .2s;
+    }
+
+    .category-card:hover .category-arrow { transform: translate(3px, -3px); }
+
+    /* CATÁLOGO */
+
+    .catalog-section {
+      background: var(--paper-dark);
+    }
+
+    .catalog-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 35px;
+    }
+
+    .catalog-top .section-index { margin-bottom: 12px; }
+
+    .catalog-top h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(42px, 6vw, 70px);
+      letter-spacing: -.08em;
+      line-height: .98;
+    }
+
+    .catalog-search {
+      width: min(100%, 320px);
+      position: relative;
+    }
+
+    .catalog-search input {
+      width: 100%;
+      min-height: 49px;
+      padding: 0 45px 0 14px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink);
+      font-size: 12px;
+      outline-offset: 2px;
+    }
+
+    .catalog-search svg {
+      position: absolute;
+      top: 15px;
+      right: 14px;
+      width: 18px;
+      pointer-events: none;
+    }
+
+    .catalog-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 15px 0;
+      border-block: 1px solid var(--line);
+      margin-bottom: 28px;
+    }
+
+    .filter-list {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .filter-button {
+      min-height: 35px;
+      padding: 0 13px;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      font-size: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s;
+    }
+
+    .filter-button.active,
+    .filter-button:hover {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .sort-select {
+      max-width: 190px;
+      min-height: 36px;
+      padding: 0 8px;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      font-size: 10px;
+    }
+
+    .catalog-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      background: var(--paper);
+      border: 1px solid transparent;
+      transition: border .2s, transform .2s;
+    }
+
+    .product-card:hover {
+      border-color: var(--ink);
+      transform: translateY(-3px);
+    }
+
+    .product-visual {
+      position: relative;
+      min-height: 185px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: var(--white);
+    }
+
+    .product-visual::before {
+      content: "";
+      position: absolute;
+      width: 135px;
+      height: 135px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+    }
+
+    .product-shape {
+      width: 74px;
+      height: 105px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      background: var(--yellow);
+      border: 1px solid rgba(23,61,53,.25);
+      color: var(--ink);
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 800;
+      transform: rotate(-7deg);
+      box-shadow: 10px 10px 0 rgba(23,61,53,.08);
+    }
+
+    .product-shape.shape-2 {
+      width: 95px;
+      height: 66px;
+      border-radius: 30px 30px 7px 7px;
+      background: #d3ddd0;
+      transform: rotate(6deg);
+    }
+
+    .product-shape.shape-3 {
+      width: 65px;
+      height: 90px;
+      border-radius: 5px 5px 17px 17px;
+      background: #ffb19b;
+      transform: rotate(4deg);
+    }
+
+    .product-shape.shape-4 {
+      width: 105px;
+      height: 70px;
+      border-radius: 5px;
+      background: #e4e7ba;
+      transform: rotate(-5deg);
+    }
+
+    .product-shape::after {
+      content: "";
+      position: absolute;
+      top: -9px;
+      left: 20px;
+      width: 32px;
+      height: 9px;
+      background: var(--ink);
+    }
+
+    .product-shape.shape-2::after,
+    .product-shape.shape-4::after { display: none; }
+
+    .product-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 2;
+      padding: 6px 8px;
+      background: var(--orange);
+      color: var(--ink);
+      font-size: 9px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .product-info {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 17px;
+    }
+
+    .product-category {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    .product-info h3 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: 17px;
+      letter-spacing: -.04em;
+      line-height: 1.25;
+    }
+
+    .product-description {
+      min-height: 37px;
+      margin: 8px 0 18px;
+      color: #687067;
+      font-size: 11px;
+      line-height: 1.65;
+    }
+
+    .product-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+    }
+
+    .product-price {
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .product-price small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 400;
+    }
+
+    .product-add {
+      width: 38px;
+      height: 38px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: var(--ink);
+      color: var(--white);
+      border: 0;
+      cursor: pointer;
+      font-size: 21px;
+      transition: background .2s;
+    }
+
+    .product-add:hover { background: var(--orange); color: var(--ink); }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 55px 20px;
+      border: 1px dashed var(--line);
+      text-align: center;
+    }
+
+    .empty-symbol {
+      margin-bottom: 18px;
+      font-family: var(--display);
+      font-size: 42px;
+      color: var(--orange);
+    }
+
+    .empty-state h3 {
+      margin: 0 0 10px;
+      font-family: var(--display);
+      font-size: 24px;
+      letter-spacing: -.05em;
+    }
+
+    .empty-state p {
+      max-width: 400px;
+      margin: 0 auto 20px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .catalog-disclaimer {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.7;
+    }
+
+    /* MANIFESTO */
+
+    .manifesto {
+      position: relative;
+      overflow: hidden;
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .manifesto::after {
+      content: "FV";
+      position: absolute;
+      right: -30px;
+      bottom: -125px;
+      color: rgba(241,239,230,.035);
+      font-family: var(--display);
+      font-size: clamp(250px, 40vw, 550px);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.15em;
+      pointer-events: none;
+    }
+
+    .manifesto-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 60px;
+    }
+
+    .manifesto .section-index { color: #b2c0b4; }
+
+    .manifesto h2 {
+      max-width: 720px;
+      font-size: clamp(46px, 7.4vw, 90px);
+    }
+
+    .manifesto h2 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    .manifesto-copy {
+      max-width: 510px;
+      margin-top: 28px;
+      color: #c1ccc1;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    .manifesto-note {
+      align-self: end;
+      max-width: 250px;
+      padding-top: 25px;
+      border-top: 1px solid rgba(241,239,230,.3);
+      color: #d5dfd4;
+      font-size: 11px;
+      line-height: 1.8;
+    }
+
+    .manifesto-mark {
+      display: inline-grid;
+      width: 50px;
+      height: 50px;
+      margin-bottom: 25px;
+      place-items: center;
+      background: var(--yellow);
+      color: var(--ink);
+      font-size: 30px;
+      font-weight: 500;
+    }
+
+    /* DIFERENCIAIS */
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .value-card {
+      min-height: 230px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .value-number {
+      color: var(--orange);
+      font-family: var(--display);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .value-card h3 {
+      margin: 45px 0 12px;
+      font-family: var(--display);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -.06em;
+    }
+
+    .value-card p {
+      max-width: 300px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* FAQ */
+
+    .faq-section { padding-top: 0; }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 65px;
+    }
+
+    .faq-intro p {
+      max-width: 340px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .faq-list { border-top: 1px solid var(--line); }
+
+    .faq-item { border-bottom: 1px solid var(--line); }
+
+    .faq-question {
+      width: 100%;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px 0;
+      background: transparent;
+      border: 0;
+      text-align: left;
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      font-size: 23px;
+      font-weight: 400;
+      transition: transform .2s;
+    }
+
+    .faq-item.open .faq-question span:last-child { transform: rotate(45deg); }
+
+    .faq-answer {
+      display: none;
+      max-width: 600px;
+      padding: 0 25px 22px 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    /* CONTATO */
+
+    .contact-section { padding-top: 0; }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      background: var(--orange);
+      color: var(--ink);
+    }
+
+    .contact-main {
+      padding: clamp(30px, 6vw, 70px);
+    }
+
+    .contact-main .section-index { color: rgba(23,61,53,.7); }
+
+    .contact-main h2 {
+      max-width: 650px;
+      margin: 0;
+      font-family: var(--display);
+      font-size: clamp(48px, 7vw, 83px);
+      font-weight: 800;
+      letter-spacing: -.09em;
+      line-height: .96;
+    }
+
+    .contact-main p {
+      max-width: 370px;
+      margin: 24px 0;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .contact-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(25px, 4vw, 45px);
+      background: var(--yellow);
+    }
+
+    .contact-detail {
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(23,61,53,.22);
+    }
+
+    .contact-detail small {
+      display: block;
+      margin-bottom: 9px;
+      color: #66715d;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    .contact-detail strong {
+      font-family: var(--display);
+      font-size: 17px;
+      letter-spacing: -.04em;
+    }
+
+    .contact-detail p {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .contact-side .button {
+      margin-top: 28px;
+      align-self: flex-start;
+    }
+
+    /* RODAPÉ */
+
+    .footer {
+      padding: 65px 0 25px;
+      background: var(--ink-deep);
+      color: var(--paper);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 55px;
+    }
+
+    .footer .brand-name { font-size: 24px; }
+    .footer .brand-caption { color: #bdcbbd; }
+
+    .footer-statement {
+      max-width: 400px;
+      margin: 25px 0 0;
+      color: #c0ccc0;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: clamp(25px, 5vw, 75px);
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .footer-column strong {
+      margin-bottom: 5px;
+      color: var(--yellow);
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .footer-column a,
+    .footer-column button {
+      width: fit-content;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      color: #c0ccc0;
+      font-size: 11px;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .footer-column a:hover,
+    .footer-column button:hover { color: var(--orange); }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(241,239,230,.2);
+      color: #b5c2b5;
+      font-size: 10px;
+    }
+
+    .footer-bottom p { margin: 0; }
+
+    .footer-bottom a { color: var(--yellow); }
+
+    /* MODAIS E LISTA */
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(10, 25, 21, .68);
+      backdrop-filter: blur(5px);
+    }
+
+    .overlay.visible { display: flex; }
+
+    .dialog {
+      width: min(540px, 100%);
+      max-height: min(85vh, 800px);
+      overflow: auto;
+      background: var(--paper);
+      color: var(--ink);
+      border: 1px solid var(--ink);
+    }
+
+    .dialog-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .dialog-head h2 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: 24px;
+      letter-spacing: -.06em;
+    }
+
+    .dialog-content { padding: 25px; }
+
+    .dialog-content p {
+      color: #606c60;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .dialog-content h3 {
+      margin-top: 24px;
+      font-family: var(--display);
+      font-size: 15px;
+    }
+
+    .interest-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .interest-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .interest-item strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .interest-item small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 10px;
+    }
+
+    .quantity-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity-controls button {
+      width: 29px;
+      height: 29px;
+      background: transparent;
+      border: 1px solid var(--line);
+      cursor: pointer;
+    }
+
+    .dialog-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 24px;
+    }
+
+    .dialog-actions .button { flex: 1; }
+
+    .toast {
+      position: fixed;
+      z-index: 200;
+      right: 20px;
+      bottom: 20px;
+      max-width: calc(100% - 40px);
+      padding: 15px 20px;
+      background: var(--ink);
+      color: var(--paper);
+      border-left: 4px solid var(--orange);
+      font-size: 12px;
+      line-height: 1.5;
+      opacity: 0;
+      transform: translateY(15px);
+      pointer-events: none;
+      transition: .25s;
+    }
+
+    .toast.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-interest {
+      display: none;
+    }
+
+    @media (min-width: 1500px) {
+      .hero h1 { font-size: 120px; }
+    }
+
+    @media (max-width: 1000px) {
+      .container { width: min(100% - 40px, var(--max)); }
+      .nav-links { gap: 17px; }
+      .nav-links a { font-size: 11px; }
+      .hero-grid { gap: 25px; }
+      .hero h1 { font-size: clamp(56px, 8vw, 82px); }
+      .hero-art { min-height: 410px; }
+      .categories, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .category-card { min-height: 180px; }
+      .manifesto-grid { gap: 35px; }
+    }
+
+    @media (max-width: 760px) {
+      .container { width: calc(100% - 36px); }
+      .announcement { font-size: 8px; letter-spacing: .08em; }
+      .nav { min-height: 70px; }
+      .brand-name { font-size: 17px; }
+      .brand-symbol { width: 34px; height: 34px; font-size: 23px; }
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 8px 18px 18px;
+        background: var(--paper);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 13px; }
+      .nav-actions > .button { display: none; }
+      .menu-toggle { display: grid; }
+      .hero { padding: 27px 0 45px; }
+      .hero-topline { align-items: flex-start; flex-direction: column; gap: 8px; }
+      .hero-grid { grid-template-columns: 1fr; padding-top: 35px; gap: 30px; }
+      .hero h1 { font-size: clamp(58px, 13.7vw, 100px); }
+      .hero-bottom { display: block; margin-top: 25px; }
+      .hero-description { max-width: 370px; font-size: 13px; }
+      .hero-art { min-height: 340px; }
+      .orbit { width: 230px; }
+      .hero-stamp { width: 75px; height: 75px; left: 10px; bottom: 65px; font-size: 8px; }
+      .ticker-inner { justify-content: flex-start; gap: 22px; }
+      .ticker-item { font-size: 10px; }
+      .section { padding: 75px 0; }
+      .section-heading { grid-template-columns: 1fr; gap: 20px; margin-bottom: 30px; }
+      .section-heading p { justify-self: start; }
+      .catalog-top { align-items: stretch; flex-direction: column; }
+      .catalog-search { width: 100%; }
+      .catalog-controls { align-items: flex-start; flex-direction: column; }
+      .sort-select { max-width: 100%; width: 100%; }
+      .product-visual { min-height: 155px; }
+      .product-info { padding: 13px; }
+      .product-info h3 { font-size: 15px; }
+      .product-description { font-size: 10px; }
+      .product-price { font-size: 12px; }
+      .product-add { width: 34px; height: 34px; }
+      .manifesto-grid { grid-template-columns: 1fr; gap: 35px; }
+      .manifesto-note { max-width: 350px; }
+      .values-grid { grid-template-columns: 1fr; }
+      .value-card { min-height: auto; padding: 23px; }
+      .value-card h3 { margin-top: 24px; }
+      .faq-grid { grid-template-columns: 1fr; gap: 25px; }
+      .contact-panel { grid-template-columns: 1fr; }
+      .contact-main { padding: 35px 25px; }
+      .contact-side { padding: 20px 25px 30px; }
+      .footer-top { grid-template-columns: 1fr; gap: 35px; }
+      .footer-links { justify-content: flex-start; flex-wrap: wrap; gap: 40px; }
+      .footer-bottom { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .mobile-interest {
+        position: fixed;
+        right: 16px;
+        bottom: 16px;
+        z-index: 40;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 13px 17px;
+        background: var(--orange);
+        color: var(--ink);
+        border: 1px solid var(--ink);
+        font-size: 11px;
+        font-weight: 800;
+        box-shadow: 4px 4px 0 var(--ink);
+        cursor: pointer;
+      }
+      .mobile-interest span {
+        display: grid;
+        min-width: 20px;
+        height: 20px;
+        place-items: center;
+        background: var(--ink);
+        color: var(--paper);
+        border-radius: 50%;
+        font-size: 10px;
+      }
+      .toast { bottom: 82px; }
+    }
+
+    @media (max-width: 380px) {
+      .container { width: calc(100% - 28px); }
+      .hero h1 { font-size: 56px; }
+      .categories, .product-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .category-card { min-height: 155px; padding: 14px; }
+      .category-card h3 { font-size: 19px; }
+      .category-icon { top: 12px; right: 12px; font-size: 30px; }
+      .category-card .category-arrow { right: 12px; bottom: 12px; }
+      .product-visual { min-height: 130px; }
+      .product-shape { transform: scale(.82) rotate(-7deg); }
+      .product-description { min-height: 50px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    <span>FARMA VITÓRIA</span>
+    Cuidado de verdade começa nas pequenas escolhas.
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Farma Vitória, início">
+        <span class="brand-symbol" aria-hidden="true">+</span>
+        <span class="brand-copy">
+          <span class="brand-name">farma vitória</span>
+          <span class="brand-caption">Saúde • Bem-estar</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#categorias">Categorias</a>
+        <a href="#catalogo">Produtos</a>
+        <a href="#sobre">Nossa essência</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-button" id="openInterest" aria-label="Abrir lista de interesse">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M4 4h2l2.2 10.5a2 2 0 0 0 2 1.5h7.6a2 2 0 0 0 1.9-1.4L21 8H7"/>
+            <circle cx="10" cy="20" r="1"/>
+            <circle cx="18" cy="20" r="1"/>
+          </svg>
+        </button>
+        <a class="button" href="#contato">Fale com a gente <span aria-hidden="true">↗</span></a>
+        <button class="icon-button menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M3 7h18M3 12h18M3 17h18"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-topline">
+          <span class="eyebrow">Mais perto de você</span>
+          <span class="hero-edition">Saúde para a vida real · Farma Vitória</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>
+              Seu cuidado.
+              <span class="line-accent">Seu tempo.</span>
+              Sua vida.
+            </h1>
+
+            <div class="hero-bottom">
+              <div>
+                <p class="hero-description">
+                  Saúde não precisa ser complicada. A gente acredita em informação clara,
+                  escolhas conscientes e cuidado que faz parte da rotina.
+                </p>
+                <div class="hero-actions">
+                  <a class="button" href="#catalogo">Conheça o catálogo <span aria-hidden="true">↘</span></a>
+                  <a class="button button-outline" href="#sobre">Conheça a Farma</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-art" aria-label="Arte gráfica abstrata nas cores da Farma Vitória">
+            <span class="art-top-label">Cuidado em movimento / 001</span>
+            <div class="art-center" aria-hidden="true">
+              <div class="orbit">
+                <span class="orbit-dot"></span>
+                <span class="orbit-cross">+</span>
+              </div>
+            </div>
+            <div class="hero-stamp">Bem-estar<br>todos os dias</div>
+            <div class="art-bottom">
+              <strong>O essencial é cuidar.</strong>
+              <span>Farma Vitória<br>Saúde e bem-estar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-label="Valores da marca">
+      <div class="ticker-inner">
+        <div class="ticker-item"><span>✳</span> Cuidado próximo</div>
+        <div class="ticker-item"><span>✳</span> Informação clara</div>
+        <div class="ticker-item"><span>✳</span> Escolhas conscientes</div>
+        <div class="ticker-item"><span>✳</span> Saúde no dia a dia</div>
+      </div>
+    </div>
+
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">01 / Explore</span>
+            <h2>O que você<br>está procurando?</h2>
+          </div>
+          <p>
+            Encontre uma categoria para começar. Os grupos são atualizados conforme
+            os produtos cadastrados no catálogo da Farma Vitória.
+          </p>
+        </div>
+
+        <div class="categories" id="categoryGrid">
+          <button class="category-card" data-category="Medicamentos" type="button">
+            <span class="category-number">01 / CATEGORIA</span>
+            <span class="category-icon" aria-hidden="true">↗</span>
+            <div><h3>Medicamentos</h3><p>Consulte os produtos disponíveis</p></div>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="category-card" data-category="Vitaminas e suplementos" type="button">
+            <span class="category-number">02 / CATEGORIA</span>
+            <span class="category-icon" aria-hidden="true">✳</span>
+            <div><h3>Vitaminas e suplementos</h3><p>Explore o catálogo</p></div>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="category-card" data-category="Higiene pessoal" type="button">
+            <span class="category-number">03 / CATEGORIA</span>
+            <span class="category-icon" aria-hidden="true">◌</span>
+            <div><h3>Higiene pessoal</h3><p>Cuidados para a rotina</p></div>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </button>
+          <button class="category-card" data-category="Beleza e dermocosméticos" type="button">
+            <span class="category-number">04 / CATEGORIA</span>
+            <span class="category-icon" aria-hidden="true">✳</span>
+            <div><h3>Beleza e dermocosméticos</h3><p>Descubra as opções</p></div>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section catalog-section" id="catalogo">
+      <div class="container">
+        <div class="catalog-top">
+          <div>
+            <span class="section-index">02 / Catálogo</span>
+            <h2>Encontre o que<br>faz sentido.</h2>
+          </div>
+          <label class="catalog-search">
+            <input id="productSearch" type="search" placeholder="Buscar por nome ou marca..." autocomplete="off" aria-label="Buscar produtos">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <circle cx="10.8" cy="10.8" r="6.8"/>
+              <path d="m16 16 5 5"/>
+            </svg>
+          </label>
+        </div>
+
+        <div class="catalog-controls">
+          <div class="filter-list" id="filterList" aria-label="Filtrar produtos">
+            <button class="filter-button active" data-filter="Todos" type="button">Todos</button>
+            <button class="filter-button" data-filter="Medicamentos" type="button">Medicamentos</button>
+            <button class="filter-button" data-filter="Vitaminas e suplementos" type="button">Vitaminas</button>
+            <button class="filter-button" data-filter="Higiene pessoal" type="button">Higiene</button>
+            <button class="filter-button" data-filter="Beleza e dermocosméticos" type="button">Beleza</button>
+          </div>
+
+          <label>
+            <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Ordenar produtos</span>
+            <select class="sort-select" id="sortProducts">
+              <option value="relevance">Ordenar: padrão</option>
+              <option value="name">Nome: A–Z</option>
+              <option value="price-asc">Menor preço</option>
+              <option value="price-desc">Maior preço</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="catalog-meta">
+          <span id="resultsCount">Catálogo de produtos</span>
+          <button class="filter-button" id="clearFilters" type="button">Limpar filtros ↺</button>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+
+        <p class="catalog-disclaimer">
+          Consulte a disponibilidade, as condições de venda e as informações de cada produto diretamente com a farmácia.
+          Medicamentos sujeitos à prescrição exigem o cumprimento das normas aplicáveis.
+        </p>
+      </div>
+    </section>
+
+    <section class="section manifesto" id="sobre">
+      <div class="container manifesto-grid">
+        <div>
+          <span class="section-index">03 / Nossa essência</span>
+          <span class="manifesto-mark" aria-hidden="true">+</span>
+          <p class="manifesto-note">
+            Farma Vitória. Uma marca que coloca o cuidado no centro da conversa.
+          </p>
+        </div>
+
+        <div>
+          <h2>Saúde é mais do que tratar. É <em>cuidar.</em></h2>
+          <p class="manifesto-copy">
+            A Farma Vitória acredita que cuidar de si começa com pequenas atitudes:
+            tirar dúvidas, buscar orientação e encontrar informações confiáveis para
+            fazer escolhas mais conscientes.
+            <br><br>
+            Este espaço foi pensado para aproximar você dos produtos e facilitar o
+            contato com a farmácia, de um jeito simples, direto e humano.
+          </p>
+          <a class="button button-light" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="section-index">04 / Nosso jeito</span>
+            <h2>O cuidado<br>está nos detalhes.</h2>
+          </div>
+          <p>
+            Uma experiência digital mais clara para você conhecer a farmácia,
+            consultar o catálogo e encontrar o canal certo para tirar suas dúvidas.
+          </p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <span class="value-number">01 — CLAREZA</span>
+            <h3>Sem complicação.</h3>
+            <p>Informações organizadas para facilitar sua busca e ajudar você a encontrar o que procura.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-number">02 — PROXIMIDADE</span>
+            <h3>Uma conversa resolve.</h3>
+            <p>Entre em contato para consultar informações e confirmar detalhes diretamente com a equipe.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-number">03 — CONSCIÊNCIA</span>
+            <h3>Escolhas bem informadas.</h3>
+            <p>Orientação profissional é importante. Para dúvidas sobre medicamentos, procure um farmacêutico ou profissional de saúde.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="duvidas">
+      <div class="container faq-grid">
+        <div class="faq-intro">
+          <span class="section-index">05 / Perguntas frequentes</span>
+          <h2 style="margin:0;font-family:var(--display);font-size:clamp(42px,6vw,68px);letter-spacing:-.08em;line-height:.98">Vamos tirar<br>essa dúvida?</h2>
+          <p>Algumas respostas rápidas para facilitar sua navegação. Para confirmar detalhes, fale diretamente com a farmácia.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false" type="button">
+              <span>Como consulto um produto?</span><span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              Use a busca e os filtros do catálogo. Se o produto não aparecer, entre em contato com a Farma Vitória para consultar a disponibilidade.
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false" type="button">
+              <span>Os preços do site são atualizados?</span><span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              Os preços, quando exibidos, dependem dos dados cadastrados pela farmácia. Confirme o valor final e as condições de venda diretamente com a equipe.
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false" type="button">
+              <span>Posso pedir orientação sobre medicamentos?</span><span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              Para orientações específicas, procure um farmacêutico ou profissional de saúde habilitado. Não utilize medicamentos sem seguir as orientações da bula e do profissional responsável.
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false" type="button">
+              <span>Como faço para confirmar a disponibilidade?</span><span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              Envie uma mensagem pelos canais de contato informados pela farmácia. A consulta pelo site não garante estoque nem reserva de produtos.
+            </div>
+          </article>
+          <article class="faq-item">
+            <button class="faq-question" aria-expanded="false" type="button">
+              <span>Este site realiza vendas online?</span><span aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              Esta versão funciona como apresentação institucional e catálogo para consulta. Ela não processa pagamentos nem confirma pedidos automaticamente.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="contact-panel">
+          <div class="contact-main">
+            <span class="section-index">06 / Entre em contato</span>
+            <h2>Seu próximo passo começa com uma conversa.</h2>
+            <p>
+              Quer consultar um produto ou saber mais sobre a Farma Vitória?
+              Entre em contato pelos canais oficiais.
+            </p>
+            <a class="button" id="contactWhatsApp" href="https://www.instagram.com/farmavitoriaa/" target="_blank" rel="noopener noreferrer">
+              Falar com a Farma <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+
+          <div class="contact-side">
+            <div>
+              <div class="contact-detail">
+                <small>Instagram oficial</small>
+                <strong>@farmavitoriaa</strong>
+              </div>
+              <div class="contact-detail">
+                <small>Atendimento</small>
+                <p>Consulte os canais oficiais para confirmar horários e disponibilidade.</p>
+              </div>
+              <div class="contact-detail">
+                <small>Localização</small>
+                <p>Endereço não informado neste site. Entre em contato para confirmar a localização.</p>
+              </div>
+            </div>
+            <a class="button" href="https://www.instagram.com/farmavitoriaa/" target="_blank" rel="noopener noreferrer">
+              Visitar Instagram <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <a class="brand" href="#inicio">
+            <span class="brand-symbol">+</span>
+            <span class="brand-copy">
+              <span class="brand-name">farma vitória</span>
+              <span class="brand-caption">Saúde • Bem-estar</span>
+            </span>
+          </a>
+          <p class="footer-statement">
+            Cuidado que acompanha você todos os dias. Conheça a Farma Vitória,
+            explore o catálogo e fale com a equipe.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-column">
+            <strong>Explore</strong>
+            <a href="#categorias">Categorias</a>
+            <a href="#catalogo">Produtos</a>
+            <a href="#sobre">Nossa essência</a>
+            <a href="#duvidas">Dúvidas</a>
+          </div>
+          <div class="footer-column">
+            <strong>Fale com a gente</strong>
+            <a href="#contato">Contato</a>
+            <a href="https://www.instagram.com/farmavitoriaa/" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
+            <button type="button" data-open-policy="privacy">Privacidade</button>
+            <button type="button" data-open-policy="terms">Termos de uso</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Farma Vitória. Todos os direitos reservados.</p>
+        <p>Um espaço para cuidar melhor. <a href="#inicio">Voltar ao topo ↑</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="mobile-interest" id="mobileInterest" type="button">
+    Minha lista <span id="interestCount">0</span>
+  </button>
+
+  <!-- Modal de lista de interesse -->
+  <div class="overlay" id="interestOverlay" role="dialog" aria-modal="true" aria-labelledby="interestTitle">
+    <div class="dialog">
+      <div class="dialog-head">
+        <h2 id="interestTitle">Minha lista de interesse</h2>
+        <button class="icon-button" type="button" data-close-overlay="interestOverlay" aria-label="Fechar lista">×</button>
+      </div>
+      <div class="dialog-content">
+        <div class="interest-list" id="interestItems"></div>
+        <div class="dialog-actions">
+          <button class="button button-outline" type="button" id="clearInterest">Limpar lista</button>
+          <button class="button" type="button" id="sendInterest">Enviar consulta ↗</button>
+        </div>
+        <p>Esta lista serve para organizar uma consulta. Não representa uma compra, reserva ou confirmação de estoque.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de produto -->
+  <div class="overlay" id="productOverlay" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <div class="dialog">
+      <div class="dialog-head">
+        <h2 id="productModalTitle">Detalhes do produto</h2>
+        <button class="icon-button" type="button" data-close-overlay="productOverlay" aria-label="Fechar detalhes">×</button>
+      </div>
+      <div class="dialog-content" id="productModalContent"></div>
+    </div>
+  </div>
+
+  <!-- Modal de políticas -->
+  <div class="overlay" id="policyOverlay" role="dialog" aria-modal="true" aria-labelledby="policyTitle">
+    <div class="dialog">
+      <div class="dialog-head">
+        <h2 id="policyTitle">Informações</h2>
+        <button class="icon-button" type="button" data-close-overlay="policyOverlay" aria-label="Fechar informações">×</button>
+      </div>
+      <div class="dialog-content" id="policyContent"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    /*
+      CONFIGURAÇÃO DA FARMA VITÓRIA
+
+      1. Cadastre os produtos reais no array PRODUCTS.
+      2. Para ativar o WhatsApp, informe o número oficial com código do país,
+         DDD e número, apenas dígitos. Exemplo de formato: 55DDDNUMERO.
+      3. Não cadastre preços, estoque ou informações que não tenham sido confirmados.
+    */
+
+    const WHATSAPP_NUMBER = "";
+
+    const PRODUCTS = [
+      /*
+      Exemplo de estrutura para cadastrar produtos reais:
+
+      {
+        id: "produto-001",
+        name: "Nome do produto",
+        brand: "Marca",
+        category: "Medicamentos",
+        description: "Descrição confirmada do produto.",
+        price: null,
+        tag: "",
+        availability: "",
+        shape: 1
+      }
+
+      Categorias aceitas:
+      "Medicamentos"
+      "Vitaminas e suplementos"
+      "Higiene pessoal"
+      "Beleza e dermocosméticos"
+      */
+
+    ];
+
+    const CATEGORY_DATA = [
+      { name: "Medicamentos", short: "Medicamentos", symbol: "↗", description: "Consulte os produtos disponíveis" },
+      { name: "Vitaminas e suplementos", short: "Vitaminas", symbol: "✳", description: "Explore o catálogo" },
+      { name: "Higiene pessoal", short: "Higiene", symbol: "◌", description: "Cuidados para a rotina" },
+      { name: "Beleza e dermocosméticos", short: "Beleza", symbol: "✳", description: "Descubra as opções" }
+    ];
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+    const state = {
+      search: "",
+      category: "Todos",
+      sort: "relevance",
+      interest: loadInterest()
+    };
+
+    function loadInterest() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem("farma-vitoria-interest") || "[]");
+        return Array.isArray(parsed) ? parsed.filter(item =>
+          item && typeof item.id === "string" && Number.isFinite(item.quantity)
+        ) : [];
+      } catch {
+        return [];
+      }
+    }
+
+    function saveInterest() {
+      try {
+        localStorage.setItem("farma-vitoria-interest", JSON.stringify(state.interest));
+      } catch {
+        showToast("Não foi possível salvar a lista neste navegador.");
+      }
+      updateInterestCount();
+    }
+
+    function normalize(value) {
+      return String(value ?? "")
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLocaleLowerCase("pt-BR")
+        .trim();
+    }
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, character => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#039;"
+      })[character]);
+    }
+
+    function formatPrice(price) {
+      if (typeof price !== "number" || !Number.isFinite(price) || price < 0) return "";
+      return price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+    }
+
+    function whatsappURL(message) {
+      const number = String(WHATSAPP_NUMBER).replace(/\D/g, "");
+      if (!number) return null;
+      return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+    }
+
+    function openWhatsApp(message) {
+      const url = whatsappURL(message);
+      if (!url) {
+        showToast("Configure o número oficial do WhatsApp no início do código para ativar este recurso.");
+        return;
+      }
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+
+    let toastTimer;
+
+    function showToast(message) {
+      const toast = $("#toast");
+      toast.textContent = message;
+      toast.classList.add("visible");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("visible"), 3600);
+    }
+
+    function getProduct(id) {
+      return PRODUCTS.find(product => product.id === id);
+    }
+
+    function filteredProducts() {
+      let items = PRODUCTS.filter(product => {
+        const searchable = normalize([
+          product.name,
+          product.brand,
+          product.category,
+          product.description
+        ].join(" "));
+
+        const matchesSearch = searchable.includes(normalize(state.search));
+        const matchesCategory = state.category === "Todos" || product.category === state.category;
+        return matchesSearch && matchesCategory;
+      });
+
+      if (state.sort === "name") {
+        items.sort((a, b) => String(a.name).localeCompare(String(b.name), "pt-BR"));
+      } else if (state.sort === "price-asc") {
+        items.sort((a, b) => {
+          const pa = typeof a.price === "number" ? a.price : Infinity;
+          const pb = typeof b.price === "number" ? b.price : Infinity;
+          return pa - pb;
+        });
+      } else if (state.sort === "price-desc") {
+        items.sort((a, b) => {
+          const pa = typeof a.price === "number" ? a.price : -Infinity;
+          const pb = typeof b.price === "number" ? b.price : -Infinity;
+          return pb - pa;
+        });
+      }
+
+      return items;
+    }
+
+    function renderCategories() {
+      const grid = $("#categoryGrid");
+      const availableCategories = CATEGORY_DATA.filter(category =>
+        PRODUCTS.some(product => product.category === category.name)
+      );
+
+      if (PRODUCTS.length === 0) {
+        grid.innerHTML = CATEGORY_DATA.map((category, index) => `
+          <button class="category-card" data-category="${escapeHTML(category.name)}" type="button">
+            <span class="category-number">0${index + 1} / CATEGORIA</span>
+            <span class="category-icon" aria-hidden="true">${category.symbol}</span>
+            <div>
+              <h3>${escapeHTML(category.name)}</h3>
+              <p>${escapeHTML(category.description)}</p>
+            </div>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </button>
+        `).join("");
+      } else {
+        grid.innerHTML = availableCategories.map((category, index) => `
+          <button class="category-card" data-category="${escapeHTML(category.name)}" type="button">
+            <span class="category-number">0${index + 1} / CATEGORIA</span>
+            <span class="category-icon" aria-hidden="true">${category.symbol}</span>
+            <div>
+              <h3>${escapeHTML(category.name)}</h3>
+              <p>${escapeHTML(category.description)}</p>
+            </div>
+            <span class="category-arrow" aria-hidden="true">↗</span>
+          </button>
+        `).join("");
+      }
+    }
+
+    function renderFilters() {
+      const availableCategories = CATEGORY_DATA.filter(category =>
+        PRODUCTS.some(product => product.category === category.name)
+      );
+
+      const filters = [
+        { name: "Todos", label: "Todos" },
+        ...availableCategories.map(category => ({ name: category.name, label: category.short }))
+      ];
+
+      if (!filters.some(filter => filter.name === state.category)) {
+        state.category = "Todos";
+      }
+
+      $("#filterList").innerHTML = filters.map(filter => `
+        <button
+          class="filter-button ${state.category === filter.name ? "active" : ""}"
+          data-filter="${escapeHTML(filter.name)}"
+          type="button"
+          aria-pressed="${state.category === filter.name}"
+        >${escapeHTML(filter.label)}</button>
+      `).join("");
+    }
+
+    function renderProducts() {
+      const products = filteredProducts();
+      const grid = $("#productGrid");
+
+      $("#resultsCount").textContent =
+        `${products.length} ${products.length === 1 ? "produto encontrado" : "produtos encontrados"}`;
+
+      if (!products.length) {
+        const isEmptyCatalog = PRODUCTS.length === 0;
+        grid.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-symbol" aria-hidden="true">${isEmptyCatalog ? "+" : "⌕"}</div>
+            <h3>${isEmptyCatalog ? "Novidades em breve." : "Não encontramos esse produto."}</h3>
+            <p>${
+              isEmptyCatalog
+                ? "O catálogo está sendo preparado. Entre em contato com a Farma Vitória para consultar produtos, preços e disponibilidade."
+                : "Tente outro nome ou categoria. Você também pode consultar a farmácia diretamente."
+            }</p>
+            <a class="button" href="#contato">Consultar a Farma ↗</a>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = products.map((product, index) => {
+        const shape = Math.max(1, Math.min(4, Number(product.shape) || ((index % 4) + 1)));
+        const price = formatPrice(product.price);
+
+        return `
+          <article class="product-card">
+            <button
+              class="product-visual"
+              type="button"
+              data-product-details="${escapeHTML(product.id)}"
+              aria-label="Ver detalhes de ${escapeHTML(product.name)}"
+            >
+              ${product.tag ? `<span class="product-tag">${escapeHTML(product.tag)}</span>` : ""}
+              <span class="product-shape shape-${shape}" aria-hidden="true">+</span>
+            </button>
+            <div class="product-info">
+              <span class="product-category">${escapeHTML(product.category || "Produto")}</span>
+              <h3>${escapeHTML(product.name)}</h3>
+              ${product.brand ? `<div style="margin-top:5px;font-size:10px;color:var(--muted)">${escapeHTML(product.brand)}</div>` : ""}
+              <p class="product-description">${escapeHTML(product.description || "Consulte informações diretamente com a farmácia.")}</p>
+              <div class="product-bottom">
+                <div class="product-price">
+                  ${price || "Consultar"}
+                  <small>${price ? "Preço cadastrado" : "Valor na farmácia"}</small>
+                </div>
+                <button class="product-add" type="button" data-add-interest="${escapeHTML(product.id)}" aria-label="Adicionar ${escapeHTML(product.name)} à lista">+</button>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    function renderCatalog() {
+      renderFilters();
+      renderCategories();
+      renderProducts();
+    }
+
+    function addToInterest(id) {
+      const product = getProduct(id);
+      if (!product) return;
+
+      const existing = state.interest.find(item => item.id === id);
+      if (existing) {
+        existing.quantity = Math.min(99, existing.quantity + 1);
+      } else {
+        state.interest.push({ id, quantity: 1 });
+      }
+
+      saveInterest();
+      showToast(`${product.name} adicionado à sua lista.`);
+    }
+
+    function changeQuantity(id, delta) {
+      const item = state.interest.find(entry => entry.id === id);
+      if (!item) return;
+
+      item.quantity += delta;
+
+      if (item.quantity <= 0) {
+        state.interest = state.interest.filter(entry => entry.id !== id);
+      } else {
+        item.quantity = Math.min(99, item.quantity);
+      }
+
+      saveInterest();
+      renderInterest();
+    }
+
+    function updateInterestCount() {
+      const count = state.interest.reduce((total, item) => total + item.quantity, 0);
+      $("#interestCount").textContent = count;
+      $("#openInterest").setAttribute("aria-label", `Abrir lista de interesse com ${count} itens`);
+    }
+
+    function renderInterest() {
+      const list = $("#interestItems");
+      const validItems = state.interest
+        .map(item => ({ ...item, product: getProduct(item.id) }))
+        .filter(item => item.product);
+
+      if (!validItems.length) {
+        list.innerHTML = `
+          <div class="empty-state" style="padding:30px 10px">
+            <div class="empty-symbol">+</div>
+            <h3>Sua lista está vazia.</h3>
+            <p>Adicione produtos do catálogo para organizar sua consulta.</p>
+            <button class="button" type="button" data-close-overlay="interestOverlay">Explorar catálogo ↗</button>
+          </div>
+        `;
+        return;
+      }
+
+      list.innerHTML = validItems.map(item => `
+        <div class="interest-item">
+          <div>
+            <strong>${escapeHTML(item.product.name)}</strong>
+            <small>${formatPrice(item.product.price) || "Preço a consultar"}</small>
+          </div>
+          <div class="quantity-controls">
+            <button type="button" data-quantity="${escapeHTML(item.id)}" data-delta="-1" aria-label="Diminuir quantidade">−</button>
+            <span>${item.quantity}</span>
+            <button type="button" data-quantity="${escapeHTML(item.id)}" data-delta="1" aria-label="Aumentar quantidade">+</button>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function showOverlay(id) {
+      const overlay = document.getElementById(id);
+      if (!overlay) return;
+      overlay.classList.add("visible");
+      document.body.style.overflow = "hidden";
+      const closeButton = $("[data-close-overlay]", overlay);
+      if (closeButton) closeButton.focus();
+    }
+
+    function closeOverlay(id) {
+      const overlay = document.getElementById(id);
+      if (!overlay) return;
+      overlay.classList.remove("visible");
+
+      if (!$(".overlay.visible")) {
+        document.body.style.overflow = "";
+      }
+    }
+
+    function showProductDetails(id) {
+      const product = getProduct(id);
+      if (!product) return;
+
+      $("#productModalTitle").textContent = product.name;
+
+      const price = formatPrice(product.price);
+      const details = [
+        product.brand ? `<p><strong>Marca:</strong> ${escapeHTML(product.brand)}</p>` : "",
+        `<p><strong>Categoria:</strong> ${escapeHTML(product.category || "Não informada")}</p>`,
+        product.description ? `<p>${escapeHTML(product.description)}</p>` : "",
+        price ? `<p><strong>Preço cadastrado:</strong> ${price}</p>` : "",
+        product.availability ? `<p><strong>Disponibilidade:</strong> ${escapeHTML(product.availability)}</p>` : "",
+        `<p>Consulte a farmácia para confirmar preço, estoque e condições de venda. As informações exibidas não substituem orientação profissional.</p>`
+      ].filter(Boolean).join("");
+
+      $("#productModalContent").innerHTML = `
+        ${details}
+        <div class="dialog-actions">
+          <button class="button button-outline" type="button" data-close-overlay="productOverlay">Fechar</button>
+          <button class="button" type="button" id="modalAddInterest" data-product-id="${escapeHTML(product.id)}">Adicionar à lista +</button>
+        </div>
+      `;
+
+      showOverlay("productOverlay");
+    }
+
+    const POLICIES = {
+      privacy: {
+        title: "Política de privacidade",
+        content: `
+          <p>Este site foi desenvolvido como uma apresentação institucional e catálogo de consulta da Farma Vitória.</p>
+          <h3>Dados de navegação</h3>
+          <p>Os campos de busca e filtros funcionam no próprio navegador. A lista de interesse pode ser salva no armazenamento local do dispositivo para permanecer disponível em visitas futuras.</p>
+          <h3>Contato externo</h3>
+          <p>Ao abrir o Instagram ou outro canal externo, você estará sujeito às políticas e condições do respectivo serviço.</p>
+          <h3>Dados pessoais</h3>
+          <p>Esta versão não possui cadastro de usuários nem formulário próprio de envio de dados. Antes de publicar, a empresa responsável deve revisar este texto conforme os recursos efetivamente instalados e sua política de tratamento de dados.</p>
+        `
+      },
+      terms: {
+        title: "Termos de uso",
+        content: `
+          <p>O conteúdo deste site tem finalidade informativa e institucional. A presença de um produto no catálogo não garante disponibilidade em estoque, preço atualizado ou possibilidade de compra.</p>
+          <h3>Informações sobre saúde</h3>
+          <p>O conteúdo não substitui avaliação, diagnóstico ou orientação de médico, farmacêutico ou outro profissional habilitado.</p>
+          <h3>Medicamentos</h3>
+          <p>A comercialização e a dispensação de medicamentos devem respeitar a legislação aplicável, as exigências de prescrição e as demais regras sanitárias.</p>
+          <h3>Atualização</h3>
+          <p>Os dados comerciais devem ser confirmados diretamente com a Farma Vitória. Esta versão não realiza pagamentos nem confirma pedidos.</p>
+        `
+      }
+    };
+
+    function showPolicy(type) {
+      const policy = POLICIES[type];
+      if (!policy) return;
+      $("#policyTitle").textContent = policy.title;
+      $("#policyContent").innerHTML = policy.content;
+      showOverlay("policyOverlay");
+    }
+
+    // Busca, filtros e ordenação
+    $("#productSearch").addEventListener("input", event => {
+      state.search = event.target.value;
+      renderProducts();
+    });
+
+    $("#filterList").addEventListener("click", event => {
+      const button = event.target.closest("[data-filter]");
+      if (!button) return;
+      state.category = button.dataset.filter;
+      renderCatalog();
+    });
+
+    $("#categoryGrid").addEventListener("click", event => {
+      const button = event.target.closest("[data-category]");
+      if (!button) return;
+
+      state.category = button.dataset.category;
+      $("#catalogo").scrollIntoView({ behavior: "smooth" });
+      renderCatalog();
+    });
+
+    $("#sortProducts").addEventListener("change", event => {
+      state.sort = event.target.value;
+      renderProducts();
+    });
+
+    $("#clearFilters").addEventListener("click", () => {
+      state.search = "";
+      state.category = "Todos";
+      state.sort = "relevance";
+      $("#productSearch").value = "";
+      $("#sortProducts").value = "relevance";
+      renderCatalog();
+    });
+
+    // Eventos dos produtos
+    $("#productGrid").addEventListener("click", event => {
+      const addButton = event.target.closest("[data-add-interest]");
+      if (addButton) {
+        addToInterest(addButton.dataset.addInterest);
+        return;
+      }
+
+      const detailsButton = event.target.closest("[data-product-details]");
+      if (detailsButton) showProductDetails(detailsButton.dataset.productDetails);
+    });
+
+    $("#productModalContent").addEventListener("click", event => {
+      const button = event.target.closest("#modalAddInterest");
+      if (!button) return;
+      addToInterest(button.dataset.productId);
+      closeOverlay("productOverlay");
+    });
+
+    // Lista de interesse
+    $("#openInterest").addEventListener("click", () => {
+      renderInterest();
+      showOverlay("interestOverlay");
+    });
+
+    $("#mobileInterest").addEventListener("click", () => {
+      renderInterest();
+      showOverlay("interestOverlay");
+    });
+
+    $("#interestItems").addEventListener("click", event => {
+      const button = event.target.closest("[data-quantity]");
+      if (button) changeQuantity(button.dataset.quantity, Number(button.dataset.delta));
+
+      const closeButton = event.target.closest("[data-close-overlay]");
+      if (closeButton) closeOverlay(closeButton.dataset.closeOverlay);
+    });
+
+    $("#clearInterest").addEventListener("click", () => {
+      state.interest = [];
+      saveInterest();
+      renderInterest();
+      showToast("Sua lista foi limpa.");
+    });
+
+    $("#sendInterest").addEventListener("click", () => {
+      const items = state.interest
+        .map(item => {
+          const product = getProduct(item.id);
+          return product ? `• ${product.name} — quantidade: ${item.quantity}` : null;
+        })
+        .filter(Boolean);
+
+      if (!items.length) {
+        showToast("Adicione pelo menos um produto à sua lista.");
+        return;
+      }
+
+      openWhatsApp(
+        `Olá! Gostaria de consultar os seguintes produtos na Farma Vitória:\n\n${items.join("\n")}\n\nPoderiam confirmar disponibilidade e valores?`
+      );
+    });
+
+    // FAQ acessível
+    $$(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const willOpen = !item.classList.contains("open");
+
+        $$(".faq-item").forEach(other => {
+          other.classList.remove("open");
+          $(".faq-question", other).setAttribute("aria-expanded", "false");
+        });
+
+        if (willOpen) {
+          item.classList.add("open");
+          button.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // Fechar modais e políticas
+    document.addEventListener("click", event => {
+      const closeButton = event.target.closest("[data-close-overlay]");
+      if (closeButton) closeOverlay(closeButton.dataset.closeOverlay);
+
+      const policyButton = event.target.closest("[data-open-policy]");
+      if (policyButton) showPolicy(policyButton.dataset.openPolicy);
+    });
+
+    $$(".overlay").forEach(overlay => {
+      overlay.addEventListener("click", event => {
+        if (event.target === overlay) closeOverlay(overlay.id);
+      });
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "Escape") {
+        $$(".overlay.visible").forEach(overlay => closeOverlay(overlay.id));
+        $("#navLinks").classList.remove("open");
+        $("#menuToggle").setAttribute("aria-expanded", "false");
+      }
+    });
+
+    // Menu responsivo
+    $("#menuToggle").addEventListener("click", () => {
+      const nav = $("#navLinks");
+      const isOpen = nav.classList.toggle("open");
+      $("#menuToggle").setAttribute("aria-expanded", String(isOpen));
+    });
+
+    $$("#navLinks a").forEach(link => {
+      link.addEventListener("click", () => {
+        $("#navLinks").classList.remove("open");
+        $("#menuToggle").setAttribute("aria-expanded", "false");
+      });
+    });
+
+    // Ano automático e inicialização
+    $("#currentYear").textContent = new Date().getFullYear();
+
+    renderCatalog();
+    renderInterest();
+
+    // Só substitui o link de contato por WhatsApp quando houver número configurado.
+    const configuredWhatsApp = whatsappURL("Olá! Gostaria de entrar em contato com a Farma Vitória.");
+    if (configuredWhatsApp) {
+      $("#contactWhatsApp").href = configuredWhatsApp;
+      $("#contactWhatsApp").target = "_blank";
+      $("#contactWhatsApp").rel = "noopener noreferrer";
+    } else {
+      $("#contactWhatsApp").addEventListener("click", event => {
+        event.preventDefault();
+        showToast("Configure o WhatsApp oficial no início do código. Por enquanto, você pode falar pelo Instagram.");
+      });
+    }
+  </script>
+</body>
+</html>

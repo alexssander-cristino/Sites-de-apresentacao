@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Supermercado Avenida | Pouso Redondo/SC</title>
+<meta name="description" content="Supermercado Avenida em Pouso Redondo/SC. Açougue, mercearia, brinquedos e ofertas. Uma família a serviço da sua.">
+<meta property="og:title" content="Supermercado Avenida | Pouso Redondo/SC">
+<meta property="og:description" content="Açougue, mercearia, brinquedos e ofertas. Uma família a serviço da sua.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#C8102E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"GroceryStore","name":"Supermercado Avenida","address":{"@type":"PostalAddress","streetAddress":"Av. 1º de Maio, 96","addressLocality":"Pouso Redondo","addressRegion":"SC","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"13:30","closes":"19:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"08:00","closes":"11:30"}],"sameAs":["https://www.instagram.com/supermercado_avenida_"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#C8102E; --red-d:#9E0C24; --bg:#FFFFFF; --soft:#F5F2F2; --ink:#1E1618; --mute:#645B5D; --line:#E6DFDF; --on-red:#fff; --ok:#14804A;
+  --f-head:'Bricolage Grotesque','Arial Black',system-ui,sans-serif; --f-body:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#150F11;--soft:#1F171A;--ink:#F6EEEF;--mute:#B7AAAD;--line:#32282B;--red:#E5253F;--ok:#3FCB86;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#150F11;--soft:#1F171A;--ink:#F6EEEF;--mute:#B7AAAD;--line:#32282B;--red:#E5253F;--ok:#3FCB86;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--f-head);line-height:1.05;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(30px,4.2vw,46px);font-weight:800}
+h3{font-size:22px;font-weight:800}
+p{margin:0}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 italic 20px/1 var(--f-head);color:var(--red);text-decoration:none;letter-spacing:-.01em;text-transform:uppercase;display:flex;flex-direction:column;gap:2px}
+.logo small{font:inherit;font-size:25px;color:var(--ink)}
+.nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;font-weight:500;font-size:15px}
+.nav ul a{text-decoration:none;color:var(--mute)}
+.nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--red);color:var(--on-red);font:600 16px/1 var(--f-body);padding:15px 24px;border-radius:999px;text-decoration:none;border:2px solid var(--red);transition:background .2s}
+.btn:hover{background:var(--red-d);border-color:var(--red-d)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:transparent}
+.btn svg{width:18px;height:18px;flex:none}
+
+.hero{padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(44px,7.2vw,92px);font-weight:800}
+.hero h1 em{font-style:normal;color:var(--red)}
+.hero p.lead{font-size:20px;color:var(--mute);max-width:46ch;margin:26px 0 34px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+
+.ticket{background:var(--red);color:#fff;border-radius:22px;padding:30px 28px 26px;position:relative;box-shadow:0 18px 40px -18px rgba(200,16,46,.55)}
+.ticket::before,.ticket::after{content:"";position:absolute;left:-12px;top:96px;width:24px;height:24px;border-radius:50%;background:var(--bg)}
+.ticket::after{left:auto;right:-12px}
+.status{display:flex;align-items:center;gap:10px;font:800 26px/1.1 var(--f-head);padding-bottom:34px;border-bottom:2px dashed rgba(255,255,255,.55)}
+.dot{width:12px;height:12px;border-radius:50%;background:#fff;flex:none;box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:pulse 2s infinite}
+.closed .dot{animation:none;opacity:.5}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.status small{display:block;font:500 15px/1.4 var(--f-body);opacity:.9;margin-top:4px}
+.ticket dl{margin:22px 0 0;display:grid;gap:10px;font-size:16px}
+.ticket dl div{display:flex;justify-content:space-between;gap:16px;padding:4px 0;border-radius:6px}
+.ticket dt{opacity:.85}
+.ticket dd{margin:0;font-weight:600;text-align:right}
+.ticket .today{background:rgba(255,255,255,.18);padding:6px 10px;margin:0 -10px}
+
+section{padding:88px 0}
+.soft{background:var(--soft)}
+.head{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:44px;flex-wrap:wrap}
+.head p{color:var(--mute);max-width:44ch}
+
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:30px;display:flex;flex-direction:column;gap:12px}
+.soft .card{background:var(--bg)}
+.card p{color:var(--mute)}
+.c1{grid-column:span 7;background:var(--ink);color:var(--bg);border-color:var(--ink);min-height:300px;justify-content:flex-end}
+.c1 p{color:inherit;opacity:.8;max-width:42ch}
+.c2{grid-column:span 5}
+.c3,.c4{grid-column:span 6}
+.ico{width:46px;height:46px;border-radius:14px;background:var(--red);color:#fff;display:grid;place-items:center;margin-bottom:auto}
+.ico svg{width:24px;height:24px}
+
+.why{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.why ul{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.why li{padding:22px 0;border-top:1px solid var(--line)}
+.why li:last-child{border-bottom:1px solid var(--line)}
+.why li b{font:800 20px/1.2 var(--f-head);display:block;margin-bottom:4px}
+.why li span{color:var(--mute)}
+.why h2+p{color:var(--mute);margin-top:20px;max-width:40ch}
+
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.visit .card{padding:36px}
+.addr{font:800 clamp(26px,3.4vw,38px)/1.1 var(--f-head);letter-spacing:-.02em;color:var(--ink)}
+.hrs{display:grid;gap:0;margin-top:8px}
+.hrs div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-top:1px solid var(--line)}
+.hrs div.today{color:var(--red);font-weight:600}
+.hrs span:last-child{text-align:right}
+
+.final{background:var(--red);color:#fff;text-align:center;padding:96px 0}
+.final h2{font-size:clamp(34px,5.6vw,68px);max-width:16ch;margin:0 auto 20px}
+.final p{opacity:.92;max-width:44ch;margin:0 auto 32px;font-size:19px}
+.final .btn{background:#fff;color:var(--red);border-color:#fff}
+.final .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+.final .cta{justify-content:center}
+
+footer{padding:36px 0;font-size:14.5px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--ink)}
+
+.meat{background:#1E1618;color:#fff}
+.meat-in{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}
+.meat h2{font-size:clamp(40px,6vw,76px)}
+.mlead{color:rgba(255,255,255,.78);font-size:19px;max-width:46ch;margin:22px 0 28px}
+.mlist{list-style:none;margin:0;padding:0}
+.mlist li{padding:16px 0;border-top:1px solid rgba(255,255,255,.18)}
+.mlist li:last-child{border-bottom:1px solid rgba(255,255,255,.18)}
+.mlist b{display:block;font:800 19px/1.2 var(--f-head)}
+.mlist span{color:rgba(255,255,255,.7)}
+.mcard{background:#C8102E;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:16px}
+.mcard p{opacity:.92}
+.mchips{display:flex;flex-wrap:wrap;gap:10px}
+.mchips button{font:600 15px/1 var(--f-body);color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:12px 16px;cursor:pointer}
+.mchips button:hover{background:#fff;color:#C8102E}
+.mchips button.on{background:#fff;color:#C8102E}
+.mcard .btn{background:#fff;color:#C8102E;border-color:#fff;justify-content:center}
+.mcard .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.6)}
+@media (max-width:860px){.meat-in{grid-template-columns:1fr;gap:36px}}
+.lista{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.sub{color:var(--mute);margin-top:18px;max-width:40ch}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.chips button{font:500 15px/1 var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:11px 16px;cursor:pointer}
+.chips button:hover{border-color:var(--red);color:var(--red)}
+.paper{padding:26px;gap:16px;box-shadow:0 20px 40px -26px rgba(0,0,0,.35)}
+.add{display:flex;gap:10px}
+.paper input{flex:1;min-width:0;font:400 16px var(--f-body);color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.paper .btn{padding:14px 20px;cursor:pointer;justify-content:center}
+#li-ul{list-style:none;margin:0;padding:0}
+#li-ul li{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px dashed var(--line)}
+#li-ul button{border:0;background:none;color:var(--mute);font-size:22px;line-height:1;cursor:pointer;padding:4px 8px}
+#li-ul button:hover{color:var(--red)}
+.empty{font-size:15px}
+.posts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.post{display:flex;flex-direction:column;justify-content:flex-end;gap:10px;aspect-ratio:1/1;border-radius:20px;padding:28px;text-decoration:none;color:#fff;transition:transform .2s}
+.post:hover{transform:translateY(-4px)}
+.post b{font:800 clamp(24px,2.8vw,32px)/1.05 var(--f-head);letter-spacing:-.02em}
+.post span{font-size:15.5px;opacity:.92}
+.p1{background:#C8102E}.p2{background:#1F4E9E}.p3{background:#1E1618;color:#fff}
+:root[data-theme="dark"] .p3{background:#3A2A2E}
+.fab{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(200,16,46,.6)}
+.fab svg{width:28px;height:28px}
+@media (max-width:860px){
+  .lista{grid-template-columns:1fr;gap:32px}
+  .posts{grid-template-columns:1fr}
+  .post{aspect-ratio:auto;min-height:200px}
+}
+@media (max-width:860px){
+  .nav ul{display:none}
+  .hero{padding:44px 0 56px}
+  .hero .wrap,.why,.visit{grid-template-columns:1fr;gap:36px}
+  .visit{gap:18px}
+  section{padding:64px 0}
+  .c1,.c2,.c3,.c4{grid-column:span 12}
+  .c1{min-height:240px}
+}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#topo" aria-label="Supermercado Avenida">Supermercado <small>Avenida</small></a>
+    <ul>
+      <li><a href="#setores">Setores</a></li>
+      <li><a href="#acougue">Açougue</a></li>
+      <li><a href="#lista">Monte sua lista</a></li>
+      <li><a href="#diferenciais">Por que a Avenida</a></li>
+      <li><a href="#visita">Horários e endereço</a></li>
+    </ul>
+    <a class="btn" data-wa href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.300 7.400L3 20.500l1.700-5.500A8.400 8.400 0 1 1 21 11.500Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="topo">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Uma família a serviço <em>da sua.</em></h1>
+      <p class="lead">Do corte fresco no açougue às ofertas da semana, o Supermercado Avenida cuida das suas compras em Pouso Redondo com atendimento que conhece o seu nome.</p>
+      <div class="cta">
+        <a class="btn" data-wa href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+        <a class="btn ghost" href="#visita">Como chegar</a>
+      </div>
+    </div>
+
+    <aside class="ticket" id="ticket" aria-label="Horário de funcionamento">
+      <div class="status" id="status"><span class="dot"></span><div><span id="st-title">Verificando horário...</span><small id="st-sub">Av. 1º de Maio, 96</small></div></div>
+      <dl>
+        <div data-d="1,2,3,4,5"><dt>Segunda a sexta</dt><dd>8h–12h e 13h30–19h30</dd></div>
+        <div data-d="6"><dt>Sábado</dt><dd>8h–16h</dd></div>
+        <div data-d="0"><dt>Domingo</dt><dd>8h–11h30</dd></div>
+      </dl>
+    </aside>
+  </div>
+</div>
+
+<section class="meat" id="acougue">
+  <div class="wrap meat-in">
+    <div>
+      <h2>Açougue Avenida</h2>
+      <p class="mlead">Carne cortada na hora, do jeito que você pede. Fale com o nosso açougueiro e leve o corte certo para o churrasco ou para o almoço de todo dia.</p>
+      <ul class="mlist">
+        <li><b>Corte na hora</b><span>Você escolhe a peça e a espessura.</span></li>
+        <li><b>Atendimento no balcão</b><span>Dúvidas sobre ponto, quantidade e preparo? É só perguntar.</span></li>
+        <li><b>Encomenda antecipada</b><span>Para festas e churrascos, avise pelo WhatsApp e deixe separado.</span></li>
+      </ul>
+    </div>
+    <div class="mcard">
+      <h3>Peça o seu corte</h3>
+      <p>Toque para adicionar à sua lista e envie para o nosso WhatsApp.</p>
+      <div class="mchips">
+        <button type="button" data-add="Picanha">+ Picanha</button>
+        <button type="button" data-add="Costela">+ Costela</button>
+        <button type="button" data-add="Contrafilé">+ Contrafilé</button>
+        <button type="button" data-add="Fraldinha">+ Fraldinha</button>
+        <button type="button" data-add="Linguiça">+ Linguiça</button>
+        <button type="button" data-add="Frango">+ Frango</button>
+      </div>
+      <a class="btn" href="#lista">Ver minha lista</a>
+      <a class="btn ghost" data-wa href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Encomendar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="setores">
+  <div class="wrap">
+    <div class="head">
+      <h2>Tudo para a sua mesa e para a sua casa</h2>
+      <p>Corredores organizados, produtos do dia a dia e um time que ajuda você a encontrar o que precisa.</p>
+    </div>
+    <div class="grid">
+      <article class="card c1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l7-7"/><path d="M8 12l6-6 5 1 1 5-6 6-6-6Z"/></svg></div>
+        <h3>Açougue</h3>
+        <p>Carnes cortadas na hora por quem entende do ofício. Peça do jeito que você precisa para o churrasco ou para o almoço de todo dia.</p>
+      </article>
+      <article class="card c2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-2 9H8L6 6Zm0 0L5 3H2"/><circle cx="9" cy="20" r="1.500"/><circle cx="18" cy="20" r="1.500"/></svg></div>
+        <h3>Mercearia e bebidas</h3>
+        <p>Básicos da despensa, limpeza, higiene e bebidas para abastecer a casa numa única visita.</p>
+      </article>
+      <article class="card c3">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.500"/><circle cx="18" cy="17" r="3.500"/><path d="M6 17l4-8h6l2 8M10 9l-1-3H7"/></svg></div>
+        <h3>Brinquedos</h3>
+        <p>Uma seção pensada para a criançada, com sorteios e campanhas que já levaram bicicletas para casa.</p>
+      </article>
+      <article class="card c4">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v9H4v-9M2 7h20v5H2zM12 21V7M12 7S9 7 8 5s1-3 2-3 2 2 2 5Zm0 0s3 0 4-2-1-3-2-3-2 2-2 5Z"/></svg></div>
+        <h3>Ofertas e datas especiais</h3>
+        <p>Dia dos Pais, Dia do Cliente e outras campanhas. Acompanhe as novidades no nosso Instagram.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="lista">
+  <div class="wrap lista">
+    <div>
+      <h2>Monte sua lista e mande para a gente</h2>
+      <p class="sub">Anote o que você precisa, toque em enviar e a lista chega pronta no nosso WhatsApp.</p>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="card paper">
+      <div class="add">
+        <input id="li-in" type="text" placeholder="Ex.: 2 kg de arroz" aria-label="Item da lista" maxlength="60">
+        <button class="btn" id="li-add" type="button">Adicionar</button>
+      </div>
+      <ul id="li-ul" aria-live="polite"></ul>
+      <p class="empty" id="li-empty">Sua lista está vazia. Adicione um item ou toque numa sugestão.</p>
+      <input id="li-name" type="text" placeholder="Seu nome (opcional)" aria-label="Seu nome" maxlength="40">
+      <a class="btn" id="li-send" data-wa-list href="#" target="_blank" rel="noopener">Enviar lista pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="soft" id="novidades">
+  <div class="wrap">
+    <div class="head">
+      <h2>Sempre tem novidade na Avenida</h2>
+      <p>Campanhas, ofertas e momentos com a comunidade. Tudo é publicado primeiro no nosso Instagram.</p>
+    </div>
+    <div class="posts">
+      <a class="post p1" href="https://www.instagram.com/supermercado_avenida_" target="_blank" rel="noopener"><b>Feliz Dia do Cliente</b><span>Mais do que clientes, vocês são parte da nossa história.</span></a>
+      <a class="post p2" href="https://www.instagram.com/supermercado_avenida_" target="_blank" rel="noopener"><b>Feliz Dia dos Pais</b><span>Uma homenagem da nossa equipe a quem faz a diferença em casa.</span></a>
+      <a class="post p3" href="https://www.instagram.com/supermercado_avenida_" target="_blank" rel="noopener"><b>Campanhas para a criançada</b><span>Concursos e prêmios que fazem a alegria da família toda.</span></a>
+    </div>
+    <div class="cta" style="margin-top:32px"><a class="btn ghost" href="https://www.instagram.com/supermercado_avenida_" target="_blank" rel="noopener">Seguir no Instagram</a></div>
+  </div>
+</section>
+
+<section id="diferenciais">
+  <div class="wrap why">
+    <div>
+      <h2>Mercado de bairro com padrão de grande</h2>
+      <p>Aqui você é atendido por gente da comunidade, que faz questão de agradecer a confiança de cada cliente.</p>
+    </div>
+    <ul>
+      <li><b>Atendimento de família</b><span>Funcionários que conhecem os clientes e resolvem na hora, sem fila de burocracia.</span></li>
+      <li><b>Localização central</b><span>Na Av. 1º de Maio, fácil de chegar e perto de quem mora e trabalha em Pouso Redondo.</span></li>
+      <li><b>Aberto também no fim de semana</b><span>Sábado o dia inteiro até 16h e domingo de manhã, para abastecer sem correria.</span></li>
+      <li><b>Sempre por perto</b><span>Tire dúvidas, confira novidades e fale com a equipe pelo WhatsApp e pelo Instagram.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="soft" id="visita">
+  <div class="wrap">
+    <div class="head"><h2>Venha nos visitar</h2></div>
+    <div class="visit">
+      <div class="card">
+        <p>Endereço</p>
+        <div class="addr">Av. 1º de Maio, 96<br>Pouso Redondo/SC</div>
+        <div class="cta" style="margin-top:18px">
+          <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Supermercado+Avenida+Av.+1%C2%BA+de+Maio+96+Pouso+Redondo+SC" target="_blank" rel="noopener">Abrir no mapa</a>
+        </div>
+      </div>
+      <div class="card">
+        <p>Horário de funcionamento</p>
+        <div class="hrs" id="hrs">
+          <div data-d="1,2,3,4,5"><span>Segunda a sexta</span><span>8h–12h e 13h30–19h30</span></div>
+          <div data-d="6"><span>Sábado</span><span>8h–16h</span></div>
+          <div data-d="0"><span>Domingo</span><span>8h–11h30</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <div class="wrap">
+    <h2>Mais do que clientes, vocês são parte da nossa história</h2>
+    <p>Fale com a gente e confira as ofertas da semana.</p>
+    <div class="cta">
+      <a class="btn" data-wa href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+      <a class="btn ghost" href="https://www.instagram.com/supermercado_avenida_" target="_blank" rel="noopener">@supermercado_avenida_</a>
+    </div>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> Supermercado Avenida. Pouso Redondo/SC.</span>
+    <span><a href="https://www.instagram.com/supermercado_avenida_" target="_blank" rel="noopener">Instagram</a></span>
+  </div>
+</footer>
+<a class="fab" data-wa href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.300 7.400L3 20.500l1.700-5.500A8.400 8.400 0 1 1 21 11.500Z"/></svg></a>
+
+<script>
+(function(){
+  // Troque pelo número real, com DDI e DDD. Exemplo: 5547999999999
+  var WHATSAPP = "55SEUNUMERO";
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent("Olá! Vim pelo site do Supermercado Avenida.");
+  });
+
+  var S = {0:[[480,690]],6:[[480,960]]};
+  for (var i=1;i<=5;i++) S[i]=[[480,720],[810,1170]];
+  var names=["domingo","segunda","terça","quarta","quinta","sexta","sábado"];
+  function f(m){var h=Math.floor(m/60),n=m%60;return n?h+"h"+String(n).padStart(2,"0"):h+"h";}
+
+  var parts = new Intl.DateTimeFormat("en-US",{timeZone:"America/Sao_Paulo",weekday:"short",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());
+  var g=function(t){return parts.filter(function(p){return p.type===t})[0].value};
+  var day=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(g("weekday"));
+  var now=(parseInt(g("hour"),10)%24)*60+parseInt(g("minute"),10);
+
+  var open=null, next=null;
+  S[day].forEach(function(r){ if(now>=r[0]&&now<r[1]) open=r; else if(now<r[0]&&!next) next={d:0,t:r[0]}; });
+  if(!open&&!next){ for(var k=1;k<=7;k++){var d=(day+k)%7; next={d:k,t:S[d][0][0],name:names[d]}; break;} }
+
+  var t=document.getElementById("st-title"), s=document.getElementById("st-sub"), box=document.getElementById("status");
+  if(open){
+    t.textContent="Aberto agora"; s.textContent="Atendemos até às "+f(open[1])+" hoje";
+  } else {
+    box.classList.add("closed"); t.textContent="Fechado agora";
+    s.textContent = next.d===0 ? "Abrimos hoje às "+f(next.t) : (next.d===1 ? "Abrimos amanhã às " : "Abrimos "+next.name+" às ")+f(next.t);
+  }
+  document.querySelectorAll("[data-d]").forEach(function(el){
+    if(el.dataset.d.split(",").indexOf(String(day))>-1) el.classList.add("today");
+  });
+  document.getElementById("yr").textContent=new Date().getFullYear();
+
+  // Lista de compras
+  var items=[], ul=document.getElementById("li-ul"), inp=document.getElementById("li-in"), emp=document.getElementById("li-empty"), nm=document.getElementById("li-name"), send=document.getElementById("li-send");
+  try{var sv=JSON.parse(localStorage.getItem("avenida-lista")||"[]"); if(Array.isArray(sv)) items=sv.slice(0,40);}catch(e){}
+  function save(){try{localStorage.setItem("avenida-lista",JSON.stringify(items));}catch(e){}}
+  function render(){
+    ul.innerHTML="";
+    items.forEach(function(t,i){
+      var li=document.createElement("li"), sp=document.createElement("span"), b=document.createElement("button");
+      sp.textContent=t; b.type="button"; b.textContent="×"; b.setAttribute("aria-label","Remover "+t);
+      b.onclick=function(){items.splice(i,1);save();render();};
+      li.appendChild(sp); li.appendChild(b); ul.appendChild(li);
+    });
+    emp.style.display=items.length?"none":"block";
+    var txt="Olá! Segue minha lista de compras"+(nm.value.trim()?" ("+nm.value.trim()+")":"")+":\n"+items.map(function(t){return "• "+t;}).join("\n");
+    send.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(items.length?txt:"Olá! Vim pelo site do Supermercado Avenida.");
+  }
+  function add(t){t=(t||"").trim(); if(!t||items.length>=40) return; items.push(t); inp.value=""; save(); render();}
+  document.getElementById("li-add").onclick=function(){add(inp.value);};
+  inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();add(inp.value);}});
+  nm.addEventListener("input",render);
+  var box2=document.getElementById("chips");
+  ["Carne para churrasco","Arroz","Feijão","Leite","Pão","Refrigerante","Produtos de limpeza"].forEach(function(n){
+    var b=document.createElement("button"); b.type="button"; b.textContent="+ "+n; b.onclick=function(){add(n);}; box2.appendChild(b);
+  });
+  document.querySelectorAll("[data-add]").forEach(function(b){
+    b.onclick=function(){add(b.dataset.add); b.classList.add("on"); setTimeout(function(){b.classList.remove("on");},900);};
+  });
+  render();
+})();
+</script>
+</body>
+</html>

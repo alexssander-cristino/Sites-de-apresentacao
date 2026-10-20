@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farmácia Líder Popular · Pouso Redondo</title>
+<meta name="description" content="Economia é coisa nossa! Farmácia Líder Popular em Pouso Redondo – SC. Atendimento pelo WhatsApp, plantão e muito mais.">
+<style>
+:root{--g:#12994a;--g2:#0b6e34;--gl:#e6f6ec;--r:#e11d2e;--bg:#fbfdfb;--sf:#fff;--tx:#10231a;--mu:#52665a;--bd:#dbe8df;--sh:0 10px 30px rgba(16,80,40,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--g:#2fc16a;--g2:#1c8d4b;--gl:#12251b;--bg:#0b130f;--sf:#122019;--tx:#eaf6ee;--mu:#9bb3a5;--bd:#22372b;--sh:0 10px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--g:#2fc16a;--g2:#1c8d4b;--gl:#12251b;--bg:#0b130f;--sf:#122019;--tx:#eaf6ee;--mu:#9bb3a5;--bd:#22372b;--sh:0 10px 30px rgba(0,0,0,.4)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.3px}
+.logo svg{width:34px;height:34px}
+.logo small{display:block;font-size:.62rem;color:var(--g);letter-spacing:.14em;text-transform:uppercase;font-weight:700;line-height:1}
+nav a{margin-left:20px;font-size:.92rem;color:var(--mu);font-weight:600}
+nav a:hover{color:var(--g)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:700;border:0;cursor:pointer;font-size:1rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px)}
+.b1{background:#25d366;color:#04230f;box-shadow:0 8px 22px rgba(37,211,102,.35)}
+.b2{background:var(--sf);color:var(--tx);border:1px solid var(--bd)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--g2),var(--g) 70%);color:#fff;padding:64px 0 90px}
+.hero:before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.08)}
+.hero:after{content:"";position:absolute;left:-80px;bottom:-140px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.06)}
+.hg{position:relative;z-index:1;display:grid;gap:40px;grid-template-columns:1.1fr .9fr;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.16);padding:6px 14px;border-radius:999px;font-size:.85rem;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:#9ca3af}
+.dot.on{background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.3)}
+h1{font-size:clamp(2.2rem,5.5vw,3.8rem);line-height:1.05;letter-spacing:-1.5px;margin:18px 0}
+h1 em{font-style:normal;color:#ffe08a}
+.hero p{font-size:1.1rem;max-width:480px;opacity:.95}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .b2{background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.3)}
+.card-h{background:var(--sf);color:var(--tx);border-radius:24px;padding:26px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+.card-h h3{font-size:1.05rem;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed var(--bd);font-size:.95rem}
+.row:last-of-type{border:0}
+.row b{color:var(--g)}
+section{padding:72px 0}
+.eyebrow{color:var(--g);font-weight:800;text-transform:uppercase;letter-spacing:.14em;font-size:.78rem}
+h2{font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:-1px;line-height:1.15;margin:8px 0 12px}
+.lead{color:var(--mu);max-width:560px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:36px}
+.it{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:24px;transition:transform .2s,box-shadow .2s}
+.it:hover{transform:translateY(-4px);box-shadow:var(--sh)}
+.ic{width:50px;height:50px;border-radius:14px;background:var(--gl);display:grid;place-items:center;margin-bottom:14px}
+.ic svg{width:26px;height:26px;stroke:var(--g);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.it h3{font-size:1.1rem;margin-bottom:6px}
+.it p{color:var(--mu);font-size:.93rem}
+.alt{background:var(--gl)}
+.pl{display:grid;gap:30px;grid-template-columns:1fr 1fr;align-items:center}
+.plc{background:linear-gradient(160deg,#1d4ed8,#0ea5e9);color:#fff;border-radius:24px;padding:34px;box-shadow:var(--sh);position:relative;overflow:hidden}
+.plc:after{content:"+";position:absolute;right:18px;top:-30px;font-size:11rem;font-weight:800;opacity:.12}
+.plc h3{font-size:2.2rem;letter-spacing:-1px}
+.steps{list-style:none;padding:0;margin-top:24px;display:grid;gap:16px}
+.steps li{display:flex;gap:14px;align-items:flex-start}
+.steps span{flex:none;width:34px;height:34px;border-radius:50%;background:var(--g);color:#fff;font-weight:800;display:grid;place-items:center}
+.loc{display:grid;gap:30px;grid-template-columns:1fr 1fr;align-items:stretch}
+.box{background:var(--sf);border:1px solid var(--bd);border-radius:24px;padding:30px}
+.box p{margin:10px 0;color:var(--mu)}
+.box p b{color:var(--tx)}
+.map{border-radius:24px;min-height:260px;background:repeating-linear-gradient(45deg,var(--gl),var(--gl) 14px,var(--sf) 14px,var(--sf) 28px);border:1px solid var(--bd);display:grid;place-items:center;text-align:center;padding:20px}
+.pin{width:58px;height:58px;margin:0 auto 10px}
+.final{background:linear-gradient(135deg,var(--g2),var(--g));color:#fff;text-align:center;border-radius:28px;padding:54px 24px}
+.final h2{color:#fff}
+.final p{opacity:.92;margin:0 auto 24px;max-width:480px}
+footer{padding:30px 0 40px;color:var(--mu);font-size:.88rem;text-align:center}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.fab svg{width:30px;height:30px}
+.rv{opacity:0;transform:translateY(18px);transition:.6s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:800px){nav{display:none}.hg,.pl,.loc{grid-template-columns:1fr}.hero{padding:44px 0 64px}section{padding:52px 0}}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="w nav">
+<a class="logo" href="#top"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#12994a"/><rect x="16.5" y="8" width="7" height="24" rx="2" fill="#fff"/><rect x="8" y="16.5" width="24" height="7" rx="2" fill="#fff"/><rect x="17.5" y="9" width="5" height="22" rx="1.5" fill="#e11d2e"/><rect x="9" y="17.5" width="22" height="5" rx="1.5" fill="#e11d2e"/></svg><span><small>Farmácia</small>Líder Popular</span></a>
+<nav><a href="#servicos">Serviços</a><a href="#plantao">Plantão</a><a href="#local">Onde estamos</a><a href="#contato">Contato</a></nav>
+<a class="btn b1" style="padding:9px 16px;font-size:.9rem" href="https://wa.me/message/WRJBRZ2TF5U6K1" target="_blank" rel="noopener">WhatsApp</a>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="w hg">
+<div>
+<span class="tag"><i class="dot" id="dot"></i><span id="st">Verificando horário…</span></span>
+<h1>Economia é <em>coisa nossa!</em></h1>
+<p>Sua farmácia de confiança em Pouso Redondo: bom preço, atendimento de vizinho e tudo pertinho de você, no bairro Progresso.</p>
+<div class="cta">
+<a class="btn b1" href="https://wa.me/message/WRJBRZ2TF5U6K1" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+<a class="btn b2" href="#local">Como chegar</a>
+</div>
+</div>
+<div class="card-h">
+<h3>🕒 Horário de atendimento</h3>
+<div class="row"><span>Segunda a sexta</span><b>08h–12h · 13h30–19h</b></div>
+<div class="row"><span>Sábados</span><b>08h–12h</b></div>
+<div class="row"><span>Domingos</span><b>Plantão da cidade*</b></div>
+<p style="font-size:.78rem;color:var(--mu);margin-top:10px">*Confira a escala de plantão no nosso Instagram.</p>
+</div>
+</div></div>
+
+<section id="servicos"><div class="w">
+<div class="rv"><span class="eyebrow">Por que a Líder Popular</span><h2>Tudo o que você precisa, com preço justo</h2><p class="lead">Cuidar da saúde da família não precisa pesar no bolso. Aqui você encontra economia de verdade e quem te atende pelo nome.</p></div>
+<div class="grid">
+<div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 6.5C17 4.6 14.8 4 12 4S7 5 7 7c0 4.5 10 2.5 10 7 0 2-2.2 3-5 3s-5-.8-5-2.8"/></svg></div><h3>Preços que cabem no bolso</h3><p>Medicamentos, genéricos e perfumaria com economia todos os dias.</p></div>
+<div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>Atendimento no WhatsApp</h3><p>Tire dúvidas, consulte produtos e faça seu pedido sem sair de casa.</p></div>
+<div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>Cuidado de vizinho</h3><p>Equipe da nossa cidade, pronta para orientar com atenção e respeito.</p></div>
+<div class="it rv"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div><h3>Plantão semanal</h3><p>Em dia de plantão, estamos de portas abertas para o que for urgente.</p></div>
+</div></div></section>
+
+<section id="plantao" class="alt"><div class="w pl">
+<div class="rv"><span class="eyebrow">Plantão</span><h2>Precisou fora do horário? A gente te ajuda.</h2><p class="lead">A farmácia de plantão muda a cada semana. Veja como saber quando é a nossa vez:</p>
+<ol class="steps">
+<li><span>1</span><div><b>Acompanhe o Instagram</b><br><small style="color:var(--mu)">Postamos a escala de plantão toda semana.</small></div></li>
+<li><span>2</span><div><b>Chame no WhatsApp</b><br><small style="color:var(--mu)">Confirme o atendimento antes de sair de casa.</small></div></li>
+<li><span>3</span><div><b>Venha até nós</b><br><small style="color:var(--mu)">R. Gottlieb Reif, 340 – Progresso.</small></div></li>
+</ol></div>
+<div class="plc rv"><small style="letter-spacing:.14em;font-weight:700;opacity:.85">FARMÁCIA DE</small><h3>Plantão</h3><p style="margin:12px 0 22px;opacity:.95">Veja a escala atualizada da semana no nosso perfil.</p><a class="btn b2" style="color:#1d4ed8;border:0" href="https://www.instagram.com/farmacialiderpopularpr" target="_blank" rel="noopener">Ver escala no Instagram</a></div>
+</div></section>
+
+<section id="local"><div class="w">
+<div class="rv"><span class="eyebrow">Onde estamos</span><h2>Pertinho de você</h2></div>
+<div class="loc" style="margin-top:30px">
+<div class="box rv"><h3>Farmácia Líder Popular – Pouso Redondo</h3>
+<p>📍 <b>R. Gottlieb Reif, 340 – Progresso</b><br>Pouso Redondo, SC</p>
+<p>🕒 <b>Seg. a sexta:</b> 08h–12h | 13h30–19h<br><b>Sábados:</b> 08h–12h</p>
+<div class="cta"><a class="btn b1" href="https://wa.me/message/WRJBRZ2TF5U6K1" target="_blank" rel="noopener">WhatsApp</a><a class="btn b2" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Gottlieb+Reif,+340,+Pouso+Redondo,+SC" target="_blank" rel="noopener">Abrir no mapa</a></div></div>
+<a class="map rv" href="https://www.google.com/maps/search/?api=1&amp;query=R.+Gottlieb+Reif,+340,+Pouso+Redondo,+SC" target="_blank" rel="noopener"><div><svg class="pin" viewBox="0 0 24 24" fill="#e11d2e"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg><b>Toque para ver a rota</b><br><small style="color:var(--mu)">Gottlieb Reif, 340 · Progresso</small></div></a>
+</div></div></section>
+
+<section id="contato" style="padding-top:0"><div class="w"><div class="final rv">
+<h2>Fale com a gente agora</h2><p>Consulte um produto, peça uma entrega ou tire sua dúvida. Respondemos pelo WhatsApp.</p>
+<div class="cta" style="justify-content:center;margin:0"><a class="btn b1" href="https://wa.me/message/WRJBRZ2TF5U6K1" target="_blank" rel="noopener">Chamar no WhatsApp</a><a class="btn b2" style="background:rgba(255,255,255,.14);color:#fff;border-color:rgba(255,255,255,.3)" href="https://www.instagram.com/farmacialiderpopularpr" target="_blank" rel="noopener">@farmacialiderpopularpr</a></div>
+</div></div></section>
+</main>
+
+<footer><div class="w">© <span id="yr">2026</span> Farmácia Líder Popular · Pouso Redondo – SC<br>Medicamentos podem causar efeitos indesejados. Em caso de dúvida, procure orientação farmacêutica.</div></footer>
+
+<a class="fab" href="https://wa.me/message/WRJBRZ2TF5U6K1" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.300 14.100c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.3.400-.4.500c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.4.100.6-.1l.8-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.4.200.5.300.1.200.1.700-.1 1.300z"/></svg></a>
+
+<script>
+(function(){
+try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
+function upd(){
+var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Sao_Paulo',weekday:'short',hour:'numeric',minute:'numeric',hour12:false}).formatToParts(new Date()),o={};
+p.forEach(function(x){o[x.type]=x.value});
+var m=(+o.hour%24)*60+ +o.minute,d=o.weekday,open=false;
+if(['Mon','Tue','Wed','Thu','Fri'].indexOf(d)>-1)open=(m>=480&&m<720)||(m>=810&&m<1140);
+else if(d==='Sat')open=m>=480&&m<720;
+document.getElementById('dot').className='dot'+(open?' on':'');
+document.getElementById('st').textContent=open?'Aberto agora':'Fechado no momento · chame no WhatsApp';
+}
+try{upd()}catch(e){document.getElementById('st').textContent='Seg. a sáb. · veja os horários abaixo'}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,804 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#351d1a">
+<meta name="description" content="Descubra chocolates e ideias para presentear na Cacau Show de Pouso Redondo, SC. Consulte produtos e disponibilidade com a unidade.">
+<title>Cacau Show | Pouso Redondo — Chocolates e Presentes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cacao:#351d1a;--dark:#211412;--caramel:#a86d42;
+  --gold:#c8a66a;--cream:#f7f0e5;--white:#fffcf7;
+  --muted:#80685d;--line:#e7dcd0;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--white);color:var(--cacao);font-family:var(--sans);line-height:1.6}
+button,input,select{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+button{cursor:pointer}
+.wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin-top:0}
+h1{font-size:clamp(3.5rem,7vw,6.5rem);letter-spacing:-.045em}
+h2{font-size:clamp(2.5rem,5vw,4.2rem);letter-spacing:-.03em}
+h3{font-size:1.7rem}
+p{margin-top:0}
+.eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.18em;font-weight:700;color:var(--caramel)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 20px;border:1px solid transparent;border-radius:2px;font-size:.82rem;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--cacao);color:white}
+.btn-dark:hover{background:var(--dark)}
+.btn-outline{background:transparent;border-color:var(--line);color:var(--cacao)}
+.btn-outline:hover{border-color:var(--caramel)}
+.btn-gold{background:var(--gold);color:var(--dark)}
+.section{padding:85px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}
+.section-head h2{margin:10px 0 0}
+.section-head p{max-width:390px;color:var(--muted);margin-bottom:5px}
+.topline{background:var(--dark);color:#f5e9d9;text-align:center;padding:8px 12px;font-size:.68rem;letter-spacing:.1em}
+header{position:sticky;top:0;z-index:20;background:#fffcf7f5;backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.2s}
+header.scrolled{box-shadow:0 5px 25px #21141210;border-color:var(--line)}
+.nav{height:78px;display:flex;align-items:center;gap:28px}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-mark{height:42px;width:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--caramel);font:1.7rem var(--serif)}
+.brand strong{display:block;font:600 1.4rem var(--serif);line-height:1}
+.brand small{display:block;font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.navlinks{display:flex;align-items:center;gap:23px;margin-left:auto}
+.navlinks a{font-size:.78rem;font-weight:600;color:#5d4740}
+.navlinks a:hover{color:var(--caramel)}
+.nav-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{position:relative;border:0;background:transparent;padding:9px;color:var(--cacao);font-size:1.2rem}
+.count{position:absolute;right:0;top:0;min-width:17px;height:17px;border-radius:50%;display:grid;place-items:center;background:var(--caramel);color:white;font-size:.62rem}
+.menu-toggle{display:none}
+.mobile-menu{display:none}
+.hero{background:var(--dark);color:var(--white);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 45%,#a86d4235,transparent 34%),linear-gradient(110deg,#211412,#351d1a 65%,#271611)}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:45px;align-items:center;min-height:570px;padding-top:45px;padding-bottom:55px}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{margin:18px 0 24px;max-width:700px}
+.hero h1 em{color:var(--gold);font-weight:400}
+.hero-copy>p{max-width:450px;color:#e2d3c7}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.hero-note{margin-top:35px;font-size:.7rem;letter-spacing:.1em;color:#cdb9a9}
+.hero-art{min-height:410px;display:grid;place-items:center;position:relative}
+.orbit{width:min(390px,100%);aspect-ratio:1;border:1px solid #c8a66a55;border-radius:50%;display:grid;place-items:center;position:relative;background:radial-gradient(circle,#a86d4220,transparent 70%)}
+.orbit:before,.orbit:after{content:"";position:absolute;inset:25px;border:1px solid #c8a66a25;border-radius:50%}
+.orbit:after{inset:55px}
+.chocolate-box{width:58%;aspect-ratio:.9;background:linear-gradient(140deg,#75432b,#301814);border:1px solid var(--gold);box-shadow:inset 0 0 0 7px #c8a66a22,0 25px 40px #0005;transform:rotate(-7deg);display:grid;place-items:center;position:relative;z-index:2}
+.chocolate-box:before{content:"";position:absolute;inset:12px;border:1px solid #c8a66a88}
+.box-label{color:#e4c98f;text-align:center;font:1.8rem var(--serif);line-height:1.05;position:relative}
+.box-label small,.box-label span{display:block;font:600 .48rem var(--sans);letter-spacing:.17em}
+.box-label small{margin-bottom:12px}
+.box-label span{margin-top:13px}
+.choco{position:absolute;z-index:3;width:48px;height:48px;border-radius:45%;background:linear-gradient(140deg,#9b6340,#472319);border:1px solid #c28b5c;box-shadow:inset 4px 4px 7px #ffffff18,4px 8px 10px #0004}
+.choco:after{content:"";position:absolute;inset:10px;border:1px solid #d4a06b88;border-radius:50%}
+.choco.one{top:5%;left:5%}.choco.two{right:0;top:16%}
+.choco.three{left:-3%;bottom:9%}.choco.four{right:7%;bottom:0}
+.floating-label{position:absolute;right:0;bottom:20px;background:var(--cream);color:var(--cacao);padding:13px 18px;box-shadow:0 15px 40px #0002;font:1.2rem var(--serif);transform:rotate(3deg)}
+.floating-label small{display:block;font:600 .6rem var(--sans);text-transform:uppercase;color:var(--caramel)}
+.trust{background:var(--cream);border-bottom:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);padding:19px 0}
+.trust-item{display:flex;justify-content:center;gap:10px;align-items:center;font-size:.76rem;color:#634d43}
+.trust-item+.trust-item{border-left:1px solid var(--line)}
+.trust-item b{color:var(--caramel);font-size:1.1rem}
+.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.category-card{background:var(--cream);border:1px solid var(--line);padding:22px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s}
+.category-card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 12px 35px #351d1a10}
+.category-symbol{font:2.3rem var(--serif);color:var(--caramel)}
+.category-card h3{font-size:1.45rem;margin:12px 0 5px}
+.category-card p{font-size:.75rem;color:var(--muted);margin:0}
+.category-bottom{display:flex;justify-content:space-between;align-items:center;font-size:.7rem;font-weight:700;margin-top:16px}
+.arrow{color:var(--caramel);font-size:1.1rem}
+.catalog{background:#f5eee3}
+.catalog-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.searchbox{display:flex;align-items:center;gap:10px;flex:1;min-width:230px;background:white;border:1px solid var(--line);padding:0 13px}
+.searchbox input{width:100%;border:0;outline:0;padding:13px 0;background:transparent;color:var(--cacao)}
+.catalog-tools select,.field select{background:white;border:1px solid var(--line);padding:12px;color:var(--cacao);min-width:155px}
+.result-line{display:flex;justify-content:space-between;align-items:center;font-size:.75rem;color:var(--muted);margin-bottom:18px}
+.clear-btn{border:0;background:transparent;text-decoration:underline;color:var(--caramel);font-weight:700}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.product-card{background:var(--white);border:1px solid #351d1a0b;transition:.25s;min-width:0}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 15px 35px #351d1a12}
+.product-visual{height:225px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#e7d7c1,#f8f2e9)}
+.product-visual:before{content:"";position:absolute;width:145px;height:145px;border:1px solid #a86d4230;border-radius:50%}
+.package{width:100px;height:125px;background:linear-gradient(145deg,#6b3826,#301916);border:1px solid var(--gold);box-shadow:inset 0 0 0 5px #c8a66a22;display:grid;place-items:center;position:relative;transform:rotate(-5deg);z-index:1}
+.package:before{content:"";position:absolute;inset:8px;border:1px solid #c8a66a80}
+.package span{font:1.05rem var(--serif);color:#e8ce95;text-align:center;line-height:1.1;z-index:1}
+.package small{display:block;font:600 .4rem var(--sans);letter-spacing:.12em;margin-bottom:8px}
+[data-tone="rose"] .package{background:linear-gradient(145deg,#9e5d54,#482421)}
+[data-tone="light"] .package{background:linear-gradient(145deg,#d4b78a,#8e633c)}
+[data-tone="cream"] .package{background:linear-gradient(145deg,#eee0c7,#bba27b)}
+.caption{position:absolute;bottom:8px;font-size:.55rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.product-info{padding:16px}
+.product-type{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel);font-weight:700}
+.product-info h3{font-size:1.4rem;margin:7px 0}
+.product-info p{font-size:.75rem;color:var(--muted);min-height:42px;margin-bottom:13px}
+.product-footer{border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.price-pending{font-size:.72rem;font-weight:700}
+.details-btn{border:0;background:transparent;color:var(--caramel);font-size:.75rem;font-weight:700}
+.product-empty{grid-column:1/-1;text-align:center;padding:50px 20px;background:white}
+.product-empty p{color:var(--muted)}
+.gift{background:var(--cacao);color:white;position:relative;overflow:hidden}
+.gift-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center;position:relative}
+.gift-copy .eyebrow{color:var(--gold)}
+.gift-copy p{color:#d8c8bc;max-width:430px}
+.quote{font:italic 1.2rem var(--serif);color:var(--gold);margin-top:30px}
+.gift-form{background:var(--cream);color:var(--cacao);padding:30px}
+.gift-form h3{font-size:2rem;margin-bottom:5px}
+.gift-form>p{font-size:.78rem;color:var(--muted)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+.field label{font-size:.72rem;font-weight:700}
+.field select{width:100%;min-width:0}
+.gift-results{display:none;margin-top:18px;border-top:1px solid var(--line);padding-top:15px}
+.gift-results.show{display:block}
+.gift-results h4{font:1.5rem var(--serif);margin:0 0 8px}
+.gift-results p{font-size:.8rem;color:var(--muted)}
+.story{background:var(--cream)}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}
+.story-art{min-height:370px;background:linear-gradient(140deg,#e8d6bd,#c6a582);display:grid;place-items:center;position:relative;overflow:hidden}
+.story-art:before{content:"";position:absolute;width:280px;height:280px;border:1px solid #6a3b2b4d;border-radius:50%;box-shadow:0 0 0 30px #6a3b2b0b,0 0 0 60px #6a3b2b08}
+.story-package{position:relative;z-index:1;background:linear-gradient(145deg,#5a3023,#2b1713);color:#e7c98b;width:190px;height:230px;display:grid;place-items:center;box-shadow:0 20px 40px #3b201b35;transform:rotate(5deg);text-align:center;font:2rem var(--serif)}
+.story-package:before{content:"";position:absolute;inset:12px;border:1px solid #c8a66a77}
+.story-package small{display:block;font:600 .5rem var(--sans);letter-spacing:.17em;margin-bottom:12px}
+.story-stamp{position:absolute;right:15px;bottom:15px;background:white;padding:12px;font:italic 1rem var(--serif);transform:rotate(-4deg)}
+.story-copy h2{margin:13px 0 20px}
+.story-copy p{color:var(--muted)}
+.story-copy .btn{margin-top:10px}
+.local-card{display:grid;grid-template-columns:1.05fr .95fr;background:var(--cream);border:1px solid var(--line)}
+.local-main,.local-side{padding:40px}
+.local-main h2{margin:12px 0}
+.local-main>p{color:var(--muted)}
+.local-details{display:grid;gap:17px;margin-top:25px}
+.local-detail{display:flex;gap:12px;font-size:.8rem}
+.local-detail>b{color:var(--caramel)}
+.local-detail strong{display:block;font-size:.75rem}
+.local-detail span{color:var(--muted)}
+.local-side{background:var(--dark);color:white;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.local-side .eyebrow{color:var(--gold)}
+.local-side h3{font-size:2.5rem;margin:12px 0}
+.local-side p{font-size:.82rem;color:#d5c4b8;max-width:300px}
+.local-side .btn{align-self:flex-start}
+.faq{background:var(--cream)}
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}
+.faq-grid>div:first-child p{color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;list-style:none;font-size:.88rem;font-weight:700;display:flex;justify-content:space-between;gap:15px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:1.2rem;color:var(--caramel)}
+details[open] summary:after{content:"−"}
+details p{color:var(--muted);font-size:.8rem;padding-top:12px;margin:0}
+footer{background:var(--dark);color:white;padding:50px 0 20px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr 1fr;gap:35px;padding-bottom:35px}
+footer .brand-mark{color:var(--gold);border-color:var(--gold)}
+footer .brand small{color:#c9b5a7}
+.footer-blurb{color:#bfaea3;font-size:.77rem;max-width:280px;margin-top:17px}
+footer h4{font-size:.73rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);margin:5px 0 15px}
+.footer-links{display:grid;gap:10px}
+.footer-links a,.footer-links span{font-size:.75rem;color:#d7c9c0}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{border-top:1px solid #ffffff1c;padding-top:17px;display:flex;justify-content:space-between;gap:15px;color:#a99487;font-size:.65rem}
+.modal-backdrop{position:fixed;inset:0;background:#160b09b8;z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{background:var(--white);width:min(650px,100%);max-height:90vh;overflow:auto;position:relative}
+.modal-close{position:absolute;right:10px;top:10px;border:0;background:#fff9;width:38px;height:38px;font-size:1.5rem;z-index:2}
+.modal-content{display:grid;grid-template-columns:.8fr 1.2fr}
+.modal-visual{min-height:290px;display:grid;place-items:center;background:var(--cream)}
+.modal-info{padding:30px}
+.modal-info h2{font-size:2.6rem;margin:10px 0}
+.modal-info p{font-size:.82rem;color:var(--muted)}
+.modal-note{background:var(--cream);padding:12px;font-size:.72rem!important}
+.drawer-backdrop{position:fixed;inset:0;background:#160b096e;z-index:90;display:none}
+.drawer-backdrop.open{display:block}
+.drawer{position:fixed;z-index:91;right:0;top:0;bottom:0;width:min(430px,100%);background:var(--white);transform:translateX(102%);transition:transform .25s;display:flex;flex-direction:column;box-shadow:-15px 0 45px #0001}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px;border-bottom:1px solid var(--line)}
+.drawer-head h3{margin:0;font-size:2rem}
+.drawer-body{padding:20px;overflow:auto;flex:1}
+.drawer-empty{text-align:center;padding:55px 10px}
+.drawer-empty h4{font:1.8rem var(--serif);margin:10px 0}
+.drawer-empty p{font-size:.8rem;color:var(--muted)}
+.cart-item{display:grid;grid-template-columns:50px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line)}
+.cart-thumb{background:var(--cream);display:grid;place-items:center;color:var(--caramel);font:1.5rem var(--serif)}
+.cart-item h4{font:1.3rem var(--serif);margin:0 0 4px}
+.cart-item p{font-size:.7rem;color:var(--muted);margin-bottom:8px}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{width:25px;height:25px;background:transparent;border:1px solid var(--line)}
+.remove{border:0;background:transparent;color:var(--caramel);font-size:.7rem;text-decoration:underline;margin-top:5px}
+.drawer-foot{padding:20px;border-top:1px solid var(--line)}
+.drawer-foot p{font-size:.7rem;color:var(--muted)}
+.drawer-foot .btn{width:100%;margin-bottom:8px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,15px);background:var(--cacao);color:white;padding:12px 18px;z-index:150;font-size:.8rem;opacity:0;pointer-events:none;transition:.2s;max-width:90%;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1000px){
+ .navlinks{gap:12px}.navlinks a{font-size:.7rem}.nav{gap:15px}
+ .category-grid,.product-grid{grid-template-columns:repeat(2,1fr)}
+ .footer-grid{grid-template-columns:1fr 1fr}
+ .gift-grid,.story-grid{gap:35px}
+}
+@media(max-width:740px){
+ .wrap{width:calc(100% - 32px)}.section{padding:65px 0}
+ .nav{height:68px}.navlinks,.header-contact{display:none}
+ .nav-actions{margin-left:auto}.menu-toggle{display:inline-block}
+ .mobile-menu{position:absolute;top:68px;left:0;right:0;background:var(--white);padding:12px 22px 20px;border-bottom:1px solid var(--line);box-shadow:0 15px 30px #0001}
+ .mobile-menu.open{display:grid}.mobile-menu a{padding:12px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+ .hero-grid{grid-template-columns:1fr;gap:0;padding-top:45px;padding-bottom:35px}
+ .hero h1{font-size:clamp(3.5rem,14vw,5.2rem)}
+ .hero-art{min-height:320px}.orbit{width:280px}
+ .floating-label{right:0;bottom:0}.choco{width:39px;height:39px}
+ .trust-grid{grid-template-columns:1fr;padding:5px 0}
+ .trust-item{justify-content:flex-start;padding:12px 6px}
+ .trust-item+.trust-item{border-left:0;border-top:1px solid var(--line)}
+ .section-head{display:block}.section-head p{margin-top:14px}
+ .category-grid{gap:10px}.category-card{padding:15px;min-height:165px}
+ .category-card h3{font-size:1.3rem}
+ .product-grid{gap:10px}.product-visual{height:175px}
+ .product-info{padding:12px}.product-info h3{font-size:1.25rem}
+ .product-info p{font-size:.71rem;min-height:48px}
+ .product-footer{align-items:flex-start;flex-direction:column}
+ .searchbox{min-width:100%}.catalog-tools select{flex:1;min-width:calc(50% - 6px)}
+ .gift-grid,.story-grid,.faq-grid{grid-template-columns:1fr;gap:30px}
+ .gift-form{padding:22px 17px}.form-row{grid-template-columns:1fr;gap:0}
+ .story-art{min-height:300px;order:2}
+ .local-card{grid-template-columns:1fr}.local-main,.local-side{padding:28px 22px}
+ .local-side h3{font-size:2.3rem}
+ .footer-grid{grid-template-columns:1fr 1fr;gap:25px 18px}
+ .footer-grid>div:first-child{grid-column:1/-1}
+ .footer-bottom{flex-direction:column}
+ .modal-content{grid-template-columns:1fr}.modal-visual{min-height:190px}.modal-info{padding:22px}
+}
+@media(max-width:390px){
+ .brand strong{font-size:1.2rem}.brand-mark{width:36px;height:36px}
+ .category-card{padding:12px}.category-card h3{font-size:1.17rem}
+ .product-visual{height:150px}.package{transform:scale(.85) rotate(-5deg)}
+ .hero-buttons .btn{padding:12px 13px;font-size:.74rem}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+<div class="topline">CHOCOLATES PARA COMPARTILHAR MOMENTOS ESPECIAIS</div>
+
+<header id="header">
+ <div class="wrap nav">
+  <a class="brand" href="#inicio" aria-label="Cacau Show, início">
+   <span class="brand-mark">C</span>
+   <span><strong>Cacau Show</strong><small>Pouso Redondo · SC</small></span>
+  </a>
+  <nav class="navlinks" aria-label="Menu principal">
+   <a href="#inicio">Início</a><a href="#categorias">Categorias</a>
+   <a href="#catalogo">Chocolates</a><a href="#presentes">Presentes</a><a href="#loja">Nossa loja</a>
+  </nav>
+  <div class="nav-actions">
+   <button class="icon-btn" id="searchJump" aria-label="Pesquisar">⌕</button>
+   <button class="icon-btn" id="cartOpen" aria-label="Abrir seleção">♧ <span class="count" id="cartCount">0</span></button>
+   <a class="btn btn-dark header-contact" href="#loja">Fale com a loja ↗</a>
+   <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
+ </div>
+ <nav class="mobile-menu" id="mobileMenu" aria-label="Menu móvel">
+  <a href="#inicio">Início</a><a href="#categorias">Categorias</a><a href="#catalogo">Chocolates</a>
+  <a href="#presentes">Presentes</a><a href="#loja">Nossa loja</a><a href="#faq">Perguntas frequentes</a>
+ </nav>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="wrap hero-grid">
+  <div class="hero-copy">
+   <div class="eyebrow">Um carinho em forma de chocolate</div>
+   <h1>Todo momento merece um <em>toque de chocolate.</em></h1>
+   <p>Descubra chocolates e ideias para presentear e transformar ocasiões especiais em lembranças deliciosas.</p>
+   <div class="hero-buttons">
+    <a class="btn btn-gold" href="#catalogo">Explorar chocolates ↗</a>
+    <a class="btn btn-outline" style="color:white;border-color:#ffffff66" href="#presentes">Encontrar um presente</a>
+   </div>
+   <div class="hero-note">CACAU SHOW · POUSO REDONDO, SC</div>
+  </div>
+  <div class="hero-art" aria-label="Composição gráfica de uma caixa de chocolate">
+   <div class="orbit">
+    <div class="chocolate-box"><div class="box-label"><small>UM PRESENTE ESPECIAL</small>Cacau<br>e afeto<span>PEQUENOS MOMENTOS</span></div></div>
+    <i class="choco one"></i><i class="choco two"></i><i class="choco three"></i><i class="choco four"></i>
+   </div>
+   <div class="floating-label"><small>Feito para encantar</small>Um gesto, mil emoções.</div>
+  </div>
+ </div>
+</section>
+
+<div class="trust"><div class="wrap trust-grid">
+ <div class="trust-item"><b>✳</b> Um presente para cada momento</div>
+ <div class="trust-item"><b>◇</b> Descubra novas experiências</div>
+ <div class="trust-item"><b>♡</b> Compartilhe algo especial</div>
+</div></div>
+
+<section class="section" id="categorias">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">Explore a seleção</div><h2>Seu próximo favorito<br>está aqui.</h2></div>
+   <p>Encontre uma ideia para adoçar o dia, celebrar uma conquista ou surpreender alguém querido.</p>
+  </div>
+  <div class="category-grid">
+   <a href="#catalogo" class="category-card" data-category="Bombons e trufas">
+    <div><div class="category-symbol">✳</div><h3>Bombons e trufas</h3><p>Pequenas delícias para saborear.</p></div>
+    <div class="category-bottom">Explorar categoria <span class="arrow">↗</span></div>
+   </a>
+   <a href="#catalogo" class="category-card" data-category="Tabletes e barras">
+    <div><div class="category-symbol">▤</div><h3>Tabletes e barras</h3><p>Chocolate para o seu momento.</p></div>
+    <div class="category-bottom">Explorar categoria <span class="arrow">↗</span></div>
+   </a>
+   <a href="#catalogo" class="category-card" data-category="Caixas de chocolate">
+    <div><div class="category-symbol">◇</div><h3>Caixas especiais</h3><p>Uma surpresa em cada detalhe.</p></div>
+    <div class="category-bottom">Explorar categoria <span class="arrow">↗</span></div>
+   </a>
+   <a href="#presentes" class="category-card">
+    <div><div class="category-symbol">♡</div><h3>Ideias para presentear</h3><p>Encontre algo com significado.</p></div>
+    <div class="category-bottom">Encontrar presente <span class="arrow">↗</span></div>
+   </a>
+  </div>
+ </div>
+</section>
+
+<section class="section catalog" id="catalogo">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">Vitrine demonstrativa</div><h2>Um mundo de chocolate.</h2></div>
+   <p>Explore as sugestões e consulte a unidade para confirmar produtos, preços e disponibilidade.</p>
+  </div>
+  <div class="catalog-tools">
+   <label class="searchbox"><span>⌕</span><span class="sr-only">Pesquisar produtos</span><input id="searchInput" type="search" placeholder="Buscar produto ou categoria..."></label>
+   <select id="categoryFilter" aria-label="Filtrar categoria">
+    <option value="">Todas as categorias</option><option>Bombons e trufas</option><option>Tabletes e barras</option>
+    <option>Caixas de chocolate</option><option>Presentes</option><option>Kits especiais</option>
+   </select>
+   <select id="sortFilter" aria-label="Ordenar produtos">
+    <option value="relevance">Relevância</option><option value="name">Nome: A–Z</option><option value="category">Categoria</option>
+   </select>
+  </div>
+  <div class="result-line"><span id="resultCount" aria-live="polite"></span><button class="clear-btn" id="clearFilters">Limpar filtros</button></div>
+  <div class="product-grid" id="productGrid"></div>
+ </div>
+</section>
+
+<section class="section gift" id="presentes">
+ <div class="wrap gift-grid">
+  <div class="gift-copy">
+   <div class="eyebrow">Um presente que fala por você</div>
+   <h2>O carinho está<br>nos detalhes.</h2>
+   <p>Escolher um presente também é uma forma de dizer “lembrei de você”. Conte um pouco sobre a ocasião e explore as sugestões.</p>
+   <div class="quote">“Alguns sentimentos combinam com chocolate.”</div>
+  </div>
+  <div class="gift-form">
+   <h3>Encontre o presente ideal</h3>
+   <p>Escolha algumas preferências para filtrar a vitrine demonstrativa.</p>
+   <form id="giftForm">
+    <div class="form-row">
+     <div class="field"><label for="giftOccasion">Qual é a ocasião?</label>
+      <select id="giftOccasion"><option value="">Qualquer ocasião</option><option>Aniversário</option><option>Agradecimento</option><option>Romance</option><option>Amizade</option><option>Celebração</option><option>Corporativo</option></select>
+     </div>
+     <div class="field"><label for="giftKind">O que você prefere?</label>
+      <select id="giftKind"><option value="">Qualquer tipo</option><option>Bombons e trufas</option><option>Tabletes e barras</option><option>Caixas de chocolate</option><option>Presentes</option></select>
+     </div>
+    </div>
+    <button class="btn btn-dark" type="submit">Ver sugestões ↗</button>
+   </form>
+   <div class="gift-results" id="giftResults" aria-live="polite"></div>
+  </div>
+ </div>
+</section>
+
+<section class="section story">
+ <div class="wrap story-grid">
+  <div class="story-art" aria-label="Composição gráfica decorativa em tons de chocolate">
+   <div class="story-package"><span><small>UM POUCO DE DOÇURA</small>Mais sabor.<br>Mais afeto.</span></div>
+   <div class="story-stamp">Para compartilhar ♡</div>
+  </div>
+  <div class="story-copy">
+   <div class="eyebrow">Pequenos momentos, grandes emoções</div>
+   <h2>Alguns momentos ficam ainda melhores quando são compartilhados.</h2>
+   <p>Um encontro, uma conquista, uma visita inesperada ou simplesmente a vontade de fazer alguém sorrir. Às vezes, um pequeno gesto torna o dia inesquecível.</p>
+   <p>Explore as opções e encontre uma forma especial de celebrar os momentos que importam.</p>
+   <a href="#catalogo" class="btn btn-dark">Descobrir a vitrine ↗</a>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="loja">
+ <div class="wrap">
+  <div class="local-card">
+   <div class="local-main">
+    <div class="eyebrow">Estamos em Pouso Redondo</div>
+    <h2>Um encontro<br>mais doce.</h2>
+    <p>Entre em contato com a unidade para consultar produtos, preços, horários e serviços disponíveis.</p>
+    <div class="local-details">
+     <div class="local-detail"><b>⌖</b><div><strong>Localização</strong><span>Endereço exato a confirmar com a unidade.</span></div></div>
+     <div class="local-detail"><b>◷</b><div><strong>Horário de atendimento</strong><span>Consulte os horários diretamente com a loja.</span></div></div>
+     <div class="local-detail"><b>◎</b><div><strong>Instagram</strong><span><a href="https://www.instagram.com/cacaushowpousoredondo/" target="_blank" rel="noopener noreferrer">@cacaushowpousoredondo ↗</a></span></div></div>
+    </div>
+   </div>
+   <div class="local-side">
+    <div><div class="eyebrow">Atendimento da unidade</div><h3>Vamos encontrar<br>o presente certo?</h3><p>Consulte a disponibilidade de produtos e as informações atualizadas da loja.</p></div>
+    <a class="btn btn-outline" style="color:white;border-color:#ffffff66" href="https://www.instagram.com/cacaushowpousoredondo/" target="_blank" rel="noopener noreferrer">Visitar Instagram ↗</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="section faq" id="faq">
+ <div class="wrap faq-grid">
+  <div><div class="eyebrow">Antes de escolher</div><h2>Ficou com<br>alguma dúvida?</h2><p>Informações importantes sobre esta vitrine digital.</p></div>
+  <div>
+   <details><summary>Os produtos e preços exibidos são oficiais?</summary><p>Não. Esta versão contém sugestões demonstrativas e não apresenta preços nem estoque oficial. Confirme as informações diretamente com a unidade antes de comprar.</p></details>
+   <details><summary>Posso fazer um pedido pelo site?</summary><p>O carrinho desta demonstração organiza uma lista de consulta. Ele não registra pedidos comerciais nem confirma compras, pagamentos ou reservas de produtos.</p></details>
+   <details><summary>A loja realiza entregas?</summary><p>As opções de entrega e retirada ainda precisam ser confirmadas com a unidade. Nenhuma modalidade, taxa ou prazo é presumido nesta página.</p></details>
+   <details><summary>Como consulto a disponibilidade?</summary><p>Entre em contato pelo perfil do Instagram da unidade e informe o produto desejado. Confirme preço, disponibilidade e condições atuais com a equipe.</p></details>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="footer-grid">
+   <div><a class="brand" href="#inicio"><span class="brand-mark">C</span><span><strong>Cacau Show</strong><small>Pouso Redondo · SC</small></span></a>
+    <p class="footer-blurb">Uma experiência digital demonstrativa para descobrir chocolates e ideias de presentes. Informações comerciais devem ser confirmadas com a unidade.</p>
+   </div>
+   <div><h4>Navegue</h4><div class="footer-links"><a href="#inicio">Início</a><a href="#categorias">Categorias</a><a href="#catalogo">Chocolates</a><a href="#presentes">Presentes</a></div></div>
+   <div><h4>Informações</h4><div class="footer-links"><a href="#loja">Nossa loja</a><a href="#faq">Perguntas frequentes</a><a href="#" id="privacyLink">Privacidade</a><a href="#" id="termsLink">Termos de uso</a></div></div>
+   <div><h4>Fale com a unidade</h4><div class="footer-links"><a href="https://www.instagram.com/cacaushowpousoredondo/" target="_blank" rel="noopener noreferrer">Instagram da unidade ↗</a><span>Pouso Redondo, Santa Catarina</span><span>Telefone e endereço: a confirmar</span></div></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> · Experiência digital demonstrativa independente.</span><span>Marca Cacau Show pertencente aos respectivos titulares. Uso sujeito às autorizações aplicáveis.</span></div>
+ </div>
+</footer>
+
+<div class="modal-backdrop" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal">
+  <button class="modal-close" id="modalClose" aria-label="Fechar detalhes">×</button>
+  <div class="modal-content"><div class="modal-visual" id="modalVisual"></div>
+   <div class="modal-info"><div class="eyebrow" id="modalCategory"></div><h2 id="modalTitle">Detalhes</h2><p id="modalDescription"></p>
+    <p class="modal-note" id="modalNote">Produto ilustrativo. Preço e disponibilidade precisam ser confirmados com a unidade.</p>
+    <button class="btn btn-dark" id="modalAdd">Adicionar à seleção</button>
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Lista de consulta" aria-hidden="true">
+ <div class="drawer-head"><h3>Sua seleção</h3><button class="icon-btn" id="cartClose" aria-label="Fechar carrinho">×</button></div>
+ <div class="drawer-body" id="cartBody"></div>
+ <div class="drawer-foot"><p id="cartSummary">Esta lista é apenas uma consulta. Não representa pedido confirmado, preço final ou reserva de estoque.</p>
+  <button class="btn btn-dark" id="shareCart">Preparar mensagem de consulta</button>
+  <button class="btn btn-outline" id="continueShopping">Continuar explorando</button>
+ </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+
+/* Produtos ilustrativos. Substitua pelos dados oficiais autorizados.
+   Não existem preços, estoque ou disponibilidade comercial fictícios. */
+const products = [
+ {id:"demo-01",name:"Seleção de bombons",category:"Bombons e trufas",description:"Uma ideia para quem aprecia pequenas experiências de chocolate.",tone:"dark",occasions:["Aniversário","Agradecimento","Amizade","Celebração"]},
+ {id:"demo-02",name:"Chocolate para saborear",category:"Tabletes e barras",description:"Uma opção clássica para acompanhar uma pausa especial.",tone:"light",occasions:["Amizade","Celebração"]},
+ {id:"demo-03",name:"Caixa para presentear",category:"Caixas de chocolate",description:"Uma apresentação especial para demonstrar carinho.",tone:"rose",occasions:["Aniversário","Romance","Agradecimento","Corporativo"]},
+ {id:"demo-04",name:"Um gesto de carinho",category:"Presentes",description:"Uma sugestão ilustrativa para tornar o dia de alguém mais doce.",tone:"cream",occasions:["Romance","Amizade","Agradecimento"]},
+ {id:"demo-05",name:"Seleção para compartilhar",category:"Kits especiais",description:"Uma ideia demonstrativa para momentos em boa companhia.",tone:"dark",occasions:["Celebração","Corporativo","Aniversário"]},
+ {id:"demo-06",name:"Pequena surpresa",category:"Bombons e trufas",description:"Uma sugestão de mimo para surpreender sem uma data especial.",tone:"rose",occasions:["Amizade","Agradecimento","Romance"]},
+ {id:"demo-07",name:"Pausa de chocolate",category:"Tabletes e barras",description:"Uma ideia simples para presentear ou aproveitar um momento só seu.",tone:"light",occasions:["Amizade","Celebração"]},
+ {id:"demo-08",name:"Presente com afeto",category:"Presentes",description:"Uma sugestão de presente que pode ser adaptada à ocasião.",tone:"cream",occasions:["Aniversário","Romance","Corporativo"]}
+];
+
+const $ = selector => document.querySelector(selector);
+const $$ = selector => [...document.querySelectorAll(selector)];
+const cart = {};
+let activeProduct = null;
+let toastTimer = null;
+let previousFocus = null;
+
+function escapeHTML(value){
+ return String(value).replace(/[&<>"']/g,char=>({
+  "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+ }[char]));
+}
+
+function artMarkup(product){
+ const label=escapeHTML(product.name).replace(/\s+/g,"<br>");
+ return `<div class="package" role="img" aria-label="Ilustração decorativa, não é fotografia do produto"><span><small>IDEIA PARA VOCÊ</small>${label}</span></div>`;
+}
+
+function productCard(product){
+ return `<article class="product-card">
+  <div class="product-visual" data-tone="${product.tone}">
+   ${artMarkup(product)}<span class="caption">Ilustração demonstrativa</span>
+  </div>
+  <div class="product-info">
+   <div class="product-type">${escapeHTML(product.category)}</div>
+   <h3>${escapeHTML(product.name)}</h3>
+   <p>${escapeHTML(product.description)}</p>
+   <div class="product-footer"><span class="price-pending">Consulte o preço</span>
+    <button class="details-btn" data-details="${product.id}">Ver detalhes ↗</button>
+   </div>
+  </div>
+ </article>`;
+}
+
+function filteredProducts(){
+ const query=$("#searchInput").value.trim().toLocaleLowerCase("pt-BR");
+ const category=$("#categoryFilter").value;
+ const sort=$("#sortFilter").value;
+
+ const result=products.filter(product=>{
+  const searchable=[product.name,product.category,product.description,...product.occasions]
+   .join(" ").toLocaleLowerCase("pt-BR");
+  return (!query||searchable.includes(query))&&(!category||product.category===category);
+ });
+
+ if(sort==="name") result.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR"));
+ if(sort==="category") result.sort((a,b)=>a.category.localeCompare(b.category,"pt-BR"));
+ return result;
+}
+
+function renderProducts(){
+ const result=filteredProducts();
+ $("#productGrid").innerHTML=result.length
+  ? result.map(productCard).join("")
+  : `<div class="product-empty"><h3>Nenhuma opção encontrada.</h3>
+     <p>Tente outra palavra ou remova algum filtro.</p>
+     <button class="btn btn-outline" id="emptyClear">Limpar filtros</button></div>`;
+
+ $("#resultCount").textContent=`${result.length} ${result.length===1?"item":"itens"} demonstrativo${result.length===1?"":"s"}`;
+ $$("[data-details]").forEach(button=>button.addEventListener("click",()=>openProduct(button.dataset.details)));
+ $("#emptyClear")?.addEventListener("click",clearFilters);
+}
+
+function clearFilters(){
+ $("#searchInput").value="";
+ $("#categoryFilter").value="";
+ $("#sortFilter").value="relevance";
+ renderProducts();
+}
+
+function showToast(message){
+ const toast=$("#toast");
+ toast.textContent=message;
+ toast.classList.add("show");
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>toast.classList.remove("show"),2800);
+}
+
+function openProduct(id){
+ const product=products.find(item=>item.id===id);
+ if(!product)return;
+ activeProduct=product;
+ previousFocus=document.activeElement;
+ $("#modalVisual").innerHTML=`<div class="product-visual" data-tone="${product.tone}" style="width:100%;height:100%;min-height:290px">
+  ${artMarkup(product)}<span class="caption">Ilustração demonstrativa</span></div>`;
+ $("#modalCategory").textContent=product.category;
+ $("#modalTitle").textContent=product.name;
+ $("#modalDescription").textContent=product.description;
+ $("#modalNote").textContent="Produto ilustrativo. Preço e disponibilidade precisam ser confirmados com a unidade.";
+ $("#modalAdd").hidden=false;
+ $("#productModal").classList.add("open");
+ $("#modalClose").focus();
+}
+
+function openInfo(title,description){
+ activeProduct=null;
+ previousFocus=document.activeElement;
+ $("#modalCategory").textContent="Informações do projeto";
+ $("#modalTitle").textContent=title;
+ $("#modalDescription").textContent=description;
+ $("#modalVisual").innerHTML='<div style="padding:25px;text-align:center;font:2rem var(--serif);color:var(--caramel)">Cacau<br>Show</div>';
+ $("#modalNote").textContent="Esta é uma versão demonstrativa. Revise as informações legais antes de publicar.";
+ $("#modalAdd").hidden=true;
+ $("#productModal").classList.add("open");
+ $("#modalClose").focus();
+}
+
+function closeProduct(){
+ $("#productModal").classList.remove("open");
+ activeProduct=null;
+ $("#modalAdd").hidden=false;
+ if(previousFocus?.focus)previousFocus.focus();
+}
+
+function addToCart(id){
+ const product=products.find(item=>item.id===id);
+ if(!product)return;
+ cart[id]=(cart[id]||0)+1;
+ renderCart();
+ showToast("Adicionado à sua lista de consulta.");
+}
+
+function changeQty(id,delta){
+ if(!cart[id])return;
+ cart[id]+=delta;
+ if(cart[id]<=0)delete cart[id];
+ renderCart();
+}
+
+function renderCart(){
+ const entries=Object.entries(cart)
+  .map(([id,qty])=>({product:products.find(item=>item.id===id),qty}))
+  .filter(item=>item.product);
+ const total=entries.reduce((sum,item)=>sum+item.qty,0);
+ $("#cartCount").textContent=total;
+
+ $("#cartBody").innerHTML=entries.length?entries.map(({product,qty})=>`
+  <div class="cart-item">
+   <div class="cart-thumb">C</div>
+   <div><h4>${escapeHTML(product.name)}</h4>
+    <p>${escapeHTML(product.category)} · preço a consultar</p>
+    <div class="qty"><button data-qty="${product.id}" data-delta="-1" aria-label="Diminuir">−</button>
+     <span>${qty}</span><button data-qty="${product.id}" data-delta="1" aria-label="Aumentar">+</button>
+    </div>
+    <button class="remove" data-remove="${product.id}">Remover</button>
+   </div><strong aria-label="Preço não informado">—</strong>
+  </div>`).join(""):`
+  <div class="drawer-empty"><div style="font-size:2.5rem;color:var(--caramel)">◇</div>
+   <h4>Sua seleção está vazia.</h4><p>Adicione opções para preparar uma consulta à unidade.</p>
+   <button class="btn btn-outline" id="cartBrowse">Explorar produtos</button>
+  </div>`;
+
+ $$("[data-qty]").forEach(button=>button.addEventListener("click",()=>changeQty(button.dataset.qty,Number(button.dataset.delta))));
+ $$("[data-remove]").forEach(button=>button.addEventListener("click",()=>{delete cart[button.dataset.remove];renderCart()}));
+ $("#cartBrowse")?.addEventListener("click",closeCart);
+ $("#shareCart").disabled=!entries.length;
+ $("#shareCart").style.opacity=entries.length?"1":".55";
+}
+
+function openCart(){
+ previousFocus=document.activeElement;
+ $("#cartDrawer").classList.add("open");
+ $("#drawerBackdrop").classList.add("open");
+ $("#cartDrawer").setAttribute("aria-hidden","false");
+ $("#cartClose").focus();
+}
+
+function closeCart(){
+ $("#cartDrawer").classList.remove("open");
+ $("#drawerBackdrop").classList.remove("open");
+ $("#cartDrawer").setAttribute("aria-hidden","true");
+}
+
+function shareCart(){
+ const entries=Object.entries(cart)
+  .map(([id,qty])=>({product:products.find(item=>item.id===id),qty}))
+  .filter(item=>item.product);
+
+ if(!entries.length){showToast("Adicione ao menos um item à sua seleção.");return;}
+
+ const list=entries.map(item=>`• ${item.product.name} — quantidade: ${item.qty}`).join("\n");
+ const message=`Olá! Gostaria de consultar a disponibilidade e os preços destes itens na Cacau Show de Pouso Redondo:\n\n${list}\n\nPoderiam me informar os valores e as opções disponíveis? Esta é apenas uma consulta.`;
+
+ if(navigator.clipboard?.writeText){
+  navigator.clipboard.writeText(message)
+   .then(()=>showToast("Mensagem copiada. Abra o Instagram da unidade para enviar a consulta."))
+   .catch(()=>fallbackCopy(message));
+ }else fallbackCopy(message);
+
+ window.open("https://www.instagram.com/cacaushowpousoredondo/","_blank","noopener,noreferrer");
+}
+
+function fallbackCopy(message){
+ const textarea=document.createElement("textarea");
+ textarea.value=message;
+ textarea.style.position="fixed";
+ textarea.style.opacity="0";
+ document.body.appendChild(textarea);
+ textarea.select();
+ try{
+  const copied=document.execCommand("copy");
+  showToast(copied?"Mensagem copiada.":"Não foi possível copiar. Verifique as permissões do navegador.");
+ }catch(error){showToast("Não foi possível copiar automaticamente.");}
+ textarea.remove();
+}
+
+$("#searchInput").addEventListener("input",renderProducts);
+$("#categoryFilter").addEventListener("change",renderProducts);
+$("#sortFilter").addEventListener("change",renderProducts);
+$("#clearFilters").addEventListener("click",clearFilters);
+$("#searchJump").addEventListener("click",()=>{
+ $("#catalogo").scrollIntoView({behavior:"smooth"});
+ setTimeout(()=>$("#searchInput").focus(),350);
+});
+
+$$("[data-category]").forEach(link=>link.addEventListener("click",()=>{
+ $("#categoryFilter").value=link.dataset.category;
+ renderProducts();
+}));
+
+$("#cartOpen").addEventListener("click",openCart);
+$("#cartClose").addEventListener("click",closeCart);
+$("#drawerBackdrop").addEventListener("click",closeCart);
+$("#continueShopping").addEventListener("click",closeCart);
+$("#shareCart").addEventListener("click",shareCart);
+$("#modalClose").addEventListener("click",closeProduct);
+$("#productModal").addEventListener("click",event=>{
+ if(event.target===$("#productModal"))closeProduct();
+});
+$("#modalAdd").addEventListener("click",()=>{
+ if(activeProduct)addToCart(activeProduct.id);
+ closeProduct();
+});
+
+$("#menuToggle").addEventListener("click",()=>{
+ const open=$("#mobileMenu").classList.toggle("open");
+ $("#menuToggle").setAttribute("aria-expanded",String(open));
+});
+$$(".mobile-menu a").forEach(link=>link.addEventListener("click",()=>{
+ $("#mobileMenu").classList.remove("open");
+ $("#menuToggle").setAttribute("aria-expanded","false");
+}));
+
+$("#giftForm").addEventListener("submit",event=>{
+ event.preventDefault();
+ const occasion=$("#giftOccasion").value;
+ const kind=$("#giftKind").value;
+ const results=products.filter(product=>
+  (!occasion||product.occasions.includes(occasion))&&
+  (!kind||product.category===kind)
+ );
+ const panel=$("#giftResults");
+ panel.classList.add("show");
+
+ if(!results.length){
+  panel.innerHTML=`<h4>Vamos ampliar a busca?</h4>
+   <p>Não encontramos uma combinação na vitrine demonstrativa. Tente outra ocasião ou tipo de produto.</p>
+   <button class="btn btn-outline" id="giftBroaden">Ver todas as opções</button>`;
+  $("#giftBroaden").addEventListener("click",()=>{
+   $("#giftOccasion").value="";
+   $("#giftKind").value="";
+   $("#giftForm").requestSubmit();
+  });
+  return;
+ }
+
+ panel.innerHTML=`<h4>${results.length} ${results.length===1?"ideia":"ideias"} para explorar</h4>
+  <p>${results.map(product=>escapeHTML(product.name)).join(" · ")}. Sugestões ilustrativas, sem preços ou disponibilidade confirmados.</p>
+  <button class="btn btn-dark" id="giftShow">Ver sugestões no catálogo</button>`;
+
+ $("#giftShow").addEventListener("click",()=>{
+  $("#searchInput").value="";
+  $("#categoryFilter").value=kind;
+  renderProducts();
+  $("#catalogo").scrollIntoView({behavior:"smooth"});
+ });
+});
+
+$("#privacyLink").addEventListener("click",event=>{
+ event.preventDefault();
+ openInfo("Privacidade","Esta versão demonstrativa não possui cadastro de clientes nem processa pagamentos. Antes da publicação, informe quais dados serão coletados, para quais finalidades, por quanto tempo serão mantidos e como os titulares poderão exercer seus direitos.");
+});
+$("#termsLink").addEventListener("click",event=>{
+ event.preventDefault();
+ openInfo("Termos de uso","Esta página é uma experiência demonstrativa independente. Produtos, preços, estoque, pedidos, pagamentos, entrega e retirada não são confirmados por ela. A publicação comercial exige revisão, autorização de uso da marca e configuração das informações oficiais.");
+});
+
+document.addEventListener("keydown",event=>{
+ if(event.key==="Escape"){
+  closeProduct();
+  closeCart();
+  $("#mobileMenu").classList.remove("open");
+  $("#menuToggle").setAttribute("aria-expanded","false");
+ }
+});
+
+window.addEventListener("scroll",()=>{
+ $("#header").classList.toggle("scrolled",window.scrollY>12);
+},{passive:true});
+
+$("#year").textContent=new Date().getFullYear();
+renderProducts();
+renderCart();
+</script>
+</body>
+</html>

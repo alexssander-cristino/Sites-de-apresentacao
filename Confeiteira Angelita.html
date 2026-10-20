@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Confeiteira Angelita – Doces por encomenda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFF3F5; --surface:#FFFFFF; --ink:#3A1F20; --muted:#7A5A5C; --line:#EBCFD4;
+  --berry:#B3224F; --berry-deep:#8E1A3E; --on-berry:#FFF8F9; --pista:#A9C79A; --butter:#F5D98A; --choco:#4A2A22;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#241214; --surface:#37201F; --ink:#FBEAEC; --muted:#CDA9AD; --line:#573539;
+    --berry:#D6386A; --berry-deep:#A82653; --on-berry:#FFF8F9; --pista:#7FA070; --butter:#E8C46A; --choco:#FBEAEC;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#241214; --surface:#37201F; --ink:#FBEAEC; --muted:#CDA9AD; --line:#573539;
+  --berry:#D6386A; --berry-deep:#A82653; --on-berry:#FFF8F9; --pista:#7FA070; --butter:#E8C46A; --choco:#FBEAEC;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0;line-height:1.05}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--butter);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+/* topo */
+.bar{position:sticky;top:0;z-index:20;background:var(--berry);color:var(--on-berry);padding-top:env(safe-area-inset-top,0px)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;height:62px}
+.logo{font:800 1.3rem Fraunces,Georgia,serif;text-decoration:none}
+nav{display:flex;gap:22px;font-weight:500}
+nav a{text-decoration:none;opacity:.92}
+nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+
+/* hero */
+.hero{background:var(--berry);color:var(--on-berry);position:relative;overflow:hidden;border-radius:0 0 48px 48px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;padding-top:48px;padding-bottom:84px;position:relative;z-index:2}
+.hero h1{font-weight:800;font-size:clamp(2.8rem,8vw,5.6rem);letter-spacing:-.025em}
+.hero h1 span{display:block;color:var(--butter)}
+.hero p{font-size:1.2rem;max-width:44ch;margin:22px 0 30px;opacity:.95}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 26px;border-radius:999px;font:700 1rem "DM Sans",sans-serif;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s}
+.btn:hover{transform:translateY(-3px)}
+.btn.sol{background:var(--butter);color:var(--choco)}
+.btn.out{border-color:var(--on-berry);color:var(--on-berry);background:transparent}
+.btn.berry{background:var(--berry);color:var(--on-berry)}
+.art{position:relative;justify-self:center;width:100%;max-width:400px;animation:entra .9s cubic-bezier(.2,.8,.2,1) both}
+.art svg{width:100%;height:auto;display:block;animation:flutua 5s ease-in-out infinite}
+@keyframes entra{from{opacity:0;transform:translateY(40px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes flutua{50%{transform:translateY(-12px) rotate(-1.5deg)}}
+.conf{position:absolute;inset:0;z-index:1;pointer-events:none}
+.conf i{position:absolute;width:8px;height:22px;border-radius:6px;opacity:.55;animation:cai linear infinite}
+@keyframes cai{from{transform:translateY(-40px) rotate(0)}to{transform:translateY(560px) rotate(360deg)}}
+
+/* faixa */
+.faixa{background:var(--butter);color:var(--choco);overflow:hidden;white-space:nowrap;transform:rotate(-1.2deg);margin:-26px -20px 0;position:relative;z-index:3;border-block:3px solid var(--choco)}
+.faixa div{display:inline-block;padding:12px 0;font:800 1.15rem Fraunces,Georgia,serif;animation:corre 28s linear infinite}
+.faixa span{margin:0 22px}
+@keyframes corre{to{transform:translateX(-50%)}}
+
+section{padding:76px 0 24px}
+h2{font-weight:800;font-size:clamp(2rem,5vw,3.2rem);letter-spacing:-.015em;margin-bottom:12px}
+.lead{color:var(--muted);max-width:54ch;margin:0 0 36px;font-size:1.08rem}
+
+/* doces */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:28px;padding:22px 22px 26px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-6px) rotate(-.6deg);border-color:var(--berry)}
+.card .ico{height:112px;border-radius:20px;display:grid;place-items:center;margin-bottom:18px}
+.card .ico svg{width:84px;height:84px}
+.card h3{font-size:1.4rem;margin-bottom:6px}
+.card p{margin:0;color:var(--muted);font-size:.98rem}
+.c1 .ico{background:#F8C6D3}.c2 .ico{background:#D8E9CE}.c3 .ico{background:#FBE7B0}
+.c4 .ico{background:#F2D4C6}.c5 .ico{background:#E5D7F0}.c6 .ico{background:#CFE6EE}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card .ico{filter:brightness(.82)}}
+
+/* sabores */
+.sabores{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:10px 18px;border-radius:999px;background:var(--surface);border:2px solid var(--line);font-weight:500}
+.chip:nth-child(4n+1){background:#F8C6D3;border-color:#F8C6D3;color:#3A1F20}
+.chip:nth-child(4n+2){background:#D8E9CE;border-color:#D8E9CE;color:#3A1F20}
+.chip:nth-child(4n+3){background:#FBE7B0;border-color:#FBE7B0;color:#3A1F20}
+
+/* passos */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;padding:0;margin:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border-radius:28px;padding:26px;border:2px solid var(--line)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--berry);color:var(--on-berry);font:800 1.3rem Fraunces,Georgia,serif;margin-bottom:14px}
+.steps h3{font-size:1.25rem;margin-bottom:6px}
+.steps p{margin:0;color:var(--muted)}
+
+/* formulario */
+.pedido{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;background:var(--surface);border:2px solid var(--line);border-radius:36px;padding:40px}
+.pedido form{display:grid;gap:14px}
+label{display:grid;gap:6px;font-weight:700;font-size:.95rem}
+input,select,textarea{font:400 1rem "DM Sans",sans-serif;padding:13px 15px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--berry)}
+.dois{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.nota{font-size:.88rem;color:var(--muted);margin:0}
+
+/* faq */
+details{background:var(--surface);border:2px solid var(--line);border-radius:20px;padding:18px 22px;margin-bottom:12px}
+summary{font:700 1.15rem Fraunces,Georgia,serif;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--berry);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0;color:var(--muted)}
+
+/* instagram */
+.insta{margin:76px 0 0;background:var(--berry);color:var(--on-berry);border-radius:48px 48px 0 0;padding:64px 0 56px;text-align:center}
+.insta h2{margin-bottom:12px}
+.insta p{max-width:46ch;margin:0 auto 28px;opacity:.95}
+.insta .btns{justify-content:center}
+.tiles{display:flex;gap:10px;justify-content:center;margin-bottom:34px}
+.tiles b{width:clamp(48px,12vw,92px);aspect-ratio:1;border-radius:22px}
+.tiles b:nth-child(1){background:var(--butter)}.tiles b:nth-child(2){background:var(--pista)}.tiles b:nth-child(3){background:#F8C6D3}.tiles b:nth-child(4){background:var(--butter)}.tiles b:nth-child(5){background:var(--pista)}
+footer{background:var(--berry-deep);color:var(--on-berry);text-align:center;padding:26px 22px calc(26px + env(safe-area-inset-bottom,0px));font-size:.93rem}
+
+.zap{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#1FA855;color:#fff;padding:14px 20px;border-radius:999px;font-weight:700;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.28)}
+
+@media (max-width:760px){
+  nav a:nth-child(n+3){display:none}
+  .hero .wrap{grid-template-columns:1fr;padding-top:28px;padding-bottom:72px}
+  .art{max-width:260px;order:-1}
+  .pedido{grid-template-columns:1fr;padding:26px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="bolo" viewBox="0 0 100 100"><rect x="14" y="56" width="72" height="30" rx="8" fill="#F5D98A"/><rect x="24" y="36" width="52" height="26" rx="7" fill="#A9C79A"/><path d="M14 62c6 9 12 9 18 0s12 9 18 0 12 9 18 0 12 9 18 0v-8H14z" fill="#B3224F"/><rect x="47" y="18" width="6" height="18" rx="3" fill="#4A2A22"/><ellipse cx="50" cy="14" rx="5" ry="8" fill="#F5D98A"/></symbol>
+  <symbol id="pote" viewBox="0 0 100 100"><path d="M24 34h52l-6 52H30z" fill="#fff" stroke="#4A2A22" stroke-width="3"/><path d="M28 56h44l-2 14H30z" fill="#B3224F"/><path d="M29 70h42l-1.5 14h-39z" fill="#4A2A22"/><rect x="20" y="26" width="60" height="10" rx="5" fill="#A9C79A"/><circle cx="50" cy="20" r="8" fill="#B3224F"/></symbol>
+  <symbol id="brig" viewBox="0 0 100 100"><circle cx="34" cy="62" r="18" fill="#4A2A22"/><circle cx="68" cy="62" r="18" fill="#4A2A22"/><circle cx="50" cy="38" r="18" fill="#4A2A22"/><g fill="#F5D98A"><circle cx="30" cy="56" r="2.5"/><circle cx="40" cy="68" r="2.5"/><circle cx="64" cy="56" r="2.5"/><circle cx="74" cy="68" r="2.5"/><circle cx="46" cy="32" r="2.5"/><circle cx="56" cy="44" r="2.5"/></g></symbol>
+  <symbol id="torta" viewBox="0 0 100 100"><path d="M10 70 50 24l40 46z" fill="#F5D98A" stroke="#4A2A22" stroke-width="3" stroke-linejoin="round"/><path d="M10 70h80v10H10z" fill="#B3224F"/><circle cx="50" cy="48" r="7" fill="#B3224F"/><circle cx="36" cy="62" r="5" fill="#A9C79A"/><circle cx="64" cy="62" r="5" fill="#A9C79A"/></symbol>
+  <symbol id="cup" viewBox="0 0 100 100"><path d="M24 54h52l-8 32H32z" fill="#F5D98A"/><path d="M24 54h52M30 54l5 32M42 54l3 32M58 54l-3 32M70 54l-5 32" stroke="#4A2A22" stroke-width="2"/><path d="M20 54c-4-16 10-18 14-24 4-14 28-14 32 0 4 6 18 8 14 24z" fill="#B3224F"/><circle cx="50" cy="20" r="6" fill="#F8C6D3"/></symbol>
+  <symbol id="pres" viewBox="0 0 100 100"><rect x="16" y="44" width="68" height="42" rx="6" fill="#B3224F"/><rect x="12" y="34" width="76" height="16" rx="5" fill="#F5D98A"/><rect x="45" y="34" width="10" height="52" fill="#A9C79A"/><path d="M50 34c-12-18-26-6-14 0zM50 34c12-18 26-6 14 0z" fill="#A9C79A" stroke="#4A2A22" stroke-width="2"/></symbol>
+</svg>
+
+<div class="bar"><div class="wrap">
+  <a class="logo" href="#topo" id="topo">Confeiteira Angelita</a>
+  <nav aria-label="Principal"><a href="#doces">Doces</a><a href="#como">Como pedir</a><a href="#encomenda">Encomenda</a><a href="#duvidas">Dúvidas</a></nav>
+</div></div>
+
+<header class="hero">
+  <div class="conf" id="conf" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h1>Doce de verdade, <span>feito à mão.</span></h1>
+      <p>Bolos, docinhos e sobremesas por encomenda para aniversários, festas e para adoçar o seu dia.</p>
+      <div class="btns">
+        <a class="btn sol" href="#encomenda">Fazer minha encomenda</a>
+        <a class="btn out" data-ig href="#doces">Ver no Instagram</a>
+      </div>
+    </div>
+    <div class="art">
+      <svg viewBox="0 0 320 320" role="img" aria-label="Bolo de três camadas com cobertura e uma vela">
+        <ellipse cx="160" cy="294" rx="130" ry="14" fill="#8E1A3E"/>
+        <rect x="40" y="200" width="240" height="88" rx="22" fill="#F5D98A"/>
+        <rect x="68" y="140" width="184" height="72" rx="18" fill="#A9C79A"/>
+        <rect x="100" y="92" width="120" height="58" rx="16" fill="#F8C6D3"/>
+        <path d="M40 214c15 24 33 24 48 0s33 24 48 0 33 24 48 0 33 24 48 0 33 24 48 0v-16H40z" fill="#fff"/>
+        <path d="M68 154c13 20 26 20 39 0s26 20 39 0 26 20 39 0 26 20 39 0v-14H68z" fill="#fff"/>
+        <path d="M100 104c11 16 22 16 33 0s22 16 33 0 22 16 33 0 14 4 21 0v-12H100z" fill="#fff"/>
+        <rect x="156" y="52" width="8" height="42" rx="4" fill="#4A2A22"/>
+        <ellipse cx="160" cy="42" rx="10" ry="16" fill="#F5D98A"/>
+        <circle cx="96" cy="190" r="9" fill="#B3224F"/><circle cx="224" cy="190" r="9" fill="#B3224F"/><circle cx="160" cy="252" r="10" fill="#B3224F"/>
+        <circle cx="86" cy="250" r="6" fill="#A9C79A"/><circle cx="234" cy="250" r="6" fill="#A9C79A"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<div class="faixa" aria-hidden="true"><div id="faixa"></div></div>
+
+<main class="wrap">
+  <section id="doces">
+    <h2>Escolha o seu doce</h2>
+    <p class="lead">Tudo é preparado sob encomenda, com ingredientes de qualidade e acabamento caprichado.</p>
+    <div class="grid">
+      <article class="card c1"><div class="ico"><svg><use href="#bolo"/></svg></div><h3>Bolos decorados</h3><p>Para aniversários e comemorações, no tema e no sabor que você escolher.</p></article>
+      <article class="card c2"><div class="ico"><svg><use href="#pote"/></svg></div><h3>Bolos no pote</h3><p>Porções individuais, ótimas para presentear ou como lembrancinha.</p></article>
+      <article class="card c3"><div class="ico"><svg><use href="#brig"/></svg></div><h3>Docinhos para festa</h3><p>Brigadeiros, beijinhos e outros doces, vendidos por cento.</p></article>
+      <article class="card c4"><div class="ico"><svg><use href="#torta"/></svg></div><h3>Tortas e sobremesas</h3><p>Para encontros em família e almoços de domingo.</p></article>
+      <article class="card c5"><div class="ico"><svg><use href="#cup"/></svg></div><h3>Cupcakes</h3><p>Pequenos, coloridos e fáceis de servir em qualquer festa.</p></article>
+      <article class="card c6"><div class="ico"><svg><use href="#pres"/></svg></div><h3>Presentes e kits festa</h3><p>Caixas de doces, ou bolo e docinhos juntos, no tamanho da sua festa.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sabores que o pessoal pede</h2>
+    <p class="lead">Não achou o seu favorito? Pergunte, a gente combina.</p>
+    <div class="sabores">
+      <span class="chip">Brigadeiro</span><span class="chip">Ninho com morango</span><span class="chip">Chocolate belga</span><span class="chip">Limão</span><span class="chip">Maracujá</span><span class="chip">Doce de leite</span><span class="chip">Red velvet</span><span class="chip">Cenoura com chocolate</span><span class="chip">Coco</span><span class="chip">Café</span>
+    </div>
+  </section>
+
+  <section id="como">
+    <h2>Pedir é simples</h2>
+    <p class="lead">Faça sua encomenda com antecedência para garantir a data.</p>
+    <ol class="steps">
+      <li><h3>Conte o que você quer</h3><p>Escolha o doce, a quantidade e a data aqui no site.</p></li>
+      <li><h3>Receba o orçamento</h3><p>Você recebe o valor e as opções de sabor e decoração.</p></li>
+      <li><h3>Confirme o pedido</h3><p>Com a confirmação, a data fica reservada para você.</p></li>
+      <li><h3>Retire ou receba</h3><p>Combine retirada ou entrega e aproveite.</p></li>
+    </ol>
+  </section>
+
+  <section id="encomenda">
+    <div class="pedido">
+      <div>
+        <h2>Monte sua encomenda</h2>
+        <p class="lead" style="margin-bottom:16px">Preencha os dados e o site abre o WhatsApp com a mensagem pronta para enviar.</p>
+        <p class="nota">Quanto mais detalhes (tema, cores, sabores), mais rápido sai o orçamento.</p>
+      </div>
+      <form id="form">
+        <label>Seu nome<input id="nome" required autocomplete="name" placeholder="Como podemos te chamar?"></label>
+        <label>O que você quer?
+          <select id="prod">
+            <option>Bolo decorado</option><option>Bolo no pote</option><option>Docinhos para festa</option><option>Tortas e sobremesas</option><option>Cupcakes</option><option>Presente ou kit festa</option>
+          </select>
+        </label>
+        <div class="dois">
+          <label>Quantidade<input id="qtd" type="number" min="1" value="1" required></label>
+          <label>Data do evento<input id="data" type="date" required></label>
+        </div>
+        <label>Detalhes<textarea id="det" rows="3" placeholder="Sabor, tema, cores, número de convidados…"></textarea></label>
+        <button class="btn berry" type="submit">Enviar pelo WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="duvidas">
+    <h2>Dúvidas comuns</h2>
+    <p class="lead">Se a sua não estiver aqui, é só chamar.</p>
+    <details><summary>Com quanto tempo de antecedência devo pedir?</summary><p>Quanto antes, melhor. Para datas movimentadas, como fim de ano e Dia das Mães, peça com mais folga.</p></details>
+    <details><summary>Vocês entregam?</summary><p>Combine a retirada ou a entrega ao fazer o orçamento.</p></details>
+    <details><summary>Posso escolher o tema e as cores do bolo?</summary><p>Pode. Mande suas ideias ou uma foto de referência e a decoração é combinada com você.</p></details>
+    <details><summary>Como é feito o pagamento?</summary><p>As formas de pagamento são combinadas na confirmação do pedido.</p></details>
+  </section>
+</main>
+
+<section class="insta">
+  <div class="wrap">
+    <div class="tiles" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
+    <h2>Veja os doces de perto</h2>
+    <p>No Instagram tem fotos dos bolos e doces mais recentes, e novidades da semana.</p>
+    <div class="btns">
+      <a class="btn sol" data-ig href="#topo">@confeiteira_angelita</a>
+      <a class="btn out" data-wa href="#encomenda">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+<footer>© <span id="ano">2026</span> Confeiteira Angelita. Todos os direitos reservados.</footer>
+
+<a class="zap" data-wa href="#encomenda" aria-label="Chamar no WhatsApp">WhatsApp</a>
+
+<script>
+  // Edite aqui: número com DDI+DDD (só dígitos), ex.: 5547999999999
+  var WHATSAPP = "55SEUNUMERO";
+  var INSTAGRAM = "https://www.instagram.com/confeiteira_angelita";
+  var base = "https://wa.me/" + WHATSAPP;
+  document.querySelectorAll("[data-wa]").forEach(function(a){
+    a.href = base + "?text=" + encodeURIComponent("Olá, Angelita! Gostaria de fazer uma encomenda.");
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.querySelectorAll("[data-ig]").forEach(function(a){ a.href = INSTAGRAM; a.target = "_blank"; a.rel = "noopener"; });
+  document.getElementById("ano").textContent = new Date().getFullYear();
+
+  var f = ["Bolos","Docinhos","Cupcakes","Tortas","Presentes","Feito à mão","Sob encomenda"];
+  var t = ""; for (var k = 0; k < 2; k++) f.forEach(function(x){ t += "<span>" + x + " ✦</span>"; });
+  document.getElementById("faixa").innerHTML = t + t;
+
+  var cores = ["#F5D98A","#A9C79A","#F8C6D3","#FFF8F9"], c = document.getElementById("conf");
+  for (var i = 0; i < 22; i++) {
+    var s = document.createElement("i");
+    s.style.left = (Math.random() * 100) + "%";
+    s.style.background = cores[i % cores.length];
+    s.style.animationDuration = (7 + Math.random() * 8) + "s";
+    s.style.animationDelay = (-Math.random() * 12) + "s";
+    c.appendChild(s);
+  }
+
+  var dt = document.getElementById("data");
+  dt.min = new Date().toISOString().slice(0,10);
+  document.getElementById("form").addEventListener("submit", function(e){
+    e.preventDefault();
+    var d = dt.value.split("-").reverse().join("/");
+    var m = "Olá, Angelita! Meu nome é " + document.getElementById("nome").value + ".\n" +
+      "Quero: " + document.getElementById("prod").value + "\n" +
+      "Quantidade: " + document.getElementById("qtd").value + "\n" +
+      "Data do evento: " + d + "\n" +
+      (document.getElementById("det").value ? "Detalhes: " + document.getElementById("det").value : "");
+    window.open(base + "?text=" + encodeURIComponent(m), "_blank", "noopener");
+  });
+</script>
+</body>
+</html>

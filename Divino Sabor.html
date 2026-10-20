@@ -1,0 +1,2812 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#581e25">
+
+  <title>Divino Sabor | Café, Restaurante e Pizzaria em Pouso Redondo SC</title>
+  <meta name="description" content="Conheça o Divino Sabor em Pouso Redondo SC. Café da manhã, buffet livre, carnes assadas, lanches, pizzas à noite e espaço para eventos.">
+  <meta name="keywords" content="restaurante em Pouso Redondo, Divino Sabor, buffet livre, pizzaria, café da manhã, carnes assadas, lanches, restaurante BR-470">
+  <meta name="author" content="Divino Sabor">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Divino Sabor | Bons momentos começam à mesa">
+  <meta property="og:description" content="Café da manhã, almoço, carnes assadas, lanches e pizzas. Venha conhecer o Divino Sabor em Pouso Redondo.">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23581e25'/%3E%3Ctext x='50' y='66' font-size='48' text-anchor='middle' fill='%23e4bd7c' font-family='Georgia'%3EDS%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --wine: #581e25;
+      --wine-dark: #351216;
+      --wine-light: #79353a;
+      --cream: #faf6ef;
+      --cream-dark: #f0e7da;
+      --paper: #fffdf9;
+      --gold: #c7a064;
+      --gold-light: #e6c993;
+      --text: #302521;
+      --muted: #766b64;
+      --white: #fff;
+      --border: rgba(88, 30, 37, .13);
+      --shadow: 0 18px 55px rgba(52, 26, 22, .10);
+      --radius: 18px;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", Arial, sans-serif;
+      --container: 1200px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--cream);
+      font-family: var(--sans);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, textarea {
+      font: inherit;
+    }
+
+    button, a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible, a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    ::selection {
+      background: var(--wine);
+      color: var(--white);
+    }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 105px 0;
+    }
+
+    .section-light {
+      background: var(--paper);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--wine);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      margin: 14px 0 16px;
+      font-family: var(--serif);
+      font-size: clamp(2.2rem, 4.4vw, 3.7rem);
+      font-weight: 500;
+      line-height: 1.17;
+      letter-spacing: -.035em;
+    }
+
+    .section-heading p {
+      max-width: 610px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .text-gold {
+      color: var(--gold-light);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      font-size: .88rem;
+      font-weight: 700;
+      text-align: center;
+      transition: background .25s, color .25s, transform .25s, border-color .25s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      color: var(--white);
+      background: var(--wine);
+    }
+
+    .btn-primary:hover {
+      background: var(--wine-light);
+    }
+
+    .btn-gold {
+      color: var(--wine-dark);
+      background: var(--gold-light);
+    }
+
+    .btn-gold:hover {
+      background: #f0d7a7;
+    }
+
+    .btn-outline {
+      color: var(--white);
+      border-color: rgba(255, 255, 255, .6);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      color: var(--wine-dark);
+      background: var(--white);
+    }
+
+    .btn-outline-dark {
+      color: var(--wine);
+      border-color: var(--border);
+      background: transparent;
+    }
+
+    .btn-outline-dark:hover {
+      background: var(--cream-dark);
+    }
+
+    .icon {
+      width: 19px;
+      height: 19px;
+      flex-shrink: 0;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Cabeçalho */
+
+    .header {
+      position: fixed;
+      z-index: 1000;
+      inset: 0 0 auto;
+      color: var(--white);
+      border-bottom: 1px solid rgba(255, 255, 255, .13);
+      transition: background .3s, box-shadow .3s, border-color .3s;
+    }
+
+    .header.scrolled {
+      color: var(--text);
+      background: rgba(255, 253, 249, .97);
+      border-color: var(--border);
+      box-shadow: 0 4px 25px rgba(35, 20, 17, .06);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 88px;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 49px;
+      height: 49px;
+      place-items: center;
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -.06em;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: .01em;
+    }
+
+    .brand-subtitle {
+      margin-top: 4px;
+      font-size: .58rem;
+      font-weight: 700;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .header.scrolled .brand-subtitle {
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(13px, 2vw, 27px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 10px 0;
+      font-size: .78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      position: absolute;
+      right: 0;
+      bottom: 4px;
+      left: 0;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .25s;
+    }
+
+    .nav-links a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .header-cta {
+      min-height: 44px;
+      padding: 10px 17px;
+      font-size: .79rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+      border: 1px solid currentColor;
+      border-radius: 3px;
+      background: transparent;
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: 760px;
+      min-height: min(850px, 100svh);
+      align-items: center;
+      overflow: hidden;
+      color: var(--white);
+      background: var(--wine-dark);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+    }
+
+    .hero::before {
+      position: absolute;
+      z-index: 1;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(35, 13, 13, .88) 0%, rgba(35, 13, 13, .70) 42%, rgba(35, 13, 13, .20) 100%),
+        linear-gradient(0deg, rgba(35, 13, 13, .55), transparent 40%);
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-top: 105px;
+      padding-bottom: 95px;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 26px;
+      color: var(--gold-light);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .hero-label::before {
+      width: 38px;
+      height: 1px;
+      background: var(--gold);
+      content: "";
+    }
+
+    .hero h1 {
+      max-width: 800px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(3.8rem, 8vw, 7rem);
+      font-weight: 500;
+      line-height: 1.01;
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 em {
+      display: block;
+      color: var(--gold-light);
+      font-weight: 400;
+    }
+
+    .hero-description {
+      max-width: 540px;
+      margin: 26px 0 32px;
+      color: rgba(255, 255, 255, .84);
+      font-size: clamp(.98rem, 1.6vw, 1.1rem);
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 48px;
+      padding-top: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .24);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(255, 255, 255, .88);
+      font-size: .78rem;
+    }
+
+    .hero-meta-item .icon {
+      color: var(--gold-light);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      z-index: 2;
+      right: max(24px, calc((100vw - var(--container)) / 2));
+      bottom: 36px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: rgba(255, 255, 255, .75);
+      font-size: .66rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+
+    .hero-scroll::after {
+      width: 1px;
+      height: 45px;
+      background: var(--gold);
+      content: "";
+    }
+
+    /* Faixa de serviços */
+
+    .service-strip {
+      color: var(--white);
+      background: var(--wine);
+    }
+
+    .service-strip-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .strip-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 13px;
+      min-height: 108px;
+      padding: 18px;
+      border-right: 1px solid rgba(255, 255, 255, .15);
+    }
+
+    .strip-item:last-child {
+      border-right: 0;
+    }
+
+    .strip-icon {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      place-items: center;
+      color: var(--gold-light);
+      border: 1px solid rgba(230, 201, 147, .5);
+      border-radius: 50%;
+    }
+
+    .strip-item strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .strip-item small {
+      display: block;
+      margin-top: 3px;
+      color: rgba(255, 255, 255, .68);
+      font-size: .73rem;
+    }
+
+    /* Apresentação */
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(45px, 8vw, 105px);
+    }
+
+    .intro-visual {
+      position: relative;
+      min-height: 570px;
+      padding: 0 40px 38px 0;
+    }
+
+    .intro-image {
+      width: 100%;
+      height: 530px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .intro-image-small {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 43%;
+      height: 205px;
+      object-fit: cover;
+      border: 8px solid var(--cream);
+      border-radius: 3px;
+    }
+
+    .intro-stamp {
+      position: absolute;
+      top: 30px;
+      left: -18px;
+      display: grid;
+      width: 100px;
+      height: 100px;
+      place-items: center;
+      padding: 12px;
+      color: var(--wine);
+      border: 1px solid var(--gold);
+      outline: 5px solid var(--cream);
+      background: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 1rem;
+      line-height: 1.25;
+      text-align: center;
+      transform: rotate(-8deg);
+    }
+
+    .intro-copy h2 {
+      margin: 15px 0 24px;
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4vw, 3.6rem);
+      font-weight: 500;
+      line-height: 1.2;
+      letter-spacing: -.035em;
+    }
+
+    .intro-copy p {
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: .96rem;
+    }
+
+    .intro-signature {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 28px 0;
+      color: var(--wine);
+    }
+
+    .signature-line {
+      width: 45px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .signature-text {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+
+    /* Gastronomia */
+
+    .food-section {
+      background: var(--paper);
+    }
+
+    .food-heading-row {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .food-heading-row .section-heading {
+      margin-bottom: 45px;
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+
+    .food-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      background: var(--paper);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .food-card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-7px);
+    }
+
+    .food-image-wrap {
+      position: relative;
+      height: 275px;
+      overflow: hidden;
+      background: var(--cream-dark);
+    }
+
+    .food-image {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s;
+    }
+
+    .food-card:hover .food-image {
+      transform: scale(1.06);
+    }
+
+    .image-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 7px 11px;
+      color: var(--wine);
+      background: var(--paper);
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .food-body {
+      padding: 24px 24px 26px;
+    }
+
+    .food-body h3 {
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .food-body p {
+      min-height: 58px;
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.8;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 4px;
+      color: var(--wine);
+      border-bottom: 1px solid var(--gold);
+      font-size: .81rem;
+      font-weight: 800;
+      transition: gap .2s;
+    }
+
+    .text-link:hover {
+      gap: 13px;
+    }
+
+    /* Buffet */
+
+    .buffet-section {
+      padding: 0;
+      color: var(--white);
+      background: var(--wine-dark);
+    }
+
+    .buffet-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 620px;
+    }
+
+    .buffet-photo {
+      position: relative;
+      min-height: 550px;
+      overflow: hidden;
+    }
+
+    .buffet-photo img {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .buffet-photo::after {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(35, 13, 13, .32), transparent 55%);
+      content: "";
+    }
+
+    .photo-caption {
+      position: absolute;
+      z-index: 1;
+      right: 30px;
+      bottom: 27px;
+      left: 30px;
+      color: var(--white);
+      font-size: .78rem;
+      letter-spacing: .06em;
+    }
+
+    .buffet-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 80px clamp(35px, 7vw, 95px);
+    }
+
+    .buffet-content .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .buffet-content h2 {
+      margin: 17px 0 22px;
+      font-family: var(--serif);
+      font-size: clamp(2.7rem, 4.4vw, 4.4rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -.035em;
+    }
+
+    .buffet-content p {
+      margin: 0 0 26px;
+      color: rgba(255, 255, 255, .74);
+      font-size: .96rem;
+    }
+
+    .feature-list {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .feature-list li {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: rgba(255, 255, 255, .9);
+      font-size: .85rem;
+    }
+
+    .feature-list .icon {
+      color: var(--gold-light);
+    }
+
+    /* Pizzaria */
+
+    .pizza-section {
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background: #241714;
+    }
+
+    .pizza-section::before {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 80% 40%, rgba(127, 63, 34, .24), transparent 48%),
+        radial-gradient(ellipse at 10% 90%, rgba(88, 30, 37, .3), transparent 45%);
+      content: "";
+    }
+
+    .pizza-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 75px;
+    }
+
+    .pizza-copy .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .pizza-copy h2 {
+      margin: 16px 0 23px;
+      font-family: var(--serif);
+      font-size: clamp(2.7rem, 4.8vw, 4.6rem);
+      font-weight: 500;
+      line-height: 1.12;
+      letter-spacing: -.04em;
+    }
+
+    .pizza-copy p {
+      margin: 0 0 29px;
+      color: rgba(255, 255, 255, .72);
+      font-size: .97rem;
+    }
+
+    .pizza-note {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 29px;
+      color: rgba(255, 255, 255, .75);
+      font-size: .77rem;
+    }
+
+    .pizza-note .icon {
+      color: var(--gold-light);
+    }
+
+    .pizza-visual {
+      position: relative;
+      padding: 20px 0 20px 20px;
+    }
+
+    .pizza-image {
+      width: 100%;
+      height: 490px;
+      object-fit: cover;
+      border-radius: 50% 50% 4px 4px;
+      border: 1px solid rgba(230, 201, 147, .45);
+      padding: 8px;
+    }
+
+    .pizza-badge {
+      position: absolute;
+      right: -18px;
+      bottom: 35px;
+      display: flex;
+      width: 120px;
+      height: 120px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: var(--wine-dark);
+      border-radius: 50%;
+      background: var(--gold-light);
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      line-height: 1.3;
+      text-align: center;
+      transform: rotate(7deg);
+    }
+
+    .pizza-badge small {
+      margin-top: 4px;
+      font-family: var(--sans);
+      font-size: .6rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    /* Galeria */
+
+    .gallery-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      grid-template-rows: 245px 245px;
+      gap: 13px;
+    }
+
+    .gallery-item {
+      position: relative;
+      min-width: 0;
+      overflow: hidden;
+      padding: 0;
+      border: 0;
+      border-radius: 3px;
+      background: var(--cream-dark);
+      text-align: left;
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery-item:nth-child(4) {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      inset: auto 0 0;
+      padding: 40px 17px 15px;
+      color: var(--white);
+      background: linear-gradient(transparent, rgba(30, 15, 12, .82));
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .gallery-hint {
+      margin-top: 17px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    /* Eventos */
+
+    .events-section {
+      color: var(--white);
+      background: var(--wine);
+    }
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: clamp(40px, 8vw, 100px);
+    }
+
+    .events-visual {
+      position: relative;
+    }
+
+    .events-main-image {
+      height: 530px;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+
+    .events-small-image {
+      position: absolute;
+      right: -25px;
+      bottom: -25px;
+      width: 42%;
+      height: 210px;
+      object-fit: cover;
+      border: 8px solid var(--wine);
+    }
+
+    .events-copy .eyebrow {
+      color: var(--gold-light);
+    }
+
+    .events-copy h2 {
+      margin: 16px 0 22px;
+      font-family: var(--serif);
+      font-size: clamp(2.5rem, 4.4vw, 3.9rem);
+      font-weight: 500;
+      line-height: 1.16;
+      letter-spacing: -.035em;
+    }
+
+    .events-copy > p {
+      margin: 0 0 27px;
+      color: rgba(255, 255, 255, .76);
+      font-size: .96rem;
+    }
+
+    .event-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+
+    .event-feature {
+      padding: 17px;
+      border: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .event-feature .icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: 9px;
+      color: var(--gold-light);
+    }
+
+    .event-feature strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      font-weight: 500;
+    }
+
+    .event-feature span {
+      display: block;
+      margin-top: 5px;
+      color: rgba(255, 255, 255, .66);
+      font-size: .76rem;
+    }
+
+    /* Faixa de contato */
+
+    .contact-banner {
+      padding: 58px 0;
+      background: var(--gold-light);
+    }
+
+    .contact-banner-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .contact-banner h2 {
+      margin: 0 0 7px;
+      color: var(--wine-dark);
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3vw, 2.8rem);
+      font-weight: 500;
+      line-height: 1.25;
+    }
+
+    .contact-banner p {
+      margin: 0;
+      color: #65473a;
+      font-size: .9rem;
+    }
+
+    .contact-banner .btn {
+      flex-shrink: 0;
+      color: var(--white);
+      background: var(--wine);
+    }
+
+    /* Contato e localização */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 65px;
+    }
+
+    .contact-copy h2 {
+      margin: 15px 0 18px;
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 4vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.18;
+      letter-spacing: -.035em;
+    }
+
+    .contact-copy > p {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 22px;
+      margin-bottom: 30px;
+    }
+
+    .contact-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .contact-detail-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+      place-items: center;
+      color: var(--wine);
+      border: 1px solid var(--border);
+    }
+
+    .contact-detail strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: .85rem;
+    }
+
+    .contact-detail span,
+    .contact-detail a {
+      color: var(--muted);
+      font-size: .83rem;
+    }
+
+    .contact-detail a:hover {
+      color: var(--wine);
+      text-decoration: underline;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 11px;
+    }
+
+    .map-wrap {
+      position: relative;
+      min-height: 440px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--cream-dark);
+    }
+
+    .map-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Horários */
+
+    .hours-panel {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 30px;
+      margin-top: 32px;
+      padding: 28px 32px;
+      border: 1px solid var(--border);
+      background: var(--paper);
+    }
+
+    .hours-panel h3 {
+      margin: 0 0 5px;
+      font-family: var(--serif);
+      font-size: 1.55rem;
+      font-weight: 500;
+    }
+
+    .hours-panel p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .83rem;
+    }
+
+    .hours-panel .btn {
+      white-space: nowrap;
+    }
+
+    /* Rodapé */
+
+    .footer {
+      color: rgba(255, 255, 255, .78);
+      background: #281315;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr 1fr;
+      gap: 65px;
+      padding-top: 70px;
+      padding-bottom: 55px;
+    }
+
+    .footer .brand {
+      color: var(--white);
+    }
+
+    .footer-description {
+      max-width: 340px;
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, .62);
+      font-size: .84rem;
+    }
+
+    .footer-heading {
+      margin: 7px 0 21px;
+      color: var(--gold-light);
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, .7);
+      font-size: .83rem;
+      transition: color .2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-contact {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      margin-bottom: 15px;
+      font-size: .82rem;
+    }
+
+    .footer-contact .icon {
+      flex-shrink: 0;
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 22px;
+      padding-bottom: 22px;
+      border-top: 1px solid rgba(255, 255, 255, .13);
+      color: rgba(255, 255, 255, .52);
+      font-size: .72rem;
+    }
+
+    .footer-bottom a {
+      color: var(--gold-light);
+    }
+
+    /* WhatsApp flutuante */
+
+    .whatsapp-float {
+      position: fixed;
+      z-index: 900;
+      right: 24px;
+      bottom: 24px;
+      display: grid;
+      width: 59px;
+      height: 59px;
+      place-items: center;
+      color: var(--white);
+      border: 2px solid rgba(255, 255, 255, .8);
+      border-radius: 50%;
+      background: #238b56;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .2);
+      transition: transform .25s, background .25s;
+    }
+
+    .whatsapp-float:hover {
+      background: #176e42;
+      transform: translateY(-4px);
+    }
+
+    .whatsapp-float .icon {
+      width: 27px;
+      height: 27px;
+    }
+
+    /* Lightbox da galeria */
+
+    .lightbox {
+      position: fixed;
+      z-index: 2000;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 28px;
+      background: rgba(17, 10, 10, .94);
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-content {
+      position: relative;
+      display: flex;
+      width: min(100%, 1100px);
+      max-height: 90svh;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .lightbox img {
+      width: auto;
+      max-width: 100%;
+      max-height: 78svh;
+      object-fit: contain;
+    }
+
+    .lightbox-caption {
+      color: var(--white);
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      color: var(--white);
+      border: 1px solid rgba(255, 255, 255, .4);
+      border-radius: 50%;
+      background: rgba(0, 0, 0, .35);
+    }
+
+    /* Animações */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: .1s; }
+    .delay-2 { transition-delay: .2s; }
+    .delay-3 { transition-delay: .3s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Responsividade */
+
+    @media (max-width: 1100px) {
+      .nav {
+        gap: 14px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: .73rem;
+      }
+
+      .brand-name {
+        font-size: 1.2rem;
+      }
+
+      .brand-mark {
+        width: 43px;
+        height: 43px;
+      }
+
+      .header-cta {
+        padding-inline: 12px;
+      }
+
+      .food-image-wrap {
+        height: 230px;
+      }
+
+      .pizza-grid {
+        gap: 45px;
+      }
+
+      .footer-main {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .section {
+        padding: 80px 0;
+      }
+
+      .menu-toggle {
+        display: flex;
+        position: relative;
+        z-index: 1002;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .nav-links {
+        position: fixed;
+        z-index: 1001;
+        inset: 0;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+        padding: 100px 40px 40px;
+        color: var(--text);
+        background: var(--paper);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity .25s, visibility .25s, transform .25s;
+      }
+
+      .nav-links.open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
+      .nav-links li {
+        width: 100%;
+        max-width: 450px;
+        margin-inline: auto;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 13px 0;
+        border-bottom: 1px solid var(--border);
+        font-family: var(--serif);
+        font-size: 1.35rem;
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .nav-links .mobile-cta {
+        display: block;
+        margin-top: 20px;
+        padding: 14px 18px;
+        color: var(--white);
+        background: var(--wine);
+        font-family: var(--sans);
+        font-size: .9rem;
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 750px;
+        min-height: 92svh;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.6rem, 10vw, 6rem);
+      }
+
+      .service-strip-inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .strip-item:nth-child(2) {
+        border-right: 0;
+      }
+
+      .strip-item:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(255, 255, 255, .15);
+      }
+
+      .intro-grid,
+      .events-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .intro-visual {
+        width: min(100%, 620px);
+        margin-inline: auto;
+      }
+
+      .intro-copy {
+        max-width: 680px;
+      }
+
+      .food-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .buffet-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buffet-photo {
+        min-height: 430px;
+      }
+
+      .buffet-content {
+        padding: 65px 35px 75px;
+      }
+
+      .pizza-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .pizza-image {
+        height: 390px;
+      }
+
+      .pizza-badge {
+        right: -5px;
+        width: 100px;
+        height: 100px;
+        font-size: .95rem;
+      }
+
+      .gallery-grid {
+        grid-template-rows: 210px 210px;
+      }
+
+      .events-visual {
+        width: calc(100% - 20px);
+        margin-bottom: 20px;
+      }
+
+      .events-main-image {
+        height: 470px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .map-wrap {
+        min-height: 390px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand-column {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: calc(100% - 36px);
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .section-heading {
+        margin-bottom: 34px;
+      }
+
+      .section-heading h2 {
+        font-size: 2.35rem;
+      }
+
+      .nav {
+        min-height: 74px;
+      }
+
+      .brand {
+        gap: 9px;
+      }
+
+      .brand-mark {
+        width: 40px;
+        height: 40px;
+        font-size: 1.15rem;
+      }
+
+      .brand-name {
+        font-size: 1.12rem;
+      }
+
+      .brand-subtitle {
+        font-size: .51rem;
+        letter-spacing: .12em;
+      }
+
+      .hero {
+        min-height: 750px;
+        min-height: 92svh;
+        align-items: center;
+      }
+
+      .hero-bg {
+        object-position: 58% center;
+      }
+
+      .hero::before {
+        background:
+          linear-gradient(90deg, rgba(35, 13, 13, .83), rgba(35, 13, 13, .40)),
+          linear-gradient(0deg, rgba(35, 13, 13, .65), transparent 75%);
+      }
+
+      .hero-content {
+        padding-top: 105px;
+        padding-bottom: 70px;
+      }
+
+      .hero-label {
+        margin-bottom: 21px;
+        font-size: .65rem;
+        letter-spacing: .14em;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.35rem, 14vw, 5rem);
+      }
+
+      .hero-description {
+        margin: 23px 0 25px;
+        font-size: .94rem;
+        line-height: 1.8;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-meta {
+        gap: 13px 20px;
+        margin-top: 30px;
+        padding-top: 18px;
+      }
+
+      .hero-meta-item {
+        font-size: .73rem;
+      }
+
+      .hero-scroll {
+        display: none;
+      }
+
+      .service-strip-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .strip-item {
+        min-height: 92px;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 14px 10px;
+      }
+
+      .strip-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .strip-icon .icon {
+        width: 17px;
+        height: 17px;
+      }
+
+      .strip-item strong {
+        font-size: .92rem;
+      }
+
+      .strip-item small {
+        font-size: .67rem;
+      }
+
+      .intro-visual {
+        min-height: 390px;
+        padding: 0 25px 28px 0;
+      }
+
+      .intro-image {
+        height: 365px;
+      }
+
+      .intro-image-small {
+        width: 44%;
+        height: 145px;
+        border-width: 5px;
+      }
+
+      .intro-stamp {
+        top: 20px;
+        left: -8px;
+        width: 78px;
+        height: 78px;
+        font-size: .82rem;
+      }
+
+      .intro-copy h2 {
+        font-size: 2.45rem;
+      }
+
+      .food-heading-row,
+      .gallery-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .food-heading-row .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .food-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .food-image-wrap {
+        height: 260px;
+      }
+
+      .food-body {
+        padding: 22px;
+      }
+
+      .food-body p {
+        min-height: auto;
+      }
+
+      .buffet-photo {
+        min-height: 340px;
+      }
+
+      .buffet-content {
+        padding: 55px 22px 62px;
+      }
+
+      .buffet-content h2,
+      .pizza-copy h2 {
+        font-size: 2.8rem;
+      }
+
+      .pizza-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .pizza-copy {
+        order: 1;
+      }
+
+      .pizza-visual {
+        order: 0;
+        padding: 0 10px 10px 0;
+      }
+
+      .pizza-image {
+        height: 330px;
+        border-radius: 50% 50% 3px 3px;
+      }
+
+      .pizza-badge {
+        right: -3px;
+        bottom: 13px;
+        width: 90px;
+        height: 90px;
+      }
+
+      .pizza-copy {
+        padding-top: 10px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 240px 175px 175px 190px;
+        gap: 9px;
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: auto;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      .gallery-caption {
+        padding: 32px 10px 11px;
+        font-size: .72rem;
+      }
+
+      .events-main-image {
+        height: 360px;
+      }
+
+      .events-small-image {
+        right: -12px;
+        bottom: -18px;
+        height: 145px;
+        border-width: 5px;
+      }
+
+      .events-copy h2 {
+        font-size: 2.55rem;
+      }
+
+      .event-features {
+        gap: 10px;
+      }
+
+      .event-feature {
+        padding: 13px;
+      }
+
+      .event-feature strong {
+        font-size: 1rem;
+      }
+
+      .contact-banner {
+        padding: 43px 0;
+      }
+
+      .contact-banner-inner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 23px;
+      }
+
+      .contact-banner h2 {
+        font-size: 2rem;
+      }
+
+      .contact-banner .btn {
+        width: 100%;
+      }
+
+      .contact-grid {
+        gap: 30px;
+      }
+
+      .contact-copy h2 {
+        font-size: 2.55rem;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+      .contact-buttons .btn {
+        width: 100%;
+      }
+
+      .map-wrap {
+        min-height: 340px;
+      }
+
+      .hours-panel {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 23px;
+      }
+
+      .hours-panel .btn {
+        width: 100%;
+        white-space: normal;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-top: 53px;
+        padding-bottom: 40px;
+      }
+
+      .footer-brand-column {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        width: 54px;
+        height: 54px;
+      }
+
+      .lightbox {
+        padding: 15px;
+      }
+
+      .lightbox-close {
+        top: -15px;
+        right: -5px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Divino Sabor Café - Restaurante - Pizzaria",
+    "telephone": "+55 47 99115-9187",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "BR-470, 1622, Arroio Grande",
+      "addressLocality": "Pouso Redondo",
+      "addressRegion": "SC",
+      "postalCode": "89172-000",
+      "addressCountry": "BR"
+    },
+    "sameAs": [
+      "https://www.instagram.com/divino_sbor/"
+    ],
+    "hasMenu": false,
+    "servesCuisine": [
+      "Brasileira",
+      "Pizza",
+      "Lanches",
+      "Café da manhã"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Ícones SVG reutilizáveis -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 12h14M13 5l7 7-7 7"/>
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3z"/>
+      <path d="M9 3v15M15 6v15"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24">
+      <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+      <circle cx="12" cy="10" r="2.5"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M22 16.9v3a2 2 0 0 1-2.2 2A19.8 19.8 0 0 1 11.2 19a19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.8 2.1Z"/>
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 6v6l4 2"/>
+    </symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24">
+      <path d="M10 2v2M14 2v2M6 8h12v8a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4z"/>
+      <path d="M18 10h1a3 3 0 0 1 0 6h-1M4 22h16"/>
+    </symbol>
+    <symbol id="i-utensils" viewBox="0 0 24 24">
+      <path d="M3 2v7a4 4 0 0 0 8 0V2M7 2v20M19 2v20M19 2c-3 3-3 7-3 10h3"/>
+    </symbol>
+    <symbol id="i-pizza" viewBox="0 0 24 24">
+      <path d="M3 20 12 3l9 17z"/>
+      <path d="M7 17h10M9 11l6 0"/>
+      <circle cx="12" cy="14" r="1.2"/>
+      <circle cx="15" cy="17" r="1"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24">
+      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path d="m5 12 4 4L19 6"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M17.5 6.5h.01"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.6A8.5 8.5 0 1 1 20.5 11.5Z"/>
+      <path d="M8 8c.5 3 3 5.5 6 6l1.3-1.3 2 .9c.2 1-1 2-2 2C10.5 15 7 11.5 6.5 7.5c0-1 1-2.2 2-2l.9 2z"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <path d="M3 6h18M3 12h18M3 18h18"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m18 6-12 12M6 6l12 12"/>
+    </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <circle cx="8.5" cy="8.5" r="1.5"/>
+      <path d="m21 15-5-5L5 21"/>
+    </symbol>
+  </svg>
+
+  <!-- Cabeçalho -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Divino Sabor - Página inicial">
+        <span class="brand-mark">DS</span>
+        <span class="brand-copy">
+          <span class="brand-name">Divino Sabor</span>
+          <span class="brand-subtitle">Café · Restaurante · Pizzaria</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#gastronomia">Gastronomia</a></li>
+          <li><a href="#buffet">Buffet</a></li>
+          <li><a href="#pizzaria">Pizzaria</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#contato">Contato</a></li>
+          <li><a class="mobile-cta" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20o%20Divino%20Sabor." target="_blank" rel="noopener noreferrer">Fale conosco</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-gold header-cta" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Divino%20Sabor." target="_blank" rel="noopener noreferrer">
+        Fale conosco
+        <svg class="icon"><use href="#i-arrow"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Banner principal -->
+    <section class="hero" id="inicio" aria-label="Apresentação do Divino Sabor">
+      <img class="hero-bg" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=85" alt="Mesa de restaurante com pratos cuidadosamente preparados, fotografia ilustrativa" fetchpriority="high">
+
+      <div class="container hero-content">
+        <span class="hero-label">Uma experiência para saborear</span>
+
+        <h1>
+          Bons momentos
+          <em>começam à mesa.</em>
+        </h1>
+
+        <p class="hero-description">
+          Do café da manhã ao almoço especial, dos nossos lanches às pizzas da noite. Descubra um lugar para compartilhar sabores e aproveitar bons momentos em Pouso Redondo.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#gastronomia">
+            Conheça nossa gastronomia
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Divino+Sabor%2C+BR-470%2C+1622%2C+Pouso+Redondo%2C+SC" target="_blank" rel="noopener noreferrer">
+            <svg class="icon"><use href="#i-pin"/></svg>
+            Como chegar
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg class="icon"><use href="#i-coffee"/></svg>
+            Café da manhã
+          </div>
+          <div class="hero-meta-item">
+            <svg class="icon"><use href="#i-utensils"/></svg>
+            Buffet livre
+          </div>
+          <div class="hero-meta-item">
+            <svg class="icon"><use href="#i-pizza"/></svg>
+            Pizzaria à noite
+          </div>
+        </div>
+      </div>
+
+      <a class="hero-scroll" href="#sobre">Descubra</a>
+    </section>
+
+    <!-- Serviços -->
+    <div class="service-strip" aria-label="Principais serviços">
+      <div class="container service-strip-inner">
+        <div class="strip-item">
+          <span class="strip-icon"><svg class="icon"><use href="#i-coffee"/></svg></span>
+          <div>
+            <strong>Café da manhã</strong>
+            <small>Comece bem o dia</small>
+          </div>
+        </div>
+
+        <div class="strip-item">
+          <span class="strip-icon"><svg class="icon"><use href="#i-utensils"/></svg></span>
+          <div>
+            <strong>Buffet livre</strong>
+            <small>Uma refeição completa</small>
+          </div>
+        </div>
+
+        <div class="strip-item">
+          <span class="strip-icon"><svg class="icon"><use href="#i-pizza"/></svg></span>
+          <div>
+            <strong>Pizzaria</strong>
+            <small>Sabor para compartilhar</small>
+          </div>
+        </div>
+
+        <div class="strip-item">
+          <span class="strip-icon"><svg class="icon"><use href="#i-users"/></svg></span>
+          <div>
+            <strong>Eventos</strong>
+            <small>Momentos especiais</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Apresentação -->
+    <section class="section" id="sobre">
+      <div class="container intro-grid">
+        <div class="intro-visual reveal">
+          <img class="intro-image" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1100&q=85" alt="Ambiente de restaurante acolhedor, imagem ilustrativa" loading="lazy">
+          <img class="intro-image-small" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=500&q=80" alt="Preparação de refeição com ingredientes frescos, imagem ilustrativa" loading="lazy">
+          <div class="intro-stamp" aria-label="Sabor e bons momentos">Sabor que<br>reúne.</div>
+        </div>
+
+        <div class="intro-copy reveal delay-1">
+          <span class="eyebrow">Bem-vindo ao Divino Sabor</span>
+          <h2>Muito mais que uma refeição: um lugar para compartilhar bons momentos.</h2>
+
+          <p>
+            No Divino Sabor, cada momento à mesa é uma oportunidade de reunir pessoas, aproveitar boa comida e criar lembranças.
+          </p>
+
+          <p>
+            Seja para começar o dia com um café da manhã, fazer uma pausa para o almoço ou aproveitar uma pizza à noite, encontre uma opção para cada ocasião.
+          </p>
+
+          <p>
+            Estamos na BR-470, em Pouso Redondo, com opções gastronômicas para diferentes momentos e um espaço que também pode receber encontros especiais.
+          </p>
+
+          <div class="intro-signature">
+            <span class="signature-line"></span>
+            <span class="signature-text">Um convite para saborear.</span>
+          </div>
+
+          <a class="btn btn-primary" href="#contato">
+            Venha nos conhecer
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gastronomia -->
+    <section class="section food-section" id="gastronomia">
+      <div class="container">
+        <div class="food-heading-row">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Nossa gastronomia</span>
+            <h2>Sabores para todos os momentos.</h2>
+            <p>Uma variedade de experiências para acompanhar seu dia, da primeira refeição até aquele encontro especial à noite.</p>
+          </div>
+
+          <a class="btn btn-outline-dark" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20as%20op%C3%A7%C3%B5es%20gastron%C3%B4micas%20do%20Divino%20Sabor." target="_blank" rel="noopener noreferrer">
+            Consultar opções
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+
+        <div class="food-grid">
+          <article class="food-card reveal">
+            <div class="food-image-wrap">
+              <img class="food-image" src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=850&q=80" alt="Mesa de café da manhã com pães, frutas e acompanhamentos, fotografia ilustrativa" loading="lazy">
+              <span class="image-tag">Comece bem o dia</span>
+            </div>
+            <div class="food-body">
+              <h3>Café da manhã</h3>
+              <p>Comece o dia com uma pausa saborosa e opções para aproveitar cada momento.</p>
+              <a class="text-link" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20o%20caf%C3%A9%20da%20manh%C3%A3." target="_blank" rel="noopener noreferrer">
+                Consultar informações
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="food-card reveal delay-1">
+            <div class="food-image-wrap">
+              <img class="food-image" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=850&q=80" alt="Variedade de alimentos frescos e preparados, fotografia ilustrativa" loading="lazy">
+              <span class="image-tag">Variedade à mesa</span>
+            </div>
+            <div class="food-body">
+              <h3>Buffet livre</h3>
+              <p>Uma opção para quem aprecia variedade e quer aproveitar uma refeição completa.</p>
+              <a class="text-link" href="#buffet">
+                Conheça o buffet
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="food-card reveal delay-2">
+            <div class="food-image-wrap">
+              <img class="food-image" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=850&q=80" alt="Carne assada preparada e servida com acompanhamentos, fotografia ilustrativa" loading="lazy">
+              <span class="image-tag">Sabor marcante</span>
+            </div>
+            <div class="food-body">
+              <h3>Carnes assadas</h3>
+              <p>Sabores marcantes e uma apresentação que abre o apetite para uma boa refeição.</p>
+              <a class="text-link" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20as%20op%C3%A7%C3%B5es%20de%20carnes%20assadas." target="_blank" rel="noopener noreferrer">
+                Consultar opções
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="food-card reveal">
+            <div class="food-image-wrap">
+              <img class="food-image" src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=850&q=80" alt="Pizza artesanal recém-assada com ingredientes variados, fotografia ilustrativa" loading="lazy">
+              <span class="image-tag">Uma noite especial</span>
+            </div>
+            <div class="food-body">
+              <h3>Pizzaria</h3>
+              <p>Reúna quem você gosta e aproveite uma boa pizza para fechar o dia.</p>
+              <a class="text-link" href="#pizzaria">
+                Descubra a pizzaria
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="food-card reveal delay-1">
+            <div class="food-image-wrap">
+              <img class="food-image" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=850&q=80" alt="Hambúrguer artesanal com pão dourado e ingredientes frescos, fotografia ilustrativa" loading="lazy">
+              <span class="image-tag">Para matar a fome</span>
+            </div>
+            <div class="food-body">
+              <h3>Lanches</h3>
+              <p>Opções para transformar uma pausa na rotina em um momento saboroso.</p>
+              <a class="text-link" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20as%20op%C3%A7%C3%B5es%20de%20lanches." target="_blank" rel="noopener noreferrer">
+                Consultar lanches
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="food-card reveal delay-2">
+            <div class="food-image-wrap">
+              <img class="food-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=850&q=80" alt="Interior acolhedor de restaurante com mesas organizadas, fotografia ilustrativa" loading="lazy">
+              <span class="image-tag">Encontros especiais</span>
+            </div>
+            <div class="food-body">
+              <h3>Ambiente e eventos</h3>
+              <p>Conheça as possibilidades para reunir amigos, familiares e convidados.</p>
+              <a class="text-link" href="#eventos">
+                Conheça o espaço
+                <svg class="icon"><use href="#i-arrow"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buffet -->
+    <section class="buffet-section" id="buffet">
+      <div class="buffet-grid">
+        <div class="buffet-photo">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1300&q=85" alt="Refeição preparada e servida para compartilhar, imagem ilustrativa" loading="lazy">
+          <span class="photo-caption">Uma pausa saborosa no seu dia.</span>
+        </div>
+
+        <div class="buffet-content reveal">
+          <span class="eyebrow">Uma experiência completa</span>
+          <h2>Seu almoço merece esse sabor.</h2>
+          <p>
+            Faça uma pausa na rotina e aproveite nosso buffet livre em um ambiente agradável para refeições individuais, encontros e momentos em família.
+          </p>
+
+          <ul class="feature-list">
+            <li><svg class="icon"><use href="#i-check"/></svg> Serviço de buffet livre</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Uma opção para diferentes ocasiões</li>
+            <li><svg class="icon"><use href="#i-check"/></svg> Atendimento em Pouso Redondo</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20consultar%20as%20informa%C3%A7%C3%B5es%20do%20buffet%20livre." target="_blank" rel="noopener noreferrer">
+              Consultar informações
+              <svg class="icon"><use href="#i-arrow"/></svg>
+            </a>
+            <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Divino+Sabor%2C+BR-470%2C+1622%2C+Pouso+Redondo%2C+SC" target="_blank" rel="noopener noreferrer">
+              Ver localização
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pizzaria -->
+    <section class="section pizza-section" id="pizzaria">
+      <div class="container pizza-grid">
+        <div class="pizza-copy reveal">
+          <span class="eyebrow">Uma noite cheia de sabor</span>
+          <h2>Quando chega a noite, o sabor continua.</h2>
+          <p>
+            Reúna a família, encontre os amigos e aproveite uma boa pizza no Divino Sabor. Um convite para desacelerar, compartilhar a mesa e aproveitar o momento.
+          </p>
+
+          <a class="btn btn-gold" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20pizzaria%20do%20Divino%20Sabor." target="_blank" rel="noopener noreferrer">
+            Consultar a pizzaria
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </a>
+
+          <div class="pizza-note">
+            <svg class="icon"><use href="#i-clock"/></svg>
+            Consulte os horários de atendimento diretamente com o restaurante.
+          </div>
+        </div>
+
+        <div class="pizza-visual reveal delay-1">
+          <img class="pizza-image" src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=1100&q=85" alt="Pizza assada com queijo derretido e ingredientes variados, fotografia ilustrativa" loading="lazy">
+          <div class="pizza-badge">
+            Feita para
+            compartilhar
+            <small>Divino Sabor</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="section section-light" id="galeria">
+      <div class="container">
+        <div class="gallery-heading">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Inspire-se</span>
+            <h2>Uma experiência que começa pelos olhos.</h2>
+            <p>Explore uma seleção de fotografias ilustrativas de gastronomia e ambientes para conhecer o estilo da experiência que queremos transmitir.</p>
+          </div>
+
+          <a class="btn btn-outline-dark" href="https://www.instagram.com/divino_sbor/" target="_blank" rel="noopener noreferrer">
+            <svg class="icon"><use href="#i-instagram"/></svg>
+            Instagram oficial
+          </a>
+        </div>
+
+        <div class="gallery-grid">
+          <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1800&q=90" data-caption="Experiência gastronômica — imagem ilustrativa" aria-label="Ampliar imagem de uma refeição">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Mesa gastronômica cuidadosamente preparada, imagem ilustrativa" loading="lazy">
+            <span class="gallery-caption">Experiência gastronômica</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1600&q=90" data-caption="Ingredientes frescos — imagem ilustrativa" aria-label="Ampliar imagem de ingredientes">
+            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=700&q=80" alt="Ingredientes frescos e alimentos preparados, imagem ilustrativa" loading="lazy">
+            <span class="gallery-caption">Sabores à mesa</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=1600&q=90" data-caption="Pizza — imagem ilustrativa" aria-label="Ampliar imagem de pizza">
+            <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=700&q=80" alt="Pizza com ingredientes variados, imagem ilustrativa" loading="lazy">
+            <span class="gallery-caption">Pizza para compartilhar</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1800&q=90" data-caption="Ambiente de restaurante — imagem ilustrativa" aria-label="Ampliar imagem de ambiente de restaurante">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" alt="Restaurante com mesas organizadas e ambiente acolhedor, imagem ilustrativa" loading="lazy">
+            <span class="gallery-caption">Ambiente acolhedor</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1568901346375-23c9450c58bd?auto=format&fit=crop&w=1600&q=90" data-caption="Lanche — imagem ilustrativa" aria-label="Ampliar imagem de lanche">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58bd?auto=format&fit=crop&w=700&q=80" alt="Hambúrguer artesanal, imagem ilustrativa" loading="lazy">
+            <span class="gallery-caption">Lanches</span>
+          </button>
+
+          <button class="gallery-item" type="button" data-full="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=1600&q=90" data-caption="Café da manhã — imagem ilustrativa" aria-label="Ampliar imagem de café da manhã">
+            <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=700&q=80" alt="Café da manhã com frutas e acompanhamentos, imagem ilustrativa" loading="lazy">
+            <span class="gallery-caption">Café da manhã</span>
+          </button>
+        </div>
+
+        <p class="gallery-hint">As fotografias desta página são ilustrativas e não representam necessariamente os pratos ou ambientes reais do estabelecimento.</p>
+      </div>
+    </section>
+
+    <!-- Eventos -->
+    <section class="section events-section" id="eventos">
+      <div class="container events-grid">
+        <div class="events-visual reveal">
+          <img class="events-main-image" src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1100&q=85" alt="Espaço preparado para uma ocasião especial, fotografia ilustrativa" loading="lazy">
+          <img class="events-small-image" src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=500&q=80" alt="Mesa preparada para encontro especial, fotografia ilustrativa" loading="lazy">
+        </div>
+
+        <div class="events-copy reveal delay-1">
+          <span class="eyebrow">Ambiente e hospitalidade</span>
+          <h2>Momentos especiais merecem um lugar especial.</h2>
+
+          <p>
+            Está planejando uma confraternização ou um encontro especial? Entre em contato com o Divino Sabor para conhecer as possibilidades de utilização do espaço privativo para eventos.
+          </p>
+
+          <div class="event-features">
+            <div class="event-feature">
+              <svg class="icon"><use href="#i-users"/></svg>
+              <strong>Espaço privativo</strong>
+              <span>Consulte as possibilidades para seu evento.</span>
+            </div>
+            <div class="event-feature">
+              <svg class="icon"><use href="#i-utensils"/></svg>
+              <strong>Mesas externas</strong>
+              <span>Mais uma opção para aproveitar o ambiente.</span>
+            </div>
+          </div>
+
+          <a class="btn btn-gold" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20conhecer%20o%20espa%C3%A7o%20para%20eventos%20do%20Divino%20Sabor.%20Poderiam%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F" target="_blank" rel="noopener noreferrer">
+            Consultar eventos pelo WhatsApp
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada de contato -->
+    <section class="contact-banner">
+      <div class="container contact-banner-inner">
+        <div>
+          <h2>Sua próxima refeição pode ser aqui.</h2>
+          <p>Fale com nossa equipe e consulte as informações atualizadas.</p>
+        </div>
+
+        <a class="btn" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Divino%20Sabor." target="_blank" rel="noopener noreferrer">
+          <svg class="icon"><use href="#i-whatsapp"/></svg>
+          Conversar pelo WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <span class="eyebrow">Localização e contato</span>
+            <h2>Esperamos por você!</h2>
+            <p>
+              Estamos em Pouso Redondo, às margens da BR-470. Consulte as informações de atendimento e planeje sua visita.
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg class="icon"><use href="#i-pin"/></svg>
+                </span>
+                <div>
+                  <strong>Nosso endereço</strong>
+                  <span>BR-470, 1622, Arroio Grande<br>Pouso Redondo - SC, CEP 89172-000</span>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg class="icon"><use href="#i-phone"/></svg>
+                </span>
+                <div>
+                  <strong>Telefone e WhatsApp</strong>
+                  <a href="https://wa.me/5547991159187" target="_blank" rel="noopener noreferrer">(47) 99115-9187</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail-icon">
+                  <svg class="icon"><use href="#i-instagram"/></svg>
+                </span>
+                <div>
+                  <strong>Instagram oficial</strong>
+                  <a href="https://www.instagram.com/divino_sbor/" target="_blank" rel="noopener noreferrer">@divino_sbor</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-buttons">
+              <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Divino+Sabor%2C+BR-470%2C+1622%2C+Pouso+Redondo%2C+SC" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-map"/></svg>
+                Abrir no Google Maps
+              </a>
+
+              <a class="btn btn-outline-dark" href="https://www.instagram.com/divino_sbor/" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#i-instagram"/></svg>
+                Seguir no Instagram
+              </a>
+            </div>
+          </div>
+
+          <div class="map-wrap reveal delay-1">
+            <iframe
+              title="Mapa de localização do Divino Sabor em Pouso Redondo"
+              src="https://maps.google.com/maps?q=Divino%20Sabor%2C%20BR-470%2C%201622%2C%20Pouso%20Redondo%2C%20SC&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
+        <div class="hours-panel reveal">
+          <div>
+            <h3>Planeje sua visita</h3>
+            <p>Os horários detalhados de cada serviço precisam ser confirmados diretamente com o estabelecimento.</p>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Poderiam%20me%20informar%20os%20hor%C3%A1rios%20atualizados%20do%20caf%C3%A9%20da%20manh%C3%A3%2C%20buffet%20e%20pizzaria%3F" target="_blank" rel="noopener noreferrer">
+            <svg class="icon"><use href="#i-clock"/></svg>
+            Consultar horários
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    <div class="container footer-main">
+      <div class="footer-brand-column">
+        <a class="brand" href="#inicio" aria-label="Voltar ao início">
+          <span class="brand-mark">DS</span>
+          <span class="brand-copy">
+            <span class="brand-name">Divino Sabor</span>
+            <span class="brand-subtitle">Café · Restaurante · Pizzaria</span>
+          </span>
+        </a>
+
+        <p class="footer-description">
+          Um convite para reunir pessoas, aproveitar boa comida e compartilhar bons momentos em Pouso Redondo, Santa Catarina.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Navegação</h3>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Nossa história e proposta</a></li>
+          <li><a href="#gastronomia">Gastronomia</a></li>
+          <li><a href="#buffet">Buffet livre</a></li>
+          <li><a href="#pizzaria">Pizzaria</a></li>
+          <li><a href="#eventos">Ambiente e eventos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="footer-heading">Encontre-nos</h3>
+
+        <div class="footer-contact">
+          <svg class="icon"><use href="#i-pin"/></svg>
+          <span>BR-470, 1622, Arroio Grande<br>Pouso Redondo - SC, 89172-000</span>
+        </div>
+
+        <div class="footer-contact">
+          <svg class="icon"><use href="#i-phone"/></svg>
+          <a href="https://wa.me/5547991159187" target="_blank" rel="noopener noreferrer">(47) 99115-9187</a>
+        </div>
+
+        <div class="footer-contact">
+          <svg class="icon"><use href="#i-instagram"/></svg>
+          <a href="https://www.instagram.com/divino_sbor/" target="_blank" rel="noopener noreferrer">@divino_sbor</a>
+        </div>
+
+        <div class="footer-contact">
+          <svg class="icon"><use href="#i-map"/></svg>
+          <a href="https://www.google.com/maps/search/?api=1&query=Divino+Sabor%2C+BR-470%2C+1622%2C+Pouso+Redondo%2C+SC" target="_blank" rel="noopener noreferrer">Como chegar</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="currentYear"></span> Divino Sabor. Todos os direitos reservados.</span>
+      <span>Feito para celebrar o prazer de compartilhar a mesa.</span>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flutuante -->
+  <a
+    class="whatsapp-float"
+    href="https://wa.me/5547991159187?text=Ol%C3%A1%21%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Divino%20Sabor."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Conversar com o Divino Sabor pelo WhatsApp">
+    <svg class="icon"><use href="#i-whatsapp"/></svg>
+  </a>
+
+  <!-- Galeria ampliada -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada da fotografia">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Fechar imagem">
+        <svg class="icon"><use href="#i-close"/></svg>
+      </button>
+      <img id="lightboxImage" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const header = document.getElementById("header");
+      const menuToggle = document.getElementById("menuToggle");
+      const navLinks = document.getElementById("navLinks");
+      const body = document.body;
+
+      // Ano atualizado automaticamente.
+      document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+      // Cabeçalho acompanha a rolagem.
+      function updateHeader() {
+        header.classList.toggle("scrolled", window.scrollY > 30);
+      }
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      // Menu acessível para dispositivos móveis.
+      function closeMenu() {
+        navLinks.classList.remove("open");
+        body.classList.remove("menu-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menu");
+        menuToggle.innerHTML = '<svg class="icon"><use href="#i-menu"/></svg>';
+      }
+
+      function toggleMenu() {
+        const isOpen = navLinks.classList.toggle("open");
+
+        body.classList.toggle("menu-open", isOpen);
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Fechar menu" : "Abrir menu"
+        );
+
+        menuToggle.innerHTML = isOpen
+          ? '<svg class="icon"><use href="#i-close"/></svg>'
+          : '<svg class="icon"><use href="#i-menu"/></svg>';
+      }
+
+      menuToggle.addEventListener("click", toggleMenu);
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeMenu();
+          closeLightbox();
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) {
+          closeMenu();
+        }
+      });
+
+      // Animações discretas com suporte à preferência de movimento reduzido.
+      const revealElements = document.querySelectorAll(".reveal");
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      if ("IntersectionObserver" in window && !reduceMotion) {
+        const observer = new IntersectionObserver((entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              obs.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: "0px 0px -35px 0px"
+        });
+
+        revealElements.forEach((element) => observer.observe(element));
+      } else {
+        revealElements.forEach((element) => {
+          element.classList.add("visible");
+        });
+      }
+
+      // Galeria com ampliação, fechamento e retorno de foco.
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const lightboxCaption = document.getElementById("lightboxCaption");
+      const lightboxClose = document.getElementById("lightboxClose");
+      let previousFocus = null;
+
+      function openLightbox(button) {
+        const image = button.querySelector("img");
+
+        previousFocus = document.activeElement;
+
+        lightboxImage.src = button.dataset.full || image.src;
+        lightboxImage.alt = image.alt;
+        lightboxCaption.textContent =
+          button.dataset.caption || image.alt;
+
+        lightbox.classList.add("open");
+        body.style.overflow = "hidden";
+        lightboxClose.focus();
+      }
+
+      function closeLightbox() {
+        if (!lightbox.classList.contains("open")) return;
+
+        lightbox.classList.remove("open");
+        body.style.overflow = "";
+
+        lightboxImage.src = "";
+
+        if (previousFocus && typeof previousFocus.focus === "function") {
+          previousFocus.focus();
+        }
+      }
+
+      document.querySelectorAll(".gallery-item").forEach((button) => {
+        button.addEventListener("click", () => openLightbox(button));
+      });
+
+      lightboxClose.addEventListener("click", closeLightbox);
+
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      // Evita a navegação para o início quando imagens têm carregamento lento.
+      // Os links externos abrem em outra aba com proteção contra acesso à página.
+    })();
+  </script>
+</body>
+</html>

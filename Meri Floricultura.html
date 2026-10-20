@@ -1,0 +1,706 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#183d32">
+<meta name="description" content="Meri Flores — flores que falam por você. Descubra inspirações florais para momentos especiais.">
+<title>Meri Flores | Flores que falam por você</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --forest:#183D32;
+  --sage:#A5B49A;
+  --petal:#E9BFC5;
+  --ivory:#F7F4ED;
+  --berry:#713B4B;
+  --charcoal:#252722;
+  --line:rgba(24,61,50,.17);
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:"DM Sans",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--ivory);color:var(--charcoal);font-family:var(--sans)}
+body.lock{overflow:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+img{display:block;width:100%;object-fit:cover}
+.wrap{width:min(1200px,calc(100% - 44px));margin:auto}
+.serif{font-family:var(--serif);font-weight:400;letter-spacing:-.04em}
+.eyebrow{font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--berry)}
+.section{padding:100px 0}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:36px}
+.section-head h2{font:400 clamp(38px,5vw,62px)/1.05 var(--serif);margin:12px 0 0}
+.section-head p{max-width:360px;font-size:13px;line-height:1.8;color:#666d63}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 22px;border:1px solid transparent;font-size:11px;font-weight:700;transition:.25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--forest);color:var(--ivory)}
+.btn-outline{border-color:currentColor;background:transparent}
+.text-link{display:inline-flex;align-items:center;gap:12px;padding-bottom:6px;border-bottom:1px solid currentColor;font-size:11px;font-weight:700}
+.text-link span{transition:transform .2s}
+.text-link:hover span{transform:translateX(4px)}
+:focus-visible{outline:2px solid var(--berry);outline-offset:4px}
+
+/* CABEÇALHO */
+.announcement{padding:10px;background:var(--forest);color:var(--ivory);text-align:center;font-size:9px;letter-spacing:.14em}
+.header{height:82px;position:sticky;top:0;z-index:20;background:rgba(247,244,237,.95);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:.25s}
+.header.scrolled{border-color:var(--line);box-shadow:0 8px 25px #183d3210}
+.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--forest)}
+.brand-mark{width:35px;height:35px;border:1px solid var(--forest);border-radius:50% 50% 50% 5px;display:grid;place-items:center;font:25px var(--serif);transform:rotate(-10deg)}
+.brand-name{font:26px var(--serif);letter-spacing:-1px}
+.brand-name small{display:block;font:8px var(--sans);letter-spacing:.22em;text-transform:uppercase;margin-top:3px}
+.nav-links{display:flex;gap:25px;align-items:center}
+.nav-links a{font-size:11px;font-weight:600}
+.nav-links a:hover{color:var(--berry)}
+.nav-actions{display:flex;gap:8px}
+.icon-btn{width:39px;height:39px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--forest);position:relative}
+.icon-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5}
+.cart-count{position:absolute;top:-3px;right:-3px;min-width:17px;height:17px;padding:0 4px;border-radius:50%;background:var(--berry);color:white;font-size:9px;display:grid;place-items:center}
+.menu-toggle{display:none}
+
+/* ABERTURA */
+.hero{display:grid;grid-template-columns:1fr 1fr;min-height:610px;background:#e8eade}
+.hero-copy{padding:70px 5vw 65px max(30px,calc((100vw - 1200px)/2));display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.hero h1{font:400 clamp(55px,6.7vw,86px)/.99 var(--serif);letter-spacing:-.055em;color:var(--forest);margin:25px 0}
+.hero h1 em{color:var(--berry)}
+.hero-copy>p{max-width:390px;color:#62695f;font-size:13px;line-height:1.9;margin:0 0 27px}
+.hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero-note{margin-top:48px;font-size:10px;color:#6b7167;letter-spacing:.06em}
+.hero-image{position:relative;min-height:610px;overflow:hidden}
+.hero-image img{height:100%;position:absolute;inset:0;animation:revealImage 1.2s ease both}
+.hero-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#102a2050,transparent 50%)}
+.stamp{position:absolute;z-index:2;right:28px;bottom:28px;width:100px;height:100px;border:1px solid #ffffffbd;border-radius:50%;display:grid;place-items:center;text-align:center;color:white;font-size:9px;letter-spacing:.1em;line-height:1.5}
+.stamp b{display:block;font:24px var(--serif);letter-spacing:0}
+@keyframes revealImage{from{opacity:.4;transform:scale(1.04)}to{opacity:1;transform:scale(1)}}
+.ticker{padding:17px 0;background:var(--forest);color:var(--ivory);overflow:hidden}
+.ticker-inner{display:flex;justify-content:space-around;gap:30px;font:italic 18px var(--serif);white-space:nowrap}
+.ticker-inner span:after{content:"✳";font:11px var(--sans);color:var(--petal);margin-left:30px}
+
+/* CATEGORIAS */
+.categories{background:var(--ivory)}
+.category-grid{display:grid;grid-template-columns:1.15fr .9fr .9fr;gap:17px;align-items:start}
+.category-card{position:relative;min-height:260px;overflow:hidden;background:var(--sage)}
+.category-card:first-child{min-height:430px}
+.category-card:nth-child(2){margin-top:45px}
+.category-card:nth-child(3){margin-top:12px}
+.category-card img{position:absolute;inset:0;height:100%;transition:transform .6s}
+.category-card:hover img{transform:scale(1.05)}
+.category-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#102a20bd,transparent 70%)}
+.category-info{position:absolute;z-index:1;left:20px;right:17px;bottom:19px;color:white;display:flex;justify-content:space-between;align-items:end;gap:8px}
+.category-info small{font-size:8px;letter-spacing:.13em;text-transform:uppercase}
+.category-info h3{font:29px var(--serif);margin:7px 0 0}
+.arrow-circle{width:34px;height:34px;border:1px solid #ffffffb5;border-radius:50%;display:grid;place-items:center;flex-shrink:0}
+
+/* VITRINE */
+.products-section{background:#ebece3}
+.product-tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.search-box{flex:1;min-width:200px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.search-box input{width:100%;padding:12px;border:0;background:transparent;outline:none;font-size:12px}
+.filter{padding:12px;border:1px solid var(--line);background:transparent;color:var(--forest);font-size:11px}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 17px}
+.product-card{min-width:0}
+.product-photo{position:relative;aspect-ratio:4/5;overflow:hidden;background:#d8dfd2}
+.product-photo img{height:100%;transition:transform .55s}
+.product-card:hover .product-photo img{transform:scale(1.045)}
+.product-tag{position:absolute;top:10px;left:10px;padding:7px 9px;background:var(--ivory);font-size:8px;text-transform:uppercase;letter-spacing:.1em}
+.quick-add{position:absolute;bottom:10px;left:10px;right:10px;padding:13px 8px;border:0;background:var(--ivory);color:var(--forest);font-size:10px;font-weight:700}
+.product-meta{padding-top:13px}
+.product-category{font-size:9px;color:#72776d;text-transform:uppercase;letter-spacing:.12em}
+.product-title-row{display:flex;justify-content:space-between;gap:8px;align-items:start;margin-top:6px}
+.product-title{font:21px/1.2 var(--serif);margin:0;font-weight:400}
+.product-price{font-size:11px;font-weight:700;white-space:nowrap;padding-top:4px}
+.product-desc{font-size:10px;color:#6c7168;line-height:1.7}
+.disclaimer{font-size:10px;color:#70766c;line-height:1.7;margin-top:24px}
+.empty{grid-column:1/-1;text-align:center;padding:45px 15px}
+.empty h3{font:30px var(--serif)}
+
+/* EDITORIAL */
+.editorial{display:grid;grid-template-columns:1fr 1fr;background:var(--forest);color:var(--ivory)}
+.editorial-photo{position:relative;min-height:520px}
+.editorial-photo img{position:absolute;inset:0;height:100%}
+.editorial-copy{padding:70px clamp(30px,7vw,100px);display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.editorial-copy .eyebrow{color:var(--petal)}
+.editorial-copy h2{font:400 clamp(42px,5vw,65px)/1.04 var(--serif);margin:23px 0}
+.editorial-copy h2 em{color:var(--petal)}
+.editorial-copy p{max-width:390px;font-size:12px;line-height:2;color:#ffffffbd;margin:0 0 27px}
+
+/* OCASIÕES */
+.occasion-grid{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}
+.occasion{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:25px 15px 25px 0;border-right:1px solid var(--line)}
+.occasion:not(:first-child){padding-left:18px}
+.occasion:last-child{border:0}
+.occasion small{display:block;font-size:8px;color:#777d72;text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.occasion span{font:21px var(--serif)}
+.occasion b{font-weight:400;color:var(--berry)}
+
+/* INSTAGRAM */
+.instagram{background:var(--petal);padding:85px 0}
+.insta-top{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}
+.insta-top h2{font:400 clamp(38px,5vw,58px)/1.05 var(--serif);margin:12px 0}
+.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.insta-tile{aspect-ratio:1;overflow:hidden}
+.insta-tile img{height:100%;transition:transform .6s}
+.insta-tile:hover img{transform:scale(1.06)}
+.insta-note{font-size:10px;color:#68434a;line-height:1.7;margin-top:16px}
+
+/* CHAMADA E RODAPÉ */
+.closing{text-align:center;padding:90px 20px}
+.closing h2{font:400 clamp(43px,6vw,72px)/1.05 var(--serif);margin:20px auto}
+.closing h2 em{color:var(--berry)}
+.closing p{font-size:12px;line-height:1.8;max-width:430px;margin:0 auto 25px;color:#656b62}
+footer{padding:55px 0 22px;background:var(--forest);color:var(--ivory)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;padding-bottom:40px}
+.footer-col h4{font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--sage)}
+.footer-col a,.footer-col p{display:block;font-size:10px;line-height:1.8;color:#ffffffc4;margin:12px 0}
+.footer-col a:hover{color:white}
+.footer-bottom{border-top:1px solid #ffffff2b;padding-top:17px;font-size:9px;color:#ffffff8a;display:flex;justify-content:space-between;gap:15px}
+
+/* SACOLA */
+.overlay{position:fixed;inset:0;z-index:40;background:#0d1b1490;opacity:0;pointer-events:none;transition:.25s}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;right:0;top:0;z-index:41;height:100dvh;width:min(440px,100%);padding:24px;background:var(--ivory);display:flex;flex-direction:column;transform:translateX(102%);transition:transform .3s}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:17px}
+.drawer-head h2{font:31px var(--serif);margin:0}
+.close{width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:transparent;font-size:20px}
+.cart-items{flex:1;overflow:auto}
+.cart-line{display:grid;grid-template-columns:72px 1fr auto;gap:12px;padding:15px 0;border-bottom:1px solid var(--line)}
+.cart-line img{height:88px}
+.cart-line h4{font:18px var(--serif);margin:2px 0 6px}
+.cart-line p{font-size:10px;color:#6c7168}
+.quantity{display:flex;align-items:center;gap:10px}
+.quantity button{width:25px;height:25px;border:1px solid var(--line);background:transparent}
+.remove{border:0;background:none;color:var(--berry);text-decoration:underline;font-size:10px;padding:7px 0}
+.cart-bottom{padding-top:18px;border-top:1px solid var(--line)}
+.total{display:flex;justify-content:space-between;margin-bottom:15px;font-size:13px}
+.cart-note{font-size:10px;line-height:1.7;color:#74796f}
+.cart-empty{text-align:center;margin:auto;padding:20px}
+.cart-empty h3{font:29px var(--serif)}
+.cart-empty p{font-size:11px;line-height:1.7;color:#73786e}
+
+/* FORMULÁRIO */
+.modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;padding:18px;background:#10261cb8}
+.modal.open{display:grid}
+.modal-card{background:var(--ivory);width:min(540px,100%);max-height:90dvh;overflow:auto;padding:26px}
+.modal-head{display:flex;justify-content:space-between;align-items:center}
+.modal-head h2{font:30px var(--serif)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.field{display:flex;flex-direction:column;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:10px;font-weight:700}
+.field input,.field textarea{padding:12px;border:1px solid var(--line);background:#fff8;font-size:12px}
+.field textarea{min-height:85px}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}
+.toast{position:fixed;bottom:22px;left:50%;z-index:60;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--forest);color:white;padding:14px 20px;font-size:11px;transition:.25s;max-width:calc(100% - 30px)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+@media(max-width:950px){
+ .nav-links{gap:14px}
+ .brand-name{font-size:23px}
+ .hero{min-height:530px}
+ .hero-image{min-height:530px}
+ .hero-copy{padding-left:28px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:680px){
+ .wrap{width:calc(100% - 34px)}
+ .header{height:70px}
+ .brand-name{font-size:22px}
+ .brand-mark{width:31px;height:31px}
+ .nav-links{position:absolute;top:70px;left:0;right:0;display:flex;flex-direction:column;align-items:stretch;gap:0;padding:0 22px;background:var(--ivory);max-height:0;overflow:hidden;transition:max-height .3s,padding .3s;box-shadow:0 12px 20px #183d3210}
+ .nav-links.open{max-height:350px;padding:8px 22px 18px}
+ .nav-links a{padding:15px 0;border-bottom:1px solid var(--line)}
+ .menu-toggle{display:grid}
+ .hero{display:flex;flex-direction:column-reverse}
+ .hero-image{min-height:0;height:390px}
+ .hero-copy{padding:43px 24px}
+ .hero h1{font-size:59px}
+ .hero-note{margin-top:30px}
+ .section{padding:70px 0}
+ .section-head{align-items:flex-start;flex-direction:column;gap:6px}
+ .section-head h2{font-size:43px}
+ .category-grid{grid-template-columns:1fr 1fr;gap:10px}
+ .category-card:first-child{grid-row:span 2;min-height:370px}
+ .category-card:nth-child(2),.category-card:nth-child(3){min-height:180px;margin:0}
+ .category-info{left:12px;right:10px;bottom:12px}
+ .category-info h3{font-size:21px}
+ .category-info small{font-size:7px}
+ .arrow-circle{width:28px;height:28px}
+ .product-grid{gap:25px 12px}
+ .product-title-row{display:block}
+ .product-title{font-size:19px}
+ .product-price{display:block}
+ .quick-add{left:7px;right:7px;bottom:7px;padding:11px 5px;font-size:9px}
+ .product-tools{gap:8px}
+ .search-box{flex-basis:100%}
+ .filter{flex:1;min-width:0;max-width:100%}
+ .editorial{grid-template-columns:1fr}
+ .editorial-photo{min-height:350px}
+ .editorial-copy{padding:50px 25px 55px}
+ .editorial-copy h2{font-size:49px}
+ .occasion-grid{grid-template-columns:1fr 1fr}
+ .occasion{padding:20px 8px 20px 0}
+ .occasion:not(:first-child){padding-left:10px}
+ .occasion:nth-child(2){border-right:0}
+ .occasion:nth-child(n+3){border-top:1px solid var(--line)}
+ .occasion:nth-child(3){padding-left:0}
+ .occasion span{font-size:18px}
+ .insta-top{align-items:flex-start;flex-direction:column}
+ .insta-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+ .footer-grid{gap:22px 15px}
+ .footer-bottom{flex-direction:column}
+ .form-grid{grid-template-columns:1fr}
+ .field.full{grid-column:auto}
+ .modal-card{padding:20px}
+ .modal-actions{flex-direction:column-reverse}
+ .modal-actions .btn{width:100%}
+}
+</style>
+</head>
+
+<body>
+<div class="announcement">FLORES PARA DIZER O QUE AS PALAVRAS NÃO CONSEGUEM</div>
+
+<header class="header" id="header">
+ <div class="wrap nav">
+  <a class="brand" href="#inicio" aria-label="Meri Flores, início">
+   <span class="brand-mark">m</span>
+   <span class="brand-name">meri flores<small>flores que falam por você</small></span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+   <a href="#colecao">Coleção</a>
+   <a href="#categorias">Categorias</a>
+   <a href="#historia">Nosso olhar</a>
+   <a href="#instagram">Instagram</a>
+  </nav>
+  <div class="nav-actions">
+   <button class="icon-btn" id="searchFocus" aria-label="Pesquisar produtos">
+    <svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+   </button>
+   <button class="icon-btn" id="cartOpen" aria-label="Abrir sacola">
+    <svg viewBox="0 0 24 24"><path d="M5 8h14l1 12H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg>
+    <span class="cart-count" id="cartCount">0</span>
+   </button>
+   <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </div>
+ </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+ <div class="hero-copy">
+  <span class="eyebrow">A beleza de sentir</span>
+  <h1>Há sentimentos<br>que <em>florescem.</em></h1>
+  <p>Flores para dizer o que às vezes as palavras não conseguem. Descubra inspirações florais para transformar pequenos gestos em lembranças especiais.</p>
+  <div class="hero-actions">
+   <a class="btn btn-dark" href="#colecao">Explore os arranjos ↗</a>
+   <a class="text-link" href="#categorias">Encontre seu estilo <span>→</span></a>
+  </div>
+  <div class="hero-note">— Beleza natural, escolhida com intenção</div>
+ </div>
+ <div class="hero-image">
+  <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1400&q=85" alt="Composição floral em tons suaves" fetchpriority="high">
+  <div class="stamp"><span><b>MF</b>feito para<br>emocionar</span></div>
+ </div>
+</section>
+
+<div class="ticker"><div class="ticker-inner">
+ <span>Um gesto que floresce</span><span>Beleza em cada detalhe</span><span>Presentes com significado</span><span>Um gesto que floresce</span>
+</div></div>
+
+<section class="section categories" id="categorias">
+ <div class="wrap">
+  <div class="section-head reveal">
+   <div><span class="eyebrow">Encontre seu jeito de presentear</span><h2>Cada flor tem<br>sua própria <em>voz.</em></h2></div>
+   <p>Explore por inspiração e encontre uma composição que combine com o que você quer dizer.</p>
+  </div>
+  <div class="category-grid">
+   <a class="category-card reveal" href="#colecao" data-category="Buquês">
+    <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=900&q=85" alt="Buquê de flores coloridas" loading="lazy">
+    <div class="category-info"><div><small>Clássicos cheios de personalidade</small><h3>Buquês</h3></div><span class="arrow-circle">↗</span></div>
+   </a>
+   <a class="category-card reveal" href="#colecao" data-category="Arranjos">
+    <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=800&q=85" alt="Arranjo floral em vaso" loading="lazy">
+    <div class="category-info"><div><small>Para marcar presença</small><h3>Arranjos</h3></div><span class="arrow-circle">↗</span></div>
+   </a>
+   <a class="category-card reveal" href="#colecao" data-category="Flores delicadas">
+    <img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=800&q=85" alt="Flores em tons delicados" loading="lazy">
+    <div class="category-info"><div><small>Pequenos gestos, grandes afetos</small><h3>Delicadezas</h3></div><span class="arrow-circle">↗</span></div>
+   </a>
+  </div>
+ </div>
+</section>
+
+<section class="section products-section" id="colecao">
+ <div class="wrap">
+  <div class="section-head reveal">
+   <div><span class="eyebrow">Curadoria floral</span><h2>Flores para <em>sentir.</em></h2></div>
+   <p>Encontre uma inspiração para cada sentimento. Os itens e valores desta demonstração precisam ser substituídos pelo catálogo confirmado da Meri Flores.</p>
+  </div>
+  <div class="product-tools">
+   <label class="search-box"><input type="search" id="search" placeholder="Buscar flores e arranjos..." aria-label="Buscar produtos"></label>
+   <select class="filter" id="categoryFilter" aria-label="Filtrar categoria">
+    <option value="">Todas as categorias</option><option>Buquês</option><option>Arranjos</option><option>Flores delicadas</option>
+   </select>
+   <select class="filter" id="sortFilter" aria-label="Ordenar produtos">
+    <option value="featured">Em destaque</option><option value="asc">Menor preço</option><option value="desc">Maior preço</option><option value="name">Nome A–Z</option>
+   </select>
+  </div>
+  <div class="product-grid" id="productGrid" aria-live="polite"></div>
+  <p class="disclaimer">Demonstração visual: nomes, fotografias e preços são ilustrativos, não representam uma oferta comercial confirmada. Consulte a floricultura para verificar composição, disponibilidade e valor antes de encomendar.</p>
+ </div>
+</section>
+
+<section class="editorial" id="historia">
+ <div class="editorial-photo">
+  <img src="https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1200&q=85" alt="Detalhe floral com iluminação natural" loading="lazy">
+ </div>
+ <div class="editorial-copy reveal">
+  <span class="eyebrow">Um presente com intenção</span>
+  <h2>Não é só flor.<br>É tudo aquilo<br>que ela <em>traduz.</em></h2>
+  <p>Um agradecimento que ganha forma. Uma saudade que encontra cor. Uma celebração que merece ser lembrada. A flor certa transforma um instante em sentimento.</p>
+  <a class="text-link" href="#colecao">Encontre sua composição <span>→</span></a>
+ </div>
+</section>
+
+<section class="section" id="ocasioes">
+ <div class="wrap">
+  <div class="section-head reveal">
+   <div><span class="eyebrow">Um sentimento para cada momento</span><h2>O que você quer <em>dizer?</em></h2></div>
+   <p>Escolha uma intenção e encontre sua inspiração floral.</p>
+  </div>
+  <div class="occasion-grid reveal">
+   <a class="occasion" href="#colecao" data-search="rosas"><div><small>Para surpreender</small><span>Romance</span></div><b>↗</b></a>
+   <a class="occasion" href="#colecao" data-search="buquê"><div><small>Para celebrar</small><span>Aniversário</span></div><b>↗</b></a>
+   <a class="occasion" href="#colecao" data-search="delicado"><div><small>Para agradecer</small><span>Gratidão</span></div><b>↗</b></a>
+   <a class="occasion" href="#colecao" data-search=""><div><small>Sem precisar explicar</small><span>Só carinho</span></div><b>↗</b></a>
+  </div>
+ </div>
+</section>
+
+<section class="instagram" id="instagram">
+ <div class="wrap">
+  <div class="insta-top reveal">
+   <div><span class="eyebrow">Um pouco mais de perto</span><h2>Flores no nosso <em>olhar.</em></h2></div>
+   <a class="btn btn-dark" href="https://www.instagram.com/meriflorespr_/" target="_blank" rel="noopener noreferrer">Visite nosso Instagram ↗</a>
+  </div>
+  <div class="insta-grid">
+   <a class="insta-tile" href="https://www.instagram.com/meriflorespr_/" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=600&q=80" alt="Flores em tons rosados" loading="lazy"></a>
+   <a class="insta-tile" href="https://www.instagram.com/meriflorespr_/" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=600&q=80" alt="Buquê colorido" loading="lazy"></a>
+   <a class="insta-tile" href="https://www.instagram.com/meriflorespr_/" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=600&q=80" alt="Arranjo floral" loading="lazy"></a>
+   <a class="insta-tile" href="https://www.instagram.com/meriflorespr_/" target="_blank" rel="noopener noreferrer"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=600&q=80" alt="Flores em composição editorial" loading="lazy"></a>
+  </div>
+  <p class="insta-note">Galeria ilustrativa com imagens de referência, não sincronizada com o Instagram. Substitua pelas fotografias autorizadas da floricultura.</p>
+ </div>
+</section>
+
+<section class="closing">
+ <span class="eyebrow">Seu próximo gesto começa aqui</span>
+ <h2>Deixe algo bonito <em>florescer.</em></h2>
+ <p>Encontre uma inspiração floral para uma pessoa especial — ou simplesmente para deixar o dia mais bonito.</p>
+ <a class="btn btn-dark" href="#colecao">Descobrir a coleção ↗</a>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="footer-grid">
+   <div class="footer-col">
+    <a class="brand" href="#inicio"><span class="brand-mark" style="border-color:var(--ivory);color:var(--ivory)">m</span><span class="brand-name" style="color:var(--ivory)">meri flores<small>flores que falam por você</small></span></a>
+    <p>Flores que carregam sentimentos, aproximam pessoas e tornam momentos especiais.</p>
+   </div>
+   <div class="footer-col"><h4>Explore</h4><a href="#colecao">Coleção floral</a><a href="#categorias">Categorias</a><a href="#ocasioes">Por ocasião</a></div>
+   <div class="footer-col"><h4>Atendimento</h4><a href="https://www.instagram.com/meriflorespr_/" target="_blank" rel="noopener noreferrer">Instagram oficial ↗</a><p>Telefone e horário: configurar com os dados oficiais.</p></div>
+   <div class="footer-col"><h4>Informações</h4><a href="#colecao">Produtos</a><a href="#colecao">Encomendas</a><p>Condições de entrega e pagamento precisam ser confirmadas.</p></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> Meri Flores</span><span>Uma experiência digital botânica.</span></div>
+ </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Sacola de compras" aria-hidden="true">
+ <div class="drawer-head"><h2>Sua sacola</h2><button class="close" id="closeCart" aria-label="Fechar sacola">×</button></div>
+ <div class="cart-items" id="cartItems"></div>
+ <div class="cart-bottom" id="cartBottom" hidden>
+  <div class="total"><span>Subtotal demonstrativo</span><strong id="subtotal">R$ 0,00</strong></div>
+  <p class="cart-note">Esta demonstração não confirma estoque, frete ou pagamento.</p>
+  <button class="btn btn-dark" id="requestOrder" style="width:100%">Preparar solicitação ↗</button>
+ </div>
+</aside>
+
+<div class="modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal-card">
+  <div class="modal-head"><h2 id="modalTitle">Vamos conversar?</h2><button class="close" id="closeModal" aria-label="Fechar formulário">×</button></div>
+  <p style="font-size:12px;line-height:1.8;color:#666d63">Prepare uma mensagem com os produtos escolhidos. Como o contato oficial ainda não foi confirmado, você poderá baixar o resumo e encaminhá-lo depois.</p>
+  <form id="orderForm">
+   <div class="form-grid">
+    <div class="field"><label for="customerName">Seu nome</label><input id="customerName" required maxlength="100" autocomplete="name" placeholder="Seu nome"></div>
+    <div class="field"><label for="customerContact">Seu contato</label><input id="customerContact" required maxlength="100" placeholder="Telefone ou e-mail"></div>
+    <div class="field full"><label for="customerMessage">Observações (opcional)</label><textarea id="customerMessage" maxlength="500" placeholder="Conte um pouco sobre sua ideia ou ocasião"></textarea></div>
+   </div>
+   <p class="cart-note">Nenhum pedido ou pagamento será realizado automaticamente.</p>
+   <div class="modal-actions"><button type="button" class="btn btn-outline" id="cancelOrder">Voltar</button><button class="btn btn-dark" type="submit">Gerar resumo ↗</button></div>
+  </form>
+ </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/*
+ * CONFIGURAÇÃO:
+ * Os produtos abaixo são demonstrações de layout, não o catálogo real.
+ * Substitua-os por produtos e preços confirmados antes de publicar.
+ * Não existe integração de pagamento, estoque ou entrega neste arquivo.
+ */
+const products=[
+ {id:"p1",name:"Buquê Aurora",category:"Buquês",description:"Uma composição colorida e cheia de movimento.",price:189.90,image:"https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=850&q=85",tag:"Em destaque"},
+ {id:"p2",name:"Jardim Sereno",category:"Arranjos",description:"Flores em harmonia para deixar o ambiente especial.",price:229.90,image:"https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=850&q=85",tag:"Composição"},
+ {id:"p3",name:"Rosas com Afeto",category:"Flores delicadas",description:"Uma referência clássica para expressar carinho.",price:159.90,image:"https://images.unsplash.com/photo-1494972308805-463bc619d34e?auto=format&fit=crop&w=850&q=85",tag:"Clássico"},
+ {id:"p4",name:"Buquê Botânico",category:"Buquês",description:"Uma proposta natural com tons suaves.",price:199.90,image:"https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=850&q=85",tag:"Natural"},
+ {id:"p5",name:"Flores do Dia",category:"Arranjos",description:"Uma inspiração floral para celebrar o cotidiano.",price:139.90,image:"https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=850&q=85",tag:"Presentear"},
+ {id:"p6",name:"Toque de Pétalas",category:"Flores delicadas",description:"Uma composição delicada, leve e cheia de cor.",price:119.90,image:"https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=850&q=85",tag:"Delicado"},
+ {id:"p7",name:"Buquê Jardim",category:"Buquês",description:"Mistura floral inspirada na beleza espontânea.",price:179.90,image:"https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=850&q=85",tag:"Botânico"},
+ {id:"p8",name:"Arranjo Essência",category:"Arranjos",description:"Uma referência elegante para decorar e presentear.",price:249.90,image:"https://images.unsplash.com/photo-1508610048659-a06b669e3321?auto=format&fit=crop&w=850&q=85",tag:"Editorial"}
+];
+
+const $=s=>document.querySelector(s);
+const money=n=>new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"}).format(n);
+let cart=[];
+let toastTimer;
+
+function toast(message){
+ const el=$("#toast");
+ el.textContent=message;
+ el.classList.add("show");
+ clearTimeout(toastTimer);
+ toastTimer=setTimeout(()=>el.classList.remove("show"),2600);
+}
+
+function renderProducts(){
+ const query=$("#search").value.trim().toLocaleLowerCase("pt-BR");
+ const category=$("#categoryFilter").value;
+ const sort=$("#sortFilter").value;
+ let list=products.filter(p=>
+  (!category||p.category===category)&&
+  (!query||(p.name+" "+p.category+" "+p.description).toLocaleLowerCase("pt-BR").includes(query))
+ );
+ if(sort==="asc")list.sort((a,b)=>a.price-b.price);
+ if(sort==="desc")list.sort((a,b)=>b.price-a.price);
+ if(sort==="name")list.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR"));
+
+ const grid=$("#productGrid");
+ if(!list.length){
+  grid.innerHTML='<div class="empty"><h3>Nenhuma flor por aqui.</h3><p>Tente outro termo ou categoria.</p></div>';
+  return;
+ }
+ grid.innerHTML=list.map(p=>`
+  <article class="product-card">
+   <div class="product-photo">
+    <img src="${p.image}" alt="${p.name}, imagem ilustrativa" loading="lazy" width="850" height="1062">
+    <span class="product-tag">${p.tag}</span>
+    <button class="quick-add" data-add="${p.id}">Adicionar à sacola +</button>
+   </div>
+   <div class="product-meta">
+    <span class="product-category">${p.category}</span>
+    <div class="product-title-row"><h3 class="product-title">${p.name}</h3><span class="product-price">${money(p.price)}</span></div>
+    <p class="product-desc">${p.description}</p>
+   </div>
+  </article>`).join("");
+ grid.querySelectorAll("[data-add]").forEach(button=>button.addEventListener("click",()=>addToCart(button.dataset.add)));
+}
+
+function addToCart(id){
+ const product=products.find(p=>p.id===id);
+ if(!product)return;
+ const existing=cart.find(p=>p.id===id);
+ if(existing)existing.qty++;
+ else cart.push({...product,qty:1});
+ renderCart();
+ toast(product.name+" adicionado à sacola.");
+}
+
+function changeQuantity(id,delta){
+ const item=cart.find(p=>p.id===id);
+ if(!item)return;
+ item.qty+=delta;
+ if(item.qty<=0)cart=cart.filter(p=>p.id!==id);
+ renderCart();
+}
+
+function removeItem(id){
+ cart=cart.filter(p=>p.id!==id);
+ renderCart();
+}
+
+function renderCart(){
+ $("#cartCount").textContent=cart.reduce((sum,p)=>sum+p.qty,0);
+ const list=$("#cartItems");
+ const bottom=$("#cartBottom");
+
+ if(!cart.length){
+  list.innerHTML='<div class="cart-empty"><h3>Sua sacola está vazia.</h3><p>Adicione uma composição para preparar sua solicitação.</p><button class="btn btn-dark" id="browse">Explorar coleção</button></div>';
+  bottom.hidden=true;
+  $("#browse").addEventListener("click",()=>{closeCart();$("#colecao").scrollIntoView({behavior:"smooth"})});
+  return;
+ }
+
+ list.innerHTML=cart.map(p=>`
+  <div class="cart-line">
+   <img src="${p.image}" alt="" loading="lazy">
+   <div>
+    <h4>${p.name}</h4><p>${money(p.price)} · ${p.category}</p>
+    <div class="quantity">
+     <button data-qty="${p.id}" data-delta="-1" aria-label="Diminuir quantidade">−</button>
+     <span>${p.qty}</span>
+     <button data-qty="${p.id}" data-delta="1" aria-label="Aumentar quantidade">+</button>
+    </div>
+    <button class="remove" data-remove="${p.id}">Remover</button>
+   </div>
+   <strong style="font-size:11px">${money(p.price*p.qty)}</strong>
+  </div>`).join("");
+
+ list.querySelectorAll("[data-qty]").forEach(b=>b.addEventListener("click",()=>changeQuantity(b.dataset.qty,Number(b.dataset.delta))));
+ list.querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>removeItem(b.dataset.remove)));
+
+ $("#subtotal").textContent=money(cart.reduce((sum,p)=>sum+p.price*p.qty,0));
+ bottom.hidden=false;
+}
+
+function openCart(){
+ $("#overlay").classList.add("open");
+ $("#drawer").classList.add("open");
+ $("#drawer").setAttribute("aria-hidden","false");
+ document.body.classList.add("lock");
+ $("#closeCart").focus();
+}
+function closeCart(){
+ $("#overlay").classList.remove("open");
+ $("#drawer").classList.remove("open");
+ $("#drawer").setAttribute("aria-hidden","true");
+ document.body.classList.remove("lock");
+}
+
+$("#cartOpen").addEventListener("click",openCart);
+$("#closeCart").addEventListener("click",closeCart);
+$("#overlay").addEventListener("click",closeCart);
+$("#search").addEventListener("input",renderProducts);
+$("#categoryFilter").addEventListener("change",renderProducts);
+$("#sortFilter").addEventListener("change",renderProducts);
+
+$("#searchFocus").addEventListener("click",()=>{
+ $("#colecao").scrollIntoView({behavior:"smooth"});
+ setTimeout(()=>$("#search").focus(),350);
+});
+
+document.querySelectorAll("[data-category]").forEach(link=>{
+ link.addEventListener("click",()=>{
+  const value=link.dataset.category;
+  $("#categoryFilter").value=[...$("#categoryFilter").options].some(o=>o.value===value)?value:"";
+  renderProducts();
+ });
+});
+document.querySelectorAll("[data-search]").forEach(link=>{
+ link.addEventListener("click",()=>{
+  $("#search").value=link.dataset.search;
+  renderProducts();
+ });
+});
+
+const nav=$("#navLinks");
+const menu=$("#menuToggle");
+menu.addEventListener("click",()=>{
+ const opened=nav.classList.toggle("open");
+ menu.setAttribute("aria-expanded",String(opened));
+ menu.setAttribute("aria-label",opened?"Fechar menu":"Abrir menu");
+});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+ nav.classList.remove("open");
+ menu.setAttribute("aria-expanded","false");
+}));
+
+window.addEventListener("scroll",()=>$("#header").classList.toggle("scrolled",window.scrollY>8),{passive:true});
+
+if("IntersectionObserver" in window){
+ const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{
+  if(entry.isIntersecting){entry.target.classList.add("visible");observer.unobserve(entry.target);}
+ }),{threshold:.12});
+ document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+}else{
+ document.querySelectorAll(".reveal").forEach(el=>el.classList.add("visible"));
+}
+
+const modal=$("#orderModal");
+function openModal(){modal.classList.add("open");$("#customerName").focus();}
+function closeModal(){modal.classList.remove("open");}
+
+$("#requestOrder").addEventListener("click",openModal);
+$("#closeModal").addEventListener("click",closeModal);
+$("#cancelOrder").addEventListener("click",closeModal);
+modal.addEventListener("click",e=>{if(e.target===modal)closeModal();});
+
+document.addEventListener("keydown",e=>{
+ if(e.key==="Escape"){closeCart();closeModal();nav.classList.remove("open");menu.setAttribute("aria-expanded","false");}
+});
+
+$("#orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+
+ const name=$("#customerName").value.trim();
+ const contact=$("#customerContact").value.trim();
+ const message=$("#customerMessage").value.trim();
+ if(!name||!contact){toast("Preencha seu nome e contato.");return;}
+
+ const items=cart.map(p=>`• ${p.name} — ${p.qty} x ${money(p.price)} = ${money(p.price*p.qty)}`).join("\n");
+ const summary=
+`SOLICITAÇÃO DE INFORMAÇÕES — MERI FLORES
+
+Nome: ${name}
+Contato: ${contact}
+
+Itens de interesse:
+${items}
+
+Subtotal demonstrativo: ${money(cart.reduce((sum,p)=>sum+p.price*p.qty,0))}
+
+Observações: ${message||"Não informado"}
+
+Por favor, confirmar disponibilidade, composição, valor final, entrega ou retirada e formas de pagamento. Esta mensagem não confirma um pedido.`;
+
+ const blob=new Blob([summary],{type:"text/plain;charset=utf-8"});
+ const url=URL.createObjectURL(blob);
+ const link=document.createElement("a");
+ link.href=url;
+ link.download="solicitacao-meri-flores.txt";
+ document.body.appendChild(link);
+ link.click();
+ link.remove();
+ URL.revokeObjectURL(url);
+
+ if(navigator.clipboard&&window.isSecureContext){
+  navigator.clipboard.writeText(summary).then(
+   ()=>toast("Resumo baixado e copiado."),
+   ()=>toast("Resumo baixado. Confira o arquivo.")
+  );
+ }else{
+  toast("Resumo de solicitação baixado.");
+ }
+ closeModal();
+});
+
+$("#year").textContent=new Date().getFullYear();
+renderProducts();
+renderCart();
+</script>
+</body>
+</html>

@@ -1,0 +1,2465 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fff8f8">
+  <title>Fofura de Papelaria | Papelaria criativa em Pouso Redondo - SC</title>
+  <meta name="description" content="Descubra papelaria criativa, presentes encantadores, cadernos, planners e novidades na Fofura de Papelaria, em Pouso Redondo - SC.">
+  <meta property="og:title" content="Fofura de Papelaria">
+  <meta property="og:description" content="Pequenos detalhes que deixam seus dias mais fofos.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #fffafa;
+      --surface: #ffffff;
+      --surface-soft: #fff2f5;
+      --pink: #e9a0b7;
+      --pink-dark: #bd547b;
+      --pink-light: #ffe2eb;
+      --lavender: #eee7fb;
+      --lavender-dark: #7760a8;
+      --cream: #fff6e9;
+      --green: #218c55;
+      --ink: #382b37;
+      --muted: #796b78;
+      --line: #f0e2e8;
+      --shadow: 0 12px 40px rgba(105, 61, 84, .08);
+      --shadow-hover: 0 20px 48px rgba(105, 61, 84, .15);
+      --radius: 24px;
+      --font-body: "DM Sans", sans-serif;
+      --font-heading: "Playfair Display", Georgia, serif;
+      --container: 1200px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body.no-scroll { overflow: hidden; }
+
+    img { display: block; max-width: 100%; }
+
+    button, input, a { font: inherit; }
+
+    button { color: inherit; }
+
+    a { color: inherit; }
+
+    button:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 3px solid var(--lavender-dark);
+      outline-offset: 4px;
+    }
+
+    button:disabled { opacity: .5; cursor: not-allowed; }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1, h2, h3 {
+      font-family: var(--font-heading);
+      line-height: 1.2;
+      letter-spacing: -.025em;
+    }
+
+    h1 { font-size: clamp(2.7rem, 5.5vw, 5rem); margin-bottom: 22px; }
+    h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 14px; }
+    h3 { font-size: 1.25rem; margin-bottom: 8px; }
+
+    p { color: var(--muted); }
+
+    .container {
+      width: min(var(--container), calc(100% - 48px));
+      margin-inline: auto;
+    }
+
+    .section { padding: 94px 0; }
+
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 38px;
+    }
+
+    .section-head.center {
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 17px;
+      color: var(--pink-dark);
+      font-size: .77rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .16em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 2px;
+      border-radius: 10px;
+      background: var(--pink-dark);
+    }
+
+    .section-head p { font-size: 1.04rem; margin-bottom: 0; }
+
+    .btn {
+      min-height: 49px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      text-decoration: none;
+      text-align: center;
+      font-size: .92rem;
+      font-weight: 700;
+      line-height: 1.35;
+      cursor: pointer;
+      transition: transform .22s, background .22s, box-shadow .22s;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      color: white;
+      background: var(--pink-dark);
+      box-shadow: 0 8px 22px #bd547b28;
+    }
+
+    .btn-primary:hover { background: #a94068; box-shadow: 0 12px 26px #bd547b38; }
+
+    .btn-outline {
+      background: var(--surface);
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .btn-outline:hover { border-color: var(--pink-dark); color: var(--pink-dark); }
+
+    .btn-whatsapp { color: #fff; background: var(--green); }
+
+    .btn-small { min-height: 42px; padding: 10px 15px; font-size: .85rem; }
+
+    .icon-btn {
+      width: 44px;
+      height: 44px;
+      display: inline-grid;
+      place-items: center;
+      flex-shrink: 0;
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--surface);
+      cursor: pointer;
+      transition: background .2s, border-color .2s;
+    }
+
+    .icon-btn:hover { background: var(--surface-soft); border-color: var(--pink); }
+
+    .icon-btn svg { width: 20px; height: 20px; }
+
+    .topbar {
+      background: #f7e9f0;
+      color: #664255;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .015em;
+    }
+
+    .topbar p { color: inherit; margin: 0; }
+
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 250, 250, .94);
+      border-bottom: 1px solid rgba(240, 226, 232, .9);
+      backdrop-filter: blur(18px);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      flex-shrink: 0;
+      color: var(--pink-dark);
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.35rem;
+      letter-spacing: -.04em;
+    }
+
+    .logo-mark {
+      width: 41px;
+      height: 41px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--pink-light);
+      color: var(--pink-dark);
+    }
+
+    .logo-mark svg { width: 24px; height: 24px; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 26px;
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: .88rem;
+      font-weight: 600;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover { color: var(--pink-dark); }
+
+    .nav-actions { display: flex; align-items: center; gap: 10px; }
+
+    .count {
+      position: absolute;
+      top: -5px;
+      right: -4px;
+      min-width: 20px;
+      height: 20px;
+      padding: 0 5px;
+      display: grid;
+      place-items: center;
+      border-radius: 20px;
+      background: var(--pink-dark);
+      color: white;
+      font-size: .7rem;
+      font-weight: 700;
+    }
+
+    .menu-toggle { display: none; }
+
+    .search-panel {
+      display: none;
+      padding: 0 0 18px;
+    }
+
+    .search-panel.open { display: block; }
+
+    .search-wrap { position: relative; }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    .search-input {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 18px 12px 48px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: .95rem;
+    }
+
+    .hero {
+      padding: 58px 0 78px;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 4% 10%, #fce7ef 0, transparent 35%),
+        radial-gradient(ellipse at 94% 85%, #eee5fa 0, transparent 38%),
+        var(--bg);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(35px, 6vw, 76px);
+      align-items: center;
+    }
+
+    .hero-copy { padding: 15px 0; }
+
+    .hero h1 span { color: var(--pink-dark); }
+
+    .hero-copy > p {
+      max-width: 500px;
+      font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+      line-height: 1.9;
+      margin-bottom: 27px;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .hero-note {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 25px;
+      font-size: .85rem;
+    }
+
+    .hero-note svg { width: 19px; color: var(--pink-dark); flex-shrink: 0; }
+
+    .hero-visual {
+      position: relative;
+      min-width: 0;
+    }
+
+    .hero-photo {
+      aspect-ratio: 4 / 4.35;
+      max-height: 620px;
+      overflow: hidden;
+      position: relative;
+      border-radius: 190px 190px 28px 28px;
+      background: var(--lavender);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: transform .8s;
+    }
+
+    .hero-photo:hover img { transform: scale(1.035); }
+
+    .floating-note {
+      position: absolute;
+      left: -28px;
+      bottom: 42px;
+      max-width: 210px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 19px;
+      border: 1px solid #f0e2e8;
+      border-radius: 19px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .floating-note .heart {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border-radius: 14px;
+      background: var(--pink-light);
+      color: var(--pink-dark);
+    }
+
+    .floating-note strong { display: block; font-size: .84rem; line-height: 1.35; }
+    .floating-note small { display: block; margin-top: 4px; color: var(--muted); font-size: .72rem; }
+
+    .hero-sticker {
+      position: absolute;
+      top: 35px;
+      right: -22px;
+      width: 77px;
+      height: 77px;
+      display: grid;
+      place-items: center;
+      border: 5px solid var(--bg);
+      border-radius: 50%;
+      background: var(--pink-light);
+      color: var(--pink-dark);
+      font-family: var(--font-heading);
+      font-size: .85rem;
+      font-weight: 700;
+      text-align: center;
+      transform: rotate(10deg);
+    }
+
+    .benefits {
+      padding: 25px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .benefit {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 13px;
+    }
+
+    .benefit-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      border-radius: 15px;
+      background: var(--surface-soft);
+      color: var(--pink-dark);
+    }
+
+    .benefit-icon svg { width: 22px; height: 22px; }
+    .benefit strong { display: block; font-size: .88rem; }
+    .benefit small { display: block; color: var(--muted); font-size: .77rem; }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .category {
+      padding: 0;
+      overflow: hidden;
+      text-align: left;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: var(--surface);
+      cursor: pointer;
+      transition: transform .25s, box-shadow .25s, border-color .25s;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+      border-color: #e9b8c9;
+      box-shadow: var(--shadow-hover);
+    }
+
+    .category-photo {
+      aspect-ratio: 1.25 / 1;
+      overflow: hidden;
+      background: var(--lavender);
+    }
+
+    .category-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .category:hover .category-photo img { transform: scale(1.07); }
+
+    .category-body { padding: 17px 17px 19px; }
+
+    .category h3 {
+      margin: 0 0 8px;
+      font-family: var(--font-body);
+      font-size: .98rem;
+      font-weight: 700;
+      letter-spacing: -.025em;
+    }
+
+    .category-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--pink-dark);
+      font-size: .8rem;
+      font-weight: 700;
+    }
+
+    .category-link svg { width: 15px; height: 15px; transition: transform .2s; }
+    .category:hover .category-link svg { transform: translateX(3px); }
+
+    .products-section { background: var(--cream); }
+
+    .product-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 27px;
+    }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; }
+
+    .chip {
+      min-height: 39px;
+      padding: 8px 15px;
+      border: 1px solid #e9dfe1;
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: .81rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .2s, color .2s, border-color .2s;
+    }
+
+    .chip:hover, .chip[aria-pressed="true"] {
+      background: var(--pink-dark);
+      color: #fff;
+      border-color: var(--pink-dark);
+    }
+
+    .result-count { color: var(--muted); font-size: .82rem; }
+
+    .demo-notice {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 24px;
+      padding: 13px 16px;
+      border: 1px solid #e9ddec;
+      border-radius: 13px;
+      background: #f8f2ff;
+      color: #665277;
+      font-size: .84rem;
+    }
+
+    .demo-notice svg { width: 19px; height: 19px; flex-shrink: 0; margin-top: 2px; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .product-card {
+      min-width: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #efe4e5;
+      border-radius: 20px;
+      background: var(--surface);
+      transition: transform .25s, box-shadow .25s;
+    }
+
+    .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+
+    .product-photo {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      background: #f8edf1;
+      cursor: pointer;
+    }
+
+    .product-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s;
+    }
+
+    .product-card:hover .product-photo img { transform: scale(1.045); }
+
+    .product-tag {
+      position: absolute;
+      left: 12px;
+      top: 12px;
+      z-index: 2;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.95);
+      color: var(--pink-dark);
+      font-size: .7rem;
+      font-weight: 700;
+      box-shadow: 0 2px 10px #0000000a;
+    }
+
+    .product-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+    }
+
+    .product-category {
+      margin-bottom: 5px;
+      color: var(--lavender-dark);
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .07em;
+    }
+
+    .product-title {
+      margin-bottom: 7px;
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
+      letter-spacing: -.02em;
+    }
+
+    .product-description {
+      flex: 1;
+      margin-bottom: 15px;
+      font-size: .83rem;
+      line-height: 1.65;
+    }
+
+    .product-price {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 8px;
+      min-height: 28px;
+      margin-bottom: 15px;
+      color: var(--pink-dark);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    .product-price del {
+      color: #988995;
+      font-size: .83rem;
+      font-weight: 500;
+    }
+
+    .product-price .no-price {
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 500;
+    }
+
+    .product-actions { display: grid; grid-template-columns: 1fr; gap: 8px; }
+    .product-actions .btn { width: 100%; }
+
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 55px 20px;
+      border: 1px dashed var(--pink);
+      border-radius: 20px;
+      background: var(--surface);
+      text-align: center;
+    }
+
+    .empty-state svg { width: 40px; height: 40px; color: var(--pink-dark); margin: 0 auto 12px; }
+    .empty-state p { margin-bottom: 18px; }
+
+    .collection {
+      background: var(--surface);
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 23px;
+    }
+
+    .collection-card {
+      min-height: 330px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: clamp(24px, 4vw, 43px);
+      border-radius: 27px;
+      background: var(--lavender);
+      isolation: isolate;
+    }
+
+    .collection-card > img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s;
+    }
+
+    .collection-card:hover > img { transform: scale(1.04); }
+
+    .collection-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(44,28,41,.78), rgba(44,28,41,.08) 90%);
+    }
+
+    .collection-card .collection-copy { max-width: 450px; }
+    .collection-card h3 { color: white; font-size: clamp(1.65rem, 3vw, 2.4rem); }
+    .collection-card p { color: #fff; margin-bottom: 20px; font-size: .94rem; }
+    .collection-card .btn { background: white; color: var(--ink); }
+
+    .collection-card.secondary {
+      background: var(--pink-light);
+    }
+
+    .collection-card.secondary::after {
+      background: linear-gradient(0deg, rgba(44,28,41,.73), rgba(44,28,41,.02) 100%);
+    }
+
+    .about-section { background: var(--surface-soft); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(35px, 7vw, 90px);
+      align-items: center;
+    }
+
+    .about-photo {
+      aspect-ratio: 4 / 4.2;
+      overflow: hidden;
+      position: relative;
+      border-radius: 25px;
+      background: var(--lavender);
+    }
+
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    .about-copy p { line-height: 1.95; }
+
+    .about-quote {
+      margin: 23px 0;
+      padding: 18px 22px;
+      border-left: 3px solid var(--pink-dark);
+      border-radius: 0 14px 14px 0;
+      background: rgba(255,255,255,.7);
+      color: var(--ink);
+      font-family: var(--font-heading);
+      font-size: 1.16rem;
+      font-style: italic;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-auto-rows: 190px;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      border-radius: 18px;
+      background: var(--lavender);
+      cursor: zoom-in;
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s;
+    }
+
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    .gallery-item::after {
+      content: "Ampliar foto";
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      color: var(--ink);
+      font-size: .72rem;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: opacity .2s, transform .2s;
+    }
+
+    .gallery-item:hover::after, .gallery-item:focus-visible::after {
+      opacity: 1;
+      transform: none;
+    }
+
+    .instagram-section { padding: 20px 0 94px; }
+
+    .instagram-banner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 25px;
+      padding: clamp(28px, 5vw, 55px);
+      border: 1px solid #eedfeb;
+      border-radius: 28px;
+      background: linear-gradient(125deg, #fbe4ec, #eee7fb 85%);
+    }
+
+    .instagram-banner h2 { font-size: clamp(1.8rem, 3vw, 2.65rem); }
+    .instagram-banner p { max-width: 590px; margin-bottom: 0; }
+
+    .instagram-mark {
+      width: 82px;
+      height: 82px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #fff;
+      border-radius: 26px;
+      background: rgba(255,255,255,.75);
+      color: var(--pink-dark);
+    }
+
+    .instagram-mark svg { width: 40px; height: 40px; }
+
+    .contact-section { background: var(--surface); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 45px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 22px;
+      margin-top: 25px;
+    }
+
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+
+    .contact-item .benefit-icon { width: 45px; height: 45px; }
+
+    .contact-item strong { display: block; margin-bottom: 3px; font-size: .9rem; }
+    .contact-item p, .contact-item a { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.7; }
+    .contact-item a:hover { color: var(--pink-dark); }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .map-card {
+      min-height: 370px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 25px;
+      background: var(--lavender);
+      isolation: isolate;
+    }
+
+    .map-card > img {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .map-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(0deg, rgba(47,34,50,.8), rgba(47,34,50,.02) 85%);
+    }
+
+    .map-card h3 { color: white; font-size: 1.7rem; }
+    .map-card p { color: white; font-size: .88rem; }
+    .map-card .btn { background: white; color: var(--ink); }
+
+    .footer {
+      padding: 56px 0 25px;
+      background: #f1e9f7;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr .7fr 1fr;
+      gap: 45px;
+      padding-bottom: 38px;
+    }
+
+    .footer .logo { margin-bottom: 16px; }
+    .footer p { font-size: .88rem; }
+    .footer h3 { margin-bottom: 16px; font-family: var(--font-body); font-size: .92rem; letter-spacing: 0; }
+    .footer ul { display: grid; gap: 9px; padding: 0; margin: 0; list-style: none; }
+    .footer li, .footer a:not(.logo) { color: #75657a; font-size: .87rem; text-decoration: none; }
+    .footer a:hover { color: var(--pink-dark); }
+    .footer-bottom { padding-top: 20px; border-top: 1px solid #ded2e6; }
+    .footer-bottom p { margin: 0; font-size: .78rem; }
+
+    .whatsapp-fab {
+      position: fixed;
+      right: max(20px, env(safe-area-inset-right));
+      bottom: calc(20px + env(safe-area-inset-bottom));
+      z-index: 40;
+      width: 59px;
+      height: 59px;
+      display: grid;
+      place-items: center;
+      border: 0;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      box-shadow: 0 6px 24px #0002;
+      transition: transform .2s;
+      text-decoration: none;
+    }
+
+    .whatsapp-fab:hover { transform: translateY(-4px) scale(1.03); }
+    .whatsapp-fab svg { width: 29px; height: 29px; }
+
+    dialog {
+      width: min(550px, calc(100% - 28px));
+      max-height: min(86vh, 850px);
+      padding: 0;
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--surface);
+      color: var(--ink);
+      box-shadow: 0 24px 100px #29182c38;
+    }
+
+    dialog::backdrop { background: rgba(38,25,42,.57); backdrop-filter: blur(4px); }
+
+    .dialog-head {
+      position: sticky;
+      top: 0;
+      z-index: 3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 18px 22px;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .dialog-head h3 { margin: 0; font-size: 1.25rem; }
+
+    .dialog-body { padding: 22px; }
+
+    .cart-empty { padding: 18px 0; text-align: center; }
+    .cart-empty svg { width: 44px; height: 44px; color: var(--pink-dark); margin: 0 auto 14px; }
+
+    .cart-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 12px;
+      align-items: center;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cart-row strong { display: block; font-size: .9rem; }
+    .cart-row small { color: var(--muted); }
+
+    .quantity { display: flex; align-items: center; gap: 10px; }
+
+    .quantity button {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      background: var(--bg);
+      cursor: pointer;
+    }
+
+    .remove-item {
+      margin-top: 5px;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--pink-dark);
+      font-size: .78rem;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .cart-summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin: 20px 0;
+      font-weight: 700;
+    }
+
+    .cart-note { font-size: .78rem; line-height: 1.6; }
+    .full-width { width: 100%; }
+
+    .lightbox {
+      width: min(900px, calc(100% - 24px));
+      max-height: 92vh;
+      overflow: hidden;
+    }
+
+    .lightbox .dialog-body { padding: 0; }
+    .lightbox-image { max-height: 76vh; width: 100%; object-fit: contain; background: #f8f1f4; }
+    .lightbox-caption { padding: 13px 20px; margin: 0; font-size: .87rem; }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(90px + env(safe-area-inset-bottom));
+      z-index: 100;
+      max-width: calc(100% - 30px);
+      padding: 13px 20px;
+      border-radius: 14px;
+      background: #392b39;
+      color: white;
+      font-size: .87rem;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, 12px);
+      transition: opacity .2s, transform .2s;
+    }
+
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: none; }
+
+    @media (min-width: 1450px) {
+      .hero { padding-top: 75px; padding-bottom: 95px; }
+    }
+
+    @media (max-width: 1050px) {
+      .nav { gap: 15px; }
+      .nav-links { gap: 16px; }
+      .nav-links a { font-size: .83rem; }
+      .logo { font-size: 1.16rem; }
+      .categories-grid, .product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .hero-grid { gap: 38px; }
+    }
+
+    @media (max-width: 820px) {
+      .container { width: min(100% - 36px, var(--container)); }
+      .section { padding: 70px 0; }
+
+      .nav { min-height: 72px; }
+      .menu-toggle { display: inline-grid; }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 20px 18px;
+        border-bottom: 1px solid var(--line);
+        background: var(--bg);
+        box-shadow: 0 15px 20px #00000008;
+      }
+
+      .nav-links.open { display: flex; flex-direction: column; }
+      .nav-links li { border-bottom: 1px solid var(--line); }
+      .nav-links li:last-child { border-bottom: 0; }
+      .nav-links a { display: block; padding: 12px 3px; font-size: .94rem; }
+      .nav-actions .desktop-whatsapp { display: none; }
+
+      .hero { padding: 45px 0 58px; }
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 25px; }
+      .hero-photo { border-radius: 140px 140px 23px 23px; }
+      .floating-note { left: -12px; bottom: 25px; padding: 12px; }
+      .hero-sticker { right: -8px; }
+
+      .categories-grid, .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .category-body { padding: 14px; }
+      .product-body { padding: 14px; }
+      .product-actions { grid-template-columns: 1fr; }
+
+      .collection-grid { grid-template-columns: 1fr 1fr; }
+      .collection-card { min-height: 330px; }
+      .about-grid { gap: 30px; }
+      .gallery-grid { grid-auto-rows: 150px; }
+      .contact-grid { gap: 25px; }
+      .footer-grid { gap: 25px; }
+    }
+
+    @media (max-width: 560px) {
+      body { font-size: 15px; }
+      .container { width: calc(100% - 30px); }
+      .section { padding: 58px 0; }
+      h1 { font-size: clamp(2.45rem, 10vw, 3.35rem); }
+      h2 { font-size: clamp(1.9rem, 8vw, 2.55rem); }
+
+      .topbar { font-size: .71rem; }
+      .nav { min-height: 67px; gap: 9px; }
+      .logo { gap: 7px; font-size: 1.02rem; }
+      .logo-mark { width: 35px; height: 35px; border-radius: 12px; }
+      .nav-actions { gap: 6px; }
+      .icon-btn { width: 39px; height: 39px; }
+      .icon-btn svg { width: 18px; height: 18px; }
+
+      .hero { padding: 35px 0 45px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-copy { padding: 0; }
+      .hero-copy > p { font-size: 1rem; line-height: 1.8; }
+      .hero-actions { display: grid; grid-template-columns: 1fr; }
+      .hero-actions .btn { width: 100%; }
+      .hero-note { font-size: .78rem; }
+      .hero-photo { width: 88%; margin: 0 auto; aspect-ratio: 1 / 1.05; border-radius: 120px 120px 22px 22px; }
+      .floating-note { left: -1px; bottom: 17px; max-width: 190px; padding: 10px; }
+      .floating-note .heart { width: 36px; height: 36px; }
+      .hero-sticker { top: 14px; right: 0; width: 65px; height: 65px; font-size: .75rem; }
+
+      .benefit-grid { grid-template-columns: 1fr; gap: 17px; }
+      .benefit { justify-content: flex-start; }
+      .benefit-icon { width: 39px; height: 39px; }
+
+      .categories-grid, .product-grid { gap: 12px; }
+      .category { border-radius: 16px; }
+      .category-photo { aspect-ratio: 1 / 1; }
+      .category-body { padding: 12px; }
+      .category h3 { font-size: .86rem; }
+      .category-link { font-size: .74rem; }
+
+      .product-toolbar { align-items: flex-start; }
+      .chips { gap: 7px; }
+      .chip { min-height: 36px; padding: 7px 11px; font-size: .75rem; }
+      .result-count { width: 100%; }
+      .demo-notice { font-size: .77rem; }
+      .product-card { border-radius: 15px; }
+      .product-photo { aspect-ratio: 1 / 1; }
+      .product-tag { top: 8px; left: 8px; padding: 5px 8px; font-size: .65rem; }
+      .product-body { padding: 11px; }
+      .product-category { font-size: .62rem; }
+      .product-title { font-size: .86rem; }
+      .product-description { font-size: .76rem; }
+      .product-price { font-size: .96rem; }
+      .product-price del { font-size: .72rem; }
+      .product-actions .btn { min-height: 39px; padding: 9px 7px; font-size: .76rem; }
+
+      .collection-grid { grid-template-columns: 1fr; }
+      .collection-card { min-height: 300px; border-radius: 20px; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 25px; }
+      .about-photo { aspect-ratio: 4 / 3; order: 2; }
+      .about-quote { font-size: 1.05rem; }
+
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 140px; gap: 10px; }
+      .gallery-item:first-child { grid-row: span 2; grid-column: span 2; }
+
+      .instagram-section { padding: 0 0 58px; }
+      .instagram-banner { grid-template-columns: 1fr; gap: 20px; padding: 26px 22px; border-radius: 21px; }
+      .instagram-mark { width: 55px; height: 55px; border-radius: 17px; grid-row: 1; }
+      .instagram-mark svg { width: 29px; height: 29px; }
+      .instagram-banner .btn { width: 100%; }
+
+      .contact-grid { grid-template-columns: 1fr; }
+      .map-card { min-height: 300px; }
+      .contact-actions .btn { flex: 1 1 100%; }
+
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px 18px; }
+      .footer-grid > :first-child { grid-column: 1 / -1; }
+      .footer-grid > :last-child { grid-column: 1 / -1; }
+      .footer { padding-top: 42px; }
+      .footer .logo { font-size: 1.2rem; }
+
+      .whatsapp-fab { width: 53px; height: 53px; right: 15px; bottom: calc(15px + env(safe-area-inset-bottom)); }
+      .dialog-body { padding: 17px; }
+      .dialog-head { padding: 15px 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <p>Um universo de papelaria criativa esperando por você em Pouso Redondo, SC.</p>
+  </div>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="logo" href="#inicio" aria-label="Fofura de Papelaria - início">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+            </svg>
+          </span>
+          Fofura de Papelaria
+        </a>
+
+        <ul class="nav-links" id="menu">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#categorias">Categorias</a></li>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#novidades">Novidades</a></li>
+          <li><a href="#sobre">Sobre a loja</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="icon-btn" id="searchToggle" aria-label="Buscar produtos" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="10.8" cy="10.8" r="6.8"/>
+              <path d="m16 16 5 5"/>
+            </svg>
+          </button>
+
+          <button class="icon-btn" id="bagToggle" aria-label="Abrir sacola">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 8h14l-1 12H6L5 8Z"/>
+              <path d="M9 8a3 3 0 0 1 6 0"/>
+            </svg>
+            <span class="count" id="bagCount" hidden>0</span>
+          </button>
+
+          <a class="btn btn-whatsapp desktop-whatsapp" data-wa href="#">WhatsApp</a>
+
+          <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+              <path d="M4 7h16M4 12h16M4 17h16"/>
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div class="search-panel" id="searchPanel">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="10.8" cy="10.8" r="6.8"/>
+            <path d="m16 16 5 5"/>
+          </svg>
+          <input class="search-input" type="search" id="searchInput" placeholder="O que você está procurando?" aria-label="Buscar produtos por nome">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Um mundo de pequenos encantos</span>
+          <h1>Pequenos detalhes que deixam seus dias <span>mais fofos.</span></h1>
+          <p>Descubra papelaria criativa, presentes encantadores e novidades para colorir sua rotina. Seu próximo detalhe favorito pode estar aqui.</p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#produtos">
+              Explorar produtos
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </a>
+            <a class="btn btn-outline" data-wa href="#">Falar pelo WhatsApp</a>
+          </div>
+
+          <div class="hero-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+            Pouso Redondo - SC, ao lado da loja Avistão
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-photo">
+            <img
+              src="https://images.unsplash.com/photo-1455390582262-044c00442bac?auto=format&amp;fit=crop&amp;w=1000&amp;q=85"
+              alt="Composição editorial de caderno e materiais de escrita em uma mesa"
+              width="1000"
+              height="1088"
+              fetchpriority="high"
+              decoding="async">
+          </div>
+
+          <div class="floating-note">
+            <span class="heart" aria-hidden="true">
+              <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+              </svg>
+            </span>
+            <span><strong>Pequenas coisas, grandes alegrias</strong><small>Seu cantinho criativo</small></span>
+          </div>
+
+          <div class="hero-sticker" aria-hidden="true">feito com<br>carinho</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits" aria-label="Conheça a Fofura">
+      <div class="container benefit-grid">
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z"/>
+            </svg>
+          </span>
+          <span><strong>Papelaria criativa</strong><small>Detalhes para inspirar</small></span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M20 12v9H4v-9M2 7h20v5H2zM12 7v14"/>
+              <path d="M12 7H7.5a2.5 2.5 0 1 1 2.5-2.5V7Zm0 0h4.5A2.5 2.5 0 1 0 14 4.5V7Z"/>
+            </svg>
+          </span>
+          <span><strong>Presentes especiais</strong><small>Surpresas para compartilhar</small></span>
+        </div>
+        <div class="benefit">
+          <span class="benefit-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8m0-12.8L5.6 18.4"/>
+            </svg>
+          </span>
+          <span><strong>Novidades encantadoras</strong><small>Ideias para o seu dia</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Encontre seus favoritos</span>
+          <h2>Um cantinho para cada ideia.</h2>
+          <p>Explore nossos universos de criatividade e encontre inspiração para estudar, organizar ou presentear.</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid"></div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="produtos">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Escolhas especiais</span>
+          <h2>Pequenas fofuras, grandes descobertas.</h2>
+          <p>Confira os itens da vitrine e consulte a loja sobre disponibilidade, valores e novidades.</p>
+        </div>
+
+        <div class="demo-notice" id="demoNotice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 11v5m0-8h.01"/>
+          </svg>
+          <span>Esta vitrine contém produtos, descrições e preços demonstrativos. As fotografias são ilustrativas e não representam necessariamente os itens disponíveis na loja.</span>
+        </div>
+
+        <div class="product-toolbar">
+          <div class="chips" id="categoryFilters" role="group" aria-label="Filtrar produtos por categoria"></div>
+          <span class="result-count" id="resultCount" aria-live="polite"></span>
+        </div>
+
+        <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section collection" id="novidades">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Inspire-se</span>
+          <h2>Novidades que dão cor à rotina.</h2>
+          <p>Novas ideias, combinações delicadas e detalhes que transformam o cotidiano em algo especial.</p>
+        </div>
+
+        <div class="collection-grid">
+          <article class="collection-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&amp;fit=crop&amp;w=1100&amp;q=82"
+              alt="Caderno aberto com páginas para anotações"
+              width="1100" height="850" loading="lazy" decoding="async">
+            <div class="collection-copy">
+              <h3>Novas ideias começam no papel.</h3>
+              <p>Inspire seus estudos, organize seus planos e dê espaço para a criatividade.</p>
+              <a class="btn" href="#produtos">Explorar a vitrine</a>
+            </div>
+          </article>
+
+          <article class="collection-card secondary reveal">
+            <img
+              src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&amp;fit=crop&amp;w=850&amp;q=82"
+              alt="Materiais coloridos de arte e criação"
+              width="850" height="1000" loading="lazy" decoding="async">
+            <div class="collection-copy">
+              <h3>Um presente cheio de carinho.</h3>
+              <p>Encontre inspirações para surpreender alguém especial.</p>
+              <a class="btn" data-wa data-msg="Olá! Gostaria de conhecer as opções de presentes da Fofura de Papelaria." href="#">Consultar presentes</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="sobre">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <img
+            src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&amp;fit=crop&amp;w=1000&amp;q=82"
+            alt="Materiais de escrita e papelaria organizados sobre uma mesa"
+            width="1000" height="1050" loading="lazy" decoding="async">
+        </div>
+
+        <div class="about-copy reveal">
+          <span class="eyebrow">Prazer, somos a Fofura</span>
+          <h2>Um mundo de criatividade nos pequenos detalhes.</h2>
+          <p>A Fofura de Papelaria é um espaço para quem ama papelaria criativa, presentes diferentes e detalhes que tornam a rotina mais especial.</p>
+          <p>A proposta é reunir inspirações para presentear, organizar os estudos e colocar mais cor no dia a dia. Queremos que cada visita seja uma oportunidade de descobrir algo que combine com você.</p>
+          <blockquote class="about-quote">"Talvez a nossa loja não faça sentido pra todo mundo, mas se fizer pra você... Você vai amar!"</blockquote>
+          <a class="btn btn-primary" data-wa data-msg="Olá! Conheci a Fofura de Papelaria pelo site e gostaria de conhecer melhor a loja." href="#">Venha conhecer a loja</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Inspiração em cada detalhe</span>
+          <h2>Um olhar pelo universo da papelaria.</h2>
+          <p>Referências visuais de cadernos, materiais criativos e composições de papelaria. Clique nas imagens para ampliar.</p>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <section class="instagram-section">
+      <div class="container">
+        <div class="instagram-banner reveal">
+          <div>
+            <span class="eyebrow">Vamos nos encontrar por lá?</span>
+            <h2>Mais fofura no seu feed.</h2>
+            <p>Acompanhe o perfil oficial da Fofura de Papelaria para conferir as publicações, novidades e informações compartilhadas pela loja.</p>
+            <a class="btn btn-primary" href="https://www.instagram.com/fofura_de_papelaria/" target="_blank" rel="noopener noreferrer" style="margin-top:22px">
+              Visitar Instagram
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="3" width="18" height="18" rx="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <path d="M17.5 6.5h.01"/>
+              </svg>
+            </a>
+          </div>
+          <div class="instagram-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M17.5 6.5h.01"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contato">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Estamos pertinho</span>
+          <h2>Venha nos fazer uma visita.</h2>
+          <p>Tem alguma dúvida ou quer saber se aquele produto está disponível? Fale com a gente ou venha conhecer a loja.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="contact-info">
+              <div class="contact-item">
+                <span class="benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/>
+                    <circle cx="12" cy="10" r="2.5"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Endereço</strong>
+                  <p>Rua Vinte e Três de Julho, 721, Centro<br>Pouso Redondo - SC, 89172-000<br>Ao lado da loja Avistão.</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7l.5 3a2 2 0 0 1-.6 1.8L7.2 10a16 16 0 0 0 6 6l1.5-1.8a2 2 0 0 1 1.8-.6l3 .5a2 2 0 0 1 1.5 2.8Z"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Telefone e WhatsApp</strong>
+                  <a href="tel:+5547992561229">(47) 99256-1229</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <circle cx="12" cy="12" r="9"/>
+                    <path d="M12 7v5l3 2"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Horários de funcionamento</strong>
+                  <p id="openingHours">Consulte os horários de atendimento pelo WhatsApp.</p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <span class="benefit-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+                    <rect x="3" y="3" width="18" height="18" rx="5"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <path d="M17.5 6.5h.01"/>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Instagram</strong>
+                  <a href="https://www.instagram.com/fofura_de_papelaria/" target="_blank" rel="noopener noreferrer">@fofura_de_papelaria</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a class="btn btn-whatsapp" data-wa href="#">Conversar pelo WhatsApp</a>
+              <a class="btn btn-outline" id="mapLink" target="_blank" rel="noopener noreferrer" href="#">Abrir no Google Maps</a>
+            </div>
+          </div>
+
+          <div class="map-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+              alt="Ambiente de loja com decoração organizada, usado como imagem ilustrativa"
+              width="1000" height="850" loading="lazy" decoding="async">
+            <div>
+              <h3>Seu próximo achadinho está pertinho.</h3>
+              <p>Encontre a Fofura de Papelaria no centro de Pouso Redondo.</p>
+              <a class="btn" id="mapCardLink" target="_blank" rel="noopener noreferrer" href="#">Ver localização no mapa</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="logo" href="#inicio">
+            <span class="logo-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21l7.8-7.5 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+              </svg>
+            </span>
+            Fofura de Papelaria
+          </a>
+          <p>Um universo de papelaria criativa, presentes e detalhes que deixam a rotina mais especial.</p>
+        </div>
+
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="#categorias">Categorias</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#novidades">Novidades</a></li>
+            <li><a href="#sobre">Sobre a loja</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Entre em contato</h3>
+          <p>Rua Vinte e Três de Julho, 721, Centro<br>Pouso Redondo - SC</p>
+          <p><a href="tel:+5547992561229">(47) 99256-1229</a></p>
+          <p><a href="https://www.instagram.com/fofura_de_papelaria/" target="_blank" rel="noopener noreferrer">Instagram oficial</a></p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Fofura de Papelaria. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-fab" data-wa href="#" aria-label="Conversar com a Fofura de Papelaria pelo WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.52 3.48A11.83 11.83 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L.05 24l6.26-1.64a11.9 11.9 0 0 0 5.77 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.5-8.42ZM12.08 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.72.98.99-3.63-.24-.37a9.83 9.83 0 0 1-1.51-5.26c0-5.46 4.44-9.9 9.9-9.9a9.83 9.83 0 0 1 7.01 2.91 9.83 9.83 0 0 1 2.9 7.01c0 5.46-4.44 9.9-9.9 9.9Zm5.43-7.41c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.8-1.49-1.78-1.66-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.87 1.22 3.07c.15.2 2.1 3.21 5.09 4.5.71.31 1.26.49 1.69.63.71.22 1.35.19 1.86.11.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/>
+    </svg>
+  </a>
+
+  <dialog id="bagDialog" aria-labelledby="bagTitle">
+    <div class="dialog-head">
+      <h3 id="bagTitle">Sua sacola</h3>
+      <button class="icon-btn" data-close aria-label="Fechar sacola">✕</button>
+    </div>
+    <div class="dialog-body" id="bagContent"></div>
+  </dialog>
+
+  <dialog id="productDialog" aria-labelledby="productDialogTitle">
+    <div class="dialog-head">
+      <h3 id="productDialogTitle">Detalhes do produto</h3>
+      <button class="icon-btn" data-close aria-label="Fechar detalhes">✕</button>
+    </div>
+    <div class="dialog-body" id="productDialogContent"></div>
+  </dialog>
+
+  <dialog id="galleryDialog" class="lightbox" aria-labelledby="galleryDialogTitle">
+    <div class="dialog-head">
+      <h3 id="galleryDialogTitle">Galeria</h3>
+      <button class="icon-btn" data-close aria-label="Fechar imagem">✕</button>
+    </div>
+    <div class="dialog-body" id="galleryDialogContent"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    "use strict";
+
+    /*
+      CONFIGURAÇÃO DA LOJA
+      Edite os dados abaixo sem precisar alterar a estrutura visual.
+      Produtos e preços atuais são demonstrativos.
+      As URLs de imagens são referências ilustrativas externas.
+    */
+    const CONFIG = {
+      whatsapp: "5547992561229",
+      address: "Rua Vinte e Três de Julho, 721, Centro, Pouso Redondo - SC, 89172-000",
+      hours: null,
+      demo: true,
+
+      categories: [
+        {
+          id: "cadernos",
+          name: "Cadernos e planners",
+          image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=600&q=80",
+          alt: "Caderno aberto para anotações"
+        },
+        {
+          id: "canetas",
+          name: "Canetas e marca-textos",
+          image: "https://images.unsplash.com/photo-1455390582262-044c00442bac?auto=format&fit=crop&w=600&q=80",
+          alt: "Materiais de escrita sobre uma mesa"
+        },
+        {
+          id: "adesivos",
+          name: "Adesivos e acessórios",
+          image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80",
+          alt: "Materiais coloridos de criação"
+        },
+        {
+          id: "organizacao",
+          name: "Organização e estudos",
+          image: "https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=600&q=80",
+          alt: "Mesa com materiais organizados"
+        },
+        {
+          id: "presentes",
+          name: "Presentes criativos",
+          image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=600&q=80",
+          alt: "Presente cuidadosamente embalado"
+        },
+        {
+          id: "fofa",
+          name: "Papelaria fofa",
+          image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=600&q=80",
+          alt: "Livros e materiais de papelaria"
+        },
+        {
+          id: "novidades",
+          name: "Novidades e exclusivos",
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80",
+          alt: "Espaço de trabalho com materiais criativos"
+        }
+      ],
+
+      products: [
+        {
+          id: 1,
+          name: "Caderno exemplo",
+          cat: "cadernos",
+          desc: "Produto demonstrativo para anotações e estudos.",
+          price: 29.90,
+          promo: null,
+          tag: "Destaque",
+          image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=700&q=82",
+          alt: "Caderno aberto com páginas para escrever"
+        },
+        {
+          id: 2,
+          name: "Planner exemplo",
+          cat: "cadernos",
+          desc: "Exemplo de item para organizar tarefas e ideias.",
+          price: null,
+          promo: null,
+          tag: null,
+          image: "https://images.unsplash.com/photo-1455390582262-044c00442bac?auto=format&fit=crop&w=700&q=82",
+          alt: "Caderno e materiais de escrita"
+        },
+        {
+          id: 3,
+          name: "Kit de canetas exemplo",
+          cat: "canetas",
+          desc: "Produto demonstrativo de escrita colorida.",
+          price: 19.90,
+          promo: 15.90,
+          tag: "Exemplo de oferta",
+          image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=700&q=82",
+          alt: "Materiais artísticos em diversas cores"
+        },
+        {
+          id: 4,
+          name: "Adesivos exemplo",
+          cat: "adesivos",
+          desc: "Exemplo de acessório para personalização.",
+          price: null,
+          promo: null,
+          tag: null,
+          image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=700&q=82",
+          alt: "Materiais de papel e itens de escrita"
+        },
+        {
+          id: 5,
+          name: "Organizador exemplo",
+          cat: "organizacao",
+          desc: "Exemplo de item para organizar seu espaço.",
+          price: null,
+          promo: null,
+          tag: null,
+          image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=82",
+          alt: "Ambiente de trabalho organizado"
+        },
+        {
+          id: 6,
+          name: "Presente criativo exemplo",
+          cat: "presentes",
+          desc: "Inspiração ilustrativa para presentear.",
+          price: null,
+          promo: null,
+          tag: "Sugestão",
+          image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=700&q=82",
+          alt: "Presente embalado para uma ocasião especial"
+        },
+        {
+          id: 7,
+          name: "Acessório fofo exemplo",
+          cat: "fofa",
+          desc: "Exemplo ilustrativo de acessório criativo.",
+          price: null,
+          promo: null,
+          tag: null,
+          image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=700&q=82",
+          alt: "Livros e materiais sobre uma mesa"
+        },
+        {
+          id: 8,
+          name: "Novidade exemplo",
+          cat: "novidades",
+          desc: "Produto demonstrativo para futuras novidades.",
+          price: null,
+          promo: null,
+          tag: "Novidade",
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=82",
+          alt: "Mesa de trabalho com materiais criativos"
+        }
+      ],
+
+      gallery: [
+        {
+          title: "Cadernos e anotações",
+          image: "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1100&q=85",
+          alt: "Caderno aberto com espaço para anotações"
+        },
+        {
+          title: "Materiais de escrita",
+          image: "https://images.unsplash.com/photo-1455390582262-044c00442bac?auto=format&fit=crop&w=850&q=82",
+          alt: "Materiais de escrita em uma mesa"
+        },
+        {
+          title: "Cores e criatividade",
+          image: "https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=850&q=82",
+          alt: "Materiais artísticos coloridos"
+        },
+        {
+          title: "Presentes",
+          image: "https://images.unsplash.com/photo-1513883049090-d0b7439799bf?auto=format&fit=crop&w=850&q=82",
+          alt: "Embalagem de presente"
+        },
+        {
+          title: "Organização",
+          image: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=850&q=82",
+          alt: "Ambiente de trabalho organizado"
+        },
+        {
+          title: "Inspiração para estudos",
+          image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&fit=crop&w=850&q=82",
+          alt: "Livros e materiais de estudo"
+        }
+      ]
+    };
+
+    const $ = (selector, root = document) => root.querySelector(selector);
+    const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+
+    const state = {
+      bag: [],
+      filter: "todas",
+      search: ""
+    };
+
+    const money = value => Number(value).toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL"
+    });
+
+    function escapeHTML(value) {
+      return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[char]);
+    }
+
+    function waLink(message = "Olá! Conheci a Fofura de Papelaria pelo site e gostaria de saber mais.") {
+      return "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(message);
+    }
+
+    function productById(id) {
+      return CONFIG.products.find(product => String(product.id) === String(id));
+    }
+
+    function categoryById(id) {
+      return CONFIG.categories.find(category => category.id === id);
+    }
+
+    function productPrice(product) {
+      if (product.promo != null) return product.promo;
+      return product.price;
+    }
+
+    function priceMarkup(product) {
+      if (product.promo != null && product.price != null) {
+        return `<del>${money(product.price)}</del><span>${money(product.promo)}</span>`;
+      }
+
+      if (product.price != null) return `<span>${money(product.price)}</span>`;
+
+      return '<span class="no-price">Consulte o preço</span>';
+    }
+
+    function imageMarkup(src, alt, className = "") {
+      return `<img class="${escapeHTML(className)}"
+        src="${escapeHTML(src)}"
+        alt="${escapeHTML(alt)}"
+        loading="lazy"
+        decoding="async"
+        width="700"
+        height="700">`;
+    }
+
+    /*
+      Quando uma imagem externa falha, mostramos um estado visual discreto.
+      Não usamos uma segunda URL infinita, evitando ciclos de erro.
+    */
+    document.addEventListener("error", event => {
+      const img = event.target;
+
+      if (!(img instanceof HTMLImageElement)) return;
+      if (img.dataset.fallbackApplied === "true") return;
+
+      img.dataset.fallbackApplied = "true";
+      img.removeAttribute("srcset");
+      img.removeAttribute("sizes");
+      img.alt = img.alt || "Imagem indisponível";
+
+      const placeholder = document.createElement("div");
+      placeholder.style.cssText =
+        "width:100%;height:100%;min-height:100px;display:grid;place-items:center;" +
+        "background:linear-gradient(135deg,#fff0f5,#eee7fb);color:#bd547b;" +
+        "font:600 13px 'DM Sans',sans-serif;text-align:center;padding:18px;";
+      placeholder.textContent = "Imagem temporariamente indisponível";
+
+      img.replaceWith(placeholder);
+    }, true);
+
+    function renderCategories() {
+      $("#categoriesGrid").innerHTML = CONFIG.categories.map(category => `
+        <button class="category" type="button" data-category="${escapeHTML(category.id)}">
+          <div class="category-photo">
+            ${imageMarkup(category.image, category.alt)}
+          </div>
+          <div class="category-body">
+            <h3>${escapeHTML(category.name)}</h3>
+            <span class="category-link">
+              Ver produtos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M13 6l6 6-6 6"/>
+              </svg>
+            </span>
+          </div>
+        </button>
+      `).join("");
+    }
+
+    function renderFilters() {
+      const filters = [{ id: "todas", name: "Todas" }, ...CONFIG.categories];
+
+      $("#categoryFilters").innerHTML = filters.map(category => `
+        <button
+          type="button"
+          class="chip"
+          data-filter="${escapeHTML(category.id)}"
+          aria-pressed="${state.filter === category.id}">
+          ${escapeHTML(category.name)}
+        </button>
+      `).join("");
+    }
+
+    function renderProducts() {
+      const search = state.search.trim().toLocaleLowerCase("pt-BR");
+
+      const products = CONFIG.products.filter(product => {
+        const category = categoryById(product.cat);
+        const matchesCategory = state.filter === "todas" || product.cat === state.filter;
+        const searchable = `${product.name} ${product.desc} ${category?.name || ""}`.toLocaleLowerCase("pt-BR");
+        return matchesCategory && (!search || searchable.includes(search));
+      });
+
+      $("#resultCount").textContent =
+        products.length + (products.length === 1 ? " produto encontrado" : " produtos encontrados");
+
+      if (!products.length) {
+        $("#productGrid").innerHTML = `
+          <div class="empty-state">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="10.8" cy="10.8" r="6.8"/>
+              <path d="m16 16 5 5M8 10h5"/>
+            </svg>
+            <h3>Nenhum produto encontrado</h3>
+            <p>Experimente outro termo ou veja todas as categorias.</p>
+            <button type="button" class="btn btn-primary" data-filter="todas">Ver todos os produtos</button>
+          </div>
+        `;
+
+        renderFilters();
+        return;
+      }
+
+      $("#productGrid").innerHTML = products.map(product => {
+        const category = categoryById(product.cat);
+        const price = productPrice(product);
+
+        const message = `Olá! Conheci a Fofura de Papelaria pelo site e gostaria de consultar o produto "${product.name}"${price != null ? ", anunciado na vitrine demonstrativa por " + money(price) : ""}. Podem confirmar o valor e a disponibilidade?`;
+
+        return `
+          <article class="product-card">
+            <button class="product-photo" type="button" data-product="${product.id}" aria-label="Ver detalhes de ${escapeHTML(product.name)}">
+              ${imageMarkup(product.image, product.alt)}
+              ${product.tag ? `<span class="product-tag">${escapeHTML(product.tag)}</span>` : ""}
+            </button>
+            <div class="product-body">
+              <span class="product-category">${escapeHTML(category?.name || "Papelaria")}</span>
+              <h3 class="product-title">${escapeHTML(product.name)}</h3>
+              <p class="product-description">${escapeHTML(product.desc)}</p>
+              <div class="product-price">${priceMarkup(product)}</div>
+              <div class="product-actions">
+                <button type="button" class="btn btn-primary btn-small" data-add="${product.id}">
+                  Adicionar à sacola
+                </button>
+                <a class="btn btn-outline btn-small" href="${waLink(message)}" target="_blank" rel="noopener noreferrer">
+                  Consultar pelo WhatsApp
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      renderFilters();
+    }
+
+    function renderGallery() {
+      $("#galleryGrid").innerHTML = CONFIG.gallery.map((item, index) => `
+        <button
+          type="button"
+          class="gallery-item"
+          data-gallery="${index}"
+          aria-label="Ampliar imagem: ${escapeHTML(item.title)}">
+          ${imageMarkup(item.image, item.alt)}
+        </button>
+      `).join("");
+    }
+
+    function updateWhatsAppLinks() {
+      $$("[data-wa]").forEach(link => {
+        const message = link.dataset.msg || undefined;
+        link.href = waLink(message);
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      });
+    }
+
+    function updateStoreInformation() {
+      const address = CONFIG.address;
+
+      const mapURL = "https://www.google.com/maps/search/?api=1&query=" +
+        encodeURIComponent("Fofura de Papelaria, " + address);
+
+      $("#mapLink").href = mapURL;
+      $("#mapCardLink").href = mapURL;
+
+      $("#year").textContent = new Date().getFullYear();
+
+      $("#openingHours").textContent = Array.isArray(CONFIG.hours) && CONFIG.hours.length
+        ? CONFIG.hours.join(" | ")
+        : "Consulte os horários de atendimento pelo WhatsApp.";
+
+      $("#demoNotice").hidden = !CONFIG.demo;
+    }
+
+    function renderBag() {
+      const count = state.bag.reduce((total, item) => total + item.quantity, 0);
+
+      $("#bagCount").textContent = count;
+      $("#bagCount").hidden = count === 0;
+
+      const content = $("#bagContent");
+
+      if (!state.bag.length) {
+        content.innerHTML = `
+          <div class="cart-empty">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M5 8h14l-1 12H6L5 8Z"/>
+              <path d="M9 8a3 3 0 0 1 6 0"/>
+            </svg>
+            <h3>Sua sacola está vazia</h3>
+            <p>Encontre suas próximas fofuras na vitrine.</p>
+            <button type="button" class="btn btn-primary" data-close-and-scroll="#produtos">Explorar produtos</button>
+          </div>
+        `;
+        return;
+      }
+
+      let subtotal = 0;
+      let hasUnpricedProducts = false;
+
+      const rows = state.bag.map(item => {
+        const product = productById(item.id);
+        if (!product) return "";
+
+        const price = productPrice(product);
+
+        if (price == null) {
+          hasUnpricedProducts = true;
+        } else {
+          subtotal += price * item.quantity;
+        }
+
+        return `
+          <div class="cart-row">
+            <div>
+              <strong>${escapeHTML(product.name)}</strong>
+              <small>${price != null ? money(price) : "Consulte o preço"}</small><br>
+              <button type="button" class="remove-item" data-remove="${product.id}">Remover</button>
+            </div>
+            <div class="quantity" aria-label="Quantidade de ${escapeHTML(product.name)}">
+              <button type="button" data-decrease="${product.id}" aria-label="Diminuir quantidade">−</button>
+              <span>${item.quantity}</span>
+              <button type="button" data-increase="${product.id}" aria-label="Aumentar quantidade">+</button>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      content.innerHTML = `
+        ${rows}
+        <div class="cart-summary">
+          <span>Subtotal dos itens com preço</span>
+          <span>${money(subtotal)}</span>
+        </div>
+        ${hasUnpricedProducts ? '<p class="cart-note">Os itens sem preço cadastrado não entram no subtotal. A loja confirmará o valor final pelo WhatsApp.</p>' : ""}
+        <button type="button" class="btn btn-whatsapp full-width" id="checkoutButton">
+          Finalizar pedido pelo WhatsApp
+        </button>
+        <p class="cart-note" style="margin-top:12px">O pedido será encaminhado para confirmação. Este site não processa pagamentos nem confirma estoque.</p>
+      `;
+    }
+
+    function addToBag(id) {
+      const product = productById(id);
+      if (!product) return;
+
+      const existing = state.bag.find(item => String(item.id) === String(id));
+
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        state.bag.push({ id: product.id, quantity: 1 });
+      }
+
+      renderBag();
+      showToast("Produto adicionado à sacola.");
+
+      $("#bagToggle").animate(
+        [{ transform: "scale(1)" }, { transform: "scale(1.12)" }, { transform: "scale(1)" }],
+        { duration: 260 }
+      );
+    }
+
+    function changeQuantity(id, amount) {
+      const item = state.bag.find(entry => String(entry.id) === String(id));
+      if (!item) return;
+
+      item.quantity += amount;
+
+      if (item.quantity <= 0) {
+        state.bag = state.bag.filter(entry => String(entry.id) !== String(id));
+      }
+
+      renderBag();
+    }
+
+    function removeFromBag(id) {
+      state.bag = state.bag.filter(item => String(item.id) !== String(id));
+      renderBag();
+      showToast("Produto removido da sacola.");
+    }
+
+    function checkout() {
+      if (!state.bag.length) return;
+
+      let subtotal = 0;
+      let hasUnpricedProducts = false;
+
+      const lines = state.bag.map(item => {
+        const product = productById(item.id);
+        if (!product) return "";
+
+        const price = productPrice(product);
+
+        if (price == null) {
+          hasUnpricedProducts = true;
+        } else {
+          subtotal += price * item.quantity;
+        }
+
+        return `- ${item.quantity}x ${product.name}` +
+          (price != null ? ` — ${money(price)} cada` : " — consultar preço");
+      }).filter(Boolean);
+
+      let message = "Olá! Gostaria de consultar este pedido da Fofura de Papelaria:\n\n";
+      message += lines.join("\n");
+      message += `\n\nSubtotal dos itens com preço cadastrado: ${money(subtotal)}`;
+
+      if (hasUnpricedProducts) {
+        message += "\nHá itens que precisam de confirmação de preço.";
+      }
+
+      message += "\n\nPodem confirmar a disponibilidade e o valor final?";
+
+      window.open(waLink(message), "_blank", "noopener,noreferrer");
+    }
+
+    function openProduct(id) {
+      const product = productById(id);
+      if (!product) return;
+
+      const category = categoryById(product.cat);
+      const content = $("#productDialogContent");
+
+      content.innerHTML = `
+        <div style="aspect-ratio:4/3;overflow:hidden;border-radius:16px;background:#f8edf1;margin-bottom:18px">
+          ${imageMarkup(product.image, product.alt)}
+        </div>
+        <span class="product-category">${escapeHTML(category?.name || "Papelaria")}</span>
+        <h2 style="font-size:1.8rem;margin:8px 0 12px">${escapeHTML(product.name)}</h2>
+        <p>${escapeHTML(product.desc)}</p>
+        <div class="product-price">${priceMarkup(product)}</div>
+        <p class="cart-note">Fotografia e informações ilustrativas. Consulte a loja para confirmar o produto real, preço e disponibilidade.</p>
+        <div style="display:grid;gap:10px;margin-top:20px">
+          <button type="button" class="btn btn-primary full-width" data-add="${product.id}">Adicionar à sacola</button>
+          <a class="btn btn-outline full-width" href="${waLink(`Olá! Gostaria de consultar o produto "${product.name}" na Fofura de Papelaria.`)}" target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp</a>
+        </div>
+      `;
+
+      $("#productDialog").showModal();
+    }
+
+    function openGallery(index) {
+      const item = CONFIG.gallery[index];
+      if (!item) return;
+
+      $("#galleryDialogTitle").textContent = item.title;
+
+      $("#galleryDialogContent").innerHTML = `
+        <img
+          class="lightbox-image"
+          src="${escapeHTML(item.image)}"
+          alt="${escapeHTML(item.alt)}"
+          width="1100"
+          height="850"
+          decoding="async">
+        <p class="lightbox-caption">${escapeHTML(item.title)} — imagem ilustrativa, não necessariamente fotografada na loja.</p>
+      `;
+
+      $("#galleryDialog").showModal();
+    }
+
+    let toastTimeout;
+
+    function showToast(message) {
+      const toast = $("#toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => toast.classList.remove("show"), 2400);
+    }
+
+    function setFilter(filter) {
+      state.filter = filter;
+      renderProducts();
+
+      if (filter !== "todas" || state.search) {
+        $("#produtos").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function toggleMenu() {
+      const menu = $("#menu");
+      const open = menu.classList.toggle("open");
+
+      $("#menuToggle").setAttribute("aria-expanded", String(open));
+      $("#menuToggle").setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    }
+
+    function toggleSearch() {
+      const panel = $("#searchPanel");
+      const open = panel.classList.toggle("open");
+
+      $("#searchToggle").setAttribute("aria-expanded", String(open));
+
+      if (open) $("#searchInput").focus();
+    }
+
+    function setupRevealAnimations() {
+      const elements = $$(".reveal");
+
+      if (!("IntersectionObserver" in window) ||
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        elements.forEach(element => element.classList.add("visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      elements.forEach(element => observer.observe(element));
+    }
+
+    document.addEventListener("click", event => {
+      const button = event.target.closest("button");
+
+      if (button) {
+        if (button.dataset.category) {
+          setFilter(button.dataset.category);
+          return;
+        }
+
+        if (button.dataset.filter) {
+          setFilter(button.dataset.filter);
+          return;
+        }
+
+        if (button.dataset.add) {
+          addToBag(button.dataset.add);
+
+          const dialog = button.closest("dialog");
+          if (dialog && dialog.id === "productDialog") dialog.close();
+
+          return;
+        }
+
+        if (button.dataset.product) {
+          openProduct(button.dataset.product);
+          return;
+        }
+
+        if (button.dataset.gallery !== undefined) {
+          openGallery(Number(button.dataset.gallery));
+          return;
+        }
+
+        if (button.dataset.increase) {
+          changeQuantity(button.dataset.increase, 1);
+          return;
+        }
+
+        if (button.dataset.decrease) {
+          changeQuantity(button.dataset.decrease, -1);
+          return;
+        }
+
+        if (button.dataset.remove) {
+          removeFromBag(button.dataset.remove);
+          return;
+        }
+
+        if (button.hasAttribute("data-close")) {
+          button.closest("dialog")?.close();
+          return;
+        }
+
+        if (button.dataset.closeAndScroll) {
+          button.closest("dialog")?.close();
+          document.querySelector(button.dataset.closeAndScroll)?.scrollIntoView({
+            behavior: "smooth"
+          });
+          return;
+        }
+      }
+
+      const link = event.target.closest("#menu a");
+
+      if (link) {
+        $("#menu").classList.remove("open");
+        $("#menuToggle").setAttribute("aria-expanded", "false");
+        $("#menuToggle").setAttribute("aria-label", "Abrir menu");
+      }
+    });
+
+    document.addEventListener("click", event => {
+      const target = event.target;
+
+      if (target.closest("#checkoutButton")) {
+        checkout();
+        return;
+      }
+
+      if (target.closest("#bagToggle")) {
+        renderBag();
+        $("#bagDialog").showModal();
+        return;
+      }
+
+      if (target.closest("#searchToggle")) {
+        toggleSearch();
+        return;
+      }
+
+      if (target.closest("#menuToggle")) {
+        toggleMenu();
+      }
+    });
+
+    $("#searchInput").addEventListener("input", event => {
+      state.search = event.target.value;
+      renderProducts();
+    });
+
+    $$("dialog").forEach(dialog => {
+      dialog.addEventListener("click", event => {
+        if (event.target === dialog) dialog.close();
+      });
+
+      dialog.addEventListener("close", () => {
+        if (!document.querySelector("dialog[open]")) {
+          document.body.classList.remove("no-scroll");
+        }
+      });
+
+      dialog.addEventListener("cancel", () => {
+        dialog.close();
+      });
+
+      dialog.addEventListener("click", () => {
+        document.body.classList.add("no-scroll");
+      });
+
+      dialog.addEventListener("close", () => {
+        document.body.classList.remove("no-scroll");
+      });
+    });
+
+    function initialize() {
+      updateWhatsAppLinks();
+      updateStoreInformation();
+      renderCategories();
+      renderFilters();
+      renderProducts();
+      renderGallery();
+      renderBag();
+      setupRevealAnimations();
+    }
+
+    initialize();
+  </script>
+</body>
+</html>
