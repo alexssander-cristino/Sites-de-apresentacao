@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mesa de Corações | Mesa posta, louças e decoração</title>
+<meta name="description" content="Peças modernas e selecionadas para mesa posta, louças, cristais e decoração. Pix com 5% de desconto, até 3x no cartão e envio para todo o Brasil.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--paper:#fff;--surf:#fff;--ink:#2b2528;--mute:#6b6064;--rosa:#c9808f;--rosa-d:#8c4a59;--ouro:#e0a81d;--ouro-d:#8f6810;--line:#e4e1e2;--tile:#f6eef0;--cinza:#ececec;
+--serif:"Instrument Serif",Georgia,serif;--sans:"Poppins",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(110px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--surf);z-index:30}
+a{color:inherit}img{max-width:100%;display:block}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--ouro);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.bar{background:var(--cinza);color:var(--rosa-d);font-size:13px}
+.bar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 20px;padding-top:9px;padding-bottom:9px}
+.bar a{text-decoration:none}.bar a:hover{text-decoration:underline}
+.perks{border-bottom:1px solid var(--line)}.perks .wrap{display:flex;flex-wrap:wrap;justify-content:space-around;gap:6px 24px;padding-top:16px;padding-bottom:16px;font-size:14px}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--surf);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;gap:16px;padding:12px 0}
+.brand{color:var(--ouro-d);font:italic 400 30px/1 var(--serif);text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.brand svg{width:20px;height:20px;fill:var(--ouro)}
+.search{flex:1;max-width:460px;margin-left:auto}
+.search input{width:100%;height:48px;border:0;border-radius:999px;background:#f3f3f3;color:var(--ink);padding:0 22px;font:inherit}
+.cartbtn{height:44px;padding:0 16px;border:1px solid var(--ouro);border-radius:999px;background:transparent;display:flex;align-items:center;gap:8px;transition:background .2s,color .2s}
+.cartbtn:hover{background:var(--ouro);color:var(--ink)}
+.cartbtn b{display:inline-grid;place-items:center;min-width:22px;height:22px;background:var(--ouro);color:var(--ink);font-weight:600;font-size:12px;border-radius:11px;padding:0 6px}
+nav.cats{background:var(--rosa)}
+nav.cats ul{list-style:none;margin:0;padding:0;display:flex;gap:4px 34px;overflow-x:auto;scrollbar-width:none}
+nav.cats button{background:none;border:0;padding:16px 0;font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;border-bottom:2px solid transparent;color:rgba(255,255,255,.92)}
+nav.cats button:hover,nav.cats button[aria-current="true"]{color:#fff;border-color:#fff}
+.hero{padding:clamp(24px,5vw,64px) 0;overflow:hidden;background:var(--rosa)}
+.hero .wrap>div:first-child{background:#fff;border:6px solid var(--ouro);padding:clamp(24px,4vw,56px)}
+.hero .plate{background:#fff}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,5vw,72px);align-items:center}
+h1{font:400 clamp(46px,7.4vw,104px)/.95 var(--serif);margin:0 0 24px;letter-spacing:-.01em}
+.hero p{max-width:44ch;color:var(--mute);font-size:18px;margin:0 0 32px}
+.cta{display:inline-block;background:var(--ouro);color:var(--ink);padding:14px 32px;border-radius:999px;text-decoration:none;border:0;font-weight:600;transition:background .2s,transform .2s}
+.cta:hover{background:var(--ouro-d);color:#fff;transform:translateY(-2px)}
+.cta.ghost{background:transparent;color:var(--ouro-d);border:1px solid var(--ouro-d);margin-left:10px}
+.cta.ghost:hover{background:var(--ouro-d);color:#fff}
+.plate{position:relative;aspect-ratio:1;border-radius:50%;background:var(--tile);display:grid;place-items:center;animation:spin-in 1.4s cubic-bezier(.2,.7,.2,1) both}
+.plate::before,.plate::after{content:"";position:absolute;border-radius:50%;border:1px solid var(--ouro)}
+.plate::before{inset:5%}.plate::after{inset:12%;border-style:double;border-width:3px}
+.plate span{font:italic 22px/1.3 var(--serif);color:var(--mute);text-align:center;max-width:16ch}
+.plate small{position:absolute;bottom:-4px;right:8%;background:var(--surf);border:1px solid var(--line);padding:6px 12px;font-size:12px;color:var(--mute)}
+@keyframes spin-in{from{opacity:0;transform:rotate(-40deg) scale(.88)}to{opacity:1;transform:none}}
+.hero .wrap>div:first-child>*{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{animation-delay:.1s!important}.hero p{animation-delay:.25s!important}.hero .acts{animation-delay:.4s!important}
+@keyframes up{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+section{padding:clamp(40px,6vw,88px) 0}
+h2{font:400 clamp(34px,4.6vw,58px)/1.02 var(--serif);margin:0 0 28px}
+.index{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.index button{width:100%;background:none;border:0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;padding:16px 4px;font:400 clamp(26px,3.6vw,44px)/1.1 var(--serif);text-align:left;transition:padding .35s cubic-bezier(.2,.7,.2,1),color .2s}
+.index button:hover{padding-left:18px;color:var(--rosa-d)}
+.index small{font:400 14px var(--sans);color:var(--mute);max-width:34ch;text-align:right}
+.shop-h{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:end;margin-bottom:24px}
+.shop-h h2{margin:0}
+.tools{display:flex;gap:10px;align-items:center;font-size:14px}
+.tools select{height:42px;border:1px solid var(--line);background:var(--surf);color:var(--ink);padding:0 10px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:36px 22px}
+.item{display:flex;flex-direction:column}
+.ph{position:relative;aspect-ratio:4/5;background:var(--tile);display:grid;place-items:center;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph::before{content:"";position:absolute;width:62%;aspect-ratio:1;border-radius:50%;border:1px solid var(--ouro);transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.item:hover .ph::before{transform:scale(1.12)}
+.ph i{font:italic 17px/1.2 var(--serif);color:var(--mute);text-align:center;padding:0 22%}
+.tag{position:absolute;top:10px;left:10px;background:var(--rosa-d);color:#fff;font-size:12px;padding:3px 9px;z-index:1}
+.item h3{font:500 15px/1.35 var(--sans);margin:14px 0 6px}
+.pr{margin-top:auto;font-size:15px}
+.pr s{color:var(--mute);margin-right:6px;font-size:13px}
+.pr b{font-weight:600}
+.pix{font-size:13px;color:var(--mute);margin:2px 0 12px}
+.add{background:none;border:1px solid var(--ink);border-radius:999px;height:44px;font-weight:500;transition:background .2s,color .2s}
+.add:hover{background:var(--ink);color:var(--paper)}
+.add.ok{background:var(--ouro);border-color:var(--ouro);color:var(--ink)}
+.empty{padding:48px 0;text-align:center;color:var(--mute)}
+.empty button{margin-top:12px}
+.turquia{background:var(--rosa-d);color:#fff}
+.turquia .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,72px);align-items:center}
+.turquia .plate{background:transparent;border:1px solid rgba(255,255,255,.2);animation:none}
+.turquia .plate span{color:#fbeef1}
+.turquia p{max-width:48ch;color:#fbeef1}
+.turquia .cta:hover{background:#fff;color:var(--rosa-d)}
+.sobre .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,72px)}
+.sobre p{color:var(--mute);margin:0 0 14px;max-width:52ch}
+footer{background:var(--rosa-d);color:#fbeef1;padding:56px 0 32px;font-size:14px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h2{font-size:30px;color:#fff;margin:0 0 12px}
+footer h4{margin:0 0 10px;color:#fff;font-weight:600}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin:6px 0}
+footer a{text-decoration:none}footer a:hover{color:#fff;text-decoration:underline}
+.fine{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.15);padding-top:20px;font-size:13px}
+.ov{position:fixed;inset:0;background:rgba(10,16,28,.5);opacity:0;pointer-events:none;transition:opacity .3s;z-index:40}
+.ov.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--surf);z-index:50;transform:translateX(102%);transition:transform .4s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dh h2{margin:0;font-size:32px}
+.x{background:none;border:0;font-size:30px;line-height:1;width:44px;height:44px}
+.lines{flex:1;overflow:auto;padding:6px 22px;list-style:none;margin:0}
+.ln{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ln .q{display:flex;align-items:center;gap:2px}
+.ln .q button{width:36px;height:36px;border:1px solid var(--line);background:none}
+.ln .q span{min-width:32px;text-align:center}
+.ln .rm{background:none;border:0;color:var(--mute);text-decoration:underline;font-size:13px;padding:0;min-height:36px}
+.df{padding:18px 22px;border-top:1px solid var(--line)}
+.row{display:flex;justify-content:space-between;margin:4px 0}
+.row.t{font-weight:600;font-size:18px;margin-top:8px}
+.df .cta{display:block;width:100%;text-align:center;margin-top:14px}
+.df small{display:block;color:var(--mute);margin-top:10px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--ink);color:var(--paper);padding:12px 20px;opacity:0;transition:.3s;z-index:60;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.prog{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:var(--ouro);transform:scaleX(0);transform-origin:0 50%;z-index:35}
+header.top .hrow{transition:padding .35s cubic-bezier(.2,.7,.2,1)}header.top.sc .hrow{padding:6px 0}header.top.sc{box-shadow:0 1px 0 var(--line)}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em}.w>span{display:inline-block;transform:translateY(105%);animation:wup .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*70ms + 150ms)}
+@keyframes wup{to{transform:none}}
+.hero .plate{clip-path:circle(0%);animation:reveal 1.4s .2s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes reveal{to{clip-path:circle(75%)}}
+.item.rv{transition-delay:calc(var(--i,0)*55ms)}
+@keyframes bump{40%{transform:scale(1.4)}}.cartbtn b.bump{animation:bump .4s}
+.search{position:relative}.sug{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--surf);border:1px solid var(--line);border-radius:20px;overflow:hidden;z-index:25;display:none}.sug.on{display:block;animation:up .25s both}.sug button{display:block;width:100%;text-align:left;background:none;border:0;padding:12px 20px;font-size:14px}.sug button:hover,.sug button:focus-visible{background:var(--tile)}
+.fav{position:absolute;top:8px;right:8px;width:40px;height:40px;border:0;background:rgba(255,255,255,.88);border-radius:50%;display:grid;place-items:center;z-index:1;transition:transform .2s}.fav:hover{transform:scale(1.1)}.fav svg{width:20px;height:20px;fill:none;stroke:var(--rosa-d);stroke-width:1.8;transition:fill .25s,stroke .25s}.fav[aria-pressed="true"] svg{fill:var(--rosa);stroke:var(--rosa)}
+.ph[data-view]{cursor:pointer}.lnk{background:none;border:0;padding:0;text-align:left;font:inherit;cursor:pointer}.lnk:hover{color:var(--rosa-d)}
+dialog.pd{border:0;padding:0;max-width:min(860px,94vw);width:100%;background:var(--surf);color:var(--ink)}dialog.pd::backdrop{background:rgba(30,16,22,.55)}dialog[open]{animation:up .4s cubic-bezier(.2,.7,.2,1)}
+.pdg{display:grid;grid-template-columns:1fr 1fr}.pdg .ph{aspect-ratio:1;cursor:default}.pdi{padding:28px;display:flex;flex-direction:column;gap:10px;justify-content:center}.pdi h3{font:400 clamp(26px,3vw,36px)/1.1 var(--serif);margin:0}.crumb{font-size:13px;color:var(--mute)}.qty{display:flex;align-items:center}.qty button{width:44px;height:44px;border:1px solid var(--line);background:none}.qty span{min-width:48px;text-align:center}.pdx{position:absolute;top:6px;right:6px;z-index:2;background:rgba(255,255,255,.9);border-radius:50%}
+@media (max-width:820px){.pdg{grid-template-columns:1fr}}
+@media (max-width:820px){.hero .wrap,.turquia .wrap,.sobre .wrap,footer .wrap{grid-template-columns:1fr}
+.hero .plate{max-width:420px;margin:0 auto}.turquia .plate{max-width:300px}
+.search{order:3;max-width:none;flex-basis:100%;margin:0}.hrow{flex-wrap:wrap}.cartbtn{margin-left:auto}
+.index small{display:none}.cta.ghost{margin:10px 0 0}html{scroll-padding-top:150px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.js .rv{opacity:1;transform:none}.w>span{transform:none}.hero .plate{clip-path:none}}
+</style>
+</head>
+<body>
+<div class="bar"><div class="wrap"><a href="https://api.whatsapp.com/send?phone=5547988020093" rel="noopener">Telefone (47) 98802-0093</a><span>Bem-vinda! Produtos modernos e selecionados p/ mesa posta</span><a href="https://www.mesadecoracoes.com.br/loja/central_anteriores.php?loja=1236934" rel="noopener">Pedidos</a></div></div>
+<header class="top">
+ <div class="wrap">
+  <div class="hrow">
+   <a class="brand" href="#topo" aria-label="Mesa de Corações, início"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8 3 4.5 6.5 4.5c2 0 3.7 1.1 5.5 3.1 1.8-2 3.5-3.1 5.5-3.1 3.5 0 5.6 3.5 4.1 7.2C19.500 16.400 12 21 12 21z"/></svg>Mesa de Corações</a>
+   <div class="search"><label class="sr" for="q">Buscar produtos</label><input id="q" type="search" placeholder="Buscar xícara, jarra, sousplat…" autocomplete="off"><div class="sug" id="sg"></div></div>
+   <button class="cartbtn" id="openCart" aria-haspopup="dialog">Sacola <b id="count">0</b></button>
+  </div>
+ </div>
+ <nav class="cats" aria-label="Categorias"><div class="wrap"><ul id="nav"></ul></div></nav>
+</header>
+<main id="topo">
+<div class="hero"><div class="wrap">
+ <div>
+  <h1>Mesa posta com amor e estilo</h1>
+  <p>Louças, cristais, bules e peças de decoração selecionados para receber bem e presentear com carinho. Desde 2020 em Pouso Redondo, SC.</p>
+  <div class="acts"><a class="cta" href="#loja">Ver produtos</a><a class="cta ghost" href="#turquia">Peças da Turquia</a></div>
+ </div>
+ <div class="plate" role="img" aria-label="Espaço para a fotografia principal da loja"><span>Fotografia principal da mesa posta</span></div>
+</div></div>
+
+<div class="perks"><div class="wrap"><span>Pix com 5% de desconto</span><span>Até 3x no cartão de crédito</span><span>Enviamos para todo o Brasil</span></div></div>
+
+<section class="rv"><div class="wrap">
+ <h2>Escolha por ambiente</h2>
+ <ul class="index" id="index"></ul>
+</div></section>
+
+<section id="loja"><div class="wrap">
+ <div class="shop-h">
+  <h2 id="shopTitle">Todas as peças</h2>
+  <div class="tools"><label for="sort">Ordenar</label>
+   <select id="sort"><option value="rel">Destaques</option><option value="asc">Menor preço</option><option value="desc">Maior preço</option><option value="az">Nome, A a Z</option></select></div>
+ </div>
+ <div class="grid" id="grid" aria-live="polite"></div>
+</div></section>
+
+<section class="turquia" id="turquia"><div class="wrap">
+ <div class="plate rv" role="img" aria-label="Espaço para fotografia das peças importadas"><span>Foto das peças importadas</span></div>
+ <div class="rv">
+  <h2>Peças importadas da Turquia</h2>
+  <p>Xícaras de chá e café, conjuntos em porcelana e porta-guardanapos trazidos de fora, para uma mesa que foge do comum.</p>
+  <button class="cta" data-cat="Peças Importadas Turquia">Ver peças importadas</button>
+ </div>
+</div></section>
+
+<section class="sobre rv"><div class="wrap">
+ <h2>Uma casa de presentes e mesa posta</h2>
+ <div>
+  <p>A Mesa de Corações nasceu em 2020 com uma ideia simples: levar amor, qualidade e estilo para quem gosta de decorar e presentear em momentos especiais.</p>
+  <p>Cada peça é escolhida a dedo, de cristais e porcelanas a utensílios de cozinha. Ficou com dúvida sobre qual peça combina com sua mesa? Chame no WhatsApp.</p>
+  <a class="cta ghost" style="margin:8px 0 0" href="https://api.whatsapp.com/send?phone=5547988020093" rel="noopener">Falar no WhatsApp</a>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div><h2>Mesa de Corações</h2><p>Rua Alice Gomes, Pouso Redondo, SC<br>CNPJ 38.822.703/0001-78</p></div>
+ <div><h4>Atendimento</h4><ul><li><a href="https://api.whatsapp.com/send?phone=5547988020093">(47) 98802-0093</a></li><li><a href="mailto:mesadecoracoes@gmail.com">mesadecoracoes@gmail.com</a></li></ul></div>
+ <div><h4>Redes</h4><ul><li><a href="https://instagram.com/mesadecoracoes" rel="noopener">Instagram</a></li><li><a href="https://facebook.com/mesadecoracoes" rel="noopener">Facebook</a></li><li><a href="https://br.pinterest.com/mesadecoracoes" rel="noopener">Pinterest</a></li></ul></div>
+ <p class="fine">Preços e estoques sujeitos a alteração sem aviso prévio. Ofertas válidas somente para a loja virtual.</p>
+</div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dt" aria-hidden="true">
+ <div class="dh"><h2 id="dt">Sua sacola</h2><button class="x" id="closeCart" aria-label="Fechar sacola">×</button></div>
+ <ul class="lines" id="lines"></ul>
+ <div class="df" id="foot"></div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+document.documentElement.classList.add("js");
+const WA="5547988020093";
+const TONE={"Servir":"#f4eaec","Louças":"#f1ece4","Café e Chá":"#efe7ea","Decoração":"#f3eee6","Taças e Jarras":"#ede8ea","Peças Importadas Turquia":"#f2e6e9","Cozinha":"#eee9e3","Banheiro":"#f4ecee","Organização":"#ece8e6"};
+const CATS=Object.keys(TONE);
+const NOTE={"Servir":"Tábuas, bandejas, guardanapos e acessórios para a mesa","Louças":"Pratos, bowls, travessas e aparelhos de jantar","Café e Chá":"Xícaras, bules, açucareiros e garrafas térmicas","Decoração":"Vasos, velas, centros de mesa e objetos","Taças e Jarras":"Taças, copos, jarras e itens de bar","Peças Importadas Turquia":"Xícaras e conjuntos importados","Cozinha":"Panelas, potes e utensílios","Banheiro":"Acessórios e conjuntos","Organização":"Organização para a casa"};
+/* Preços e nomes copiados da loja atual. Para trocar a foto, preencha img com o caminho do arquivo. */
+const P=[
+{id:1,n:"Caminho de Mesa Natal Canto Mitrado 140 x 40 cm",c:"Servir",p:49.99},
+{id:2,n:"Bowl Quadrado de Cristal com Acabamento em Coração 8,5 x 5 cm",c:"Louças",p:16.99},
+{id:3,n:"Açucareiro de Metal Elegancy 16,5 x 16 cm",c:"Café e Chá",p:249},
+{id:4,n:"Abajur Dourado Importado",c:"Decoração",p:1050},
+{id:5,n:"Petisqueira Redonda Sortida de Cristal, Lyor",c:"Servir",p:10.99},
+{id:6,n:"Jarra Deli Diamante 750 ml de Vidro, Lyor",c:"Taças e Jarras",p:35.9,o:41.99},
+{id:7,n:"Conjunto de 6 Xícaras para Chá com Pires Nice Rainbow 180 ml, Lyor",c:"Café e Chá",p:105},
+{id:8,n:"Kit Lavanda (a partir de)",c:"Decoração",p:19.9,f:1},
+{id:9,n:"Garrafa Térmica Floral Azul 1 L (a partir de)",c:"Café e Chá",p:315,f:1},
+{id:10,n:"Porta Guardanapo Importado Turquia",c:"Peças Importadas Turquia",p:199},
+{id:11,n:"Sousplat de Cristal Daisy 32 cm, Wolff",c:"Louças",p:35.99},
+{id:12,n:"Jarra Árabe 1,8 L de Vidro Dourado para Água e Suco",c:"Taças e Jarras",p:249,o:299.99},
+{id:13,n:"Leiteira de Cristal Ecológico Little Bee, Lyor (a partir de)",c:"Café e Chá",p:35.9,f:1},
+{id:14,n:"Queijeira de Cristal com Tampa e Fio de Ouro 20 cm, Lyor",c:"Servir",p:75},
+{id:15,n:"Conjunto de Chá Turco Luxo 6 Xícaras 90 ml com Pires Dourado",c:"Peças Importadas Turquia",p:699.99},
+{id:16,n:"Kit Golden Bird, Wolff (a partir de)",c:"Cozinha",p:31.9,f:1},
+{id:17,n:"Bandeja de Metal com Espelho Berlin Dourada 32 cm, Lyor",c:"Café e Chá",p:89.9},
+{id:18,n:"Jogo de Pratos em Porcelana Azul com Filete Dourado (a partir de)",c:"Louças",p:1118.97,f:1},
+{id:19,n:"Conjunto de 6 Xícaras 200 ml com Pires em Porcelana Branca",c:"Peças Importadas Turquia",p:549},
+{id:20,n:"Pote de Mel de Abelha de Vidro (a partir de)",c:"Servir",p:159,f:1}];
+const $=s=>document.querySelector(s);
+const R=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const pix=v=>Math.round(v*95)/100;
+let cat="all",term="",sort="rel",cart={};
+try{cart=JSON.parse(localStorage.getItem("mdc-cart")||"{}")}catch(e){}
+const save=()=>{try{localStorage.setItem("mdc-cart",JSON.stringify(cart))}catch(e){}};
+const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12}):null;
+const watch=el=>io?io.observe(el):el.classList.add("in");
+document.querySelectorAll(".rv").forEach(watch);
+
+$("#nav").innerHTML=`<li><button data-cat="all" aria-current="true">Tudo</button></li>`+CATS.map(c=>`<li><button data-cat="${c}">${c}</button></li>`).join("");
+$("#index").innerHTML=CATS.map(c=>`<li><button data-cat="${c}">${c}<small>${NOTE[c]}</small></button></li>`).join("");
+
+function list(){
+ let a=P.filter(x=>(cat==="all"||x.c===cat)&&(!term||(x.n+" "+x.c).toLowerCase().includes(term)));
+ if(sort==="asc")a.sort((x,y)=>x.p-y.p);else if(sort==="desc")a.sort((x,y)=>y.p-x.p);else if(sort==="az")a.sort((x,y)=>x.n.localeCompare(y.n,"pt-BR"));
+ return a}
+function render(){
+ const a=list();
+ $("#shopTitle").textContent=cat==="all"?"Todas as peças":cat;
+ document.querySelectorAll("#nav button").forEach(b=>b.setAttribute("aria-current",String(b.dataset.cat===cat)));
+ if(!a.length){$("#grid").innerHTML=`<div class="empty" style="grid-column:1/-1"><p>Nenhuma peça encontrada${term?` para “${term.replace(/[<>&]/g,"")}”`:""}.</p><button class="cta" data-cat="all">Ver todas as peças</button></div>`;return}
+ $("#grid").innerHTML=a.map((x,i)=>`<article class="item rv" style="--i:${i%8}"><div class="ph" data-view="${x.id}" style="background:${TONE[x.c]}"><button class="fav" data-fav="${x.id}" aria-pressed="${!!fav[x.id]}" aria-label="Favoritar ${x.n}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-9-9c-1.3-3.2.7-6.5 4-6.5 2 0 3.5 1 5 2.8 1.5-1.8 3-2.8 5-2.8 3.3 0 5.300 3.300 4 6.500-2 4.600-9 9-9 9z"/></svg></button>${x.o?`<span class="tag">-${Math.round((1-x.p/x.o)*100)}%</span>`:""}${x.img?`<img src="${x.img}" alt="${x.n}" loading="lazy">`:`<i>${x.c}</i>`}</div>
+ <h3><button class="lnk" data-view="${x.id}">${x.n}</button></h3><div class="pr">${x.o?`<s>${R(x.o)}</s>`:""}${x.f?"a partir de ":""}<b>${R(x.p)}</b></div><div class="pix">${R(pix(x.p))} no Pix · até 3x no cartão</div>
+ <button class="add" data-add="${x.id}">Adicionar à sacola</button></article>`).join("");
+ document.querySelectorAll("#grid .rv").forEach(watch)}
+function go(c){cat=c;render();$("#loja").scrollIntoView()}
+document.addEventListener("click",e=>{
+ const b=e.target.closest("[data-cat]");if(b){go(b.dataset.cat);return}
+ if(!e.target.closest(".search"))$("#sg").classList.remove("on");const fv=e.target.closest("[data-fav]");if(fv){toggleFav(fv);return}const vw=e.target.closest("[data-view]");if(vw){view(+vw.dataset.view);return}const ad=e.target.closest("[data-add]");if(ad){add(+ad.dataset.add,ad);return}
+ const st=e.target.closest("[data-step]");if(st){step(+st.dataset.id,+st.dataset.step);return}
+ const rm=e.target.closest("[data-rm]");if(rm){delete cart[rm.dataset.rm];paint()}});
+$("#q").addEventListener("input",e=>{term=e.target.value.trim().toLowerCase();cat="all";render()});
+$("#sort").addEventListener("change",e=>{sort=e.target.value;render()});
+
+let tt;function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>t.classList.remove("on"),2200)}
+function add(id,btn){cart[id]=(cart[id]||0)+1;paint();try{navigator.vibrate&&navigator.vibrate(12)}catch(e){}btn.classList.add("ok");btn.textContent="Adicionado";setTimeout(()=>{btn.classList.remove("ok");btn.textContent="Adicionar à sacola"},1400);toast("Peça adicionada à sacola")}
+function step(id,d){cart[id]=(cart[id]||0)+d;if(cart[id]<=0)delete cart[id];paint()}
+function paint(){
+ save();const ids=Object.keys(cart),n=ids.reduce((s,i)=>s+cart[i],0);
+ const cb=$("#count");if(cb.textContent!==String(n)){cb.classList.remove("bump");void cb.offsetWidth;cb.classList.add("bump")}cb.textContent=n;
+ const sub=ids.reduce((s,i)=>s+P.find(p=>p.id==i).p*cart[i],0);
+ $("#lines").innerHTML=ids.length?ids.map(i=>{const x=P.find(p=>p.id==i);return `<li class="ln"><div>${x.n}</div><div><b>${R(x.p*cart[i])}</b></div>
+ <div class="q"><button data-id="${i}" data-step="-1" aria-label="Diminuir quantidade">−</button><span>${cart[i]}</span><button data-id="${i}" data-step="1" aria-label="Aumentar quantidade">+</button></div><button class="rm" data-rm="${i}">Remover</button></li>`}).join(""):`<li class="empty">Sua sacola está vazia. Escolha uma peça para começar.</li>`;
+ const msg=encodeURIComponent("Olá! Quero fazer este pedido:\n"+ids.map(i=>`${cart[i]}x ${P.find(p=>p.id==i).n}`).join("\n")+`\nSubtotal: ${R(sub)}`);
+ $("#foot").innerHTML=ids.length?`<div class="row"><span>Subtotal</span><span>${R(sub)}</span></div><div class="row"><span>No Pix (5% de desconto)</span><span>${R(pix(sub))}</span></div>
+ <div class="row t"><span>Total</span><span>${R(sub)}</span></div><a class="cta" href="https://api.whatsapp.com/send?phone=${WA}&text=${msg}" rel="noopener">Finalizar pelo WhatsApp</a>
+ <small>Frete e forma de pagamento são combinados no atendimento.</small>`:""}
+let last;
+function open(){last=document.activeElement;$("#drawer").classList.add("on");$("#ov").classList.add("on");$("#drawer").setAttribute("aria-hidden","false");$("#closeCart").focus()}
+function close(){$("#drawer").classList.remove("on");$("#ov").classList.remove("on");$("#drawer").setAttribute("aria-hidden","true");last&&last.focus()}
+$("#openCart").onclick=open;$("#closeCart").onclick=close;$("#ov").onclick=close;
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&$("#drawer").classList.contains("on"))close()});
+let fav={};try{fav=JSON.parse(localStorage.getItem("mdc-fav")||"{}")}catch(e){}
+function toggleFav(b){const id=b.dataset.fav;if(fav[id])delete fav[id];else fav[id]=1;b.setAttribute("aria-pressed",String(!!fav[id]));try{localStorage.setItem("mdc-fav",JSON.stringify(fav))}catch(e){}toast(fav[id]?"Salvo nos favoritos":"Removido dos favoritos")}
+const D=document.createElement("dialog");D.className="pd";D.setAttribute("aria-labelledby","pdt");document.body.appendChild(D);
+D.addEventListener("click",e=>{if(e.target===D||e.target.closest("[data-x]"))D.close()});
+function view(id){const x=P.find(p=>p.id===id);let qn=1;$("#sg").classList.remove("on");
+ D.innerHTML=`<button class="x pdx" data-x aria-label="Fechar">×</button><div class="pdg"><div class="ph" style="background:${TONE[x.c]}"><i>${x.c}</i></div><div class="pdi"><div class="crumb">Início / ${x.c}</div><h3 id="pdt">${x.n}</h3><div class="pr">${x.o?`<s>${R(x.o)}</s>`:""}${x.f?"a partir de ":""}<b>${R(x.p)}</b></div><div class="pix">${R(pix(x.p))} no Pix com 5% de desconto · até 3x no cartão</div><div class="qty"><button data-q="-1" aria-label="Diminuir quantidade">−</button><span id="qv">1</span><button data-q="1" aria-label="Aumentar quantidade">+</button></div><button class="cta" id="pdadd">Adicionar à sacola</button></div></div>`;
+ D.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>{qn=Math.max(1,qn+ +b.dataset.q);$("#qv").textContent=qn});
+ $("#pdadd").onclick=()=>{cart[id]=(cart[id]||0)+qn;paint();D.close();toast("Peça adicionada à sacola")};D.showModal()}
+$("#q").addEventListener("input",e=>{const v=e.target.value.trim().toLowerCase(),m=v.length<2?[]:P.filter(x=>x.n.toLowerCase().includes(v)).slice(0,5);$("#sg").innerHTML=m.map(x=>`<button data-view="${x.id}">${x.n}</button>`).join("");$("#sg").classList.toggle("on",m.length>0)});
+const h1=document.querySelector(".hero h1");h1.setAttribute("aria-label",h1.textContent);h1.innerHTML=h1.textContent.split(" ").map((w,i)=>`<span class="w" aria-hidden="true"><span style="--i:${i}">${w}</span></span>`).join(" ");
+const pg=document.createElement("div");pg.className="prog";document.body.prepend(pg);
+const hd=document.querySelector("header.top"),pl=document.querySelector(".hero .plate"),rmo=matchMedia("(prefers-reduced-motion:reduce)").matches;let tk=false;
+function onS(){tk=false;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;pg.style.transform=`scaleX(${h>0?y/h:0})`;hd.classList.toggle("sc",y>60);if(!rmo&&pl&&y<900)pl.style.transform=`translateY(${y*.08}px)`}
+addEventListener("scroll",()=>{if(!tk){tk=true;requestAnimationFrame(onS)}},{passive:true});onS();
+render();paint();
+</script>
+</body>
+</html>
